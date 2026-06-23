@@ -1,0 +1,1 @@
+const e={securityLevel:"loose",startOnLoad:!1,flowchart:{htmlLabels:!0}};export{e as default};
