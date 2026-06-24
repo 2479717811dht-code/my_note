@@ -104,7 +104,7 @@ export default withMermaid(
             },
             {
               text: '实验课内容及实验报告',
-              link: '/note-cs-code-cleaned'
+              link: '/lab'
             },
           // items: [
           //   {
