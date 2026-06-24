@@ -17,7 +17,7 @@ hero:
 
     - theme: alt
       text: "Check in GitHub"
-      link: https://github.com/2479717811dht-code
+      link: https://github.com/2479717811dht-code/my_note
 
 features:
   - icon: 🧭
