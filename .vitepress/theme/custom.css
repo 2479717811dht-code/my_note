@@ -1,0 +1,101 @@
+/* 任务列表 */
+.vp-doc input[type='checkbox'] {
+width: 1em;
+height: 1em;
+margin-right: 0.45em;
+vertical-align: -0.12em;
+}
+
+/* 高亮文字 */
+.vp-doc mark {
+padding: 0.08em 0.2em;
+border-radius: 3px;
+}
+
+/* 脚注区域 */
+.vp-doc .footnotes {
+margin-top: 2.5rem;
+font-size: 0.9em;
+}
+
+/* Mermaid 图不要超出页面 */
+.vp-doc .mermaid {
+overflow-x: auto;
+text-align: center;
+}
+
+/* ==================================================
+标题间距统一：h1、h2、h3、h4、h5、h6 全部一致
+================================================== */
+
+/* 统一所有标题上方间距，去掉各级标题原有的不同下边距 */
+.vp-doc h1,
+.vp-doc h2,
+.vp-doc h3,
+.vp-doc h4,
+.vp-doc h5,
+.vp-doc h6 {
+margin-top: 1.0rem !important;
+margin-bottom: 0 !important;
+}
+
+/* h2 默认有横线和额外顶部内边距，会破坏统一间距 */
+.vp-doc h2 {
+padding-top: 0 !important;
+border-top: none !important;
+}
+
+/* 文档开头的第一个标题不需要上方留白 */
+.vp-doc > h1:first-child,
+.vp-doc > h2:first-child,
+.vp-doc > h3:first-child,
+.vp-doc > h4:first-child,
+.vp-doc > h5:first-child,
+.vp-doc > h6:first-child {
+margin-top: 0 !important;
+}
+
+/* 标题后接正文、列表、引用、表格、代码块时的统一间距 */
+.vp-doc h1 + p,
+.vp-doc h1 + ul,
+.vp-doc h1 + ol,
+.vp-doc h1 + blockquote,
+.vp-doc h1 + table,
+.vp-doc h1 + div,
+
+.vp-doc h2 + p,
+.vp-doc h2 + ul,
+.vp-doc h2 + ol,
+.vp-doc h2 + blockquote,
+.vp-doc h2 + table,
+.vp-doc h2 + div,
+
+.vp-doc h3 + p,
+.vp-doc h3 + ul,
+.vp-doc h3 + ol,
+.vp-doc h3 + blockquote,
+.vp-doc h3 + table,
+.vp-doc h3 + div,
+
+.vp-doc h4 + p,
+.vp-doc h4 + ul,
+.vp-doc h4 + ol,
+.vp-doc h4 + blockquote,
+.vp-doc h4 + table,
+.vp-doc h4 + div,
+
+.vp-doc h5 + p,
+.vp-doc h5 + ul,
+.vp-doc h5 + ol,
+.vp-doc h5 + blockquote,
+.vp-doc h5 + table,
+.vp-doc h5 + div,
+
+.vp-doc h6 + p,
+.vp-doc h6 + ul,
+.vp-doc h6 + ol,
+.vp-doc h6 + blockquote,
+.vp-doc h6 + table,
+.vp-doc h6 + div {
+margin-top: 0.7rem !important;
+}

@@ -1,0 +1,19 @@
+{
+  "scripts": {
+    "docs:dev": "vitepress dev",
+    "docs:build": "vitepress build",
+    "docs:preview": "vitepress preview",
+    "build": "vitepress build"
+  },
+  "devDependencies": {
+    "@mdit/plugin-footnote": "^0.23.2",
+    "@mdit/plugin-mark": "^0.23.2",
+    "@mdit/plugin-sub": "^0.24.2",
+    "@mdit/plugin-sup": "^0.24.2",
+    "@mdit/plugin-tasklist": "^0.23.2",
+    "markdown-it-mathjax3": "^4.3.2",
+    "mermaid": "^11.15.0",
+    "vitepress": "^1.6.4",
+    "vitepress-plugin-mermaid": "^2.0.17"
+  }
+}
