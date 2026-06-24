@@ -210,7 +210,7 @@ export default withMermaid(
             },
             {
               text: 'Digital Logic Design',
-              link: '/dldnote'
+              link: '/Digital-Logic-Design-Lab'
             },
             // {
             //   text: 'Fundamentals of Data Structure',
@@ -222,7 +222,7 @@ export default withMermaid(
             // },
             {
               text: 'Computer Organization',
-              link: '/Computer_Organization'
+              link: '/Computer-Organization-Lab'
             }
             // {
             //   text: 'Advanced Data Structure & Algorithm Analysis',

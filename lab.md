@@ -1,4 +1,4 @@
-# <center>ReadMe_Lab</center>
+# <center>Lab</center>
 
 这里是实验课的 PPT 以及实验报告合集，有需自取喵 ~
 

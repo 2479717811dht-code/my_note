@@ -1,4 +1,4 @@
-# <center>ReadMe_Theory</center>
+# <center>Theory</center>
 
 这里是理论课的笔记合集，有需自取喵 ~
 
