@@ -55,7 +55,9 @@ Welcome to **My Note**.
 
 主要包括数制系统、布尔代数、组合逻辑电路、时序逻辑电路、有限状态机与 Verilog 设计。
 
-[进入课程笔记 →](/dldnote)
+[进入理论笔记 →](/dldnote)
+
+[进入实验内容 →](/Digital-Logic-Design-Lab)
 
 ---
 
@@ -85,7 +87,9 @@ Welcome to **My Note**.
 
 主要包括数据表示、指令系统、CPU、控制器、存储器、数据通路、流水线与性能分析等内容。
 
-[进入课程笔记 →](/Computer_Organization)
+[进入理论笔记 →](/Computer_Organization)
+
+[进入实验内容 →](/Computer-Organization-Lab)
 
 ### Advanced Data Structure & Algorithm Analysis
 
