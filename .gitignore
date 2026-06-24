@@ -87,21 +87,16 @@ typings/
 # DynamoDB Local files
 .dynamodb/
 
-# --- Project Specific Rules ---
-
-# VitePress Build & Cache
+# 过滤 VitePress 编译垃圾
 .vitepress/cache/
 .vitepress/dist/
+node_modules/
 
-# Vivado Project Files (Ignore generated artifacts)
-*.runs/
-*.sim/
-*.srcs/
-*.cache/
-*.hw/
-*.ip_user_files/
-*.gen/
-*.xpr
-*.log
-*.jou
-*.backup*
+# 过滤 Vivado 编译垃圾（全自动清理）
+**/*.cache/
+**/*.hw/
+**/*.ip_user_files/
+**/*.runs/
+**/*.sim/
+**/vivado.jou
+**/vivado.log
