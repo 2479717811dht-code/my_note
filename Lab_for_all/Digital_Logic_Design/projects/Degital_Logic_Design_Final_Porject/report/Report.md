@@ -4,13 +4,14 @@
 <center>邓欢桐 3250102223</center>
 
 <center>
-<img src="20260323101520_871_96.png" style="zoom: 60%;" />
-<img src="20260323101521_872_96.png" style="zoom: 20%;" />
-<img src="20260324164217_269_180.jpg" style="zoom: 25%;" />
+<img src="./20260323101520_871_96.png" style="zoom: 60%;" />
+<img src="./20260323101521_872_96.png" style="zoom: 20%;" />
+<img src="./20260324164217_269_180.jpg" style="zoom: 25%;" />
 </center>
 <center>
-<img src="background.jpg" style="zoom:20%;" /><img src="20260620003444_310_1.png" style="zoom:70.9%;"  />
+<img src="./background.jpg" style="zoom:20%;" /><img src="./20260620003444_310_1.png" style="zoom:70.9%;"  />
 </center>
+
 ---
 
 ## 摘要
@@ -998,7 +999,7 @@ g
 b
 ```
 
-![](figure1.png)
+![](./figure1.png)
 
 <center>Figure 1  VGA 时序仿真波形</center>
 
@@ -1030,7 +1031,7 @@ uut.u_vga_display.menu_rgb_out
 uut.u_vga_display.rgb_real
 ```
 
-![](figure2.png)
+![](./figure2.png)
 
 <center>Figure 2  菜单到游戏状态切换波形</center>
 
@@ -1058,7 +1059,7 @@ uut.u_vga_display.text_rgb_out
 uut.u_vga_display.rgb_real
 ```
 
-![](figure3.png)
+![](./figure3.png)
 
 <center>Figure 3  结算文字显示波形</center>
 
@@ -1290,6 +1291,6 @@ uut.u_vga_display.rgb_real
 
 ---
 
-<img src="20260322115501_236_180.jpg" style="zoom:33%;" />
+<img src="./20260322115501_236_180.jpg" style="zoom:33%;" />
 
-![](20260325141247_275_180.jpg)
+![](./20260325141247_275_180.jpg)
