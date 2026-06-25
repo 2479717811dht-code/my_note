@@ -7,6 +7,7 @@
 欢迎大家从入口直接进入喵 ~
 
 <center>
-<img src="./public/20260506105112_167_1.jpg" style="zoom:33%;" />
+<img src="../public/20260506105112_167_1.jpg" style="zoom:33%;" />
+
 
 </center>

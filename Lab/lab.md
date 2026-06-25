@@ -19,8 +19,7 @@
 |    $7$     |   **Kimi**   |          擅长长文档阅读、资料总结和中文写作。          |   [Kimi](https://kimi.moonshot.cn/)   |
 |    $8$     |   **豆包**   |    字节旗下 AI 助手，适合日常问答、创作和轻量使用。    |    [豆包](https://www.doubao.com/)    |
 
-
 <center>
-<img src="./public/20260602160047_1014_180.jpg" style="zoom:33%;" />
+<img src="../public/20260602160047_1014_180.jpg" style="zoom:33%;" />
 
 </center>

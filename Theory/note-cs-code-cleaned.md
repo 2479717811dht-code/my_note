@@ -7,9 +7,9 @@
 ---
 
 <center>
-<img src="./public/20260323101520_871_96.png" style="zoom: 60%;" />
-<img src="./public/20260323101521_872_96.png" style="zoom: 20%;" />
-<img src="./public/20260324164217_269_180.jpg" style="zoom: 25%;" />
+<img src="../public/20260323101520_871_96.png" style="zoom: 60%;" />
+<img src="../public/20260323101521_872_96.png" style="zoom: 20%;" />
+<img src="../public/20260324164217_269_180.jpg" style="zoom: 25%;" />
 </center>
 
 ---
@@ -3462,14 +3462,14 @@ Consider two algorithms: one is called “sequential search” which scans throu
 
 To measure the performance of a function, we may use C's standard library `time.h` as the following:
 
-![alt text](./public/image.png)
+![alt text](../public/image.png)
 
 **Note:** 
 If a function runs so quickly that it takes less than a tick to finish, we may repeat the function calls for $K$ times to obtain a total run time, and then divide the total time by $K$ to obtain a more accurate duration for a single run of the function.  The repetition factor must be large enough so that the number of elapsed ticks is at least $10$ if we want an accuracy of at least $10$%.
 
 The test results must be listed in the following table:
 
-![alt text](./public/image-1.png)
+![alt text](../public/image-1.png)
 
 The performances of the four functions must be plotted in the same $N$–run_time coordinate system for illustration.
 

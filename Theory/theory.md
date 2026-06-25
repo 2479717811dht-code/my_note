@@ -18,6 +18,7 @@
 |    $8$     |   **豆包**   |    字节旗下 AI 助手，适合日常问答、创作和轻量使用。    |    [豆包](https://www.doubao.com/)    |
 
 <center>
-<img src="./public/20260602162149_1020_180.jpg" style="zoom:33%;" />
+<img src="../public/20260602162149_1020_180.jpg" style="zoom:33%;" />
+
 
 </center>

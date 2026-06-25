@@ -7,8 +7,8 @@
 ---
 
 <center>
-<img src="./public/20260323101520_871_96.png" style="zoom: 60%;" />
-<img src="./public/20260323101521_872_96.png" style="zoom: 20%;" /><img src="./public/20260324164217_269_180.jpg" style="zoom: 25%;" />
+<img src="../public/20260323101520_871_96.png" style="zoom: 60%;" />
+<img src="../public/20260323101521_872_96.png" style="zoom: 20%;" /><img src="../public/20260324164217_269_180.jpg" style="zoom: 25%;" />
 
 
 </center>
@@ -17277,7 +17277,7 @@ The performances of the two functions must be **plotted** in the **same** $N$–
 
 
 
-![](./public/20260322115501_236_180.jpg)
+![](../public/20260322115501_236_180.jpg)
 
-![](./public/20260325141247_275_180.jpg)
+![](../public/20260325141247_275_180.jpg)
 
