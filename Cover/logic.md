@@ -45,7 +45,7 @@ Welcome to **My Note**.
 
 主要包括程序设计思维、基础算法、代码实现与常见题型分析。
 
-[进入课程笔记 →](/note-cs-code-cleaned)
+[进入课程笔记 →](/Theory/note-cs-code-cleaned)
 
 ---
 
@@ -55,9 +55,9 @@ Welcome to **My Note**.
 
 主要包括数制系统、布尔代数、组合逻辑电路、时序逻辑电路、有限状态机与 Verilog 设计。
 
-[进入理论笔记 →](/dldnote)
+[进入理论笔记 →](/Theory/dldnote)
 
-[进入实验内容 →](/Digital-Logic-Design-Lab)
+[进入实验内容 →](/Lab/Digital-Logic-Design-Lab)
 
 ---
 
@@ -67,7 +67,7 @@ Welcome to **My Note**.
 
 主要包括线性表、栈、队列、树、堆、图、排序、散列、最短路径、最小生成树与网络流等内容。
 
-[进入课程笔记 →](/Fundamentals_of_Data_Structure)
+[进入课程笔记 →](/Theory/Fundamentals_of_Data_Structure)
 
 ---
 
@@ -77,7 +77,7 @@ Welcome to **My Note**.
 
 主要包括命题逻辑、谓词逻辑、集合、关系、函数、图论、组合计数与生成函数等内容。
 
-[进入课程笔记 →](/Discrete_Mathematics)
+[进入课程笔记 →](/Theory/Discrete_Mathematics)
 
 ---
 
@@ -87,9 +87,9 @@ Welcome to **My Note**.
 
 主要包括数据表示、指令系统、CPU、控制器、存储器、数据通路、流水线与性能分析等内容。
 
-[进入理论笔记 →](/Computer_Organization)
+[进入理论笔记 →](/Theory/Computer_Organization)
 
-[进入实验内容 →](/Computer-Organization-Lab)
+[进入实验内容 →](/Lab/Computer-Organization-Lab)
 
 ### Advanced Data Structure & Algorithm Analysis
 
@@ -97,7 +97,7 @@ Welcome to **My Note**.
 
 主要包括各种高级的算法，且为 cyll 执教的版本，也许有一定的代表性。
 
-[进入课程笔记 →](/Advanced_Data_Structure_Algorithm_Analysis)
+[进入课程笔记 →](/Theory/Advanced_Data_Structure_Algorithm_Analysis)
 
 ## Study Checklist
 
