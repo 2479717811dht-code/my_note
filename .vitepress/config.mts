@@ -80,7 +80,7 @@ export default withMermaid(
     },
 
     head: [
-    ['link', { rel: 'icon', href: '/my_note/link.jpg' }] 
+    ['link', { rel: 'icon', href: '/my_note/link.png' }] 
     // 如果你准备了 .ico 格式，就写 '/favicon.ico'
     ],
 
