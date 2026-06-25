@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="zh-CN" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Runtime API Examples | My Note</title>
+    <meta name="description" content="我的数字花园">
+    <meta name="generator" content="VitePress v1.6.4">
+    <link rel="preload stylesheet" href="/my_note/assets/style.Ducp553B.css" as="style">
+    <link rel="preload stylesheet" href="/my_note/vp-icons.css" as="style">
+    
+    <script type="module" src="/my_note/assets/app.BQcPerVC.js"></script>
+    <link rel="preload" href="/my_note/assets/inter-roman-latin.Di8DUHzh.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="modulepreload" href="/my_note/assets/chunks/framework.BilZITcA.js">
+    <link rel="modulepreload" href="/my_note/assets/chunks/theme.EwS7CScl.js">
+    <link rel="modulepreload" href="/my_note/assets/chunks/katex.C5jXJg4s.js">
+    <link rel="modulepreload" href="/my_note/assets/chunks/dagre-BM42HDAG.DGBjwtQB.js">
+    <link rel="modulepreload" href="/my_note/assets/chunks/cose-bilkent-S5V4N54A.XXREo5QP.js">
+    <link rel="modulepreload" href="/my_note/assets/chunks/c4Diagram-AAUBKEIU.CppnRWEg.js">
+    <link rel="modulepreload" href="/my_note/assets/chunks/flowDiagram-I6XJVG4X.D23eIEOh.js">
+    <link rel="modulepreload" href="/my_note/assets/chunks/erDiagram-TEJ5UH35.CZZixwte.js">
+    <link rel="modulepreload" href="/my_note/assets/chunks/gitGraphDiagram-PVQCEYII.CzmJucGT.js">
+    <link rel="modulepreload" href="/my_note/assets/chunks/ganttDiagram-6RSMTGT7.CLqlbhw5.js">
+    <link rel="modulepreload" href="/my_note/assets/chunks/infoDiagram-5YYISTIA.R7RPAeLn.js">
+    <link rel="modulepreload" href="/my_note/assets/chunks/pieDiagram-4H26LBE5.CDUTefPv.js">
+    <link rel="modulepreload" href="/my_note/assets/chunks/quadrantDiagram-W4KKPZXB.QcKk0wUg.js">
+    <link rel="modulepreload" href="/my_note/assets/chunks/xychartDiagram-2RQKCTM6.DcBVn65P.js">
+    <link rel="modulepreload" href="/my_note/assets/chunks/requirementDiagram-4Y6WPE33.ymCEq3LL.js">
+    <link rel="modulepreload" href="/my_note/assets/chunks/sequenceDiagram-3UESZ5HK.5JzqeHbN.js">
+    <link rel="modulepreload" href="/my_note/assets/chunks/classDiagram-4FO5ZUOK.CyS-FJRi.js">
+    <link rel="modulepreload" href="/my_note/assets/chunks/classDiagram-v2-Q7XG4LA2.CyS-FJRi.js">
+    <link rel="modulepreload" href="/my_note/assets/chunks/stateDiagram-AJRCARHV.BbBBZBn0.js">
+    <link rel="modulepreload" href="/my_note/assets/chunks/stateDiagram-v2-BHNVJYJU.CHUgBYdo.js">
+    <link rel="modulepreload" href="/my_note/assets/chunks/journeyDiagram-JHISSGLW.TZ_EHs9K.js">
+    <link rel="modulepreload" href="/my_note/assets/chunks/timeline-definition-PNZ67QCA.DpS54B8m.js">
+    <link rel="modulepreload" href="/my_note/assets/chunks/mindmap-definition-RKZ34NQL.d97kiM32.js">
+    <link rel="modulepreload" href="/my_note/assets/chunks/kanban-definition-UN3LZRKU.08tkBej4.js">
+    <link rel="modulepreload" href="/my_note/assets/chunks/sankeyDiagram-5OEKKPKP.MoDvDowB.js">
+    <link rel="modulepreload" href="/my_note/assets/chunks/diagram-LMA3HP47.WaciKTmM.js">
+    <link rel="modulepreload" href="/my_note/assets/chunks/diagram-2AECGRRQ.CV6ZBP9t.js">
+    <link rel="modulepreload" href="/my_note/assets/chunks/blockDiagram-GPEHLZMM.C5NOqYfS.js">
+    <link rel="modulepreload" href="/my_note/assets/chunks/diagram-5GNKFQAL.I9_158Uf.js">
+    <link rel="modulepreload" href="/my_note/assets/chunks/architectureDiagram-3BPJPVTR.BrQ-DeI0.js">
+    <link rel="modulepreload" href="/my_note/assets/chunks/diagram-KO2AKTUF.B1WOYfZR.js">
+    <link rel="modulepreload" href="/my_note/assets/chunks/ishikawaDiagram-YF4QCWOH.CIEN9a9v.js">
+    <link rel="modulepreload" href="/my_note/assets/chunks/vennDiagram-CIIHVFJN.BLebORQa.js">
+    <link rel="modulepreload" href="/my_note/assets/chunks/diagram-OG6HWLK6.BFZK35Hj.js">
+    <link rel="modulepreload" href="/my_note/assets/chunks/wardleyDiagram-YWT4CUSO.BbvtLLRE.js">
+    <link rel="modulepreload" href="/my_note/assets/chunks/virtual_mermaid-config.DiWKfQQj.js">
+    <link rel="modulepreload" href="/my_note/assets/Cover_api-examples.md.C9Bs5alO.lean.js">
+    <link rel="icon" href="/my_note/20260602162150_1021_180.jpg">
+    <script id="check-dark-mode">(()=>{const e=localStorage.getItem("vitepress-theme-appearance")||"auto",a=window.matchMedia("(prefers-color-scheme: dark)").matches;(!e||e==="auto"?a:e==="dark")&&document.documentElement.classList.add("dark")})();</script>
+    <script id="check-mac-os">document.documentElement.classList.toggle("mac",/Mac|iPhone|iPod|iPad/i.test(navigator.platform));</script>
+  </head>
+  <body>
+    <div id="app"><div class="Layout" data-v-d8b57b2d><!--[--><!--]--><!--[--><span tabindex="-1" data-v-fcbfc0e0></span><a href="#VPContent" class="VPSkipLink visually-hidden" data-v-fcbfc0e0>跳到正文</a><!--]--><!----><header class="VPNav" data-v-d8b57b2d data-v-7ad780c2><div class="VPNavBar" data-v-7ad780c2 data-v-9fd4d1dd><div class="wrapper" data-v-9fd4d1dd><div class="container" data-v-9fd4d1dd><div class="title" data-v-9fd4d1dd><div class="VPNavBarTitle has-sidebar" data-v-9fd4d1dd data-v-9f43907a><a class="title" href="/my_note/" data-v-9f43907a><!--[--><!--]--><!--[--><img class="VPImage logo" src="/my_note/20260323101521_872_96.png" alt data-v-ab19afbb><!--]--><span data-v-9f43907a>My Note</span><!--[--><!--]--></a></div></div><div class="content" data-v-9fd4d1dd><div class="content-body" data-v-9fd4d1dd><!--[--><!--]--><div class="VPNavBarSearch search" data-v-9fd4d1dd><!--[--><!----><div id="local-search"><button type="button" class="DocSearch DocSearch-Button" aria-label="搜索"><span class="DocSearch-Button-Container"><span class="vp-icon DocSearch-Search-Icon"></span><span class="DocSearch-Button-Placeholder">搜索</span></span><span class="DocSearch-Button-Keys"><kbd class="DocSearch-Button-Key"></kbd><kbd class="DocSearch-Button-Key">K</kbd></span></button></div><!--]--></div><nav aria-labelledby="main-nav-aria-label" class="VPNavBarMenu menu" data-v-9fd4d1dd data-v-afb2845e><span id="main-nav-aria-label" class="visually-hidden" data-v-afb2845e> Main Navigation </span><!--[--><!--[--><a class="VPLink link VPNavBarMenuLink" href="/my_note/" tabindex="0" data-v-afb2845e data-v-815115f5><!--[--><span data-v-815115f5>首页</span><!--]--></a><!--]--><!--[--><div class="VPFlyout VPNavBarMenuGroup" data-v-afb2845e data-v-bfe7971f><button type="button" class="button" aria-haspopup="true" aria-expanded="false" data-v-bfe7971f><span class="text" data-v-bfe7971f><!----><span data-v-bfe7971f>课程</span><span class="vpi-chevron-down text-icon" data-v-bfe7971f></span></span></button><div class="menu" data-v-bfe7971f><div class="VPMenu" data-v-bfe7971f data-v-20ed86d6><div class="items" data-v-20ed86d6><!--[--><!--[--><div class="VPMenuLink" data-v-20ed86d6 data-v-7eeeb2dc><a class="VPLink link" href="/my_note/Theory/theory.html" data-v-7eeeb2dc><!--[--><span data-v-7eeeb2dc>计科专业理论课</span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-20ed86d6 data-v-7eeeb2dc><a class="VPLink link" href="/my_note/Lab/lab.html" data-v-7eeeb2dc><!--[--><span data-v-7eeeb2dc>实验课内容及实验报告</span><!--]--></a></div><!--]--><!--]--></div><!--[--><!--]--></div></div></div><!--]--><!--[--><a class="VPLink link VPNavBarMenuLink" href="/my_note/Break/break.html" tabindex="0" data-v-afb2845e data-v-815115f5><!--[--><span data-v-815115f5>休息一下</span><!--]--></a><!--]--><!--]--></nav><!----><div class="VPNavBarAppearance appearance" data-v-9fd4d1dd data-v-3f90c1a5><button class="VPSwitch VPSwitchAppearance" type="button" role="switch" title aria-checked="false" data-v-3f90c1a5 data-v-be9742d9 data-v-b4ccac88><span class="check" data-v-b4ccac88><span class="icon" data-v-b4ccac88><!--[--><span class="vpi-sun sun" data-v-be9742d9></span><span class="vpi-moon moon" data-v-be9742d9></span><!--]--></span></span></button></div><div class="VPSocialLinks VPNavBarSocialLinks social-links" data-v-9fd4d1dd data-v-ef6192dc data-v-e71e869c><!--[--><a class="VPSocialLink no-icon" href="https://github.com/2479717811dht-code" aria-label="GitHub" target="_blank" rel="noopener" data-v-e71e869c data-v-60a9a2d3><span class="vpi-social-github"></span></a><!--]--></div><div class="VPFlyout VPNavBarExtra extra" data-v-9fd4d1dd data-v-f953d92f data-v-bfe7971f><button type="button" class="button" aria-haspopup="true" aria-expanded="false" aria-label="extra navigation" data-v-bfe7971f><span class="vpi-more-horizontal icon" data-v-bfe7971f></span></button><div class="menu" data-v-bfe7971f><div class="VPMenu" data-v-bfe7971f data-v-20ed86d6><!----><!--[--><!--[--><!----><div class="group" data-v-f953d92f><div class="item appearance" data-v-f953d92f><p class="label" data-v-f953d92f>外观</p><div class="appearance-action" data-v-f953d92f><button class="VPSwitch VPSwitchAppearance" type="button" role="switch" title aria-checked="false" data-v-f953d92f data-v-be9742d9 data-v-b4ccac88><span class="check" data-v-b4ccac88><span class="icon" data-v-b4ccac88><!--[--><span class="vpi-sun sun" data-v-be9742d9></span><span class="vpi-moon moon" data-v-be9742d9></span><!--]--></span></span></button></div></div></div><div class="group" data-v-f953d92f><div class="item social-links" data-v-f953d92f><div class="VPSocialLinks social-links-list" data-v-f953d92f data-v-e71e869c><!--[--><a class="VPSocialLink no-icon" href="https://github.com/2479717811dht-code" aria-label="GitHub" target="_blank" rel="noopener" data-v-e71e869c data-v-60a9a2d3><span class="vpi-social-github"></span></a><!--]--></div></div></div><!--]--><!--]--></div></div></div><!--[--><!--]--><button type="button" class="VPNavBarHamburger hamburger" aria-label="mobile navigation" aria-expanded="false" aria-controls="VPNavScreen" data-v-9fd4d1dd data-v-6bee1efd><span class="container" data-v-6bee1efd><span class="top" data-v-6bee1efd></span><span class="middle" data-v-6bee1efd></span><span class="bottom" data-v-6bee1efd></span></span></button></div></div></div></div><div class="divider" data-v-9fd4d1dd><div class="divider-line" data-v-9fd4d1dd></div></div></div><!----></header><div class="VPLocalNav has-sidebar empty" data-v-d8b57b2d data-v-2488c25a><div class="container" data-v-2488c25a><button class="menu" aria-expanded="false" aria-controls="VPSidebarNav" data-v-2488c25a><span class="vpi-align-left menu-icon" data-v-2488c25a></span><span class="menu-text" data-v-2488c25a>课程目录</span></button><div class="VPLocalNavOutlineDropdown" style="--vp-vh:0px;" data-v-2488c25a data-v-6b867909><button data-v-6b867909>返回顶部</button><!----></div></div></div><aside class="VPSidebar" data-v-d8b57b2d data-v-42c4c606><div class="curtain" data-v-42c4c606></div><nav class="nav" id="VPSidebarNav" aria-labelledby="sidebar-aria-label" tabindex="-1" data-v-42c4c606><span class="visually-hidden" id="sidebar-aria-label" data-v-42c4c606> Sidebar Navigation </span><!--[--><!--]--><!--[--><div class="no-transition group" data-v-51288d80><section class="VPSidebarItem level-0 collapsible" data-v-51288d80 data-v-0009425e><div class="item" role="button" tabindex="0" data-v-0009425e><div class="indicator" data-v-0009425e></div><h2 class="text" data-v-0009425e>开始阅读</h2><div class="caret" role="button" aria-label="toggle section" tabindex="0" data-v-0009425e><span class="vpi-chevron-right caret-icon" data-v-0009425e></span></div></div><div class="items" data-v-0009425e><!--[--><div class="VPSidebarItem level-1 is-link" data-v-0009425e data-v-0009425e><div class="item" data-v-0009425e><div class="indicator" data-v-0009425e></div><a class="VPLink link link" href="/my_note/Cover/logic.html" data-v-0009425e><!--[--><p class="text" data-v-0009425e>课程总览</p><!--]--></a><!----></div><!----></div><!--]--></div></section></div><div class="no-transition group" data-v-51288d80><section class="VPSidebarItem level-0 collapsible" data-v-51288d80 data-v-0009425e><div class="item" role="button" tabindex="0" data-v-0009425e><div class="indicator" data-v-0009425e></div><h2 class="text" data-v-0009425e>理论课</h2><div class="caret" role="button" aria-label="toggle section" tabindex="0" data-v-0009425e><span class="vpi-chevron-right caret-icon" data-v-0009425e></span></div></div><div class="items" data-v-0009425e><!--[--><div class="VPSidebarItem level-1 is-link" data-v-0009425e data-v-0009425e><div class="item" data-v-0009425e><div class="indicator" data-v-0009425e></div><a class="VPLink link link" href="/my_note/Theory/theory.html" data-v-0009425e><!--[--><p class="text" data-v-0009425e>Read Me</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-0009425e data-v-0009425e><div class="item" data-v-0009425e><div class="indicator" data-v-0009425e></div><a class="VPLink link link" href="/my_note/Theory/note-cs-code-cleaned.html" data-v-0009425e><!--[--><p class="text" data-v-0009425e>Fundamentals of Programming and Algorithms</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-0009425e data-v-0009425e><div class="item" data-v-0009425e><div class="indicator" data-v-0009425e></div><a class="VPLink link link" href="/my_note/Theory/dldnote.html" data-v-0009425e><!--[--><p class="text" data-v-0009425e>Digital Logic Design</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-0009425e data-v-0009425e><div class="item" data-v-0009425e><div class="indicator" data-v-0009425e></div><a class="VPLink link link" href="/my_note/Theory/Fundamentals_of_Data_Structure.html" data-v-0009425e><!--[--><p class="text" data-v-0009425e>Fundamentals of Data Structure</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-0009425e data-v-0009425e><div class="item" data-v-0009425e><div class="indicator" data-v-0009425e></div><a class="VPLink link link" href="/my_note/Theory/Discrete_Mathematics.html" data-v-0009425e><!--[--><p class="text" data-v-0009425e>Discrete Mathematics</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-0009425e data-v-0009425e><div class="item" data-v-0009425e><div class="indicator" data-v-0009425e></div><a class="VPLink link link" href="/my_note/Theory/Computer_Organization.html" data-v-0009425e><!--[--><p class="text" data-v-0009425e>Computer Organization</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-0009425e data-v-0009425e><div class="item" data-v-0009425e><div class="indicator" data-v-0009425e></div><a class="VPLink link link" href="/my_note/Theory/Advanced_Data_Structure_Algorithm_Analysis.html" data-v-0009425e><!--[--><p class="text" data-v-0009425e>Advanced Data Structure & Algorithm Analysis</p><!--]--></a><!----></div><!----></div><!--]--></div></section></div><div class="no-transition group" data-v-51288d80><section class="VPSidebarItem level-0 collapsible" data-v-51288d80 data-v-0009425e><div class="item" role="button" tabindex="0" data-v-0009425e><div class="indicator" data-v-0009425e></div><h2 class="text" data-v-0009425e>实验课</h2><div class="caret" role="button" aria-label="toggle section" tabindex="0" data-v-0009425e><span class="vpi-chevron-right caret-icon" data-v-0009425e></span></div></div><div class="items" data-v-0009425e><!--[--><div class="VPSidebarItem level-1 is-link" data-v-0009425e data-v-0009425e><div class="item" data-v-0009425e><div class="indicator" data-v-0009425e></div><a class="VPLink link link" href="/my_note/Lab/lab.html" data-v-0009425e><!--[--><p class="text" data-v-0009425e>Read Me</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-0009425e data-v-0009425e><div class="item" data-v-0009425e><div class="indicator" data-v-0009425e></div><a class="VPLink link link" href="/my_note/Lab/Digital-Logic-Design-Lab.html" data-v-0009425e><!--[--><p class="text" data-v-0009425e>Digital Logic Design</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-0009425e data-v-0009425e><div class="item" data-v-0009425e><div class="indicator" data-v-0009425e></div><a class="VPLink link link" href="/my_note/Lab/Computer-Organization-Lab.html" data-v-0009425e><!--[--><p class="text" data-v-0009425e>Computer Organization</p><!--]--></a><!----></div><!----></div><!--]--></div></section></div><div class="no-transition group" data-v-51288d80><section class="VPSidebarItem level-0 collapsible collapsed" data-v-51288d80 data-v-0009425e><div class="item" role="button" tabindex="0" data-v-0009425e><div class="indicator" data-v-0009425e></div><h2 class="text" data-v-0009425e>休息一下</h2><div class="caret" role="button" aria-label="toggle section" tabindex="0" data-v-0009425e><span class="vpi-chevron-right caret-icon" data-v-0009425e></span></div></div><div class="items" data-v-0009425e><!--[--><div class="VPSidebarItem level-1 is-link" data-v-0009425e data-v-0009425e><div class="item" data-v-0009425e><div class="indicator" data-v-0009425e></div><a class="VPLink link link" href="/my_note/Break/break.html" data-v-0009425e><!--[--><p class="text" data-v-0009425e>Read Me</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-0009425e data-v-0009425e><div class="item" data-v-0009425e><div class="indicator" data-v-0009425e></div><a class="VPLink link link" href="/my_note/Break/relax.html" data-v-0009425e><!--[--><p class="text" data-v-0009425e>喝杯下午茶</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-0009425e data-v-0009425e><div class="item" data-v-0009425e><div class="indicator" data-v-0009425e></div><a class="VPLink link link" href="/my_note/Break/cc98web.html" data-v-0009425e><!--[--><p class="text" data-v-0009425e>氵亿会儿98</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-0009425e data-v-0009425e><div class="item" data-v-0009425e><div class="indicator" data-v-0009425e></div><a class="VPLink link link" href="/my_note/Break/basketball.html" data-v-0009425e><!--[--><p class="text" data-v-0009425e>看一下比赛</p><!--]--></a><!----></div><!----></div><!--]--></div></section></div><!--]--><!--[--><!--]--></nav></aside><div class="VPContent has-sidebar" id="VPContent" data-v-d8b57b2d data-v-9a6c75ad><div class="VPDoc has-sidebar has-aside" data-v-9a6c75ad data-v-e6f2a212><!--[--><!--]--><div class="container" data-v-e6f2a212><div class="aside" data-v-e6f2a212><div class="aside-curtain" data-v-e6f2a212></div><div class="aside-container" data-v-e6f2a212><div class="aside-content" data-v-e6f2a212><div class="VPDocAside" data-v-e6f2a212 data-v-cb998dce><!--[--><!--]--><!--[--><!--]--><nav aria-labelledby="doc-outline-aria-label" class="VPDocAsideOutline" data-v-cb998dce data-v-f610f197><div class="content" data-v-f610f197><div class="outline-marker" data-v-f610f197></div><div aria-level="2" class="outline-title" id="doc-outline-aria-label" role="heading" data-v-f610f197>本页目录</div><ul class="VPDocOutlineItem root" data-v-f610f197 data-v-53c99d69><!--[--><!--]--></ul></div></nav><!--[--><!--]--><div class="spacer" data-v-cb998dce></div><!--[--><!--]--><!----><!--[--><!--]--><!--[--><!--]--></div></div></div></div><div class="content" data-v-e6f2a212><div class="content-container" data-v-e6f2a212><!--[--><!--]--><main class="main" data-v-e6f2a212><div style="position:relative;" class="vp-doc _my_note_Cover_api-examples" data-v-e6f2a212><div><h1 id="runtime-api-examples" tabindex="-1">Runtime API Examples <a class="header-anchor" href="#runtime-api-examples" aria-label="Permalink to &quot;Runtime API Examples&quot;">​</a></h1><p>This page demonstrates usage of some of the runtime APIs provided by VitePress.</p><p>The main <code>useData()</code> API can be used to access site, theme, and page data for the current page. It works in both <code>.md</code> and <code>.vue</code> files:</p><div class="language-md vp-adaptive-theme line-numbers-mode"><button title="Copy Code" class="copy"></button><span class="lang">md</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">&lt;script setup&gt;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">import { useData } from &#39;vitepress&#39;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">const { theme, page, frontmatter } = useData()</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">&lt;/script&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;">## Results</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;">### Theme Data</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">&lt;pre&gt;{{ theme }}&lt;/pre&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;">### Page Data</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">&lt;pre&gt;{{ page }}&lt;/pre&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;">### Page Frontmatter</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">&lt;pre&gt;{{ frontmatter }}&lt;/pre&gt;</span></span></code></pre><div class="line-numbers-wrapper" aria-hidden="true"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br></div></div><h2 id="results" tabindex="-1">Results <a class="header-anchor" href="#results" aria-label="Permalink to &quot;Results&quot;">​</a></h2><h3 id="theme-data" tabindex="-1">Theme Data <a class="header-anchor" href="#theme-data" aria-label="Permalink to &quot;Theme Data&quot;">​</a></h3><pre>{
+  &quot;logo&quot;: &quot;/20260323101521_872_96.png&quot;,
+  &quot;siteTitle&quot;: &quot;My Note&quot;,
+  &quot;outline&quot;: {
+    &quot;level&quot;: &quot;deep&quot;,
+    &quot;label&quot;: &quot;本页目录&quot;
+  },
+  &quot;nav&quot;: [
+    {
+      &quot;text&quot;: &quot;首页&quot;,
+      &quot;link&quot;: &quot;/&quot;
+    },
+    {
+      &quot;text&quot;: &quot;课程&quot;,
+      &quot;items&quot;: [
+        {
+          &quot;text&quot;: &quot;计科专业理论课&quot;,
+          &quot;link&quot;: &quot;/Theory/theory&quot;
+        },
+        {
+          &quot;text&quot;: &quot;实验课内容及实验报告&quot;,
+          &quot;link&quot;: &quot;/Lab/lab&quot;
+        }
+      ]
+    },
+    {
+      &quot;text&quot;: &quot;休息一下&quot;,
+      &quot;link&quot;: &quot;/Break/break&quot;
+    }
+  ],
+  &quot;socialLinks&quot;: [
+    {
+      &quot;icon&quot;: &quot;github&quot;,
+      &quot;link&quot;: &quot;https://github.com/2479717811dht-code&quot;,
+      &quot;ariaLabel&quot;: &quot;GitHub&quot;
+    }
+  ],
+  &quot;sidebar&quot;: [
+    {
+      &quot;text&quot;: &quot;开始阅读&quot;,
+      &quot;collapsed&quot;: false,
+      &quot;items&quot;: [
+        {
+          &quot;text&quot;: &quot;课程总览&quot;,
+          &quot;link&quot;: &quot;/Cover/logic&quot;
+        }
+      ]
+    },
+    {
+      &quot;text&quot;: &quot;理论课&quot;,
+      &quot;collapsed&quot;: false,
+      &quot;items&quot;: [
+        {
+          &quot;text&quot;: &quot;Read Me&quot;,
+          &quot;link&quot;: &quot;/Theory/theory&quot;
+        },
+        {
+          &quot;text&quot;: &quot;Fundamentals of Programming and Algorithms&quot;,
+          &quot;link&quot;: &quot;/Theory/note-cs-code-cleaned&quot;
+        },
+        {
+          &quot;text&quot;: &quot;Digital Logic Design&quot;,
+          &quot;link&quot;: &quot;/Theory/dldnote&quot;
+        },
+        {
+          &quot;text&quot;: &quot;Fundamentals of Data Structure&quot;,
+          &quot;link&quot;: &quot;/Theory/Fundamentals_of_Data_Structure&quot;
+        },
+        {
+          &quot;text&quot;: &quot;Discrete Mathematics&quot;,
+          &quot;link&quot;: &quot;/Theory/Discrete_Mathematics&quot;
+        },
+        {
+          &quot;text&quot;: &quot;Computer Organization&quot;,
+          &quot;link&quot;: &quot;/Theory/Computer_Organization&quot;
+        },
+        {
+          &quot;text&quot;: &quot;Advanced Data Structure &amp; Algorithm Analysis&quot;,
+          &quot;link&quot;: &quot;/Theory/Advanced_Data_Structure_Algorithm_Analysis&quot;
+        }
+      ]
+    },
+    {
+      &quot;text&quot;: &quot;实验课&quot;,
+      &quot;collapsed&quot;: false,
+      &quot;items&quot;: [
+        {
+          &quot;text&quot;: &quot;Read Me&quot;,
+          &quot;link&quot;: &quot;/Lab/lab&quot;
+        },
+        {
+          &quot;text&quot;: &quot;Digital Logic Design&quot;,
+          &quot;link&quot;: &quot;/Lab/Digital-Logic-Design-Lab&quot;
+        },
+        {
+          &quot;text&quot;: &quot;Computer Organization&quot;,
+          &quot;link&quot;: &quot;/Lab/Computer-Organization-Lab&quot;
+        }
+      ]
+    },
+    {
+      &quot;text&quot;: &quot;休息一下&quot;,
+      &quot;collapsed&quot;: true,
+      &quot;items&quot;: [
+        {
+          &quot;text&quot;: &quot;Read Me&quot;,
+          &quot;link&quot;: &quot;/Break/break&quot;
+        },
+        {
+          &quot;text&quot;: &quot;喝杯下午茶&quot;,
+          &quot;link&quot;: &quot;/Break/relax&quot;
+        },
+        {
+          &quot;text&quot;: &quot;氵亿会儿98&quot;,
+          &quot;link&quot;: &quot;/Break/cc98web&quot;
+        },
+        {
+          &quot;text&quot;: &quot;看一下比赛&quot;,
+          &quot;link&quot;: &quot;/Break/basketball&quot;
+        }
+      ]
+    }
+  ],
+  &quot;search&quot;: {
+    &quot;provider&quot;: &quot;local&quot;,
+    &quot;options&quot;: {
+      &quot;locales&quot;: {
+        &quot;root&quot;: {
+          &quot;translations&quot;: {
+            &quot;button&quot;: {
+              &quot;buttonText&quot;: &quot;搜索&quot;,
+              &quot;buttonAriaLabel&quot;: &quot;搜索&quot;
+            },
+            &quot;modal&quot;: {
+              &quot;displayDetails&quot;: &quot;显示详细列表&quot;,
+              &quot;resetButtonTitle&quot;: &quot;重置搜索&quot;,
+              &quot;backButtonTitle&quot;: &quot;关闭搜索&quot;,
+              &quot;noResultsText&quot;: &quot;没有找到相关内容&quot;,
+              &quot;footer&quot;: {
+                &quot;selectText&quot;: &quot;选择&quot;,
+                &quot;selectKeyAriaLabel&quot;: &quot;回车&quot;,
+                &quot;navigateText&quot;: &quot;切换&quot;,
+                &quot;navigateUpKeyAriaLabel&quot;: &quot;向上箭头&quot;,
+                &quot;navigateDownKeyAriaLabel&quot;: &quot;向下箭头&quot;,
+                &quot;closeText&quot;: &quot;关闭&quot;,
+                &quot;closeKeyAriaLabel&quot;: &quot;Esc&quot;
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  &quot;docFooter&quot;: {
+    &quot;prev&quot;: &quot;上一篇&quot;,
+    &quot;next&quot;: &quot;下一篇&quot;
+  },
+  &quot;lastUpdated&quot;: {
+    &quot;text&quot;: &quot;最后更新于&quot;
+  },
+  &quot;darkModeSwitchLabel&quot;: &quot;外观&quot;,
+  &quot;lightModeSwitchTitle&quot;: &quot;切换为浅色模式&quot;,
+  &quot;darkModeSwitchTitle&quot;: &quot;切换为深色模式&quot;,
+  &quot;sidebarMenuLabel&quot;: &quot;课程目录&quot;,
+  &quot;returnToTopLabel&quot;: &quot;返回顶部&quot;,
+  &quot;skipToContentLabel&quot;: &quot;跳到正文&quot;,
+  &quot;footer&quot;: {
+    &quot;message&quot;: &quot;Built with VitePress · My Digital Garden&quot;,
+    &quot;copyright&quot;: &quot;Copyright © 2026 H.T.Deng&quot;
+  }
+}</pre><h3 id="page-data" tabindex="-1">Page Data <a class="header-anchor" href="#page-data" aria-label="Permalink to &quot;Page Data&quot;">​</a></h3><pre>{
+  &quot;title&quot;: &quot;Runtime API Examples&quot;,
+  &quot;description&quot;: &quot;&quot;,
+  &quot;frontmatter&quot;: {
+    &quot;outline&quot;: &quot;deep&quot;
+  },
+  &quot;headers&quot;: [],
+  &quot;relativePath&quot;: &quot;Cover/api-examples.md&quot;,
+  &quot;filePath&quot;: &quot;Cover/api-examples.md&quot;,
+  &quot;lastUpdated&quot;: 1782377578000
+}</pre><h3 id="page-frontmatter" tabindex="-1">Page Frontmatter <a class="header-anchor" href="#page-frontmatter" aria-label="Permalink to &quot;Page Frontmatter&quot;">​</a></h3><pre>{
+  &quot;outline&quot;: &quot;deep&quot;
+}</pre><h2 id="more" tabindex="-1">More <a class="header-anchor" href="#more" aria-label="Permalink to &quot;More&quot;">​</a></h2><p>Check out the documentation for the <a href="https://vitepress.dev/reference/runtime-api#usedata" target="_blank" rel="noreferrer">full list of runtime APIs</a>.</p></div></div></main><footer class="VPDocFooter" data-v-e6f2a212 data-v-1bcd8184><!--[--><!--]--><div class="edit-info" data-v-1bcd8184><!----><div class="last-updated" data-v-1bcd8184><p class="VPLastUpdated" data-v-1bcd8184 data-v-1bb0c8a8>最后更新于: <time datetime="2026-06-25T08:52:58.000Z" data-v-1bb0c8a8></time></p></div></div><nav class="prev-next" aria-labelledby="doc-footer-aria-label" data-v-1bcd8184><span class="visually-hidden" id="doc-footer-aria-label" data-v-1bcd8184>Pager</span><div class="pager" data-v-1bcd8184><!----></div><div class="pager" data-v-1bcd8184><a class="VPLink link pager-link next" href="/my_note/Cover/logic.html" data-v-1bcd8184><!--[--><span class="desc" data-v-1bcd8184>下一篇</span><span class="title" data-v-1bcd8184>课程总览</span><!--]--></a></div></nav></footer><!--[--><!--]--></div></div></div><!--[--><!--]--></div></div><footer class="VPFooter has-sidebar" data-v-d8b57b2d data-v-566314d4><div class="container" data-v-566314d4><p class="message" data-v-566314d4>Built with VitePress · My Digital Garden</p><p class="copyright" data-v-566314d4>Copyright © 2026 H.T.Deng</p></div></footer><!--[--><!--]--></div></div>
+    <script>window.__VP_HASH_MAP__=JSON.parse("{\"break_basketball.md\":\"Ce7spOF9\",\"break_break.md\":\"B6_tnrtW\",\"break_cc98web.md\":\"MFYDsitr\",\"break_relax.md\":\"Ces5Fu1z\",\"cover_api-examples.md\":\"C9Bs5alO\",\"cover_explanation.md\":\"BQVi3hdT\",\"cover_logic.md\":\"DYI9ZhPL\",\"cover_markdown-examples.md\":\"ClNQgVIt\",\"index.md\":\"B8j496_1\",\"lab_computer-organization-lab.md\":\"CNV3gW2m\",\"lab_digital-logic-design-lab.md\":\"DsjkTd97\",\"lab_lab.md\":\"Ryhbm1St\",\"lab_lab_for_all_computer_organization_none.md\":\"DKNCIbvD\",\"lab_lab_for_all_digital_logic_design_lab_3.16_report.md\":\"DqRZxB63\",\"lab_lab_for_all_digital_logic_design_lab_3.16_第三次实验报告-邓欢桐、杨海涛.md\":\"BQ4fSZlX\",\"lab_lab_for_all_digital_logic_design_lab_3.23_第四次实验报告.md\":\"DxwBT1D6\",\"lab_lab_for_all_digital_logic_design_lab_3.2_untitled.md\":\"Dp8SpZG-\",\"lab_lab_for_all_digital_logic_design_lab_3.2_实验报告1-邓欢桐、杨海涛.md\":\"B1b2NEsa\",\"lab_lab_for_all_digital_logic_design_lab_3.2_第一次实验报告-邓欢桐、杨海涛.md\":\"Da7MbcWT\",\"lab_lab_for_all_digital_logic_design_lab_3.30_第五次实验报告-邓欢桐、杨海涛.md\":\"BmJ3gRck\",\"lab_lab_for_all_digital_logic_design_lab_3.9_第二次实验报告-邓欢桐、杨海涛.md\":\"U4LxEzKa\",\"lab_lab_for_all_digital_logic_design_lab_4.13_第六次实验报告-邓欢桐、杨海涛.md\":\"RYRO5sh4\",\"lab_lab_for_all_digital_logic_design_lab_4.20_第七次实验报告（邓欢桐、杨海涛）.md\":\"BE7NLzVY\",\"lab_lab_for_all_digital_logic_design_lab_4.27_第八次实验报告-邓欢桐、杨海涛.md\":\"Ds2H0pWf\",\"lab_lab_for_all_digital_logic_design_lab_5.11_第九次实验报告-邓欢桐、杨海涛.md\":\"DYx7Pwy-\",\"lab_lab_for_all_digital_logic_design_lab_5.18_第十次实验报告-邓欢桐、杨海涛.md\":\"CIhEgTAd\",\"lab_lab_for_all_digital_logic_design_lab_5.25_第十一次实验报告-邓欢桐，杨海涛.md\":\"C0PDRGfN\",\"lab_lab_for_all_digital_logic_design_lab_6.1_第十二次实验报告-邓欢桐、杨海涛.md\":\"C-h0ONvr\",\"lab_lab_for_all_digital_logic_design_lab_6.8_第十三次实验报告-邓欢桐、杨海涛.md\":\"BcO8FJUG\",\"lab_lab_for_all_digital_logic_design_lab_chain_chain.md\":\"BmZ9LJs8\",\"lab_lab_for_all_digital_logic_design_projects_degital_logic_design_final_porject_report_report.md\":\"CDVj-bRF\",\"lab_lab_for_all_digital_logic_design_projects_degital_logic_design_final_porject_video_for_acceptance_read_me.md\":\"sG_diZxG\",\"readme.md\":\"C5uc-fSa\",\"theory_advanced_data_structure_algorithm_analysis.md\":\"Dfqf2E6q\",\"theory_computer_organization.md\":\"DXu-p_aV\",\"theory_discrete_mathematics.md\":\"2Z3Y2gmj\",\"theory_dldnote.md\":\"BlsA5ukS\",\"theory_fundamentals_of_data_structure.md\":\"CfZ4ScJ6\",\"theory_note-cs-code-cleaned.md\":\"CoxE5AmC\",\"theory_theory.md\":\"CXhElWZd\"}");window.__VP_SITE_DATA__=JSON.parse("{\"lang\":\"zh-CN\",\"dir\":\"ltr\",\"title\":\"My Note\",\"description\":\"我的数字花园\",\"base\":\"/my_note/\",\"head\":[],\"router\":{\"prefetchLinks\":true},\"appearance\":true,\"themeConfig\":{\"logo\":\"/20260323101521_872_96.png\",\"siteTitle\":\"My Note\",\"outline\":{\"level\":\"deep\",\"label\":\"本页目录\"},\"nav\":[{\"text\":\"首页\",\"link\":\"/\"},{\"text\":\"课程\",\"items\":[{\"text\":\"计科专业理论课\",\"link\":\"/Theory/theory\"},{\"text\":\"实验课内容及实验报告\",\"link\":\"/Lab/lab\"}]},{\"text\":\"休息一下\",\"link\":\"/Break/break\"}],\"socialLinks\":[{\"icon\":\"github\",\"link\":\"https://github.com/2479717811dht-code\",\"ariaLabel\":\"GitHub\"}],\"sidebar\":[{\"text\":\"开始阅读\",\"collapsed\":false,\"items\":[{\"text\":\"课程总览\",\"link\":\"/Cover/logic\"}]},{\"text\":\"理论课\",\"collapsed\":false,\"items\":[{\"text\":\"Read Me\",\"link\":\"/Theory/theory\"},{\"text\":\"Fundamentals of Programming and Algorithms\",\"link\":\"/Theory/note-cs-code-cleaned\"},{\"text\":\"Digital Logic Design\",\"link\":\"/Theory/dldnote\"},{\"text\":\"Fundamentals of Data Structure\",\"link\":\"/Theory/Fundamentals_of_Data_Structure\"},{\"text\":\"Discrete Mathematics\",\"link\":\"/Theory/Discrete_Mathematics\"},{\"text\":\"Computer Organization\",\"link\":\"/Theory/Computer_Organization\"},{\"text\":\"Advanced Data Structure & Algorithm Analysis\",\"link\":\"/Theory/Advanced_Data_Structure_Algorithm_Analysis\"}]},{\"text\":\"实验课\",\"collapsed\":false,\"items\":[{\"text\":\"Read Me\",\"link\":\"/Lab/lab\"},{\"text\":\"Digital Logic Design\",\"link\":\"/Lab/Digital-Logic-Design-Lab\"},{\"text\":\"Computer Organization\",\"link\":\"/Lab/Computer-Organization-Lab\"}]},{\"text\":\"休息一下\",\"collapsed\":true,\"items\":[{\"text\":\"Read Me\",\"link\":\"/Break/break\"},{\"text\":\"喝杯下午茶\",\"link\":\"/Break/relax\"},{\"text\":\"氵亿会儿98\",\"link\":\"/Break/cc98web\"},{\"text\":\"看一下比赛\",\"link\":\"/Break/basketball\"}]}],\"search\":{\"provider\":\"local\",\"options\":{\"locales\":{\"root\":{\"translations\":{\"button\":{\"buttonText\":\"搜索\",\"buttonAriaLabel\":\"搜索\"},\"modal\":{\"displayDetails\":\"显示详细列表\",\"resetButtonTitle\":\"重置搜索\",\"backButtonTitle\":\"关闭搜索\",\"noResultsText\":\"没有找到相关内容\",\"footer\":{\"selectText\":\"选择\",\"selectKeyAriaLabel\":\"回车\",\"navigateText\":\"切换\",\"navigateUpKeyAriaLabel\":\"向上箭头\",\"navigateDownKeyAriaLabel\":\"向下箭头\",\"closeText\":\"关闭\",\"closeKeyAriaLabel\":\"Esc\"}}}}}}},\"docFooter\":{\"prev\":\"上一篇\",\"next\":\"下一篇\"},\"lastUpdated\":{\"text\":\"最后更新于\"},\"darkModeSwitchLabel\":\"外观\",\"lightModeSwitchTitle\":\"切换为浅色模式\",\"darkModeSwitchTitle\":\"切换为深色模式\",\"sidebarMenuLabel\":\"课程目录\",\"returnToTopLabel\":\"返回顶部\",\"skipToContentLabel\":\"跳到正文\",\"footer\":{\"message\":\"Built with VitePress · My Digital Garden\",\"copyright\":\"Copyright © 2026 H.T.Deng\"}},\"locales\":{},\"scrollOffset\":134,\"cleanUrls\":false}");</script>
+    
+  </body>
+</html>
