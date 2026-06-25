@@ -7,7 +7,7 @@ hero:
   tagline: "H.T.Deng | AR15LAL"
 
   image:
-    src: ./public/20260323101521_872_96.png
+    src: /20260323101521_872_96.png
     alt: Logo
 
   actions:
