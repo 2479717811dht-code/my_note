@@ -105,11 +105,11 @@ export default withMermaid(
           items: [
             {
               text: '计科专业理论课',
-              link: '/theory'
+              link: '/Theory/theory'
             },
             {
               text: '实验课内容及实验报告',
-              link: '/lab'
+              link: '/Lab/lab'
             },
           // items: [
           //   {
@@ -144,7 +144,7 @@ export default withMermaid(
         },
         {
           text: '休息一下',
-          link: '/break'
+          link: '/Break/break'
         }
       ],
 
@@ -163,7 +163,7 @@ export default withMermaid(
           items: [
             {
               text: '课程总览',
-              link: '/logic'
+              link: '/Cover/logic'
             }
           ]
         },
@@ -173,31 +173,31 @@ export default withMermaid(
           items: [
             {
               text: 'Read Me',
-              link: '/theory'
+              link: '/Theory/theory'
             },
             {
               text: 'Fundamentals of Programming and Algorithms',
-              link: '/note-cs-code-cleaned'
+              link: '/Theory/note-cs-code-cleaned'
             },
             {
               text: 'Digital Logic Design',
-              link: '/dldnote'
+              link: '/Theory/dldnote'
             },
             {
               text: 'Fundamentals of Data Structure',
-              link: '/Fundamentals_of_Data_Structure'
+              link: '/Theory/Fundamentals_of_Data_Structure'
             },
             {
               text: 'Discrete Mathematics',
-              link: '/Discrete_Mathematics'
+              link: '/Theory/Discrete_Mathematics'
             },
             {
               text: 'Computer Organization',
-              link: '/Computer_Organization'
+              link: '/Theory/Computer_Organization'
             },
             {
               text: 'Advanced Data Structure & Algorithm Analysis',
-              link: '/Advanced_Data_Structure_Algorithm_Analysis'
+              link: '/Theory/Advanced_Data_Structure_Algorithm_Analysis'
             }
           ]
         },
@@ -211,11 +211,11 @@ export default withMermaid(
             // },
             {
               text: 'Read Me',
-              link: '/lab'
+              link: '/Lab/lab'
             },
             {
               text: 'Digital Logic Design',
-              link: '/Digital-Logic-Design-Lab'
+              link: '/Lab/Digital-Logic-Design-Lab'
             },
             // {
             //   text: 'Fundamentals of Data Structure',
@@ -227,7 +227,7 @@ export default withMermaid(
             // },
             {
               text: 'Computer Organization',
-              link: '/Computer-Organization-Lab'
+              link: '/Lab/Computer-Organization-Lab'
             }
             // {
             //   text: 'Advanced Data Structure & Algorithm Analysis',
@@ -241,19 +241,19 @@ export default withMermaid(
           items: [
             {
               text: 'Read Me',
-              link: '/break'
+              link: '/Break/break'
             },            
             {
               text: '喝杯下午茶',
-              link: '/relax'
+              link: '/Break/relax'
             },
             {
               text: '氵亿会儿98',
-              link: '/cc98web'
+              link: '/Break/cc98web'
             },
             {
               text: '看一下比赛',
-              link: '/basketball'
+              link: '/Break/basketball'
             }
           ]
         }

@@ -7,13 +7,13 @@ hero:
   tagline: "H.T.Deng | AR15LAL"
 
   image:
-    src: /20260323101521_872_96.png
+    src: ./public/20260323101521_872_96.png
     alt: Logo
 
   actions:
     - theme: brand
       text: "Start Reading"
-      link: /logic
+      link: /Cover/logic
 
     - theme: alt
       text: "Check in GitHub"
@@ -23,25 +23,25 @@ features:
   - icon: 🧭
     title: Course Map
     details: 从课程总览开始，按自己的学习进度进入对应笔记。
-    link: /logic
+    link: /Cover/logic
     linkText: Start Here
 
   - icon: 💻
     title: Theory
     details: 理论课的笔记整理
-    link: /theory
+    link: /Theory/theory
     linkText: Read Me
 
   - icon: 🧠
     title: Lab
     details: 实验课的 PPT 和一些报告（附代码）
-    link: /lab
+    link: /Lab/lab
     linkText: Read Me
 
   - icon: ☕
     title: Take a Break
     details: 学累了就喝杯下午茶，稍微休息一下再继续。
-    link: /relax
+    link: /Break/break
     linkText: Relax
 ---
 
