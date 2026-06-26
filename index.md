@@ -22,7 +22,7 @@ hero:
 features:
   - icon: 🧭
     title: Course Map
-    details: 从课程总览开始，按自己的学习进度进入对应笔记。
+    details: 从课程总览开始，按自己的学习进度进入对应笔记
     link: /Cover/logic
     linkText: Start Here
 
@@ -40,7 +40,7 @@ features:
 
   - icon: ☕
     title: Take a Break
-    details: 学累了就喝杯下午茶，稍微休息一下再继续。
+    details: 学累了就喝杯下午茶，稍微休息一下再继续
     link: /Break/break
     linkText: Relax
 ---
