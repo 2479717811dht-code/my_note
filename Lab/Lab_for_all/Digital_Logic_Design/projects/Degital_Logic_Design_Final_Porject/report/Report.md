@@ -6,11 +6,12 @@
 <center>
 <img src="./20260323101520_871_96.png" style="zoom: 60%;" />
 <img src="./20260323101521_872_96.png" style="zoom: 20%;" />
-<img src="./20260324164217_269_180.jpg" style="zoom: 25%;" />
+<img src="./ckc.png" style="zoom: 25%;" />
 </center>
 <center>
 <img src="./background.jpg" style="zoom:20%;" /><img src="./20260620003444_310_1.png" style="zoom:70.9%;"  />
 </center>
+
 
 ---
 
