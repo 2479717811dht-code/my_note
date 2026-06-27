@@ -6,7 +6,7 @@ hero:
   text: "MIX && CS"
   tagline: "H.T.Deng | AR15LAL"
   image:
-    src: /ckc.png
+    src: /20260323101521_872_96.png
     alt: "Logo"
   actions:
     - theme: brand
