@@ -99,6 +99,14 @@ Welcome to **My Note**.
 
 [进入课程笔记 →](/Theory/Advanced_Data_Structure_Algorithm_Analysis)
 
+###  Probability and Mathematical Statistics
+
+概率论与数理统计
+
+简称概与统，比概和统稍微简单些，表面上是计科的专业课，本质上是一门数学课。
+
+[进入课程笔记 →](/Theory/Probability_and_Mathematical_Statistics)
+
 ## Study Checklist
 
 * [ ] 阅读课程基本概念

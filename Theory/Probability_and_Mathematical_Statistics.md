@@ -1,0 +1,21 @@
+# <center>概率论与数理统计</center>
+
+---
+
+<center>浙江大学 竺可桢学院 混合2504班 邓欢桐 3250102223</center>
+
+---
+
+<center>
+<img src="../public/20260323101520_871_96.png" style="zoom: 60%;" />
+<img src="../public/20260323101521_872_96.png" style="zoom: 20%;" />
+<img src="../public/ckc.png" style="zoom: 25%;" />
+</center>
+
+
+
+---
+
+[TOC]
+
+---

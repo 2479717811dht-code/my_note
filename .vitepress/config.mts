@@ -198,6 +198,10 @@ export default withMermaid(
             {
               text: 'Advanced Data Structure & Algorithm Analysis',
               link: '/Theory/Advanced_Data_Structure_Algorithm_Analysis'
+            },
+            {
+              text: '	Probability and Mathematical Statistics',
+              link: '/Theory/Probability_and_Mathematical_Statistics'
             }
           ]
         },
