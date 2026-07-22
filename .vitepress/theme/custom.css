@@ -1,5 +1,34 @@
 /* ==================================================
- * Warm Ink (暖砚) 风格配色变量定义
+ * 0. 引入霞鹜文楷在线字体（确保手机及未装字体的设备正常显示）
+ * ================================================== */
+@import url('https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css');
+
+/* ==================================================
+ * 1. 暖砚（Warm Ink）本地字体声明与全局覆盖
+ * ================================================== */
+@font-face {
+  font-family: "Warm Ink WenKai GB";
+  src: local("LXGW WenKai GB Screen"),
+       local("LXGW WenKai Screen GB"),
+       local("LXGW WenKai Screen GB Screen"),
+       local("LXGWWenKaiGBScreen"),
+       local("霞鹜文楷 GB 屏幕阅读版"),
+       local("LXGW WenKai GB"),
+       local("LXGW WenKai Screen"),
+       local("LXGW WenKai");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+:root {
+  /* 覆盖 VitePress 底层字体变量，将在线字体与本地文楷放到首位 */
+  --vp-font-family-base: "LXGW WenKai Screen", "Warm Ink WenKai GB", "LXGW WenKai GB Screen", "LXGW WenKai Screen GB", "霞鹜文楷 GB 屏幕阅读版", "LXGW WenKai", "Microsoft YaHei", sans-serif !important;
+  --vp-font-family-mono: "Maple Mono CN", "Maple Mono", "Maple Mono NF CN", "Cascadia Code", "JetBrains Mono", Consolas, monospace !important;
+}
+
+/* ==================================================
+ * 2. 暖砚（Warm Ink）风格配色变量定义
  * ================================================== */
 .vp-doc {
   --wi-text: #5f5654;           /* 砚墨灰：默认文本 */
@@ -11,7 +40,38 @@
   --wi-border: #ddd2ca;         /* 暖砚边框 */
   --wi-border-light: #eee5de;   /* 浅层边框 */
   --wi-highlight: #eee1b7;      /* 暖黄高光 */
+
+  /* 强制应用文楷与基础文字样式 */
+  font-family: var(--vp-font-family-base);
+  color: var(--wi-text);
 }
+
+/* 强制各级容器继承文楷字体 */
+.vp-doc p,
+.vp-doc h1,
+.vp-doc h2,
+.vp-doc h3,
+.vp-doc h4,
+.vp-doc h5,
+.vp-doc h6,
+.vp-doc li,
+.vp-doc blockquote,
+.vp-doc table {
+  font-family: var(--vp-font-family-base);
+}
+
+/* 强制代码容器应用 Maple Mono 等宽字体 */
+.vp-doc code,
+.vp-doc tt,
+.vp-doc pre,
+.vp-doc div[class*="language-"] code,
+.vp-doc div[class*="language-"] pre {
+  font-family: var(--vp-font-family-mono);
+}
+
+/* ==================================================
+ * 3. 基础元素与拓展功能（列表、高亮、脚注、图表）
+ * ================================================== */
 
 /* 任务列表：引入暖砚竹绿强调色 */
 .vp-doc input[type='checkbox'] {
@@ -19,10 +79,10 @@
   height: 1em;
   margin-right: 0.45em;
   vertical-align: -0.12em;
-  accent-color: var(--wi-accent); /* 暖砚复选框主题色 */
+  accent-color: var(--wi-accent);
 }
 
-/* 任务列表已完成时的弱化样式（贴合暖砚纸质质感） */
+/* 任务列表已完成时的弱化样式 */
 .vp-doc .task-list-item.done,
 .vp-doc .task-list-item.done > p {
   color: var(--wi-muted);
@@ -67,8 +127,8 @@
 }
 
 /* ==================================================
-   标题间距统一：保留你的逻辑，注入暖砚色彩与下划线
-================================================== */
+ * 4. 标题间距统一与暖砚层次化修饰
+ * ================================================== */
 
 /* 统一所有标题上方间距，赋予暖砚基础文字特性 */
 .vp-doc h1,
@@ -171,22 +231,22 @@
 }
 
 /* ==================================================
- * 暖砚（Warm Ink）核心排版细节补充
+ * 5. 暖砚（Warm Ink）排版细节与特色区块
  * ================================================== */
 
-/* 1. 粗体、超链接与行内代码：彻底告别冷色调 */
+/* 粗体、超链接与独立行内代码 */
 .vp-doc strong {
-  color: #625454; /* 暖墨色，比纯黑更温润 */
+  color: #625454;
 }
 
 .vp-doc a {
-  color: var(--wi-accent-dark, #627e5b); /* 深竹绿 */
+  color: var(--wi-accent-dark, #627e5b);
   text-decoration: none;
-  border-bottom: 1px solid #b5c3aa; /* 暖砚标志性的超链接绿色底线 */
+  border-bottom: 1px solid #b5c3aa;
   transition: color 0.2s, border-color 0.2s;
 }
 .vp-doc a:hover {
-  color: var(--wi-accent, #79946f); /* 悬停时变浅竹绿 */
+  color: var(--wi-accent, #79946f);
   border-bottom-color: var(--wi-accent, #79946f);
 }
 
@@ -199,14 +259,14 @@
   border-radius: 4px;
 }
 
-/* 2. 引用块与分割线：模拟素纸质感 */
+/* 引用块与分割线：模拟素纸质感 */
 .vp-doc blockquote:not(.md-alert) {
   margin: 1.25rem 0;
   padding: 0.9rem 1rem;
   color: var(--wi-text-soft, #756966);
-  background: #faf5f0; /* 柔和纸张底色 */
+  background: #faf5f0;
   border: 1px solid var(--wi-border, #ddd2ca);
-  border-left: 4px solid var(--wi-accent-dark, #627e5b); /* 左侧边框改为深竹绿 */
+  border-left: 4px solid var(--wi-accent-dark, #627e5b);
   border-radius: 6px;
 }
 
@@ -214,23 +274,23 @@
   height: 1px;
   margin: 2.4rem 0;
   border: 0;
-  background: var(--wi-border, #ddd2ca); /* 去掉自带的渐变或复杂线条 */
+  background: var(--wi-border, #ddd2ca);
 }
 
-/* 3. 表格样式：深色纸质表头 + 隔行暖色交替 */
+/* 表格样式：深色纸质表头 + 隔行暖色交替 */
 .vp-doc table {
   border-collapse: collapse;
 }
 .vp-doc th {
   color: var(--wi-heading, #4b4240);
-  background: #f1e9e2; /* 深度纸张色 */
+  background: #f1e9e2;
   font-weight: 700;
 }
 .vp-doc tbody tr:nth-child(even) {
   background: #fbf8f2;
 }
 
-/* 4. 折叠区块（Details/Summary） */
+/* 折叠区块（Details/Summary） */
 .vp-doc details {
   padding: 0.72rem 0.9rem;
   border: 1px solid var(--wi-border, #ddd2ca);
@@ -243,7 +303,9 @@
   cursor: pointer;
 }
 
-/* 5. 暖砚专属招牌：居中格言与靠右署名（在 VitePress 博客中极具特色） */
+/* ==================================================
+ * 6. 暖砚专属招牌：居中格言与靠右署名
+ * ================================================== */
 .vp-doc .my-motto,
 .vp-doc p.my-motto {
   display: block !important;
@@ -272,7 +334,7 @@
   text-align: right !important;
   margin-top: 60px !important;
   padding-right: 20px !important;
-  color: #6b4423 !important; /* 偏红棕的印章/签字墨色 */
+  color: #6b4423 !important;
   font-family: "钟齐志莽行书", cursive !important;
   font-size: 26px !important;
   letter-spacing: 2px !important;
