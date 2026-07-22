@@ -1,48 +1,118 @@
-/* 任务列表 */
+/* ==================================================
+ * Warm Ink (暖砚) 风格配色变量定义
+ * ================================================== */
+.vp-doc {
+  --wi-text: #5f5654;           /* 砚墨灰：默认文本 */
+  --wi-text-soft: #756966;      /* 次级文本 */
+  --wi-muted: #9a8d87;          /* 弱化文本/注释 */
+  --wi-heading: #4b4240;        /* 墨色：主标题颜色 */
+  --wi-accent: #79946f;         /* 竹绿：强调色 */
+  --wi-accent-dark: #627e5b;    /* 深竹绿：H2/H3 标题色 */
+  --wi-border: #ddd2ca;         /* 暖砚边框 */
+  --wi-border-light: #eee5de;   /* 浅层边框 */
+  --wi-highlight: #eee1b7;      /* 暖黄高光 */
+}
+
+/* 任务列表：引入暖砚竹绿强调色 */
 .vp-doc input[type='checkbox'] {
-width: 1em;
-height: 1em;
-margin-right: 0.45em;
-vertical-align: -0.12em;
+  width: 1em;
+  height: 1em;
+  margin-right: 0.45em;
+  vertical-align: -0.12em;
+  accent-color: var(--wi-accent); /* 暖砚复选框主题色 */
 }
 
-/* 高亮文字 */
+/* 任务列表已完成时的弱化样式（贴合暖砚纸质质感） */
+.vp-doc .task-list-item.done,
+.vp-doc .task-list-item.done > p {
+  color: var(--wi-muted);
+}
+
+/* 高亮文字：替换为暖砚专用的暖黄色与舒适内边距 */
 .vp-doc mark {
-padding: 0.08em 0.2em;
-border-radius: 3px;
+  color: inherit;
+  background: var(--wi-highlight);
+  padding: 0.08em 0.2em;
+  border-radius: 3px;
 }
 
-/* 脚注区域 */
+/* 脚注区域：增加暖砚顶边线与纸质弱化色 */
 .vp-doc .footnotes {
-margin-top: 2.5rem;
-font-size: 0.9em;
+  margin-top: 2.8rem;
+  padding-top: 1.2rem;
+  color: var(--wi-text-soft);
+  font-size: 0.92em;
+  border-top: 1px solid var(--wi-border);
 }
 
-/* Mermaid 图不要超出页面 */
+/* Footnote 上标颜色改用暖砚竹绿 */
+.vp-doc sup.footnote-ref a {
+  color: var(--wi-accent-dark);
+  font-weight: 700;
+}
+
+/* Mermaid 图不要超出页面 + 增加暖砚极细滚动条质感 */
 .vp-doc .mermaid {
-overflow-x: auto;
-text-align: center;
+  overflow-x: auto;
+  text-align: center;
+  scrollbar-width: thin;
+  scrollbar-color: var(--wi-border) transparent;
+}
+.vp-doc .mermaid::-webkit-scrollbar {
+  height: 6px;
+}
+.vp-doc .mermaid::-webkit-scrollbar-thumb {
+  background: var(--wi-border);
+  border-radius: 3px;
 }
 
 /* ==================================================
-标题间距统一：h1、h2、h3、h4、h5、h6 全部一致
+   标题间距统一：保留你的逻辑，注入暖砚色彩与下划线
 ================================================== */
 
-/* 统一所有标题上方间距，去掉各级标题原有的不同下边距 */
+/* 统一所有标题上方间距，赋予暖砚基础文字特性 */
 .vp-doc h1,
 .vp-doc h2,
 .vp-doc h3,
 .vp-doc h4,
 .vp-doc h5,
 .vp-doc h6 {
-margin-top: 1.0rem !important;
-margin-bottom: 0 !important;
+  margin-top: 1.0rem !important;
+  margin-bottom: 0 !important;
+  color: var(--wi-heading);
+  font-weight: 700;
+  line-height: 1.38;
 }
 
-/* h2 默认有横线和额外顶部内边距，会破坏统一间距 */
+/* h1：暖砚墨深色 + 粗底边框 */
+.vp-doc h1 {
+  padding-bottom: 0.6rem !important;
+  border-bottom: 1px solid var(--wi-border) !important;
+}
+
+/* h2：暖砚标志性的「深竹绿」+ 浅底边框 */
 .vp-doc h2 {
-padding-top: 0 !important;
-border-top: none !important;
+  padding-top: 0 !important;
+  padding-bottom: 0.45rem !important;
+  color: var(--wi-accent-dark) !important;
+  border-top: none !important;
+  border-bottom: 1px solid var(--wi-border-light) !important;
+}
+
+/* h3：与 h2 呼应的「深竹绿」 */
+.vp-doc h3 {
+  color: var(--wi-accent-dark) !important;
+}
+
+/* h4 - h6：暖砚视觉降级色彩层次 */
+.vp-doc h4 {
+  color: var(--wi-heading) !important;
+}
+.vp-doc h5 {
+  color: var(--wi-text-soft) !important;
+}
+.vp-doc h6 {
+  color: var(--wi-muted) !important;
 }
 
 /* 文档开头的第一个标题不需要上方留白 */
@@ -52,7 +122,7 @@ border-top: none !important;
 .vp-doc > h4:first-child,
 .vp-doc > h5:first-child,
 .vp-doc > h6:first-child {
-margin-top: 0 !important;
+  margin-top: 0 !important;
 }
 
 /* 标题后接正文、列表、引用、表格、代码块时的统一间距 */
@@ -97,5 +167,115 @@ margin-top: 0 !important;
 .vp-doc h6 + blockquote,
 .vp-doc h6 + table,
 .vp-doc h6 + div {
-margin-top: 0.7rem !important;
+  margin-top: 0.7rem !important;
+}
+
+/* ==================================================
+ * 暖砚（Warm Ink）核心排版细节补充
+ * ================================================== */
+
+/* 1. 粗体、超链接与行内代码：彻底告别冷色调 */
+.vp-doc strong {
+  color: #625454; /* 暖墨色，比纯黑更温润 */
+}
+
+.vp-doc a {
+  color: var(--wi-accent-dark, #627e5b); /* 深竹绿 */
+  text-decoration: none;
+  border-bottom: 1px solid #b5c3aa; /* 暖砚标志性的超链接绿色底线 */
+  transition: color 0.2s, border-color 0.2s;
+}
+.vp-doc a:hover {
+  color: var(--wi-accent, #79946f); /* 悬停时变浅竹绿 */
+  border-bottom-color: var(--wi-accent, #79946f);
+}
+
+/* 独立行内代码（非代码块）：红棕色文字 + 暖米色背景 */
+.vp-doc :not(pre) > code {
+  color: #8a574f;
+  background: #f1e7e0;
+  border: 1px solid #e4d4c7;
+  padding: 0.1em 0.32em;
+  border-radius: 4px;
+}
+
+/* 2. 引用块与分割线：模拟素纸质感 */
+.vp-doc blockquote:not(.md-alert) {
+  margin: 1.25rem 0;
+  padding: 0.9rem 1rem;
+  color: var(--wi-text-soft, #756966);
+  background: #faf5f0; /* 柔和纸张底色 */
+  border: 1px solid var(--wi-border, #ddd2ca);
+  border-left: 4px solid var(--wi-accent-dark, #627e5b); /* 左侧边框改为深竹绿 */
+  border-radius: 6px;
+}
+
+.vp-doc hr {
+  height: 1px;
+  margin: 2.4rem 0;
+  border: 0;
+  background: var(--wi-border, #ddd2ca); /* 去掉自带的渐变或复杂线条 */
+}
+
+/* 3. 表格样式：深色纸质表头 + 隔行暖色交替 */
+.vp-doc table {
+  border-collapse: collapse;
+}
+.vp-doc th {
+  color: var(--wi-heading, #4b4240);
+  background: #f1e9e2; /* 深度纸张色 */
+  font-weight: 700;
+}
+.vp-doc tbody tr:nth-child(even) {
+  background: #fbf8f2;
+}
+
+/* 4. 折叠区块（Details/Summary） */
+.vp-doc details {
+  padding: 0.72rem 0.9rem;
+  border: 1px solid var(--wi-border, #ddd2ca);
+  border-radius: 5px;
+  background: #faf5f0;
+}
+.vp-doc summary {
+  color: var(--wi-heading, #4b4240);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* 5. 暖砚专属招牌：居中格言与靠右署名（在 VitePress 博客中极具特色） */
+.vp-doc .my-motto,
+.vp-doc p.my-motto {
+  display: block !important;
+  text-align: center !important;
+  margin: 60px auto 20px !important;
+  padding: 20px 0 !important;
+  width: 80% !important;
+  border-top: 1px dashed #b1c2ca !important;
+  border-bottom: 1px dashed #b1c2ca !important;
+  color: #2d4856 !important;
+  font-family: "钟齐志莽行书", "沐瑶随心体", "清松手写体3", cursive !important;
+  font-size: 19px !important;
+  line-height: 1.8 !important;
+  letter-spacing: 2px !important;
+  font-style: italic !important;
+}
+.vp-doc .my-motto span {
+  display: block !important;
+  text-align: right !important;
+  margin-top: 10px !important;
+  font-size: 0.9em !important;
+}
+.vp-doc .my-sign,
+.vp-doc p.my-sign {
+  display: block !important;
+  text-align: right !important;
+  margin-top: 60px !important;
+  padding-right: 20px !important;
+  color: #6b4423 !important; /* 偏红棕的印章/签字墨色 */
+  font-family: "钟齐志莽行书", cursive !important;
+  font-size: 26px !important;
+  letter-spacing: 2px !important;
+  font-weight: bold !important;
+  font-style: italic !important;
 }
