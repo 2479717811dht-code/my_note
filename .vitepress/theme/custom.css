@@ -7,13 +7,11 @@
  * 1. 暖陶（Warm Terracotta）底层架构与全局覆写
  * ================================================== */
 :root {
-  /* 品牌色加深，使封面和按钮更具分量感 */
   --vp-c-brand-1: #b85b44 !important;      
   --vp-c-brand-2: #9c4633 !important;      
   --vp-c-brand-3: #d17561 !important;      
   --vp-c-brand-soft: rgba(184, 91, 68, 0.15) !important;
 
-  /* 宣纸底色：微微泛出暖麦色 */
   --vp-c-bg: #fdfaf5 !important;           
   --vp-c-bg-alt: #f6efe6 !important;
   
@@ -21,33 +19,28 @@
   --vp-font-family-mono: "Maple Mono CN", "JetBrains Mono", Consolas, monospace !important;
 }
 
-/* 全局文字选中状态：极其丰满的暖色包裹 */
 ::selection {
   background: rgba(184, 91, 68, 0.8);
   color: #ffffff;
 }
 
 /* ==================================================
- * 2. 全局文字与“醇厚墨迹”设定
+ * 2. 全局文字设定与【正文专属微加粗】
  * ================================================== */
 .vp-doc {
-  --wi-text: #463a37;           /* 浓褐：默认文本 */
+  --wi-text: #463a37;           
   --wi-text-soft: #6b5c58;      
   --wi-muted: #9c8a84;          
-  --wi-heading: #2e2321;        /* 极深褐：主标题颜色，压得住阵脚 */
+  --wi-heading: #2e2321;        
   --wi-accent: #b85b44;         
   --wi-accent-dark: #9c4633;    
   --wi-border: #e3d2c8;         
   --wi-border-light: #f2e6de;   
-  --wi-highlight: #fce29f;      /* 暖黄高光 */
+  --wi-highlight: #fce29f;      
 
   font-family: var(--vp-font-family-base);
   color: var(--wi-text);
-  
-  /* 【字重丰满化】增强墨晕阴影，让字体更饱满、不发虚 */
-  font-weight: 500;
   -webkit-font-smoothing: antialiased;
-  text-shadow: 0 0 0.6px rgba(70, 58, 55, 0.25), 0.2px 0.2px 0px rgba(70, 58, 55, 0.1); 
 }
 
 /* 强制各级容器继承字体 */
@@ -55,11 +48,18 @@
 .vp-doc li, .vp-doc blockquote, .vp-doc table { font-family: var(--vp-font-family-base); }
 .vp-doc code, .vp-doc tt, .vp-doc pre, .vp-doc div[class*="language-"] code, .vp-doc div[class*="language-"] pre { font-family: var(--vp-font-family-mono); }
 
-/* ==================================================
- * 3. 基础元素与动态特效（丰满的微交互）
- * ================================================== */
+/* 【核心修改】专门针对正文（段落、列表、表格内容）进行物理加粗 */
+.vp-doc p, 
+.vp-doc li, 
+.vp-doc td {
+  font-weight: 500; 
+  -webkit-text-stroke: 0.35px var(--wi-text); /* 专门控制正文的粗细，数值越大越粗，0.35px 是个很舒服的微胖状态 */
+  text-shadow: 0.3px 0.3px 0px rgba(70, 58, 55, 0.15); /* 增加一点点墨晕感，防止描边后字体发虚 */
+}
 
-/* 任务列表 */
+/* ==================================================
+ * 3. 基础元素与动态特效
+ * ================================================== */
 .vp-doc input[type='checkbox'] {
   width: 1.15em; height: 1.15em; margin-right: 0.5em;
   accent-color: var(--wi-accent);
@@ -68,7 +68,6 @@
 }
 .vp-doc input[type='checkbox']:hover { transform: scale(1.15) translateY(-1px); }
 
-/* 高亮文字：荧光笔涂抹感 */
 .vp-doc mark {
   color: inherit;
   background: linear-gradient(120deg, rgba(252,226,159,1) 0%, rgba(252,226,159,0.6) 100%);
@@ -77,101 +76,110 @@
   box-shadow: 0 1px 3px rgba(252, 226, 159, 0.8);
 }
 
-/* 超链接特效：加粗 + 底部滑块动画 */
 .vp-doc a {
   position: relative;
   color: var(--wi-accent-dark);
   text-decoration: none;
   font-weight: 700;
+  -webkit-text-stroke: 0.4px var(--wi-accent-dark); /* 链接额外加粗 */
   border-bottom: none !important;
   transition: color 0.3s ease;
 }
 .vp-doc a::after {
   content: ''; position: absolute;
-  width: 100%; height: 3px; /* 更粗的下划线 */
+  width: 100%; height: 2px; 
   bottom: -2px; left: 0;
   background-color: var(--wi-accent);
   transform: scaleX(0); transform-origin: bottom right;
   transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-  border-radius: 2px;
 }
 .vp-doc a:hover { color: var(--wi-accent); }
 .vp-doc a:hover::after { transform: scaleX(1); transform-origin: bottom left; }
 
 /* ==================================================
- * 4. 标题体积感与悬停特效（核心丰满区）
+ * 4. 标题设计（H2 极简标注版）
  * ================================================== */
 .vp-doc h1, .vp-doc h2, .vp-doc h3, .vp-doc h4 {
-  font-weight: 800 !important; 
   color: var(--wi-heading);
   line-height: 1.4;
   margin-top: 1.5rem !important;
   margin-bottom: 0.5rem !important;
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); 
+  -webkit-text-stroke: 0.6px var(--wi-heading); /* 标题更粗 */
 }
 
-/* H1：双层底边框，极其厚重 */
 .vp-doc h1 {
   padding-bottom: 0.8rem !important;
   border-bottom: 4px double var(--wi-border) !important;
 }
 .vp-doc h1:hover { color: var(--wi-accent) !important; transform: translateX(4px); }
 
-/* ★ H2：增加背景色块与左侧立柱，体积感拉满 */
+/* 【核心修改】H2 极简淡色标注 */
 .vp-doc h2 {
-  padding: 0.6rem 0.8rem !important;
-  color: var(--wi-accent-dark) !important;
-  background: linear-gradient(90deg, rgba(184, 91, 68, 0.08) 0%, rgba(184, 91, 68, 0) 100%);
-  border-left: 6px solid var(--wi-accent) !important;
-  border-bottom: 1px solid var(--wi-border-light) !important;
+  padding: 0 !important;
+  padding-bottom: 0.5rem !important;
+  color: var(--wi-heading) !important; /* 恢复为主标题色，不那么跳脱 */
+  background: transparent !important;
+  border-left: none !important;
+  border-bottom: 1px dashed var(--wi-border) !important;
   border-top: none !important;
-  border-radius: 4px 0 0 4px;
+}
+.vp-doc h2::before {
+  content: '❖'; /* 淡淡的菱形标注，也可换成 '#' 或 '·' */
+  margin-right: 10px;
+  color: rgba(184, 91, 68, 0.3); /* 半透明的暖色，极淡 */
+  font-size: 0.9em;
+  font-weight: normal;
+  -webkit-text-stroke: 0; /* 标注不加粗 */
+  transition: color 0.3s ease, transform 0.3s ease;
+  display: inline-block;
 }
 .vp-doc h2:hover {
-  background: linear-gradient(90deg, rgba(184, 91, 68, 0.15) 0%, rgba(184, 91, 68, 0) 100%);
-  transform: translateX(6px);
-  box-shadow: -2px 2px 8px rgba(184, 91, 68, 0.05);
+  transform: translateX(4px);
+}
+.vp-doc h2:hover::before {
+  color: var(--wi-accent); /* 悬停时标注变亮 */
+  transform: rotate(90deg); /* 悬停时小菱形微微旋转 */
 }
 
-/* H3：带上修饰点缀 */
 .vp-doc h3 { color: var(--wi-accent-dark) !important; }
-.vp-doc h3::before {
-  content: '✤'; /* 添加一个小花饰 */
-  margin-right: 8px;
-  color: var(--wi-border);
-  font-size: 0.9em;
-  transition: color 0.3s ease;
-}
 .vp-doc h3:hover { transform: translateX(4px); }
-.vp-doc h3:hover::before { color: var(--wi-accent); }
 
 /* ==================================================
- * 5. 特色区块（引用、代码、图片）重立体化
+ * 5. 封面 cute.gif 专属相框 & 其它区块
  * ================================================== */
 
-/* 图片全局修饰：自带画框投影感 */
-.vp-doc img {
-  border-radius: 8px;
-  box-shadow: 0 6px 16px rgba(120, 70, 60, 0.08);
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
+/* 【核心修改】精准定位封面图或名为 cute.gif 的图片，加上暖陶画框 */
+.VPHero .image-src,
+img[src*="cute.gif"] {
+  border: 8px solid #fff !important;           /* 白色内衬画框 */
+  outline: 2px solid #e3d2c8 !important;       /* 暖色外边框 */
+  border-radius: 24px !important;              /* 大圆角 */
+  box-shadow: 0 12px 30px rgba(184, 91, 68, 0.15), 0 4px 8px rgba(0,0,0,0.05) !important; /* 立体投影 */
+  background-color: #fff;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
-.vp-doc img:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 24px rgba(120, 70, 60, 0.15);
+.VPHero .image-src:hover,
+img[src*="cute.gif"]:hover {
+  transform: translateY(-5px) scale(1.02) !important;
+  box-shadow: 0 18px 40px rgba(184, 91, 68, 0.22), 0 6px 12px rgba(0,0,0,0.08) !important;
 }
 
-/* ★ 独立行内代码：凸起的按键质感 */
+/* 其他普通图片的基础修饰 */
+.vp-doc img:not([src*="cute.gif"]) {
+  border-radius: 8px;
+  box-shadow: 0 6px 16px rgba(120, 70, 60, 0.08);
+}
+
 .vp-doc :not(pre) > code {
   color: #7a3525;
   background: #f7e6e1;
   border: 1px solid #e8cec5;
-  border-bottom: 2px solid #dcaea1; /* 增加底边框制造凸起感 */
+  border-bottom: 2px solid #dcaea1; 
   padding: 0.15em 0.4em;
   border-radius: 5px;
-  font-weight: 700;
 }
 
-/* ★ 引用块：加入大号背景水印与渐变，像高级卡片 */
 .vp-doc blockquote:not(.md-alert) {
   position: relative;
   margin: 1.6rem 0;
@@ -182,29 +190,25 @@
   border-left: 6px solid var(--wi-accent);
   border-radius: 8px;
   box-shadow: 2px 6px 15px rgba(140, 70, 50, 0.06);
-  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: all 0.3s ease;
   overflow: hidden;
   z-index: 1;
 }
-/* 引用块背景大引号 */
 .vp-doc blockquote:not(.md-alert)::after {
   content: '”';
   position: absolute;
-  bottom: -40px;
-  right: -10px;
+  bottom: -40px; right: -10px;
   font-size: 8rem;
   color: rgba(184, 91, 68, 0.06);
   font-family: Georgia, serif;
-  z-index: -1;
-  line-height: 1;
+  z-index: -1; line-height: 1;
 }
 .vp-doc blockquote:not(.md-alert):hover {
   transform: translateY(-4px);
   box-shadow: 4px 10px 20px rgba(140, 70, 50, 0.12);
-  border-left-width: 10px; /* 悬停时左边框加粗 */
+  border-left-width: 10px; 
 }
 
-/* 表格：增加厚重的表头与投影 */
 .vp-doc table {
   border-collapse: separate;
   border-spacing: 0;
@@ -216,8 +220,7 @@
 }
 .vp-doc th {
   color: var(--wi-heading);
-  background: linear-gradient(to bottom, #f2e6de 0%, #ebd8cb 100%); /* 表头渐变加厚 */
-  font-weight: 800;
+  background: linear-gradient(to bottom, #f2e6de 0%, #ebd8cb 100%); 
   padding: 0.8rem 1rem;
 }
 .vp-doc td { padding: 0.7rem 1rem; }
@@ -225,7 +228,7 @@
 .vp-doc tbody tr:hover { background: #f2e3d8; transition: background 0.2s ease; }
 
 /* ==================================================
- * 6. 专属招牌：更华丽的排版与发光
+ * 6. 专属招牌
  * ================================================== */
 .vp-doc .my-motto,
 .vp-doc p.my-motto {
@@ -242,28 +245,24 @@
   font-size: 22px !important;
   line-height: 2 !important;
   letter-spacing: 4px !important;
-  font-weight: 700 !important;
   border-radius: 20px !important;
-  transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+  transition: all 0.5s ease !important;
   box-shadow: inset 0 0 20px rgba(184, 91, 68, 0.02) !important;
+  -webkit-text-stroke: 0.5px var(--wi-accent-dark); /* 招牌也对应加粗 */
 }
-
 .vp-doc .my-motto:hover {
   transform: scale(1.04) translateY(-2px) !important;
   text-shadow: 0 0 15px rgba(184, 91, 68, 0.4) !important;
   border-color: var(--wi-accent-dark) !important;
-  box-shadow: 0 10px 30px rgba(184, 91, 68, 0.08), inset 0 0 20px rgba(184, 91, 68, 0.05) !important;
 }
-
 .vp-doc .my-motto span {
   display: block !important;
   text-align: right !important;
   margin-top: 15px !important;
   font-size: 0.95em !important;
   opacity: 0.85;
-  font-weight: 500 !important;
+  -webkit-text-stroke: 0;
 }
-
 .vp-doc .my-sign,
 .vp-doc p.my-sign {
   display: block !important;
@@ -272,11 +271,11 @@
   padding-right: 25px !important;
   color: #7a3525 !important;
   font-family: "钟齐志莽行书", cursive !important;
-  font-size: 32px !important; /* 署名更大 */
+  font-size: 32px !important; 
   letter-spacing: 3px !important;
-  font-weight: bold !important;
   font-style: italic !important;
   transition: all 0.4s ease !important;
+  -webkit-text-stroke: 1px #7a3525; /* 签名进一步加粗 */
 }
 .vp-doc .my-sign:hover {
   transform: translateX(-8px) scale(1.05) !important;
