@@ -51,6 +51,16 @@ features:
 > [!NOTE]
 > :sparkles:我...真的...真的...真的...好喜欢你:sparkles:
 
+<!-- HTML -->
+
+<div style="display: flex; justify-content: center; margin: 2.5rem 0;">
+  <img 
+    src="/indexPerson.png" 
+    alt="相拥" 
+    style="border-radius: 16px; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); max-width: 90%; width: 450px;" 
+  />
+</div>
+
 ## 使用方式
 
 - 使用右侧“本页目录”快速跳转到文章章节。
