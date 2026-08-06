@@ -19,13 +19,13 @@ hero:
 features:
   - icon: "🧭"
     title: "Course Map"
-    details: "从课程总览开始，按自己的学习进度进入对应笔记"
+    details: "课程总览，仅为内容完备性而写"
     link: /Cover/logic
     linkText: "Start Here"
 
   - icon: "💻"
     title: "Theory"
-    details: "理论课的笔记整理"
+    details: "理论课的笔记整理，但不限计科专业课"
     link: /Theory/theory
     linkText: "Read Me"
 
@@ -37,17 +37,19 @@ features:
 
   - icon: "☕"
     title: "Take a Break"
-    details: "学累了就喝杯下午茶，稍微休息一下再继续"
+    details: "严肃放松一下，不是什么不可饶恕的罪过"
     link: /Break/break
     linkText: "Relax"
 ---
 
 ## Welcome
 
-这是一个持续整理中的个人知识库，主要记录计算机科学与技术专业课程笔记、学习过程中的推导、易错点、代码与实验记录。
+想你了~
 
-> [!TIP]
-> 可以从顶部“课程笔记”进入对应课程；需要找某个具体概念时，直接使用右上角搜索。
+我只想在这样的桃花源拥有无限的治愈和温柔。
+
+> [!NOTE]
+> :sparkles:我...真的...真的...真的...好喜欢你:sparkles:
 
 ## 使用方式
 
