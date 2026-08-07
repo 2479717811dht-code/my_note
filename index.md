@@ -51,7 +51,7 @@ features:
 > [!NOTE]
 > :sparkles:我...真的...真的...真的...好喜欢你:sparkles:
 
-<!-- === 暖陶主题相拥特效容器版 (适配你的 VitePress) === -->
+<!-- === 暖陶主题相拥特效容器版 (适配你的 VitePress - 修复 SSR 报错) === -->
 <div id="romantic-box" style="position: relative; overflow: hidden; background: linear-gradient(135deg, #fdf7f2 0%, #f4e8df 100%); border: 1px solid #ebdcd2; border-radius: 20px; padding: 3rem 1rem; margin: 2rem 0; display: flex; align-items: center; justify-content: center; box-shadow: 2px 6px 20px rgba(140, 70, 50, 0.08);">
 
   <style>
@@ -62,7 +62,7 @@ features:
     /* 左侧文字 - 适配暖陶主色调 */
     #romantic-box .neon-title { 
       font-size: 2.5rem; 
-      color: #9c4633; /* 使用你的 --wi-accent-dark */
+      color: #9c4633; 
       text-shadow: 0 0 10px rgba(184, 91, 68, 0.3), 0 0 20px rgba(184, 91, 68, 0.2); 
       margin: 0 0 0.5rem 0; 
       font-weight: bold; 
@@ -71,7 +71,7 @@ features:
       -webkit-text-stroke: 0.6px #9c4633;
     }
     #romantic-box .sub-text { 
-      color: #6b5c58; /* 使用你的 --wi-text-soft */
+      color: #6b5c58; 
       font-size: 1.1rem; 
       line-height: 1.6; 
       text-align: right; 
@@ -80,7 +80,6 @@ features:
     
     /* 图片包装器与光晕 */
     #romantic-box .image-wrapper-inner { position: relative; animation: floatObj 6s ease-in-out infinite; margin: 1rem 0; }
-    /* 将光晕改为温暖的橘粉色调 */
     #romantic-box .image-wrapper-inner::before { 
       content: ''; position: absolute; top: -5%; left: -5%; width: 110%; height: 110%; 
       background: radial-gradient(circle, rgba(209, 117, 97, 0.4) 0%, rgba(184, 91, 68, 0.2) 50%, transparent 70%); 
@@ -108,9 +107,9 @@ features:
     #romantic-box .lyrics-container-inner:hover .lyrics-track-inner { animation-play-state: paused; }
     
     /* 歌词文字颜色调整为深色主题下可见 */
-    #romantic-box .lyric-line-inner { color: #9c8a84; /* --wi-muted */ transition: all 0.3s; cursor: default; font-size: 1.05rem; margin: 0; font-weight: 500;}
+    #romantic-box .lyric-line-inner { color: #9c8a84; transition: all 0.3s; cursor: default; font-size: 1.05rem; margin: 0; font-weight: 500;}
     #romantic-box .lyric-line-inner:hover { 
-      color: #b85b44; /* --wi-accent */
+      color: #b85b44; 
       transform: scale(1.08) translateX(10px); 
       text-shadow: 0 0 8px rgba(184, 91, 68, 0.4); 
     }
@@ -161,22 +160,25 @@ features:
   </div>
 
   <script>
-    (function() {
-      const box = document.getElementById('romantic-box');
-      if(!box) return;
-      function createHeart() {
-        const heart = document.createElement('div');
-        heart.classList.add('heart-particle');
-        const symbols = ['❤', '♥', '✨'];
-        heart.innerHTML = symbols[Math.floor(Math.random() * symbols.length)];
-        heart.style.left = Math.random() * 90 + '%';
-        heart.style.animationDuration = (Math.random() * 3 + 4) + 's';
-        heart.style.fontSize = (Math.random() * 12 + 10) + 'px';
-        box.appendChild(heart);
-        setTimeout(() => { heart.remove(); }, 6000);
-      }
-      setInterval(createHeart, 500);
-    })();
+    // 【关键修复】：检查是否在浏览器环境下运行
+    if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+      (function() {
+        const box = document.getElementById('romantic-box');
+        if(!box) return;
+        function createHeart() {
+          const heart = document.createElement('div');
+          heart.classList.add('heart-particle');
+          const symbols = ['❤', '♥', '✨'];
+          heart.innerHTML = symbols[Math.floor(Math.random() * symbols.length)];
+          heart.style.left = Math.random() * 90 + '%';
+          heart.style.animationDuration = (Math.random() * 3 + 4) + 's';
+          heart.style.fontSize = (Math.random() * 12 + 10) + 'px';
+          box.appendChild(heart);
+          setTimeout(() => { heart.remove(); }, 6000);
+        }
+        setInterval(createHeart, 500);
+      })();
+    }
   </script>
 </div>
 <!-- === 暖陶容器版结束 === -->
