@@ -41,7 +41,7 @@ export default withMermaid(
     description: '我的数字花园',
 
     // 开启深色 / 浅色模式切换
-    appearance: true,
+    appearance: false,
 
     // 读取 Git 提交时间，显示文章最后更新时间
     lastUpdated: true,
