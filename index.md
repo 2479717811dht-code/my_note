@@ -65,7 +65,7 @@ features:
     #romantic-box .main-image-inner:hover { transform: scale(1.03) translateY(-5px); box-shadow: 0 15px 35px rgba(184, 91, 68, 0.25); }
     #romantic-box .side-right-inner { flex: 1; min-width: 200px; max-width: 300px; }
     #romantic-box .lyrics-container-inner { height: 250px; overflow: hidden; -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 20%, black 80%, transparent 100%); mask-image: linear-gradient(to bottom, transparent 0%, black 20%, black 80%, transparent 100%); }
-    #romantic-box .lyrics-track-inner { display: flex; flex-direction: column; gap: 1rem; padding-top: 100px; animation: scrollLyricsInner 20s linear infinite; margin: 0; }
+    #romantic-box .lyrics-track-inner { display: flex; flex-direction: column; gap: 1rem; padding-top: 100px; animation: scrollLyricsInner 80s linear infinite; margin: 0; }
     #romantic-box .lyrics-container-inner:hover .lyrics-track-inner { animation-play-state: paused; }
     #romantic-box .lyric-line-inner { color: #9c8a84; transition: all 0.3s; cursor: default; font-size: 1.05rem; margin: 0; font-weight: 500;}
     #romantic-box .lyric-line-inner:hover { color: #b85b44; transform: scale(1.08) translateX(10px); text-shadow: 0 0 8px rgba(184, 91, 68, 0.4); }
