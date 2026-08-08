@@ -137,19 +137,22 @@ features:
       </div>
     </div>
   </div>
-  <script setup>
-  import { onMounted, onUnmounted } from 'vue'
+</div> <!-- ✅ HTML 结构在这里安全结束 -->
 
-  // 用一个变量把定时器存起来，方便后面销毁
-  let heartInterval = null;
+<!-- ✅ script setup 必须放在最外层独立存在 -->
+<script setup>
+import { onMounted, onUnmounted, nextTick } from 'vue'
 
-  onMounted(() => {
-    // 页面刚渲染完毕时触发（从内页退回来也会触发）
-    if (typeof window === 'undefined' || typeof document === 'undefined') return;
-  
+let heartInterval = null;
+
+onMounted(() => {
+  if (typeof window === 'undefined' || typeof document === 'undefined') return;
+
+  // 使用 nextTick 确保 DOM 挂载完成后再寻找元素
+  nextTick(() => {
     const box = document.getElementById('romantic-box');
     if(!box) return;
-  
+
     function createHeart() {
       const heart = document.createElement('div');
       heart.classList.add('heart-particle');
@@ -158,29 +161,26 @@ features:
       heart.style.left = Math.random() * 90 + '%';
       heart.style.animationDuration = (Math.random() * 3 + 4) + 's';
       heart.style.fontSize = (Math.random() * 12 + 10) + 'px';
+      
       box.appendChild(heart);
-    
+      
       setTimeout(() => { 
-        // 严谨一点：删除前判断元素是否还在盒子里
         if (box.contains(heart)) {
           heart.remove(); 
         }
       }, 6000);
     }
     
-    // 开启定时器
     heartInterval = setInterval(createHeart, 500);
-  })
-  
-  onUnmounted(() => {
-    // 当你点进内页，当前主页被销毁时触发
-    // 这里必须清除定时器，不然它会在后台偷偷运行，导致卡顿报错
-    if (heartInterval) {
-      clearInterval(heartInterval);
-    }
-  })
-  </script>
-</div>
+  });
+})
+
+onUnmounted(() => {
+  if (heartInterval) {
+    clearInterval(heartInterval);
+  }
+})
+</script>
 
 
 
