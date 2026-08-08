@@ -211,7 +211,8 @@ img[src*="cute.gif"]:hover {
 
 .vp-doc table {
   width: 100%;
-  display: block;
+  display: block; /* 恢复为 block，为滚动做准备 */
+  overflow-x: auto; /* 核心：超宽时自动出现横向滚动条 */
   border-collapse: separate;
   border-spacing: 0;
   border: 1px solid var(--wi-border);
