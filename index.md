@@ -52,8 +52,6 @@ features:
 > 
 > :sparkles:在月光下与你紧紧相拥，你就是我的熠熠星辉:sparkles:
 
-<!-- === 暖陶主题相拥特效 (修复空行导致的代码外泄问题) === -->
-
 <div id="romantic-box" style="position: relative; overflow: hidden; background: linear-gradient(135deg, #fdf7f2 0%, #f4e8df 100%); border: 1px solid #ebdcd2; border-radius: 20px; padding: 3rem 1rem; margin: 2rem 0; display: flex; align-items: center; justify-content: center; box-shadow: 2px 6px 20px rgba(140, 70, 50, 0.08);">
   <style>
     #romantic-box * { box-sizing: border-box; }
@@ -139,25 +137,48 @@ features:
       </div>
     </div>
   </div>
-  <script>
-    if (typeof window !== 'undefined' && typeof document !== 'undefined') {
-      (function() {
-        const box = document.getElementById('romantic-box');
-        if(!box) return;
-        function createHeart() {
-          const heart = document.createElement('div');
-          heart.classList.add('heart-particle');
-          const symbols = ['❤', '♥', '✨'];
-          heart.innerHTML = symbols[Math.floor(Math.random() * symbols.length)];
-          heart.style.left = Math.random() * 90 + '%';
-          heart.style.animationDuration = (Math.random() * 3 + 4) + 's';
-          heart.style.fontSize = (Math.random() * 12 + 10) + 'px';
-          box.appendChild(heart);
-          setTimeout(() => { heart.remove(); }, 6000);
+  <script setup>
+  import { onMounted, onUnmounted } from 'vue'
+
+  // 用一个变量把定时器存起来，方便后面销毁
+  let heartInterval = null;
+
+  onMounted(() => {
+    // 页面刚渲染完毕时触发（从内页退回来也会触发）
+    if (typeof window === 'undefined' || typeof document === 'undefined') return;
+  
+    const box = document.getElementById('romantic-box');
+    if(!box) return;
+  
+    function createHeart() {
+      const heart = document.createElement('div');
+      heart.classList.add('heart-particle');
+      const symbols = ['❤', '♥', '✨'];
+      heart.innerHTML = symbols[Math.floor(Math.random() * symbols.length)];
+      heart.style.left = Math.random() * 90 + '%';
+      heart.style.animationDuration = (Math.random() * 3 + 4) + 's';
+      heart.style.fontSize = (Math.random() * 12 + 10) + 'px';
+      box.appendChild(heart);
+    
+      setTimeout(() => { 
+        // 严谨一点：删除前判断元素是否还在盒子里
+        if (box.contains(heart)) {
+          heart.remove(); 
         }
-        setInterval(createHeart, 500);
-      })();
+      }, 6000);
     }
+    
+    // 开启定时器
+    heartInterval = setInterval(createHeart, 500);
+  })
+  
+  onUnmounted(() => {
+    // 当你点进内页，当前主页被销毁时触发
+    // 这里必须清除定时器，不然它会在后台偷偷运行，导致卡顿报错
+    if (heartInterval) {
+      clearInterval(heartInterval);
+    }
+  })
   </script>
 </div>
 
