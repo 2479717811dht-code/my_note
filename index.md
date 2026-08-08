@@ -48,8 +48,8 @@ features:
 
 我只想在这样的桃花源拥有无限的治愈和温柔。
 
-> [!NOTE]
-> :sparkles:我...真的...真的...真的...好喜欢你:sparkles:
+> :moon:I got you, moonlight, you're my starlight.:moon:
+> :sparkles:在月光下与你紧紧相拥，你就是我的熠熠星辉:sparkles:
 
 <!-- === 暖陶主题相拥特效 (修复空行导致的代码外泄问题) === -->
 
