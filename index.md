@@ -189,43 +189,39 @@ import { onMounted, onUnmounted } from 'vue'
 let intervalId = null;
 
 onMounted(() => {
-  // 确保只在浏览器端运行，防止打包报错
   if (typeof window === 'undefined') return;
 
-  // 替换成 test0.html 里的爱心和星星
   const symbols = ['❤', '♥', '✨', '✦'];
   
   function createHeart() {
     const heart = document.createElement('div');
     heart.innerText = symbols[Math.floor(Math.random() * symbols.length)];
     
-    // 初始样式设置：从底部出现，加上霓虹发光特效
+    // 【修改点 1】：起始位置从 bottom 改为 top，让它从屏幕最上方开始
     heart.style.position = 'fixed';
     heart.style.left = Math.random() * 100 + 'vw';
-    heart.style.bottom = '-10vh'; // 从屏幕下方看不见的地方开始
-    heart.style.fontSize = Math.random() * 25 + 10 + 'px'; // 10px 到 35px 随机大小
+    heart.style.top = '-10vh'; // 从屏幕上方看不见的地方开始
+    heart.style.fontSize = Math.random() * 25 + 10 + 'px'; 
     heart.style.zIndex = '9999';
-    heart.style.pointerEvents = 'none'; // 防止遮挡点击
+    heart.style.pointerEvents = 'none'; 
     heart.style.color = '#ff2a5f';
-    heart.style.textShadow = '0 0 15px #ff2a5f, 0 0 30px #ff2a5f'; // 赛博粉发光
+    heart.style.textShadow = '0 0 15px #ff2a5f, 0 0 30px #ff2a5f'; 
     
     document.body.appendChild(heart);
     
-    // 随机动画时间：5秒到10秒
     const duration = (Math.random() * 5 + 5) * 1000; 
     
-    // 完美复刻 test0.html 中的 @keyframes floatUp 动画
     const animation = heart.animate([
       { transform: 'translateY(0) scale(0.5) rotate(0deg)', opacity: 0, offset: 0 },
-      { opacity: 0.8, offset: 0.2 }, // 动画进行到 20% 时浮现
-      { transform: 'translateY(-120vh) scale(1.5) rotate(360deg)', opacity: 0, offset: 1 } // 向上飘出屏幕并放大旋转
+      { opacity: 0.8, offset: 0.2 },
+      // 【修改点 2】：translateY 的值从 -120vh 改成正数的 120vh，让它往下落
+      { transform: 'translateY(120vh) scale(1.5) rotate(360deg)', opacity: 0, offset: 1 } 
     ], {
       duration: duration,
       easing: 'ease-in',
       fill: 'forwards'
     });
     
-    // 动画结束后自动清理 DOM 节点，保持页面流畅
     animation.onfinish = () => {
       if (document.body.contains(heart)) {
         heart.remove();
@@ -233,11 +229,9 @@ onMounted(() => {
     };
   }
 
-  // 每 300 毫秒生成一个（与 test0 保持一致）
   intervalId = setInterval(createHeart, 300);
 })
 
-// 当用户离开首页时，停止生成
 onUnmounted(() => {
   if (intervalId) {
     clearInterval(intervalId);
