@@ -93,7 +93,14 @@ features:
 
 也许这些内容不太适合补天喵~
 
-![](/20260625030353_324_1.jpg)
+<div style="display: flex; justify-content: center; gap: 20px; margin: 2rem 0;">
+  <!-- 第一个表情包 -->
+  <img src="/pig_to_right.gif" alt="表情包1" style="width: 45%; max-width: 300px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" />
+  
+  <!-- 第二个表情包 -->
+  <img src="/pig_to_left.gif" alt="表情包2" style="width: 45%; max-width: 300px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" />
+</div>
+
 
 <script setup>
 import { onMounted, onUnmounted } from 'vue'
