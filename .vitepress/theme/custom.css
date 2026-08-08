@@ -210,6 +210,8 @@ img[src*="cute.gif"]:hover {
 }
 
 .vp-doc table {
+  width: 100%;
+  display: block;
   border-collapse: separate;
   border-spacing: 0;
   border: 1px solid var(--wi-border);
