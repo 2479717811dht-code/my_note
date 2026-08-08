@@ -210,10 +210,10 @@ img[src*="cute.gif"]:hover {
 }
 
 .vp-doc table {
-  display: block !important;      /* 强制转换为块级元素以开启横向滚动 */
-  width: 100% !important;         /* 强制外层容器撑满屏幕 */
-  overflow-x: auto !important;    /* 核心：内容超出时，自动出现横向滚动条 */
-  white-space: nowrap;            /* 强制内容不换行，确保长表格能触发滚动 */
+  display: table !important;      /* 核心：恢复原生表格属性，这才是 Typora 撑满的秘诀 */
+  width: 100% !important;         /* 强制撑满整个屏幕宽度 */
+  table-layout: auto !important;  /* 让浏览器像 Typora 一样，自动根据内容按比例分配每列宽度 */
+  word-break: break-word;         /* 核心防御：遇到超长无空格的代码时自动换行，防止撑爆网页 */
   
   border-collapse: separate;
   border-spacing: 0;
@@ -225,19 +225,14 @@ img[src*="cute.gif"]:hover {
 }
 
 .vp-doc th {
-  position: sticky;               /* 新增：开启表头吸顶 */
-  top: 0;                         /* 新增：吸附在顶部 */
-  z-index: 10;                    /* 新增：确保向下滚动时表头不被遮挡 */
-  
   color: var(--wi-heading);
   background: linear-gradient(to bottom, #f2e6de 0%, #ebd8cb 100%); 
-  padding: 0.8rem 1.5rem;         /* 修改：稍微加大了左右内边距 */
-  min-width: 120px;               /* 新增：给短表格一个保底宽度，强行撑满画面 */
+  padding: 0.8rem 1.5rem; /* 保持舒服的内边距 */
+  text-align: left;       /* Typora 默认通常是左对齐，看起来更规整 */
 }
 
 .vp-doc td { 
-  padding: 0.7rem 1.5rem;         /* 修改：配合表头加大内边距 */
-  min-width: 120px;               /* 新增：给短表格一个保底宽度，强行撑满画面 */
+  padding: 0.7rem 1.5rem; 
 }
 
 .vp-doc tbody tr:nth-child(even) { 
