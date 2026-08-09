@@ -26,6 +26,7 @@ Welcome to **My Note**.
 * 离散数学
 * 计算机组成
 * 高级数据结构与算法分析
+* 马克思主义基本原理
 
 建议不要只把它当作考前速记资料。
 
@@ -91,6 +92,8 @@ Welcome to **My Note**.
 
 [进入实验内容 →](/Lab/Computer-Organization-Lab)
 
+---
+
 ### Advanced Data Structure & Algorithm Analysis
 
 高级数据结构与算法分析。
@@ -99,6 +102,8 @@ Welcome to **My Note**.
 
 [进入课程笔记 →](/Theory/Advanced_Data_Structure_Algorithm_Analysis)
 
+---
+
 ###  Probability and Mathematical Statistics
 
 概率论与数理统计
@@ -106,6 +111,18 @@ Welcome to **My Note**.
 简称概与统，比概和统稍微简单些，表面上是计科的专业课，本质上是一门数学课。
 
 [进入课程笔记 →](/Theory/Probability_and_Mathematical_Statistics)
+
+---
+
+### 马克思主义基本原理
+
+马克思主义基本原理
+
+一门需要闭卷的学科，考研也会涉及。
+
+[进入课程笔记 →](/Theory/Marxism)
+
+---
 
 ## Study Checklist
 

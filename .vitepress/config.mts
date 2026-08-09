@@ -200,8 +200,12 @@ export default withMermaid(
               link: '/Theory/Advanced_Data_Structure_Algorithm_Analysis'
             },
             {
-              text: '	Probability and Mathematical Statistics',
+              text: 'Probability and Mathematical Statistics',
               link: '/Theory/Probability_and_Mathematical_Statistics'
+            },
+            {
+              text: '马克思主义基本原理',
+              link: '/Theory/Marxism'
             }
           ]
         },
