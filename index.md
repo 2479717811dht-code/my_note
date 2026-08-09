@@ -3,8 +3,8 @@ layout: home
 
 hero:
   name: "My Note"
-  text: "MIX && CS"
-  tagline: "H.T.Deng | AR15LAL"
+  text: "AR15LAL"
+  tagline: "一个没有对象的野指针"
   image:
     src: /cute.gif
     alt: "Logo"
@@ -63,13 +63,13 @@ features:
       transition: all 0.4s ease;
       display: block;
     }
-    
+
     .simple-hero-img:hover {
       transform: translateY(-5px); /* 鼠标悬停时微微上浮 */
       box-shadow: 0 15px 35px rgba(184, 91, 68, 0.15); /* 阴影加深，产生呼吸感互动 */
     }
   </style>
-  
+
   <img src="/indexPerson.png" alt="Always With You" class="simple-hero-img" />
 </div>
 
@@ -96,7 +96,7 @@ features:
 <div style="display: flex; justify-content: center; gap: 20px; margin: 2rem 0;">
   <!-- 第一个表情包 -->
   <img src="/pig_to_right.gif" alt="表情包1" style="width: 45%; max-width: 300px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" />
-  
+
   <!-- 第二个表情包 -->
   <img src="/pig_to_left.gif" alt="表情包2" style="width: 45%; max-width: 300px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" />
 </div>
@@ -111,7 +111,7 @@ onMounted(() => {
   if (typeof window === 'undefined') return;
 
   const symbols = ['❤', '♥', '✨', '✦'];
-  
+
   function createHeart() {
     const heart = document.createElement('div');
     heart.innerText = symbols[Math.floor(Math.random() * symbols.length)];
