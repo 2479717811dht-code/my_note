@@ -252,16 +252,8 @@ export default withMermaid(
               link: '/Break/break'
             },            
             {
-              text: '喝杯下午茶',
-              link: '/Break/relax'
-            },
-            {
-              text: '氵亿会儿98',
-              link: '/Break/cc98web'
-            },
-            {
-              text: '看一下比赛',
-              link: '/Break/basketball'
+              text: 'Journal 1',
+              link: '/Break/Journal1'
             }
           ]
         }
