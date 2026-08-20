@@ -254,6 +254,10 @@ export default withMermaid(
             {
               text: 'Journal 1',
               link: '/Break/Journal1'
+            },
+            {
+              text: 'Journal 2',
+              link: '/Break/Journal2'
             }
           ]
         }
