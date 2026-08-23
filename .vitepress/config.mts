@@ -250,15 +250,15 @@ export default withMermaid(
             {
               text: 'Read Me',
               link: '/Break/break'
-            },            
-            {
-              text: 'Journal 1',
-              link: '/Break/Journal1'
-            },
-            {
-              text: 'Journal 2',
-              link: '/Break/Journal2'
-            }
+            }//,            
+            // {
+            //   text: 'Journal 1',
+            //   link: '/Break/Journal1'
+            // },
+            // {
+            //   text: 'Journal 2',
+            //   link: '/Break/Journal2'
+            // }
           ]
         }
       ],
