@@ -14,33 +14,37 @@
   --vp-c-brand-soft: rgba(184, 91, 68, 0.1);
 
   /* 纸境背景层级：暖白凝脂纸、暖木柔调 */
-  --vp-c-bg: #fcf9f2;
-  --vp-c-bg-alt: #f6efe4;
+  --vp-c-bg: #faf7f2;
+  --vp-c-bg-alt: #f5ede2;
   --vp-c-bg-elv: #ffffff;
-  --vp-c-bg-soft: #f4ecdf;
+  --vp-c-bg-soft: #f2e9dc;
+
+  /* 侧边栏与导航栏原生变量注入 */
+  --vp-sidebar-bg-color: #f7efe4;
+  --vp-nav-bg-color: rgba(250, 247, 242, 0.92);
 
   /* 边框与分割线：淡陶暖线 */
   --vp-c-border: #ebdcd2;
   --vp-c-divider: #f0e4dc;
 
   /* 文档专属色彩体系 */
-  --wi-text: #3e332f;
-  --wi-text-soft: #63554e;
+  --wi-text: #3c322e;
+  --wi-text-soft: #63544e;
   --wi-muted: #95847d;
-  --wi-heading: #2b1f1c;
+  --wi-heading: #2a1e1b;
   --wi-accent: #b85b44;
   --wi-accent-dark: #963d28;
-  --wi-accent-light: #fcf1ec;
+  --wi-accent-light: #fbf0ec;
   --wi-border: #e6dacd;
-  --wi-border-light: #f3eae0;
+  --wi-border-light: #f2e8de;
   --wi-highlight: #fae4a6;
   --wi-gold: #c68a4c;
 
   /* 柔和阴影系统 */
-  --wi-shadow-xs: 0 2px 6px rgba(140, 70, 50, 0.04);
-  --wi-shadow-sm: 0 4px 14px rgba(140, 70, 50, 0.06);
-  --wi-shadow-md: 0 8px 24px rgba(140, 70, 50, 0.09);
-  --wi-shadow-lg: 0 16px 38px rgba(140, 70, 50, 0.13);
+  --wi-shadow-xs: 0 2px 8px rgba(130, 65, 45, 0.04);
+  --wi-shadow-sm: 0 4px 16px rgba(130, 65, 45, 0.07);
+  --wi-shadow-md: 0 10px 28px rgba(130, 65, 45, 0.1);
+  --wi-shadow-lg: 0 18px 42px rgba(130, 65, 45, 0.14);
 
   /* 跨平台字体栈：保证 Mac/iOS/Windows/Android 均有最适宜回退 */
   --vp-font-family-base: "LXGW WenKai Screen", "LXGW WenKai GB Screen", "霞鹜文楷 GB 屏幕阅读版",
@@ -50,12 +54,12 @@
 
 /* 文字选中高亮 */
 ::selection {
-  background: rgba(184, 91, 68, 0.25);
-  color: #2b1f1c;
+  background: rgba(184, 91, 68, 0.22);
+  color: #2a1e1b;
 }
 
 /* ==================================================
- * 2. 全局正文排版（自然渲染，告别物理描边）
+ * 2. 全局正文排版（自然高清，去油去腻）
  * ================================================== */
 body {
   background-color: var(--vp-c-bg);
@@ -80,13 +84,12 @@ body {
   color: var(--wi-text);
 }
 
-/* 段落间距呼吸感 */
 .vp-doc p {
   margin: 1.15rem 0;
 }
 
 /* ==================================================
- * 3. 标题体系与垂直节奏（层级分明，优雅锚点）
+ * 3. 内页标题体系与垂直节奏（告别虚线杂乱）
  * ================================================== */
 .vp-doc h1, .vp-doc h2, .vp-doc h3, .vp-doc h4, .vp-doc h5, .vp-doc h6 {
   font-family: var(--vp-font-family-base);
@@ -99,7 +102,7 @@ body {
 .vp-doc h1 {
   font-size: 2.1rem;
   line-height: 1.35;
-  margin-top: 2.6rem;
+  margin-top: 2.4rem;
   margin-bottom: 1.2rem;
   padding-bottom: 0.8rem;
   border-bottom: 2px solid var(--wi-border);
@@ -111,18 +114,19 @@ body {
   position: absolute;
   left: 0;
   bottom: -2px;
-  width: 60px;
+  width: 52px;
   height: 2px;
   background-color: var(--wi-accent);
+  border-radius: 2px;
 }
 
 .vp-doc h2 {
   font-size: 1.55rem;
   line-height: 1.4;
-  margin-top: 2.4rem;
-  margin-bottom: 0.8rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 1px dashed var(--wi-border);
+  margin-top: 2.5rem;
+  margin-bottom: 0.85rem;
+  padding-bottom: 0.55rem;
+  border-bottom: 1px solid rgba(184, 91, 68, 0.16);
   display: flex;
   align-items: center;
 }
@@ -131,16 +135,9 @@ body {
   content: '❖';
   margin-right: 10px;
   color: var(--wi-accent);
-  opacity: 0.8;
+  opacity: 0.85;
   font-size: 0.85em;
   font-weight: normal;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-  display: inline-block;
-}
-
-.vp-doc h2:hover::before {
-  transform: rotate(45deg) scale(1.1);
-  opacity: 1;
 }
 
 .vp-doc h3 {
@@ -159,7 +156,130 @@ body {
 }
 
 /* ==================================================
- * 4. 超链接与交互（排除锚点与图片下划线）
+ * 4. 内页左侧边栏（VPSidebar）与右侧目录（Outline）精雕
+ * ================================================== */
+.VPSidebar {
+  background-color: var(--vp-sidebar-bg-color) !important;
+  border-right: 1px solid var(--wi-border-light) !important;
+  box-shadow: 2px 0 10px rgba(184, 91, 68, 0.02);
+}
+
+/* 侧边栏分组标题 */
+.VPSidebarItem.level-0 > .item .text {
+  font-weight: 700 !important;
+  color: var(--wi-heading) !important;
+  letter-spacing: 0.5px;
+}
+
+/* 侧边栏普通选项 */
+.VPSidebarItem .text {
+  font-size: 0.93rem;
+  color: var(--wi-text-soft);
+  transition: all 0.2s ease;
+}
+
+.VPSidebarItem .item:hover .text {
+  color: var(--wi-accent) !important;
+}
+
+/* 侧边栏高亮当前项：暖陶微胶囊背景 */
+.VPSidebarItem.is-active > .item {
+  background: rgba(184, 91, 68, 0.11) !important;
+  border-radius: 8px !important;
+}
+
+.VPSidebarItem.is-active > .item .text {
+  color: var(--wi-accent-dark) !important;
+  font-weight: 700 !important;
+}
+
+/* 右侧本页目录（Aside Outline） */
+.VPDocAsideOutline .outline-link {
+  font-size: 0.88rem;
+  color: var(--wi-muted);
+  transition: all 0.2s ease;
+}
+
+.VPDocAsideOutline .outline-link:hover,
+.VPDocAsideOutline .outline-link.active {
+  color: var(--wi-accent) !important;
+}
+
+.VPDocAsideOutline .outline-marker {
+  background-color: var(--wi-accent) !important;
+  width: 2.5px;
+  border-radius: 2px;
+}
+
+/* 内置 [toc] 渲染美化：书籍导读盒 */
+nav.table-of-contents {
+  margin: 1.8rem 0 2.2rem;
+  padding: 18px 24px;
+  background: linear-gradient(135deg, #ffffff 0%, #fcf7f1 100%);
+  border: 1px solid var(--wi-border);
+  border-radius: 14px;
+  box-shadow: var(--wi-shadow-xs);
+}
+
+nav.table-of-contents::before {
+  content: '📖 章节目录速览';
+  display: block;
+  font-weight: 700;
+  color: var(--wi-accent);
+  font-size: 1rem;
+  margin-bottom: 12px;
+  border-bottom: 1px dashed var(--wi-border-light);
+  padding-bottom: 6px;
+}
+
+nav.table-of-contents ul {
+  list-style: none !important;
+  padding-left: 1.2rem !important;
+  margin: 0 !important;
+}
+
+nav.table-of-contents > ul {
+  padding-left: 0 !important;
+}
+
+nav.table-of-contents li {
+  margin: 0.4rem 0 !important;
+}
+
+nav.table-of-contents a {
+  color: var(--wi-text-soft) !important;
+  font-size: 0.94rem;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+nav.table-of-contents a:hover {
+  color: var(--wi-accent) !important;
+}
+
+/* 上一篇 / 下一篇翻页卡片 */
+.VPDocFooter .prev-next .pager-link {
+  border: 1px solid var(--wi-border) !important;
+  background: #ffffff !important;
+  border-radius: 14px !important;
+  box-shadow: var(--wi-shadow-xs);
+  transition: all 0.25s ease !important;
+  padding: 14px 18px !important;
+}
+
+.VPDocFooter .prev-next .pager-link:hover {
+  border-color: var(--wi-accent) !important;
+  transform: translateY(-2px);
+  box-shadow: var(--wi-shadow-sm);
+}
+
+.VPDocFooter .prev-next .pager-link .title {
+  color: var(--wi-accent) !important;
+  font-weight: 700;
+}
+
+/* ==================================================
+ * 5. 超链接、行内代码与引用块
  * ================================================== */
 .vp-doc a:not(.header-anchor) {
   position: relative;
@@ -178,7 +298,7 @@ body {
   bottom: 0px;
   left: 0;
   background-color: var(--wi-accent);
-  opacity: 0.4;
+  opacity: 0.35;
   transform: scaleX(0.85);
   transform-origin: bottom center;
   transition: all 0.25s ease;
@@ -194,9 +314,6 @@ body {
   height: 2px;
 }
 
-/* ==================================================
- * 5. 行内代码与代码块优雅适配
- * ================================================== */
 .vp-doc :not(pre) > code {
   color: var(--wi-accent-dark);
   background: var(--wi-accent-light);
@@ -208,17 +325,13 @@ body {
   box-shadow: 0 1px 2px rgba(184, 91, 68, 0.04);
 }
 
-/* 代码块容器 */
 .vp-doc div[class*="language-"] {
-  border-radius: 12px;
+  border-radius: 14px;
   border: 1px solid var(--wi-border);
   box-shadow: var(--wi-shadow-xs);
-  margin: 1.4rem 0;
+  margin: 1.5rem 0;
 }
 
-/* ==================================================
- * 6. 引用块（Blockquote）：纸境雅致文摘
- * ================================================== */
 .vp-doc blockquote:not(.md-alert) {
   position: relative;
   margin: 1.6rem 0;
@@ -227,7 +340,7 @@ body {
   background: linear-gradient(135deg, #fdfaf6 0%, #f7eee4 100%);
   border: 1px solid var(--wi-border-light);
   border-left: 5px solid var(--wi-accent);
-  border-radius: 10px;
+  border-radius: 12px;
   box-shadow: var(--wi-shadow-sm);
   overflow: hidden;
   z-index: 1;
@@ -246,19 +359,13 @@ body {
   pointer-events: none;
 }
 
-.vp-doc blockquote:not(.md-alert) p {
-  margin: 0.4rem 0;
-}
-
-/* ==================================================
- * 7. 表格系统：全宽与响应式移动端滚动保护
- * ================================================== */
+/* 表格：全宽与移动端响应式 */
 .vp-doc table {
   width: 100%;
   border-collapse: separate;
   border-spacing: 0;
   border: 1px solid var(--wi-border);
-  border-radius: 10px;
+  border-radius: 12px;
   overflow: hidden;
   box-shadow: var(--wi-shadow-xs);
   margin: 1.6rem 0;
@@ -296,7 +403,6 @@ body {
   transition: background-color 0.15s ease;
 }
 
-/* 移动端视口保护：表格自动横向滑动，防止撑裂排版 */
 @media (max-width: 768px) {
   .vp-doc table {
     display: block;
@@ -307,36 +413,14 @@ body {
 }
 
 /* ==================================================
- * 8. 任务列表与标记高亮
+ * 6. 首页（Home Page）高级质感与快速导览卡片
  * ================================================== */
-.vp-doc input[type='checkbox'] {
-  width: 1.15em;
-  height: 1.15em;
-  margin-right: 0.5em;
-  accent-color: var(--wi-accent);
-  box-shadow: 0 1px 3px rgba(184, 91, 68, 0.2);
-  vertical-align: -0.15em;
-  cursor: pointer;
-}
-
-.vp-doc mark {
-  color: inherit;
-  background: linear-gradient(120deg, rgba(250, 228, 166, 0.85) 0%, rgba(250, 228, 166, 0.45) 100%);
-  padding: 0.15em 0.4em;
-  border-radius: 4px;
-}
-
-/* ==================================================
- * 9. 首页（Home Page）高端视觉定制
- * ================================================== */
-/* 导航栏毛玻璃底色 */
 .VPNavBar {
-  background-color: rgba(252, 249, 242, 0.88) !important;
+  background-color: var(--vp-nav-bg-color) !important;
   backdrop-filter: blur(12px) !important;
   border-bottom: 1px solid var(--wi-border-light) !important;
 }
 
-/* 首页 Hero 标题质感 */
 .VPHero .name {
   background: linear-gradient(135deg, #b85b44 0%, #8c3624 100%) !important;
   -webkit-background-clip: text !important;
@@ -360,20 +444,18 @@ img[src*="cute.gif"] {
   border-radius: 26px !important;
   box-shadow: var(--wi-shadow-md) !important;
   background-color: #ffffff;
-  /* 严格锁定 translate(-50%, -50%) 居中基准，杜绝定位冲突导致的向右下角飞移 */
   transform: translate(-50%, -50%) !important;
   transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.35s ease, outline-color 0.35s ease !important;
 }
 
 .VPHero .image-src:hover,
 img[src*="cute.gif"]:hover {
-  /* 平稳向上微浮 6px，居中基准点纹丝不动 */
   transform: translate(-50%, calc(-50% - 6px)) scale(1.02) !important;
   box-shadow: var(--wi-shadow-lg) !important;
   outline-color: var(--wi-accent) !important;
 }
 
-/* 首页按钮质感升级 */
+/* 首页操作按钮 */
 .VPButton.brand {
   background: linear-gradient(135deg, #b85b44 0%, #a44b36 100%) !important;
   border: 1px solid #9b412d !important;
@@ -403,17 +485,15 @@ img[src*="cute.gif"]:hover {
   color: var(--wi-accent) !important;
 }
 
-/* 首页 Feature 卡片：轻拟物与暖砂纸感 */
+/* 首页特性卡片 */
 .VPFeatures .VPFeature {
-  background: rgba(255, 255, 255, 0.85) !important;
+  background: rgba(255, 255, 255, 0.88) !important;
   backdrop-filter: blur(10px);
   border: 1px solid var(--wi-border-light) !important;
   border-radius: 18px !important;
   box-shadow: var(--wi-shadow-sm) !important;
   padding: 24px 28px !important;
   transition: all 0.35s cubic-bezier(0.2, 0.8, 0.2, 1) !important;
-  position: relative;
-  overflow: hidden;
 }
 
 .VPFeatures .VPFeature:hover {
@@ -435,11 +515,7 @@ img[src*="cute.gif"]:hover {
   line-height: 1.6 !important;
 }
 
-/* ==================================================
- * 10. index.md 专属高级组件排版（逼格提升模块）
- * ================================================== */
-
-/* 顶部/文前微型徽章 */
+/* 胶囊徽章 */
 .garden-badge {
   display: inline-flex;
   align-items: center;
@@ -448,30 +524,29 @@ img[src*="cute.gif"]:hover {
   color: var(--wi-accent-dark);
   border: 1px solid rgba(184, 91, 68, 0.2);
   border-radius: 999px;
-  padding: 4px 14px;
-  font-size: 0.85rem;
+  padding: 5px 16px;
+  font-size: 0.86rem;
   font-weight: 600;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
 }
 
-/* 首页主视觉画报卡片 (Hero Picture Container) */
+/* 首页画报卡片 */
 .garden-banner-card {
-  margin: 2.4rem auto;
+  margin: 2.2rem auto;
   width: 100%;
-  max-width: 920px;
+  max-width: 900px;
   border-radius: 22px;
-  padding: 10px;
-  background: linear-gradient(135deg, #ffffff 0%, #fcf7f1 100%);
+  padding: 8px;
+  background: linear-gradient(135deg, #ffffff 0%, #fbf5ee 100%);
   border: 1px solid var(--wi-border);
   box-shadow: var(--wi-shadow-md);
-  transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
-  position: relative;
+  transition: all 0.35s ease;
 }
 
 .garden-banner-card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-3px);
   box-shadow: var(--wi-shadow-lg);
-  border-color: rgba(184, 91, 68, 0.4);
+  border-color: rgba(184, 91, 68, 0.35);
 }
 
 .garden-banner-img {
@@ -479,42 +554,38 @@ img[src*="cute.gif"]:hover {
   height: auto;
   border-radius: 16px;
   display: block;
-  object-fit: cover;
-  transition: transform 0.5s ease;
 }
 
 /* 优雅金漆书签引言卡片 */
 .garden-quote-box {
-  background: linear-gradient(135deg, #fffdfa 0%, #f8f1e7 100%);
+  background: linear-gradient(135deg, #ffffff 0%, #fcf7f0 100%);
   border: 1px solid var(--wi-border);
   border-left: 5px solid var(--wi-accent);
   border-radius: 14px;
   padding: 1.4rem 1.8rem;
-  margin: 2rem 0;
+  margin: 1.8rem 0;
   box-shadow: var(--wi-shadow-xs);
-  position: relative;
 }
 
 .garden-quote-title {
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   text-transform: uppercase;
   letter-spacing: 2px;
   color: var(--wi-accent);
   font-weight: 700;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
 .garden-quote-content {
   font-size: 1.05rem;
   color: var(--wi-text);
   line-height: 1.8;
-  font-style: normal;
 }
 
-/* 导航快速直达矩阵 */
+/* 核心笔记快速直达矩阵（Quick Nav）全新升级 */
 .garden-quick-nav {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 16px;
   margin: 1.8rem 0;
 }
@@ -523,14 +594,13 @@ img[src*="cute.gif"]:hover {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 14px 18px;
+  padding: 16px 20px;
   background: #ffffff;
   border: 1px solid var(--wi-border);
-  border-radius: 12px;
+  border-radius: 14px;
   text-decoration: none !important;
   color: var(--wi-heading) !important;
-  font-weight: 600;
-  transition: all 0.25s ease;
+  transition: all 0.28s cubic-bezier(0.2, 0.8, 0.2, 1);
   box-shadow: var(--wi-shadow-xs);
 }
 
@@ -538,18 +608,38 @@ img[src*="cute.gif"]:hover {
   transform: translateY(-3px);
   border-color: var(--wi-accent);
   box-shadow: var(--wi-shadow-sm);
-  color: var(--wi-accent) !important;
+}
+
+.garden-nav-pill .pill-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
 .garden-nav-pill .icon {
-  font-size: 1.3rem;
-  margin-right: 10px;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.garden-nav-pill .pill-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--wi-heading);
+  display: block;
+  line-height: 1.4;
+}
+
+.garden-nav-pill .pill-desc {
+  font-size: 0.84rem;
+  color: var(--wi-muted);
+  display: block;
+  margin-top: 2px;
 }
 
 .garden-nav-pill .arrow {
   color: var(--wi-muted);
-  font-size: 1.1rem;
-  transition: transform 0.25s ease;
+  font-size: 1.2rem;
+  transition: transform 0.25s ease, color 0.25s ease;
 }
 
 .garden-nav-pill:hover .arrow {
@@ -557,7 +647,7 @@ img[src*="cute.gif"]:hover {
   color: var(--wi-accent);
 }
 
-/* 表情包卡片工整画廊 */
+/* 表情包画廊 */
 .garden-meme-gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -590,7 +680,7 @@ img[src*="cute.gif"]:hover {
   display: block;
 }
 
-/* 座右铭与落款（支持优雅衬线回退，绝不降级到 Comic Sans） */
+/* 座右铭与落款 */
 .vp-doc .my-motto {
   display: block;
   text-align: center;

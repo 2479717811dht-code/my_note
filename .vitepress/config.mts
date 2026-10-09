@@ -245,20 +245,20 @@ export default withMermaid(
         },
         {
           text: '休息一下',
-          collapsed: true,
+          collapsed: false,
           items: [
             {
-              text: 'Read Me',
+              text: 'Read Me · 摸鱼小憩',
               link: '/Break/break'
-            }//,            
-            // {
-            //   text: 'Journal 1',
-            //   link: '/Break/Journal1'
-            // },
-            // {
-            //   text: 'Journal 2',
-            //   link: '/Break/Journal2'
-            // }
+            },
+            {
+              text: 'Journal 1 · 红黑树',
+              link: '/Break/Journal1'
+            },
+            {
+              text: 'Journal 2 · 大海',
+              link: '/Break/Journal2'
+            }
           ]
         }
       ],

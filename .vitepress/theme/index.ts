@@ -1,15 +1,17 @@
 import DefaultTheme from 'vitepress/theme'
-import { h } from 'vue' // 👉 新增：引入 Vue 的渲染函数
-import MusicToggle from './MusicToggle.vue' // 👉 新增：引入刚才写好的音乐按钮
+import { h } from 'vue'
+import MusicToggle from './MusicToggle.vue'
+import BreakGames from './BreakGames.vue'
 import './custom.css'
 
 export default {
-  extends: DefaultTheme, // 继承默认主题
-  
-  // 👉 核心操作：重写布局，把音乐按钮塞进右上角插槽
+  extends: DefaultTheme,
   Layout: () => {
     return h(DefaultTheme.Layout, null, {
       'nav-bar-content-after': () => h(MusicToggle)
     })
+  },
+  enhanceApp({ app }) {
+    app.component('BreakGames', BreakGames)
   }
 }
