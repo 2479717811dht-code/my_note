@@ -328,8 +328,51 @@ nav.table-of-contents a:hover {
 .vp-doc div[class*="language-"] {
   border-radius: 14px;
   border: 1px solid var(--wi-border);
-  box-shadow: var(--wi-shadow-xs);
-  margin: 1.5rem 0;
+  box-shadow: 0 4px 16px rgba(130, 65, 45, 0.05);
+  margin: 1.6rem 0;
+  overflow: hidden;
+}
+
+/* 提示块 / 警告盒 / Admonitions 专属质感升级 */
+.vp-doc .custom-block {
+  border-radius: 14px !important;
+  margin: 1.6rem 0 !important;
+  padding: 18px 22px !important;
+  border: 1px solid transparent !important;
+  box-shadow: 0 4px 16px rgba(130, 65, 45, 0.04) !important;
+}
+
+.vp-doc .custom-block.tip {
+  background: linear-gradient(135deg, rgba(247, 243, 237, 0.95) 0%, rgba(254, 252, 249, 0.9) 100%) !important;
+  border-color: rgba(184, 91, 68, 0.25) !important;
+  border-left: 5px solid var(--wi-accent) !important;
+}
+
+.vp-doc .custom-block.info {
+  background: linear-gradient(135deg, rgba(240, 245, 252, 0.95) 0%, rgba(250, 252, 255, 0.9) 100%) !important;
+  border-color: rgba(60, 110, 180, 0.22) !important;
+  border-left: 5px solid #3c6eb4 !important;
+}
+
+.vp-doc .custom-block.warning {
+  background: linear-gradient(135deg, rgba(255, 250, 238, 0.95) 0%, rgba(255, 254, 250, 0.9) 100%) !important;
+  border-color: rgba(217, 130, 43, 0.25) !important;
+  border-left: 5px solid #d9822b !important;
+}
+
+.vp-doc .custom-block .custom-block-title {
+  font-weight: 700 !important;
+  letter-spacing: 0.5px;
+  margin-bottom: 6px;
+}
+
+/* 内页普通插图柔和装裱 */
+.vp-doc img:not(.garden-banner-img):not(.garden-meme-item img):not(.garden-photo-frame img):not([src*="cute.gif"]) {
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(130, 65, 45, 0.08);
+  margin: 1.6rem auto;
+  display: block;
+  max-width: 100%;
 }
 
 .vp-doc blockquote:not(.md-alert) {
@@ -410,6 +453,24 @@ nav.table-of-contents a:hover {
     white-space: nowrap;
     -webkit-overflow-scrolling: touch;
   }
+}
+
+/* 任务清单与高亮标注（内页排版精修） */
+.vp-doc input[type='checkbox'] {
+  width: 1.15em;
+  height: 1.15em;
+  margin-right: 0.55em;
+  accent-color: var(--wi-accent);
+  box-shadow: 0 1px 3px rgba(184, 91, 68, 0.2);
+  vertical-align: -0.15em;
+  cursor: pointer;
+}
+
+.vp-doc mark {
+  color: inherit;
+  background: linear-gradient(120deg, rgba(250, 228, 166, 0.85) 0%, rgba(250, 228, 166, 0.45) 100%);
+  padding: 0.15em 0.45em;
+  border-radius: 4px;
 }
 
 /* ==================================================
@@ -582,72 +643,215 @@ img[src*="cute.gif"]:hover {
   line-height: 1.8;
 }
 
-/* 核心笔记快速直达矩阵（Quick Nav）全新升级 */
-.garden-quick-nav {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 16px;
-  margin: 1.8rem 0;
+/* ==================================================
+ * 7. 现代便当盒知识矩阵（Bento Grid Knowledge Matrix）
+ * ================================================== */
+.bento-cluster {
+  margin: 2.4rem 0 3rem;
 }
 
-.garden-nav-pill {
+.bento-section-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 1.2rem;
+  border-bottom: 1px solid rgba(184, 91, 68, 0.12);
+  padding-bottom: 0.6rem;
+}
+
+.bento-section-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--wi-heading);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.bento-section-subtitle {
+  font-size: 0.85rem;
+  color: var(--wi-muted);
+}
+
+.garden-bento-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(285px, 1fr));
+  gap: 16px;
+  margin: 1.2rem 0;
+}
+
+.bento-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 18px 20px;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.92) 0%, rgba(253, 249, 243, 0.8) 100%);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(184, 91, 68, 0.13);
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(184, 91, 68, 0.05);
+  text-decoration: none !important;
+  transition: all 0.32s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: hidden;
+}
+
+.bento-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent 0%, var(--wi-accent) 50%, transparent 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.bento-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(184, 91, 68, 0.42);
+  box-shadow: 0 14px 34px -4px rgba(184, 91, 68, 0.16), 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+.bento-card:hover::before {
+  opacity: 1;
+}
+
+.bento-card-top {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 16px 20px;
-  background: #ffffff;
-  border: 1px solid var(--wi-border);
-  border-radius: 14px;
-  text-decoration: none !important;
-  color: var(--wi-heading) !important;
-  transition: all 0.28s cubic-bezier(0.2, 0.8, 0.2, 1);
-  box-shadow: var(--wi-shadow-xs);
+  margin-bottom: 12px;
 }
 
-.garden-nav-pill:hover {
-  transform: translateY(-3px);
-  border-color: var(--wi-accent);
-  box-shadow: var(--wi-shadow-sm);
+.bento-code-badge {
+  font-family: var(--vp-font-family-mono);
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: var(--wi-accent-dark);
+  background: rgba(184, 91, 68, 0.09);
+  padding: 3px 8px;
+  border-radius: 6px;
+  letter-spacing: 0.5px;
+  border: 1px solid rgba(184, 91, 68, 0.15);
 }
 
-.garden-nav-pill .pill-left {
+.bento-tag-badge {
+  font-size: 0.74rem;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 999px;
+  letter-spacing: 0.3px;
+}
+
+.bento-tag-badge.core {
+  background: rgba(184, 91, 68, 0.1);
+  color: var(--wi-accent-dark);
+}
+
+.bento-tag-badge.math {
+  background: rgba(78, 122, 199, 0.1);
+  color: #2b5597;
+}
+
+.bento-tag-badge.lab {
+  background: rgba(46, 139, 87, 0.1);
+  color: #246e44;
+}
+
+.bento-tag-badge.life {
+  background: rgba(198, 138, 76, 0.12);
+  color: #945d1f;
+}
+
+.bento-card-body {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.bento-icon-box {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(184, 91, 68, 0.1) 0%, rgba(250, 245, 238, 0.8) 100%);
+  border: 1px solid rgba(184, 91, 68, 0.12);
   display: flex;
   align-items: center;
-  gap: 12px;
-}
-
-.garden-nav-pill .icon {
-  font-size: 1.5rem;
+  justify-content: center;
+  font-size: 1.45rem;
   flex-shrink: 0;
+  box-shadow: 0 2px 6px rgba(184, 91, 68, 0.04);
 }
 
-.garden-nav-pill .pill-title {
-  font-size: 1rem;
+.bento-content {
+  flex: 1;
+}
+
+.bento-title {
+  font-size: 1.05rem;
   font-weight: 700;
   color: var(--wi-heading);
+  line-height: 1.35;
+  margin-bottom: 4px;
   display: block;
-  line-height: 1.4;
+  transition: color 0.2s ease;
 }
 
-.garden-nav-pill .pill-desc {
+.bento-card:hover .bento-title {
+  color: var(--wi-accent);
+}
+
+.bento-desc {
   font-size: 0.84rem;
   color: var(--wi-muted);
+  line-height: 1.5;
   display: block;
-  margin-top: 2px;
 }
 
-.garden-nav-pill .arrow {
+.bento-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid rgba(184, 91, 68, 0.08);
+  padding-top: 10px;
+  margin-top: auto;
+}
+
+.bento-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.bento-chip {
+  font-size: 0.72rem;
+  color: var(--wi-text-soft);
+  background: #fbf7f2;
+  padding: 2px 6px;
+  border-radius: 4px;
+  border: 1px solid rgba(184, 91, 68, 0.08);
+}
+
+.bento-arrow {
   color: var(--wi-muted);
-  font-size: 1.2rem;
+  font-size: 1.15rem;
+  font-weight: bold;
   transition: transform 0.25s ease, color 0.25s ease;
+  line-height: 1;
 }
 
-.garden-nav-pill:hover .arrow {
+.bento-card:hover .bento-arrow {
   transform: translateX(4px);
   color: var(--wi-accent);
 }
 
-/* 表情包画廊 */
+/* ==================================================
+ * 8. 表情包画廊与趣图展示
+ * ================================================== */
 .garden-meme-gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -656,11 +860,11 @@ img[src*="cute.gif"]:hover {
 }
 
 .garden-meme-item {
-  background: #ffffff;
-  border: 1px solid var(--wi-border);
-  border-radius: 14px;
-  padding: 12px;
-  box-shadow: var(--wi-shadow-xs);
+  background: linear-gradient(135deg, #ffffff 0%, #faf6f0 100%);
+  border: 1px solid rgba(184, 91, 68, 0.12);
+  border-radius: 16px;
+  padding: 14px;
+  box-shadow: 0 4px 16px rgba(184, 91, 68, 0.04);
   transition: all 0.3s ease;
   display: flex;
   flex-direction: column;
@@ -669,8 +873,8 @@ img[src*="cute.gif"]:hover {
 
 .garden-meme-item:hover {
   transform: translateY(-4px);
-  border-color: var(--wi-accent);
-  box-shadow: var(--wi-shadow-sm);
+  border-color: rgba(184, 91, 68, 0.35);
+  box-shadow: 0 12px 28px rgba(184, 91, 68, 0.1);
 }
 
 .garden-meme-item img {
@@ -680,39 +884,351 @@ img[src*="cute.gif"]:hover {
   display: block;
 }
 
-/* 座右铭与落款 */
-.vp-doc .my-motto {
+/* ==================================================
+ * 9. 勒布朗·詹姆斯座右铭卡片（Strive For Greatness）
+ * ================================================== */
+.vp-doc .lebron-motto {
+  position: relative;
   display: block;
   text-align: center;
-  margin: 60px auto 30px;
-  padding: 26px 20px;
-  max-width: 780px;
-  border-top: 2px dashed var(--wi-accent);
-  border-bottom: 2px dashed var(--wi-accent);
-  color: var(--wi-accent-dark);
-  background: radial-gradient(circle, rgba(184, 91, 68, 0.05) 0%, transparent 80%);
-  font-family: "LXGW WenKai Screen", "Kaiti SC", "STKaiti", "楷体", serif;
-  font-size: 20px;
-  line-height: 2;
-  letter-spacing: 3px;
-  border-radius: 18px;
-  transition: all 0.4s ease;
+  margin: 50px auto 25px;
+  padding: 32px 28px 26px;
+  max-width: 820px;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.95) 0%, rgba(253, 248, 240, 0.9) 100%);
+  border: 1px solid rgba(198, 138, 76, 0.28);
+  border-radius: 22px;
+  box-shadow: 0 10px 32px -4px rgba(198, 138, 76, 0.12), 0 2px 8px rgba(0, 0, 0, 0.03);
+  backdrop-filter: blur(10px);
+  overflow: hidden;
+  transition: all 0.35s ease;
 }
 
-.vp-doc .my-motto:hover {
-  transform: scale(1.02);
-  background: radial-gradient(circle, rgba(184, 91, 68, 0.09) 0%, transparent 90%);
+.vp-doc .lebron-motto::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #c68a4c 0%, #b85b44 50%, #963d28 100%);
 }
 
-.vp-doc .my-sign {
+.vp-doc .lebron-motto:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 42px -4px rgba(198, 138, 76, 0.2);
+  border-color: rgba(184, 91, 68, 0.45);
+}
+
+.motto-crown-icon {
+  font-size: 2rem;
+  line-height: 1;
+  margin-bottom: 8px;
+  display: inline-block;
+  filter: drop-shadow(0 2px 6px rgba(198, 138, 76, 0.3));
+  animation: crown-float 3s ease-in-out infinite alternate;
+}
+
+@keyframes crown-float {
+  0% { transform: translateY(0px) rotate(-2deg); }
+  100% { transform: translateY(-4px) rotate(2deg); }
+}
+
+.motto-tagline {
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 4px;
+  color: var(--wi-accent);
+  text-transform: uppercase;
+  margin-bottom: 16px;
   display: block;
-  text-align: right;
-  margin-top: 30px;
-  padding-right: 20px;
-  color: var(--wi-accent-dark);
-  font-family: "LXGW WenKai Screen", "Kaiti SC", "STKaiti", "楷体", serif;
-  font-size: 24px;
-  letter-spacing: 2px;
+}
+
+.motto-quote-en {
+  font-family: Georgia, "Times New Roman", "Songti SC", serif;
+  font-size: 1.25rem;
+  font-weight: 600;
   font-style: italic;
-  font-weight: bold;
+  color: #2a1e1b;
+  line-height: 1.6;
+  max-width: 680px;
+  margin: 0 auto 12px;
+  letter-spacing: 0.3px;
+}
+
+.motto-quote-cn {
+  font-family: var(--vp-font-family-base);
+  font-size: 1.02rem;
+  color: #5c4e47;
+  line-height: 1.8;
+  max-width: 660px;
+  margin: 0 auto 18px;
+  font-weight: 450;
+}
+
+.motto-author {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--vp-font-family-base);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--wi-accent-dark);
+  border-top: 1px dashed rgba(184, 91, 68, 0.2);
+  padding-top: 14px;
+}
+
+/* ==================================================
+ * 10. 极客冲浪·推荐站点卡片（Break 书签系统）
+ * ================================================== */
+.garden-bookmarks-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 14px;
+  margin: 1.6rem 0 2.2rem;
+}
+
+.bookmark-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 14px 16px;
+  background: linear-gradient(135deg, #ffffff 0%, #fcf8f3 100%);
+  border: 1px solid rgba(184, 91, 68, 0.12);
+  border-radius: 14px;
+  text-decoration: none !important;
+  color: var(--wi-text) !important;
+  box-shadow: 0 2px 10px rgba(184, 91, 68, 0.04);
+  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.bookmark-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(184, 91, 68, 0.38);
+  box-shadow: 0 10px 24px rgba(184, 91, 68, 0.12);
+}
+
+.bookmark-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.bookmark-title-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.bookmark-icon {
+  font-size: 1.3rem;
+}
+
+.bookmark-name {
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: var(--wi-heading);
+}
+
+.bookmark-card:hover .bookmark-name {
+  color: var(--wi-accent);
+}
+
+.bookmark-tag {
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: rgba(184, 91, 68, 0.08);
+  color: var(--wi-accent-dark);
+}
+
+.bookmark-desc {
+  font-size: 0.82rem;
+  color: var(--wi-muted);
+  line-height: 1.45;
+  margin-bottom: 10px;
+}
+
+.bookmark-link-text {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--wi-accent);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* ==================================================
+ * 11. 心境随笔文人书签卡片（Journals）
+ * ================================================== */
+.journal-bento-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 18px;
+  margin: 1.6rem 0 2.2rem;
+}
+
+.journal-bento-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 22px 24px;
+  background: linear-gradient(135deg, #fffdfb 0%, #f8f1e7 100%);
+  border: 1px solid rgba(198, 138, 76, 0.22);
+  border-radius: 18px;
+  text-decoration: none !important;
+  box-shadow: 0 4px 18px rgba(130, 65, 45, 0.05);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: hidden;
+}
+
+.journal-bento-card::before {
+  content: '“';
+  position: absolute;
+  top: 10px;
+  right: 16px;
+  font-size: 5rem;
+  font-family: Georgia, serif;
+  color: rgba(184, 91, 68, 0.08);
+  line-height: 1;
+  pointer-events: none;
+}
+
+.journal-bento-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(184, 91, 68, 0.4);
+  box-shadow: 0 14px 32px rgba(184, 91, 68, 0.14);
+}
+
+.journal-badge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--wi-accent-dark);
+  background: rgba(184, 91, 68, 0.1);
+  padding: 3px 10px;
+  border-radius: 999px;
+  align-self: flex-start;
+  margin-bottom: 12px;
+}
+
+.journal-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--wi-heading);
+  margin-bottom: 8px;
+}
+
+.journal-quote {
+  font-size: 0.88rem;
+  font-style: italic;
+  color: var(--wi-text-soft);
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.journal-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.82rem;
+  color: var(--wi-accent);
+  font-weight: 600;
+  border-top: 1px dashed rgba(184, 91, 68, 0.15);
+  padding-top: 10px;
+}
+
+/* ==================================================
+ * 12. AI 智能辅导智囊团卡片（内页专用）
+ * ================================================== */
+.ai-assistant-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 14px;
+  margin: 1.6rem 0;
+}
+
+.ai-assistant-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 16px;
+  background: linear-gradient(135deg, #ffffff 0%, #faf6f0 100%);
+  border: 1px solid rgba(184, 91, 68, 0.12);
+  border-radius: 14px;
+  text-decoration: none !important;
+  color: var(--wi-text) !important;
+  box-shadow: 0 2px 10px rgba(184, 91, 68, 0.04);
+  transition: all 0.28s ease;
+}
+
+.ai-assistant-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(184, 91, 68, 0.38);
+  box-shadow: 0 10px 22px rgba(184, 91, 68, 0.12);
+}
+
+.ai-card-icon {
+  font-size: 1.6rem;
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: rgba(184, 91, 68, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.ai-card-info {
+  flex: 1;
+}
+
+.ai-card-name {
+  font-size: 0.96rem;
+  font-weight: 700;
+  color: var(--wi-heading);
+  display: block;
+}
+
+.ai-assistant-card:hover .ai-card-name {
+  color: var(--wi-accent);
+}
+
+.ai-card-desc {
+  font-size: 0.78rem;
+  color: var(--wi-muted);
+  line-height: 1.35;
+  display: block;
+  margin-top: 2px;
+}
+
+/* ==================================================
+ * 13. 优雅相框与画报展示（内页通用）
+ * ================================================== */
+.garden-photo-frame {
+  margin: 2.2rem auto;
+  text-align: center;
+}
+
+.garden-photo-frame img {
+  display: inline-block;
+  max-width: 480px;
+  width: 100%;
+  border: 6px solid #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(130, 65, 45, 0.12);
+  transition: transform 0.35s ease;
+}
+
+.garden-photo-frame img:hover {
+  transform: scale(1.015);
+}
+
+.garden-photo-caption {
+  font-size: 0.84rem;
+  color: var(--wi-muted);
+  margin-top: 10px;
+  letter-spacing: 0.5px;
 }

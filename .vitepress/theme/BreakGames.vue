@@ -550,12 +550,20 @@ onUnmounted(() => {
 
 <style scoped>
 .break-games-card {
-  margin: 2.2rem 0;
-  padding: 22px;
-  background: linear-gradient(135deg, #ffffff 0%, #fcf8f3 100%);
-  border: 1px solid #ebdcd2;
-  border-radius: 20px;
-  box-shadow: 0 8px 26px rgba(184, 91, 68, 0.07);
+  margin: 2.2rem 0 3rem;
+  padding: 24px 26px;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.95) 0%, rgba(253, 248, 241, 0.88) 100%);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(184, 91, 68, 0.16);
+  border-radius: 24px;
+  box-shadow: 0 12px 36px -6px rgba(184, 91, 68, 0.1), 0 2px 8px rgba(0, 0, 0, 0.02);
+  transition: all 0.3s ease;
+}
+
+.break-games-card:hover {
+  box-shadow: 0 16px 42px -6px rgba(184, 91, 68, 0.14);
+  border-color: rgba(184, 91, 68, 0.28);
 }
 
 .games-header {
@@ -563,47 +571,50 @@ onUnmounted(() => {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  gap: 12px;
-  padding-bottom: 16px;
-  border-bottom: 1px dashed #ebdcd2;
+  gap: 14px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid rgba(184, 91, 68, 0.1);
 }
 
 .games-title {
-  font-size: 1.15rem;
+  font-size: 1.18rem;
   font-weight: 700;
   color: #2b1f1c;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
 }
 
 .games-tabs {
   display: flex;
-  gap: 8px;
+  background: rgba(184, 91, 68, 0.07);
+  padding: 4px;
+  border-radius: 999px;
+  gap: 4px;
+  border: 1px solid rgba(184, 91, 68, 0.08);
 }
 
 .tab-btn {
-  padding: 6px 14px;
+  padding: 6px 16px;
   border-radius: 999px;
-  border: 1px solid #ebdcd2;
-  background: #ffffff;
+  border: none;
+  background: transparent;
   color: #63554e;
   font-size: 0.88rem;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.25s ease;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .tab-btn:hover {
-  border-color: #b85b44;
   color: #b85b44;
 }
 
 .tab-btn.active {
-  background: #b85b44;
-  color: #ffffff;
-  border-color: #b85b44;
-  box-shadow: 0 2px 8px rgba(184, 91, 68, 0.25);
+  background: #ffffff;
+  color: #b85b44;
+  font-weight: 700;
+  box-shadow: 0 2px 10px rgba(184, 91, 68, 0.15), 0 1px 3px rgba(0, 0, 0, 0.04);
 }
 
 .game-view {

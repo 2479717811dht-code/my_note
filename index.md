@@ -57,54 +57,285 @@ features:
   <img :src="withBase('/indexPerson.png')" alt="Always With You" class="garden-banner-img" />
 </div>
 
-## 核心笔记直达 · Core Notes
+## 全景知识矩阵 · Course & Notes Hub
 
-精选热门理论笔记与实验实战直通车，一键开启阅读：
+涵盖理论专业课、数理基础、工程实验与后花园，全景速达：
 
-<div class="garden-quick-nav">
-  <a :href="withBase('/Theory/Fundamentals_of_Data_Structure')" class="garden-nav-pill">
-    <div class="pill-left">
-      <span class="icon">🌲</span>
+<div class="bento-cluster">
+  <div class="bento-section-header">
+    <div class="bento-section-title">💻 计算理论与系统架构 · Core Systems</div>
+    <div class="bento-section-subtitle">计算机系必修硬核专业课</div>
+  </div>
+  <div class="garden-bento-grid">
+    <a :href="withBase('/Theory/Fundamentals_of_Data_Structure')" class="bento-card">
       <div>
-        <span class="pill-title">数据结构基础</span>
-        <span class="pill-desc">算法分析 · 树与图 · 堆与并查集</span>
+        <div class="bento-card-top">
+          <span class="bento-code-badge">FDS</span>
+          <span class="bento-tag-badge core">专业核心</span>
+        </div>
+        <div class="bento-card-body">
+          <div class="bento-icon-box">🌲</div>
+          <div class="bento-content">
+            <span class="bento-title">数据结构基础</span>
+            <span class="bento-desc">树与森林 · 堆与优先队列 · 散列表 · 图论最短路径与并查集</span>
+          </div>
+        </div>
       </div>
-    </div>
-    <span class="arrow">→</span>
-  </a>
+      <div class="bento-card-footer">
+        <div class="bento-chips">
+          <span class="bento-chip">84K字精研</span>
+          <span class="bento-chip">图算法</span>
+        </div>
+        <span class="bento-arrow">→</span>
+      </div>
+    </a>
 
-  <a :href="withBase('/Theory/Computer_Organization')" class="garden-nav-pill">
-    <div class="pill-left">
-      <span class="icon">🖥️</span>
+    <a :href="withBase('/Theory/Advanced_Data_Structure_Algorithm_Analysis')" class="bento-card">
       <div>
-        <span class="pill-title">计算机组成与体系</span>
-        <span class="pill-desc">MIPS 架构 · 数据通路 · 流水线</span>
+        <div class="bento-card-top">
+          <span class="bento-code-badge">ADS</span>
+          <span class="bento-tag-badge core">进阶算法</span>
+        </div>
+        <div class="bento-card-body">
+          <div class="bento-icon-box">🚀</div>
+          <div class="bento-content">
+            <span class="bento-title">高级数据结构与算法</span>
+            <span class="bento-desc">AVL 树 · 伸展树 · B+ 树 · 左倾堆 · 摊还分析与近似算法</span>
+          </div>
+        </div>
       </div>
-    </div>
-    <span class="arrow">→</span>
-  </a>
+      <div class="bento-card-footer">
+        <div class="bento-chips">
+          <span class="bento-chip">cyll版讲义</span>
+          <span class="bento-chip">摊还分析</span>
+        </div>
+        <span class="bento-arrow">→</span>
+      </div>
+    </a>
 
-  <a :href="withBase('/Theory/dldnote')" class="garden-nav-pill">
-    <div class="pill-left">
-      <span class="icon">⚡</span>
+    <a :href="withBase('/Theory/Computer_Organization')" class="bento-card">
       <div>
-        <span class="pill-title">数字逻辑设计</span>
-        <span class="pill-desc">组合逻辑 · 时序电路 · 状态机设计</span>
+        <div class="bento-card-top">
+          <span class="bento-code-badge">CO</span>
+          <span class="bento-tag-badge core">硬件系统</span>
+        </div>
+        <div class="bento-card-body">
+          <div class="bento-icon-box">🖥️</div>
+          <div class="bento-content">
+            <span class="bento-title">计算机组成与体系</span>
+            <span class="bento-desc">MIPS 架构 · 指令集 · 单周期/流水线数据通路 · Cache 存储层次</span>
+          </div>
+        </div>
       </div>
-    </div>
-    <span class="arrow">→</span>
-  </a>
+      <div class="bento-card-footer">
+        <div class="bento-chips">
+          <span class="bento-chip">流水线冒险</span>
+          <span class="bento-chip">Cache 映射</span>
+        </div>
+        <span class="bento-arrow">→</span>
+      </div>
+    </a>
 
-  <a :href="withBase('/Break/break')" class="garden-nav-pill">
-    <div class="pill-left">
-      <span class="icon">🎮</span>
+    <a :href="withBase('/Theory/dldnote')" class="bento-card">
       <div>
-        <span class="pill-title">摸鱼放松小站</span>
-        <span class="pill-desc">赛博木鱼 · 极客贪吃蛇 · 2048小游戏</span>
+        <div class="bento-card-top">
+          <span class="bento-code-badge">DLD</span>
+          <span class="bento-tag-badge core">硬件基石</span>
+        </div>
+        <div class="bento-card-body">
+          <div class="bento-icon-box">⚡</div>
+          <div class="bento-content">
+            <span class="bento-title">数字逻辑设计</span>
+            <span class="bento-desc">布尔代数 · 卡诺图化简 · 组合时序逻辑 · 状态机 · Verilog 设计</span>
+          </div>
+        </div>
       </div>
-    </div>
-    <span class="arrow">→</span>
-  </a>
+      <div class="bento-card-footer">
+        <div class="bento-chips">
+          <span class="bento-chip">卡诺图</span>
+          <span class="bento-chip">FSM 状态机</span>
+        </div>
+        <span class="bento-arrow">→</span>
+      </div>
+    </a>
+
+    <a :href="withBase('/Theory/note-cs-code-cleaned')" class="bento-card">
+      <div>
+        <div class="bento-card-top">
+          <span class="bento-code-badge">FPA</span>
+          <span class="bento-tag-badge core">编程基石</span>
+        </div>
+        <div class="bento-card-body">
+          <div class="bento-icon-box">💻</div>
+          <div class="bento-content">
+            <span class="bento-title">程序设计与算法基础</span>
+            <span class="bento-desc">C/C++ 核心语法 · 指针内存模型 · 面向对象 · 基础算法与题型解析</span>
+          </div>
+        </div>
+      </div>
+      <div class="bento-card-footer">
+        <div class="bento-chips">
+          <span class="bento-chip">指针机制</span>
+          <span class="bento-chip">STL与算法</span>
+        </div>
+        <span class="bento-arrow">→</span>
+      </div>
+    </a>
+  </div>
+</div>
+
+<div class="bento-cluster">
+  <div class="bento-section-header">
+    <div class="bento-section-title">📐 数理基石与通识素养 · Math & GenEd</div>
+    <div class="bento-section-subtitle">推导思维与考研核心</div>
+  </div>
+  <div class="garden-bento-grid">
+    <a :href="withBase('/Theory/Discrete_Mathematics')" class="bento-card">
+      <div>
+        <div class="bento-card-top">
+          <span class="bento-code-badge">DM</span>
+          <span class="bento-tag-badge math">数理基石</span>
+        </div>
+        <div class="bento-card-body">
+          <div class="bento-icon-box">📐</div>
+          <div class="bento-content">
+            <span class="bento-title">离散数学</span>
+            <span class="bento-desc">命题谓词逻辑 · 集合与等价偏序关系 · 图论与树 · 组合计数与母函数</span>
+          </div>
+        </div>
+      </div>
+      <div class="bento-card-footer">
+        <div class="bento-chips">
+          <span class="bento-chip">偏序关系</span>
+          <span class="bento-chip">图论推导</span>
+        </div>
+        <span class="bento-arrow">→</span>
+      </div>
+    </a>
+
+    <a :href="withBase('/Theory/Probability_and_Mathematical_Statistics')" class="bento-card">
+      <div>
+        <div class="bento-card-top">
+          <span class="bento-code-badge">PMS</span>
+          <span class="bento-tag-badge math">数理基石</span>
+        </div>
+        <div class="bento-card-body">
+          <div class="bento-icon-box">🎲</div>
+          <div class="bento-content">
+            <span class="bento-title">概率论与数理统计</span>
+            <span class="bento-desc">随机变量及分布 · 期望与方差 · 大数定律与极限定理 · 参数估计与假设检验</span>
+          </div>
+        </div>
+      </div>
+      <div class="bento-card-footer">
+        <div class="bento-chips">
+          <span class="bento-chip">分布律模型</span>
+          <span class="bento-chip">估计检验</span>
+        </div>
+        <span class="bento-arrow">→</span>
+      </div>
+    </a>
+
+    <a :href="withBase('/Theory/Marxism')" class="bento-card">
+      <div>
+        <div class="bento-card-top">
+          <span class="bento-code-badge">MARX</span>
+          <span class="bento-tag-badge math">闭卷重点</span>
+        </div>
+        <div class="bento-card-body">
+          <div class="bento-icon-box">🚩</div>
+          <div class="bento-content">
+            <span class="bento-title">马克思主义基本原理</span>
+            <span class="bento-desc">唯物论辩证法 · 认识论与实践 · 资本论与唯物史观 · 期末及考研要点</span>
+          </div>
+        </div>
+      </div>
+      <div class="bento-card-footer">
+        <div class="bento-chips">
+          <span class="bento-chip">考点梳理</span>
+          <span class="bento-chip">背诵导图</span>
+        </div>
+        <span class="bento-arrow">→</span>
+      </div>
+    </a>
+  </div>
+</div>
+
+<div class="bento-cluster">
+  <div class="bento-section-header">
+    <div class="bento-section-title">🔬 硬件实战与工程落地 · Engineering Labs</div>
+    <div class="bento-section-subtitle">从 Verilog 电路到 CPU 设计</div>
+  </div>
+  <div class="garden-bento-grid">
+    <a :href="withBase('/Lab/Digital-Logic-Design-Lab')" class="bento-card">
+      <div>
+        <div class="bento-card-top">
+          <span class="bento-code-badge">DLD LAB</span>
+          <span class="bento-tag-badge lab">硬件实战</span>
+        </div>
+        <div class="bento-card-body">
+          <div class="bento-icon-box">🧪</div>
+          <div class="bento-content">
+            <span class="bento-title">数字逻辑设计实验</span>
+            <span class="bento-desc">Vivado 仿真与综合 · FPGA 板卡开发 · 组合时序实验报告与大作业</span>
+          </div>
+        </div>
+      </div>
+      <div class="bento-card-footer">
+        <div class="bento-chips">
+          <span class="bento-chip">Verilog HDL</span>
+          <span class="bento-chip">大作业代码</span>
+        </div>
+        <span class="bento-arrow">→</span>
+      </div>
+    </a>
+
+    <a :href="withBase('/Lab/Computer-Organization-Lab')" class="bento-card">
+      <div>
+        <div class="bento-card-top">
+          <span class="bento-code-badge">CO LAB</span>
+          <span class="bento-tag-badge lab">CPU架构</span>
+        </div>
+        <div class="bento-card-body">
+          <div class="bento-icon-box">⚙️</div>
+          <div class="bento-content">
+            <span class="bento-title">计算机组成体系实验</span>
+            <span class="bento-desc">MIPS 单周期 CPU 设计 · 汇编指令调试 · 中断异常与软硬件协同验证</span>
+          </div>
+        </div>
+      </div>
+      <div class="bento-card-footer">
+        <div class="bento-chips">
+          <span class="bento-chip">MIPS 汇编</span>
+          <span class="bento-chip">数据通路测试</span>
+        </div>
+        <span class="bento-arrow">→</span>
+      </div>
+    </a>
+
+    <a :href="withBase('/Cover/logic')" class="bento-card">
+      <div>
+        <div class="bento-card-top">
+          <span class="bento-code-badge">MAP</span>
+          <span class="bento-tag-badge life">全局导引</span>
+        </div>
+        <div class="bento-card-body">
+          <div class="bento-icon-box">🧭</div>
+          <div class="bento-content">
+            <span class="bento-title">课程体系知识图谱</span>
+            <span class="bento-desc">浙江大学计科培养方案全局脉络 · 选课指引 · 学习心法与 SGA 寄语</span>
+          </div>
+        </div>
+      </div>
+      <div class="bento-card-footer">
+        <div class="bento-chips">
+          <span class="bento-chip">培养路线</span>
+          <span class="bento-chip">全局框架</span>
+        </div>
+        <span class="bento-arrow">→</span>
+      </div>
+    </a>
+  </div>
 </div>
 
 ## 阅览与排版特性 · Features
@@ -135,9 +366,12 @@ features:
   </div>
 </div>
 
-<div class="my-motto">
-  “知止而后有定，定而后能静，静而后能安，安而后能虑，虑而后能得。”
-  <div class="my-sign">—— H.T. Deng</div>
+<div class="lebron-motto">
+  <div class="motto-crown-icon">👑</div>
+  <div class="motto-tagline">STRIVE FOR GREATNESS · 追求伟大</div>
+  <div class="motto-quote-en">“In Northeast Ohio, nothing is given. Everything is earned. You work for what you have.”</div>
+  <div class="motto-quote-cn">“在俄亥俄州东北部，没有什么是理所当然给予你的，一切都必须靠自己去赢取。唯有拼尽全力，方能追求伟大。”</div>
+  <div class="motto-author">—— LeBron Raymone James Sr. 👑</div>
 </div>
 
 <script setup>

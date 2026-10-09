@@ -1,24 +1,273 @@
-# <center>Theory</center>
+---
+title: 理论课程集 · Theory Notes
+description: 浙江大学计算机科学与技术专业核心理论课深度笔记合集
+---
 
-这里是理论课的笔记合集，有需自取喵 ~
+# 理论课程集 · Theory Notes
 
-如果有误清和 lz 反馈喵，谢谢 uu 喵 ~
+<div class="garden-badge">💡 格物致知 · 体系化推导与知识沉淀</div>
 
-有不会的知识点和题目？AI 直达喵 $↓$
+欢迎查阅计算机系专业理论课深度笔记。这里记录了从大一编程基石、大二软硬件核心，到高阶算法与数理基石的完整推导过程与题型总结。
 
-| 编号 |     名称     |                          简介                          |                超链接                 |
-| :--: | :----------: | :----------------------------------------------------: | :-----------------------------------: |
-| $1$  | **ChatGPT**  | 综合能力强，适合学习辅导、代码、写作、分析与日常使用。 |    [ChatGPT](https://chatgpt.com/)    |
-| $2$  |  **Claude**  |       长文本阅读、写作润色和文档分析能力较突出。       |     [Claude](https://claude.ai/)      |
-| $3$  |  **Gemini**  | 与 Google 生态结合较紧密，适合搜索、文档与多模态任务。 | [Gemini](https://gemini.google.com/)  |
-| $4$  |   **Grok**   |       偏实时信息和社交平台内容讨论，风格更直接。       |       [Grok](https://grok.com/)       |
-| $5$  | **DeepSeek** |    中文、代码和推理类任务表现不错，适合学习与编程。    | [DeepSeek](https://www.deepseek.com/) |
-| $6$  |   **元宝**   |   腾讯旗下 AI 助手，适合中文问答及腾讯生态相关场景。   | [元宝](https://yuanbao.tencent.com/)  |
-| $7$  |   **Kimi**   |          擅长长文档阅读、资料总结和中文写作。          |   [Kimi](https://kimi.moonshot.cn/)   |
-| $8$  |   **豆包**   |    字节旗下 AI 助手，适合日常问答、创作和轻量使用。    |    [豆包](https://www.doubao.com/)    |
+---
 
-<center>
-<img src="../public/20260602162149_1020_180.jpg" style="zoom:33%;" />
+## 理论核心课程矩阵 · Core Theory Courses
 
+点击卡片直接进入各科目完整深度笔记：
 
-</center>
+<div class="garden-bento-grid">
+  <a href="./Fundamentals_of_Data_Structure" class="bento-card">
+    <div>
+      <div class="bento-card-top">
+        <span class="bento-code-badge">FDS</span>
+        <span class="bento-tag-badge core">专业必修</span>
+      </div>
+      <div class="bento-card-body">
+        <div class="bento-icon-box">🌲</div>
+        <div class="bento-content">
+          <span class="bento-title">数据结构基础</span>
+          <span class="bento-desc">线性表、树与森林、二叉平衡树、堆、散列、图论算法与并查集</span>
+        </div>
+      </div>
+    </div>
+    <div class="bento-card-footer">
+      <div class="bento-chips">
+        <span class="bento-chip">84K字详记</span>
+        <span class="bento-chip">Dijkstra/Prim</span>
+      </div>
+      <span class="bento-arrow">→</span>
+    </div>
+  </a>
+
+  <a href="./Advanced_Data_Structure_Algorithm_Analysis" class="bento-card">
+    <div>
+      <div class="bento-card-top">
+        <span class="bento-code-badge">ADS</span>
+        <span class="bento-tag-badge core">高阶必修</span>
+      </div>
+      <div class="bento-card-body">
+        <div class="bento-icon-box">🚀</div>
+        <div class="bento-content">
+          <span class="bento-title">高级数据结构与算法</span>
+          <span class="bento-desc">AVL 树、伸展树、B+ 树、红黑树、左倾堆、摊还分析与NP完全问题</span>
+        </div>
+      </div>
+    </div>
+    <div class="bento-card-footer">
+      <div class="bento-chips">
+        <span class="bento-chip">cyll 版</span>
+        <span class="bento-chip">摊还分析</span>
+      </div>
+      <span class="bento-arrow">→</span>
+    </div>
+  </a>
+
+  <a href="./Computer_Organization" class="bento-card">
+    <div>
+      <div class="bento-card-top">
+        <span class="bento-code-badge">CO</span>
+        <span class="bento-tag-badge core">硬件系统</span>
+      </div>
+      <div class="bento-card-body">
+        <div class="bento-icon-box">🖥️</div>
+        <div class="bento-content">
+          <span class="bento-title">计算机组成与体系</span>
+          <span class="bento-desc">MIPS 架构、单周期与流水线数据通路、结构/数据/控制冒险、Cache 层次</span>
+        </div>
+      </div>
+    </div>
+    <div class="bento-card-footer">
+      <div class="bento-chips">
+        <span class="bento-chip">流水线微架构</span>
+        <span class="bento-chip">Cache 映射</span>
+      </div>
+      <span class="bento-arrow">→</span>
+    </div>
+  </a>
+
+  <a href="./dldnote" class="bento-card">
+    <div>
+      <div class="bento-card-top">
+        <span class="bento-code-badge">DLD</span>
+        <span class="bento-tag-badge core">硬件基石</span>
+      </div>
+      <div class="bento-card-body">
+        <div class="bento-icon-box">⚡</div>
+        <div class="bento-content">
+          <span class="bento-title">数字逻辑设计</span>
+          <span class="bento-desc">布尔代数、卡诺图化简、组合逻辑、时序电路、触发器、有限状态机 FSM</span>
+        </div>
+      </div>
+    </div>
+    <div class="bento-card-footer">
+      <div class="bento-chips">
+        <span class="bento-chip">卡诺图</span>
+        <span class="bento-chip">Mealy/Moore</span>
+      </div>
+      <span class="bento-arrow">→</span>
+    </div>
+  </a>
+
+  <a href="./note-cs-code-cleaned" class="bento-card">
+    <div>
+      <div class="bento-card-top">
+        <span class="bento-code-badge">FPA</span>
+        <span class="bento-tag-badge core">编程基石</span>
+      </div>
+      <div class="bento-card-body">
+        <div class="bento-icon-box">💻</div>
+        <div class="bento-content">
+          <span class="bento-title">程序设计与算法基础</span>
+          <span class="bento-desc">C/C++ 核心语法规范、指针与内存模型、结构体、面向对象与高频例题</span>
+        </div>
+      </div>
+    </div>
+    <div class="bento-card-footer">
+      <div class="bento-chips">
+        <span class="bento-chip">指针机制</span>
+        <span class="bento-chip">算法实战</span>
+      </div>
+      <span class="bento-arrow">→</span>
+    </div>
+  </a>
+
+  <a href="./Discrete_Mathematics" class="bento-card">
+    <div>
+      <div class="bento-card-top">
+        <span class="bento-code-badge">DM</span>
+        <span class="bento-tag-badge math">数理基石</span>
+      </div>
+      <div class="bento-card-body">
+        <div class="bento-icon-box">📐</div>
+        <div class="bento-content">
+          <span class="bento-title">离散数学</span>
+          <span class="bento-desc">命题与谓词逻辑、集合与关系、偏序集、图论与树、组合计数与母函数</span>
+        </div>
+      </div>
+    </div>
+    <div class="bento-card-footer">
+      <div class="bento-chips">
+        <span class="bento-chip">等价/偏序关系</span>
+        <span class="bento-chip">图连通度</span>
+      </div>
+      <span class="bento-arrow">→</span>
+    </div>
+  </a>
+
+  <a href="./Probability_and_Mathematical_Statistics" class="bento-card">
+    <div>
+      <div class="bento-card-top">
+        <span class="bento-code-badge">PMS</span>
+        <span class="bento-tag-badge math">数理基石</span>
+      </div>
+      <div class="bento-card-body">
+        <div class="bento-icon-box">🎲</div>
+        <div class="bento-content">
+          <span class="bento-title">概率论与数理统计</span>
+          <span class="bento-desc">随机变量及其分布律、多维变量、极限定理、参数估计与假设检验</span>
+        </div>
+      </div>
+    </div>
+    <div class="bento-card-footer">
+      <div class="bento-chips">
+        <span class="bento-chip">分布模型</span>
+        <span class="bento-chip">置信区间</span>
+      </div>
+      <span class="bento-arrow">→</span>
+    </div>
+  </a>
+
+  <a href="./Marxism" class="bento-card">
+    <div>
+      <div class="bento-card-top">
+        <span class="bento-code-badge">MARX</span>
+        <span class="bento-tag-badge math">闭卷核心</span>
+      </div>
+      <div class="bento-card-body">
+        <div class="bento-icon-box">🚩</div>
+        <div class="bento-content">
+          <span class="bento-title">马克思主义基本原理</span>
+          <span class="bento-desc">唯物辩证法、实践与认识论、资本主义生产与剩余价值、唯物史观背诵</span>
+        </div>
+      </div>
+    </div>
+    <div class="bento-card-footer">
+      <div class="bento-chips">
+        <span class="bento-chip">考点大纲</span>
+        <span class="bento-chip">考研背诵</span>
+      </div>
+      <span class="bento-arrow">→</span>
+    </div>
+  </a>
+</div>
+
+---
+
+## 理论进阶路线 · Study Roadmap
+
+::: tip 💡 计算机科学理论学习递进建议
+1. **编程思维筑基**：以《程序设计基础》熟悉内存、指针与结构化思维，通过《离散数学》建立严谨的形式化推导习惯。
+2. **算法与数据结构**：深研《数据结构基础（FDS）》，吃透树、堆、图与并查集，随后衔接《高级数据结构与算法（ADS）》的摊还分析与平衡树进阶。
+3. **软硬件协同自底向上**：由《数字逻辑设计》理解门电路与状态机，再跃升至《计算机组成与体系》推导指令译码、单周期与流水线数据通路。
+:::
+
+---
+
+## 助学智囊团 · AI Research Assistants
+
+遇到复杂的概念推导、数学证明或代码调试时，可随时借助以下 AI 助手：
+
+<div class="ai-assistant-grid">
+  <a href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer" class="ai-assistant-card">
+    <div class="ai-card-icon">🤖</div>
+    <div class="ai-card-info">
+      <span class="ai-card-name">ChatGPT</span>
+      <span class="ai-card-desc">综合能力强，适合概念推导、代码实现与综合答疑</span>
+    </div>
+  </a>
+
+  <a href="https://claude.ai/" target="_blank" rel="noopener noreferrer" class="ai-assistant-card">
+    <div class="ai-card-icon">🧠</div>
+    <div class="ai-card-info">
+      <span class="ai-card-name">Claude</span>
+      <span class="ai-card-desc">逻辑清晰，长文本学术资料阅读与严密推理极佳</span>
+    </div>
+  </a>
+
+  <a href="https://deepseek.com/" target="_blank" rel="noopener noreferrer" class="ai-assistant-card">
+    <div class="ai-card-icon">⚡</div>
+    <div class="ai-card-info">
+      <span class="ai-card-name">DeepSeek</span>
+      <span class="ai-card-desc">国产推理先锋，擅长数学公式推导与复杂代码分析</span>
+    </div>
+  </a>
+
+  <a href="https://gemini.google.com/" target="_blank" rel="noopener noreferrer" class="ai-assistant-card">
+    <div class="ai-card-icon">💎</div>
+    <div class="ai-card-info">
+      <span class="ai-card-name">Gemini</span>
+      <span class="ai-card-desc">Google 旗下多模态模型，支持海量上下文与多模态图表</span>
+    </div>
+  </a>
+
+  <a href="https://kimi.moonshot.cn/" target="_blank" rel="noopener noreferrer" class="ai-assistant-card">
+    <div class="ai-card-icon">🌙</div>
+    <div class="ai-card-info">
+      <span class="ai-card-name">Kimi</span>
+      <span class="ai-card-desc">长文本阅读专家，擅长期末论文研读与复习资料总结</span>
+    </div>
+  </a>
+
+  <a href="https://grok.com/" target="_blank" rel="noopener noreferrer" class="ai-assistant-card">
+    <div class="ai-card-icon">🚀</div>
+    <div class="ai-card-info">
+      <span class="ai-card-name">Grok</span>
+      <span class="ai-card-desc">风格直接幽默，快速探讨技术观点与前沿热点</span>
+    </div>
+  </a>
+</div>
+
+<div class="garden-photo-frame">
+  <img src="/20260602162149_1020_180.jpg" alt="Keep Moving Forward" />
+  <div class="garden-photo-caption">Strive for Greatness · 积跬步以至千里，致广大而尽精微</div>
+</div>
