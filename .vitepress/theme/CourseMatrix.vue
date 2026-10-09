@@ -175,7 +175,7 @@ const filteredCourses = computed(() => {
       <a
         v-for="item in filteredCourses"
         :key="item.code"
-        :href="withBase(item.link)"
+        :href="withBase(item.link.endsWith('.html') ? item.link : item.link + '.html')"
         class="matrix-card"
       >
         <div class="card-top">

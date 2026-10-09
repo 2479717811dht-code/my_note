@@ -134,7 +134,7 @@ description: 赛博木鱼、极客贪吃蛇、2048小游戏与极客冲浪社区
 在代码与严密的数理逻辑之外，记录一些真实的骨血、潮水与呼吸：
 
 <div class="journal-bento-grid">
-  <a href="./Journal1" class="journal-bento-card">
+  <a href="./Journal1.html" class="journal-bento-card">
     <div class="journal-badge">🍂 随笔 01 · 算法隐喻</div>
     <div class="journal-title">Journal 1 · 红黑树</div>
     <div class="journal-quote">
@@ -146,7 +146,7 @@ description: 赛博木鱼、极客贪吃蛇、2048小游戏与极客冲浪社区
     </div>
   </a>
 
-  <a href="./Journal2" class="journal-bento-card">
+  <a href="./Journal2.html" class="journal-bento-card">
     <div class="journal-badge">🌊 随笔 02 · 记忆潮汐</div>
     <div class="journal-title">Journal 2 · 大海</div>
     <div class="journal-quote">

@@ -110,36 +110,7 @@ export default withMermaid(
             {
               text: '实验课内容及实验报告',
               link: '/Lab/lab'
-            },
-          // items: [
-          //   {
-          //     text: '课程总览',
-          //     link: '/logic'
-          //   },
-          //   {
-          //     text: 'Fundamentals of Programming and Algorithms',
-          //     link: '/note-cs-code-cleaned'
-          //   },
-          //   {
-          //     text: 'Digital Logic Design',
-          //     link: '/dldnote'
-          //   },
-          //   {
-          //     text: 'Fundamentals of Data Structure',
-          //     link: '/Fundamentals_of_Data_Structure'
-          //   },
-          //   {
-          //     text: 'Discrete Mathematics',
-          //     link: '/Discrete_Mathematics'
-          //   },
-          //   {
-          //     text: 'Computer Organization',
-          //     link: '/Computer_Organization'
-          //   },
-          //   {
-          //     text: 'Advanced Data Structure & Algorithm Analysis',
-          //     link: '/Advanced_Data_Structure_Algorithm_Analysis'
-          //   }
+            }
           ]
         },
         {
@@ -213,10 +184,6 @@ export default withMermaid(
           text: '实验课',
           collapsed: false,
           items: [
-            // {
-            //   text: 'Fundamentals of Programming and Algorithms',
-            //   link: '/note-cs-code-cleaned'
-            // },
             {
               text: 'Read Me',
               link: '/Lab/lab'
@@ -225,22 +192,10 @@ export default withMermaid(
               text: 'Digital Logic Design',
               link: '/Lab/Digital-Logic-Design-Lab'
             },
-            // {
-            //   text: 'Fundamentals of Data Structure',
-            //   link: '/Fundamentals_of_Data_Structure'
-            // },
-            // {
-            //   text: 'Discrete Mathematics',
-            //   link: '/Discrete_Mathematics'
-            // },
             {
               text: 'Computer Organization',
               link: '/Lab/Computer-Organization-Lab'
             }
-            // {
-            //   text: 'Advanced Data Structure & Algorithm Analysis',
-            //   link: '/Advanced_Data_Structure_Algorithm_Analysis'
-            // }
           ]
         },
         {

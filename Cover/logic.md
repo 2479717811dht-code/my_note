@@ -69,7 +69,7 @@ Welcome to **My Note**，浙大计科学子与技术探索者的数字花园。
 ## 核心科目专栏导航 · Courses
 
 <div class="garden-bento-grid">
-  <a href="/Theory/note-cs-code-cleaned" class="bento-card">
+  <a href="../Theory/note-cs-code-cleaned.html" class="bento-card">
     <div>
       <div class="bento-card-top">
         <span class="bento-code-badge">FPA</span>
@@ -89,7 +89,7 @@ Welcome to **My Note**，浙大计科学子与技术探索者的数字花园。
     </div>
   </a>
 
-  <a href="/Theory/dldnote" class="bento-card">
+  <a href="../Theory/dldnote.html" class="bento-card">
     <div>
       <div class="bento-card-top">
         <span class="bento-code-badge">DLD</span>
@@ -109,7 +109,7 @@ Welcome to **My Note**，浙大计科学子与技术探索者的数字花园。
     </div>
   </a>
 
-  <a href="/Theory/Fundamentals_of_Data_Structure" class="bento-card">
+  <a href="../Theory/Fundamentals_of_Data_Structure.html" class="bento-card">
     <div>
       <div class="bento-card-top">
         <span class="bento-code-badge">FDS</span>
@@ -129,7 +129,7 @@ Welcome to **My Note**，浙大计科学子与技术探索者的数字花园。
     </div>
   </a>
 
-  <a href="/Theory/Discrete_Mathematics" class="bento-card">
+  <a href="../Theory/Discrete_Mathematics.html" class="bento-card">
     <div>
       <div class="bento-card-top">
         <span class="bento-code-badge">DM</span>
@@ -149,7 +149,7 @@ Welcome to **My Note**，浙大计科学子与技术探索者的数字花园。
     </div>
   </a>
 
-  <a href="/Theory/Computer_Organization" class="bento-card">
+  <a href="../Theory/Computer_Organization.html" class="bento-card">
     <div>
       <div class="bento-card-top">
         <span class="bento-code-badge">CO</span>
@@ -169,7 +169,7 @@ Welcome to **My Note**，浙大计科学子与技术探索者的数字花园。
     </div>
   </a>
 
-  <a href="/Theory/Advanced_Data_Structure_Algorithm_Analysis" class="bento-card">
+  <a href="../Theory/Advanced_Data_Structure_Algorithm_Analysis.html" class="bento-card">
     <div>
       <div class="bento-card-top">
         <span class="bento-code-badge">ADS</span>
@@ -189,7 +189,7 @@ Welcome to **My Note**，浙大计科学子与技术探索者的数字花园。
     </div>
   </a>
 
-  <a href="/Theory/Probability_and_Mathematical_Statistics" class="bento-card">
+  <a href="../Theory/Probability_and_Mathematical_Statistics.html" class="bento-card">
     <div>
       <div class="bento-card-top">
         <span class="bento-code-badge">PMS</span>
@@ -209,7 +209,7 @@ Welcome to **My Note**，浙大计科学子与技术探索者的数字花园。
     </div>
   </a>
 
-  <a href="/Theory/Marxism" class="bento-card">
+  <a href="../Theory/Marxism.html" class="bento-card">
     <div>
       <div class="bento-card-top">
         <span class="bento-code-badge">MARX</span>

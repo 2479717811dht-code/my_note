@@ -16,7 +16,7 @@ description: 浙江大学计算机科学与技术专业核心理论课深度笔�
 点击卡片直接进入各科目完整深度笔记：
 
 <div class="garden-bento-grid">
-  <a href="./Fundamentals_of_Data_Structure" class="bento-card">
+  <a href="./Fundamentals_of_Data_Structure.html" class="bento-card">
     <div>
       <div class="bento-card-top">
         <span class="bento-code-badge">FDS</span>
@@ -39,7 +39,7 @@ description: 浙江大学计算机科学与技术专业核心理论课深度笔�
     </div>
   </a>
 
-  <a href="./Advanced_Data_Structure_Algorithm_Analysis" class="bento-card">
+  <a href="./Advanced_Data_Structure_Algorithm_Analysis.html" class="bento-card">
     <div>
       <div class="bento-card-top">
         <span class="bento-code-badge">ADS</span>
@@ -62,7 +62,7 @@ description: 浙江大学计算机科学与技术专业核心理论课深度笔�
     </div>
   </a>
 
-  <a href="./Computer_Organization" class="bento-card">
+  <a href="./Computer_Organization.html" class="bento-card">
     <div>
       <div class="bento-card-top">
         <span class="bento-code-badge">CO</span>
@@ -85,7 +85,7 @@ description: 浙江大学计算机科学与技术专业核心理论课深度笔�
     </div>
   </a>
 
-  <a href="./dldnote" class="bento-card">
+  <a href="./dldnote.html" class="bento-card">
     <div>
       <div class="bento-card-top">
         <span class="bento-code-badge">DLD</span>
@@ -108,7 +108,7 @@ description: 浙江大学计算机科学与技术专业核心理论课深度笔�
     </div>
   </a>
 
-  <a href="./note-cs-code-cleaned" class="bento-card">
+  <a href="./note-cs-code-cleaned.html" class="bento-card">
     <div>
       <div class="bento-card-top">
         <span class="bento-code-badge">FPA</span>
@@ -131,7 +131,7 @@ description: 浙江大学计算机科学与技术专业核心理论课深度笔�
     </div>
   </a>
 
-  <a href="./Discrete_Mathematics" class="bento-card">
+  <a href="./Discrete_Mathematics.html" class="bento-card">
     <div>
       <div class="bento-card-top">
         <span class="bento-code-badge">DM</span>
@@ -154,7 +154,7 @@ description: 浙江大学计算机科学与技术专业核心理论课深度笔�
     </div>
   </a>
 
-  <a href="./Probability_and_Mathematical_Statistics" class="bento-card">
+  <a href="./Probability_and_Mathematical_Statistics.html" class="bento-card">
     <div>
       <div class="bento-card-top">
         <span class="bento-code-badge">PMS</span>
@@ -177,7 +177,7 @@ description: 浙江大学计算机科学与技术专业核心理论课深度笔�
     </div>
   </a>
 
-  <a href="./Marxism" class="bento-card">
+  <a href="./Marxism.html" class="bento-card">
     <div>
       <div class="bento-card-top">
         <span class="bento-code-badge">MARX</span>

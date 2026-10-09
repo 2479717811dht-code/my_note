@@ -16,7 +16,7 @@ description: 浙江大学计算机科学与技术专业实验报告、Vivado 工
 点击卡片直接进入实验报告与设计代码归档：
 
 <div class="garden-bento-grid">
-  <a href="./Digital-Logic-Design-Lab" class="bento-card">
+  <a href="./Digital-Logic-Design-Lab.html" class="bento-card">
     <div>
       <div class="bento-card-top">
         <span class="bento-code-badge">DLD LAB</span>
@@ -39,7 +39,7 @@ description: 浙江大学计算机科学与技术专业实验报告、Vivado 工
     </div>
   </a>
 
-  <a href="./Computer-Organization-Lab" class="bento-card">
+  <a href="./Computer-Organization-Lab.html" class="bento-card">
     <div>
       <div class="bento-card-top">
         <span class="bento-code-badge">CO LAB</span>
