@@ -455,4 +455,66 @@ const filteredCourses = computed(() => {
     grid-template-columns: 1fr;
   }
 }
+
+/* 深色模式适配 */
+:global(.dark) .matrix-filter-bar {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+:global(.dark) .matrix-filter-btn {
+  color: #a89f9c;
+}
+
+:global(.dark) .matrix-filter-btn:hover {
+  color: #e58d76;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+:global(.dark) .matrix-filter-btn.active {
+  background: rgba(217, 120, 96, 0.22);
+  color: #f2a694;
+  border: 1px solid rgba(217, 120, 96, 0.4);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
+}
+
+:global(.dark) .matrix-card {
+  background: linear-gradient(145deg, rgba(32, 27, 26, 0.94) 0%, rgba(25, 21, 20, 0.88) 100%);
+  border-color: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.32);
+}
+
+:global(.dark) .matrix-card:hover {
+  border-color: rgba(217, 120, 96, 0.45);
+  box-shadow: 0 14px 36px -4px rgba(0, 0, 0, 0.55), 0 0 16px rgba(217, 120, 96, 0.12);
+}
+
+:global(.dark) .code-badge {
+  color: #f0a895;
+  background: rgba(217, 120, 96, 0.16);
+  border-color: rgba(217, 120, 96, 0.28);
+}
+
+:global(.dark) .icon-box {
+  background: linear-gradient(135deg, rgba(217, 120, 96, 0.15) 0%, rgba(35, 30, 28, 0.8) 100%);
+  border-color: rgba(217, 120, 96, 0.2);
+}
+
+:global(.dark) .card-title {
+  color: #f0eae4;
+}
+
+:global(.dark) .card-desc {
+  color: #a49690;
+}
+
+:global(.dark) .chip-item {
+  color: #b0a39c;
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+:global(.dark) .card-footer {
+  border-top-color: rgba(255, 255, 255, 0.06);
+}
 </style>

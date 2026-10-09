@@ -10,6 +10,7 @@ const currentTab = ref('muyu') // 'muyu' | 'snake' | '2048'
 const muyuCount = ref(0)
 const floatingTexts = ref([])
 const isAutoMuyu = ref(false)
+const isStriking = ref(false)
 let autoMuyuTimer = null
 
 const blessings = [
@@ -55,6 +56,10 @@ const playMuyuSound = () => {
 const tapMuyu = () => {
   muyuCount.value++
   playMuyuSound()
+  isStriking.value = true
+  setTimeout(() => {
+    isStriking.value = false
+  }, 120)
   
   const text = blessings[Math.floor(Math.random() * blessings.length)]
   const id = Date.now() + Math.random()
@@ -431,22 +436,94 @@ onUnmounted(() => {
         累计功德：<span class="count-num">{{ muyuCount }}</span>
       </div>
       <div class="muyu-stage" @click="tapMuyu">
-        <div class="muyu-woodblock">
-          <svg viewBox="0 0 100 100" class="muyu-svg">
+        <!-- 莲花/丝绒底座 -->
+        <div class="muyu-cushion"></div>
+
+        <!-- 木鱼本体 -->
+        <div :class="['muyu-woodblock', { struck: isStriking }]">
+          <svg viewBox="0 0 180 140" class="muyu-svg">
+            <defs>
+              <linearGradient id="woodGradient" x1="20%" y1="0%" x2="80%" y2="100%">
+                <stop offset="0%" stop-color="#d97354" />
+                <stop offset="50%" stop-color="#a6442b" />
+                <stop offset="100%" stop-color="#692212" />
+              </linearGradient>
+              <linearGradient id="slitGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#360f07" />
+                <stop offset="100%" stop-color="#1d0702" />
+              </linearGradient>
+              <radialGradient id="eyeGlow" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#fae8c8" />
+                <stop offset="100%" stop-color="#8a301a" />
+              </radialGradient>
+              <filter id="muyuShadow" x="-10%" y="-10%" width="130%" height="130%">
+                <feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#8a321d" flood-opacity="0.25" />
+              </filter>
+            </defs>
+
+            <!-- 木鱼饱满本体轮廓 -->
             <path
-              d="M50 15 C25 15, 10 35, 10 60 C10 82, 30 88, 50 88 C70 88, 90 82, 90 60 C90 35, 75 15, 50 15 Z"
-              fill="#b85b44"
+              d="M90 20 C135 20, 160 50, 155 85 C150 115, 120 125, 90 125 C55 125, 25 115, 20 85 C15 50, 45 20, 90 20 Z"
+              fill="url(#woodGradient)"
+              filter="url(#muyuShadow)"
             />
+
+            <!-- 顶部高光弧线 -->
             <path
-              d="M30 65 Q50 80, 70 65"
-              stroke="#fcf9f2"
-              stroke-width="5"
+              d="M50 35 C75 25, 105 25, 130 35"
+              stroke="rgba(255, 230, 205, 0.45)"
+              stroke-width="3"
               stroke-linecap="round"
               fill="none"
             />
-            <circle cx="50" cy="40" r="7" fill="#fcf9f2" />
+
+            <!-- 祥云/卷鱼雕花纹理 -->
+            <path
+              d="M70 45 Q90 38, 110 45 Q125 52, 115 62 Q95 70, 75 62 Z"
+              stroke="rgba(250, 220, 185, 0.35)"
+              stroke-width="2.5"
+              fill="rgba(250, 220, 185, 0.1)"
+            />
+
+            <!-- 传统木鱼眼雕花 -->
+            <circle cx="58" cy="62" r="8" fill="url(#eyeGlow)" />
+            <circle cx="58" cy="62" r="4" fill="#3d140b" />
+
+            <!-- 木鱼声学空腔（开嘴鱼吻） -->
+            <path
+              d="M45 88 C70 102, 110 102, 135 88 C125 80, 55 80, 45 88 Z"
+              fill="url(#slitGradient)"
+            />
+            <path
+              d="M48 87 C70 98, 110 98, 132 87"
+              stroke="#fae2c5"
+              stroke-width="2"
+              stroke-linecap="round"
+              fill="none"
+            />
+
+            <!-- 底部鱼鳍微卷轮廓 -->
+            <path
+              d="M32 95 Q20 105, 38 112 Q50 110, 45 100 Z"
+              fill="#822814"
+            />
           </svg>
         </div>
+
+        <!-- 悬空木槌（敲击时下砸） -->
+        <div :class="['muyu-mallet', { strike: isStriking }]">
+          <svg viewBox="0 0 60 70" class="mallet-svg">
+            <!-- 槌柄 -->
+            <line x1="12" y1="58" x2="45" y2="18" stroke="#8d4b38" stroke-width="4.5" stroke-linecap="round" />
+            <!-- 握把缠绳 -->
+            <line x1="14" y1="56" x2="22" y2="46" stroke="#e0c4a4" stroke-width="4.5" stroke-linecap="round" />
+            <!-- 槌头（包绸软锤） -->
+            <circle cx="47" cy="16" r="9" fill="#f4ebd9" stroke="#b08a68" stroke-width="2" />
+          </svg>
+        </div>
+
+        <!-- 敲击震动波纹 -->
+        <div v-if="isStriking" class="muyu-ripple"></div>
 
         <!-- 悬浮功德文字 -->
         <transition-group name="float-up">
@@ -456,7 +533,7 @@ onUnmounted(() => {
             class="floating-badge"
             :style="{ left: `calc(50% + ${item.offset}px)` }"
           >
-            {{ item.text }}
+            ✦ {{ item.text }}
           </div>
         </transition-group>
       </div>
@@ -639,34 +716,95 @@ onUnmounted(() => {
 
 .muyu-stage {
   position: relative;
-  width: 140px;
-  height: 140px;
-  margin: 10px 0 24px;
+  width: 190px;
+  height: 155px;
+  margin: 10px auto 26px;
   cursor: pointer;
   user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.muyu-cushion {
+  position: absolute;
+  bottom: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 156px;
+  height: 26px;
+  border-radius: 50%;
+  background: radial-gradient(ellipse at center, rgba(184, 91, 68, 0.32) 0%, rgba(184, 91, 68, 0.06) 65%, transparent 100%);
+  filter: blur(2px);
+  z-index: 1;
 }
 
 .muyu-woodblock {
-  width: 100%;
-  height: 100%;
-  transition: transform 0.1s ease;
-  filter: drop-shadow(0 10px 18px rgba(184, 91, 68, 0.2));
+  width: 150px;
+  height: 120px;
+  transition: transform 0.08s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+  position: relative;
+  z-index: 2;
+  filter: drop-shadow(0 8px 16px rgba(138, 50, 29, 0.25));
+}
+
+.muyu-woodblock.struck {
+  transform: scale(0.93) translateY(4px);
 }
 
 .muyu-stage:active .muyu-woodblock {
-  transform: scale(0.92);
+  transform: scale(0.92) translateY(5px);
+}
+
+.muyu-mallet {
+  position: absolute;
+  top: -10px;
+  right: -8px;
+  width: 60px;
+  height: 70px;
+  pointer-events: none;
+  transform-origin: 14px 58px;
+  transform: rotate(0deg);
+  transition: transform 0.08s ease;
+  z-index: 5;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
+}
+
+.muyu-mallet.strike {
+  transform: rotate(-28deg) translate(-8px, 6px);
+}
+
+.muyu-ripple {
+  position: absolute;
+  top: 42%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 2px solid rgba(217, 130, 43, 0.7);
+  animation: rippleExpand 0.35s ease-out forwards;
+  pointer-events: none;
+  z-index: 4;
+}
+
+@keyframes rippleExpand {
+  0% { transform: translate(-50%, -50%) scale(0.6); opacity: 0.9; }
+  100% { transform: translate(-50%, -50%) scale(1.6); opacity: 0; }
 }
 
 .floating-badge {
   position: absolute;
-  top: 10px;
+  top: -6px;
   transform: translateX(-50%);
   color: #b85b44;
-  font-weight: bold;
-  font-size: 1.1rem;
+  font-weight: 800;
+  font-size: 1.15rem;
   pointer-events: none;
   white-space: nowrap;
+  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.95), 0 0 12px rgba(184, 91, 68, 0.35);
   animation: floatUp 0.9s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+  z-index: 10;
 }
 
 @keyframes floatUp {
@@ -832,5 +970,103 @@ onUnmounted(() => {
   font-size: 1.35rem;
   user-select: none;
   transition: all 0.15s ease;
+}
+
+/* 深色模式适配 */
+:global(.dark) .break-games-card {
+  background: linear-gradient(145deg, rgba(32, 27, 26, 0.94) 0%, rgba(25, 21, 20, 0.88) 100%);
+  border-color: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 12px 36px -6px rgba(0, 0, 0, 0.45);
+}
+
+:global(.dark) .break-games-card:hover {
+  border-color: rgba(217, 120, 96, 0.35);
+}
+
+:global(.dark) .games-header {
+  border-bottom-color: rgba(255, 255, 255, 0.08);
+}
+
+:global(.dark) .games-title {
+  color: #f0eae4;
+}
+
+:global(.dark) .games-tabs {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+:global(.dark) .tab-btn {
+  color: #a89f9c;
+}
+
+:global(.dark) .tab-btn:hover {
+  color: #e58d76;
+}
+
+:global(.dark) .tab-btn.active {
+  background: rgba(217, 120, 96, 0.22);
+  color: #f2a694;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+:global(.dark) .muyu-counter {
+  color: #a89f9c;
+}
+
+:global(.dark) .muyu-counter .count-num {
+  color: #f2a694;
+}
+
+:global(.dark) .action-pill.alt {
+  background: rgba(255, 255, 255, 0.06);
+  color: #e58d76;
+  border-color: rgba(217, 120, 96, 0.35);
+}
+
+:global(.dark) .muyu-tip {
+  color: #8c7e77;
+}
+
+:global(.dark) .game-stats {
+  color: #a89f9c;
+}
+
+:global(.dark) .canvas-wrap {
+  border-color: rgba(217, 120, 96, 0.2);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+}
+
+:global(.dark) .game-overlay {
+  background: rgba(26, 22, 21, 0.92);
+}
+
+:global(.dark) .over-text {
+  color: #f2a694;
+}
+
+:global(.dark) .pad-btn {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.1);
+  color: #ece5df;
+}
+
+:global(.dark) .pad-btn:active {
+  background: rgba(217, 120, 96, 0.2);
+}
+
+:global(.dark) .mini-btn {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(217, 120, 96, 0.3);
+  color: #e58d76;
+}
+
+:global(.dark) .board-2048 {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+:global(.dark) .floating-badge {
+  color: #f2a694;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8), 0 0 12px rgba(217, 120, 96, 0.4);
 }
 </style>

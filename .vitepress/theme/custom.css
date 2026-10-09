@@ -230,6 +230,18 @@ body {
   border-radius: 2px;
 }
 
+.vp-doc h1:has(center),
+.vp-doc h1:has(> center) {
+  text-align: center;
+}
+
+.vp-doc h1:has(center)::after,
+.vp-doc h1:has(> center)::after {
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  width: 76px !important;
+}
+
 .vp-doc h2 {
   font-size: 1.55rem;
   line-height: 1.4;
@@ -292,27 +304,28 @@ body {
   color: var(--wi-accent) !important;
 }
 
-/* 侧边栏高亮当前项：淡色背景向左多延伸，形成贴合导引线的精致高亮胶囊 */
+/* 侧边栏高亮当前项：淡色背景向左深度延展，形成贴合左侧边槽的高级书签胶囊 */
 .VPSidebarItem .item {
   transition: all 0.22s ease !important;
   border-radius: 8px !important;
 }
 
 .VPSidebarItem.is-active > .item {
-  background: rgba(184, 91, 68, 0.12) !important;
-  border-radius: 8px !important;
-  margin-left: -14px !important;
-  padding-left: 14px !important;
-  border-left: 3px solid var(--wi-accent) !important;
+  background: linear-gradient(90deg, rgba(184, 91, 68, 0.16) 0%, rgba(184, 91, 68, 0.07) 100%) !important;
+  border-radius: 0 10px 10px 0 !important;
+  margin-left: -24px !important;
+  padding-left: 24px !important;
+  border-left: 4px solid var(--wi-accent) !important;
+  box-shadow: 2px 2px 10px rgba(184, 91, 68, 0.06);
 }
 
 .VPSidebarItem.level-0.is-active > .item {
-  margin-left: -8px !important;
-  padding-left: 12px !important;
+  margin-left: -16px !important;
+  padding-left: 18px !important;
 }
 
 .VPSidebarItem .item:hover {
-  background: rgba(184, 91, 68, 0.05);
+  background: rgba(184, 91, 68, 0.06);
 }
 
 .VPSidebarItem.is-active > .item .text {
@@ -340,48 +353,58 @@ body {
 
 /* 内置 [toc] 渲染美化：书籍导读盒 */
 nav.table-of-contents {
-  margin: 1.8rem 0 2.2rem;
-  padding: 18px 24px;
-  background: linear-gradient(135deg, #ffffff 0%, #fcf7f1 100%);
-  border: 1px solid var(--wi-border);
+  margin: 2rem 0 2.5rem;
+  padding: 20px 24px;
+  background: linear-gradient(135deg, #ffffff 0%, #fbf5ee 100%);
+  border: 1px solid rgba(184, 91, 68, 0.16);
+  border-left: 4px solid var(--wi-accent);
   border-radius: 14px;
   box-shadow: var(--wi-shadow-xs);
 }
 
 nav.table-of-contents::before {
-  content: '📖 章节目录速览';
+  content: '📖 章节目录速览 · Contents';
   display: block;
   font-weight: 700;
   color: var(--wi-accent);
-  font-size: 1rem;
+  font-size: 0.98rem;
   margin-bottom: 12px;
-  border-bottom: 1px dashed var(--wi-border-light);
-  padding-bottom: 6px;
+  border-bottom: 1px dashed rgba(184, 91, 68, 0.18);
+  padding-bottom: 8px;
+  letter-spacing: 0.5px;
 }
 
 nav.table-of-contents ul {
   list-style: none !important;
   padding-left: 1.2rem !important;
-  margin: 0 !important;
+  border-left: 1px dashed rgba(184, 91, 68, 0.14);
+  margin: 0 0 0 0.5rem !important;
 }
 
 nav.table-of-contents > ul {
   padding-left: 0 !important;
+  border-left: none !important;
+  margin-left: 0 !important;
 }
 
 nav.table-of-contents li {
-  margin: 0.4rem 0 !important;
+  margin: 0.35rem 0 !important;
 }
 
 nav.table-of-contents a {
   color: var(--wi-text-soft) !important;
-  font-size: 0.94rem;
-  text-decoration: none;
-  transition: color 0.2s ease;
+  font-size: 0.92rem;
+  text-decoration: none !important;
+  padding: 2px 6px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  display: inline-block;
 }
 
 nav.table-of-contents a:hover {
   color: var(--wi-accent) !important;
+  background: rgba(184, 91, 68, 0.08);
+  transform: translateX(3px);
 }
 
 /* 上一篇 / 下一篇翻页卡片 */
@@ -408,8 +431,8 @@ nav.table-of-contents a:hover {
 /* ==================================================
  * 5. 超链接、行内代码与引用块
  * ================================================== */
-.vp-doc p a:not(.header-anchor):not([class*="card"]):not([class*="btn"]):not([class*="pill"]):not([class*="matrix"]):not(:has(img)),
-.vp-doc li a:not(.header-anchor):not([class*="card"]):not([class*="btn"]):not([class*="pill"]):not([class*="matrix"]):not(:has(img)) {
+.vp-doc p a:not(.header-anchor):not([class*="card"]):not([class*="btn"]):not([class*="pill"]):not([class*="matrix"]):not(:has(img)):not(nav.table-of-contents a),
+.vp-doc li a:not(.header-anchor):not([class*="card"]):not([class*="btn"]):not([class*="pill"]):not([class*="matrix"]):not(:has(img)):not(nav.table-of-contents a) {
   position: relative;
   color: var(--wi-accent);
   text-decoration: none;
@@ -418,8 +441,8 @@ nav.table-of-contents a:hover {
   padding: 0 2px;
 }
 
-.vp-doc p a:not(.header-anchor):not([class*="card"]):not([class*="btn"]):not([class*="pill"]):not([class*="matrix"]):not(:has(img))::after,
-.vp-doc li a:not(.header-anchor):not([class*="card"]):not([class*="btn"]):not([class*="pill"]):not([class*="matrix"]):not(:has(img))::after {
+.vp-doc p a:not(.header-anchor):not([class*="card"]):not([class*="btn"]):not([class*="pill"]):not([class*="matrix"]):not(:has(img)):not(nav.table-of-contents a)::after,
+.vp-doc li a:not(.header-anchor):not([class*="card"]):not([class*="btn"]):not([class*="pill"]):not([class*="matrix"]):not(:has(img)):not(nav.table-of-contents a)::after {
   content: '';
   position: absolute;
   width: 100%;
@@ -433,13 +456,13 @@ nav.table-of-contents a:hover {
   transition: all 0.25s ease;
 }
 
-.vp-doc p a:not(.header-anchor):hover,
-.vp-doc li a:not(.header-anchor):hover {
+.vp-doc p a:not(.header-anchor):not(nav.table-of-contents a):hover,
+.vp-doc li a:not(.header-anchor):not(nav.table-of-contents a):hover {
   color: var(--wi-accent-dark);
 }
 
-.vp-doc p a:not(.header-anchor):hover::after,
-.vp-doc li a:not(.header-anchor):hover::after {
+.vp-doc p a:not(.header-anchor):not(nav.table-of-contents a):hover::after,
+.vp-doc li a:not(.header-anchor):not(nav.table-of-contents a):hover::after {
   opacity: 1;
   transform: scaleX(1);
   height: 2px;
@@ -450,7 +473,8 @@ nav.table-of-contents a:hover {
 .vp-doc a[class*="pill"]::after,
 .vp-doc a[class*="bento"]::after,
 .vp-doc a[class*="bookmark"]::after,
-.vp-doc a[class*="matrix"]::after {
+.vp-doc a[class*="matrix"]::after,
+nav.table-of-contents a::after {
   display: none !important;
   content: none !important;
 }
@@ -508,12 +532,72 @@ nav.table-of-contents a:hover {
 }
 
 /* 内页普通插图柔和装裱 */
-.vp-doc img:not(.garden-banner-img):not(.garden-meme-item img):not(.garden-photo-frame img):not([src*="cute.gif"]) {
+.vp-doc img:not(.garden-banner-img):not(.garden-meme-item img):not(.garden-photo-frame img):not([src*="cute.gif"]):not(center img) {
   border-radius: 12px;
   box-shadow: 0 6px 20px rgba(130, 65, 45, 0.08);
   margin: 1.6rem auto;
   display: block;
   max-width: 100%;
+}
+
+/* 学术笔记专属刊头（Emblem Ribbon / School Badges）优雅横排 */
+.vp-doc center:has(img) {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: wrap !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 24px 36px !important;
+  margin: 1.8rem auto 2.4rem !important;
+  padding: 16px 32px !important;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.88) 0%, rgba(250, 245, 238, 0.78) 100%) !important;
+  border: 1px solid rgba(184, 91, 68, 0.16) !important;
+  border-radius: 18px !important;
+  box-shadow: var(--wi-shadow-xs) !important;
+  max-width: 760px !important;
+}
+
+.vp-doc center img {
+  display: inline-block !important;
+  zoom: 1 !important;
+  height: 48px !important;
+  max-height: 48px !important;
+  width: auto !important;
+  max-width: 240px !important;
+  object-fit: contain !important;
+  margin: 4px 10px !important;
+  border-radius: 4px !important;
+  box-shadow: none !important;
+  background: transparent !important;
+  filter: drop-shadow(0 2px 5px rgba(184, 91, 68, 0.08));
+  vertical-align: middle !important;
+  transition: transform 0.25s ease;
+}
+
+.vp-doc center img:hover {
+  transform: scale(1.06);
+}
+
+.vp-doc center:not(:has(img)) {
+  font-size: 0.96rem;
+  color: var(--wi-text-soft);
+  letter-spacing: 0.8px;
+  font-weight: 500;
+  margin: 0.8rem auto 1.4rem;
+}
+
+.vp-doc hr {
+  border: none !important;
+  border-top: 1px dashed rgba(184, 91, 68, 0.2) !important;
+  margin: 1.8rem 0 !important;
+}
+
+.dark .vp-doc center:has(img) {
+  background: linear-gradient(135deg, rgba(32, 27, 26, 0.88) 0%, rgba(25, 21, 20, 0.78) 100%) !important;
+  border-color: rgba(217, 120, 96, 0.2) !important;
+}
+.dark .vp-doc center img {
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.4));
 }
 
 .vp-doc blockquote:not(.md-alert) {
@@ -688,20 +772,27 @@ img[src*="cute.gif"]:hover {
 }
 
 /* 首页特性卡片 */
+.VPFeatures {
+  position: relative;
+  z-index: 2;
+}
+
 .VPFeatures .VPFeature {
-  background: rgba(255, 255, 255, 0.88) !important;
-  backdrop-filter: blur(10px);
-  border: 1px solid var(--wi-border-light) !important;
-  border-radius: 18px !important;
-  box-shadow: var(--wi-shadow-sm) !important;
+  position: relative;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.92) !important;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(184, 91, 68, 0.14) !important;
+  border-radius: 20px !important;
+  box-shadow: 0 6px 20px rgba(184, 91, 68, 0.06) !important;
   padding: 24px 28px !important;
   transition: all 0.35s cubic-bezier(0.2, 0.8, 0.2, 1) !important;
 }
 
 .VPFeatures .VPFeature:hover {
   transform: translateY(-5px);
-  border-color: var(--wi-accent) !important;
-  box-shadow: var(--wi-shadow-md) !important;
+  border-color: rgba(184, 91, 68, 0.45) !important;
+  box-shadow: 0 14px 34px -4px rgba(184, 91, 68, 0.18) !important;
 }
 
 .VPFeatures .VPFeature .title {
@@ -1349,29 +1440,31 @@ img[src*="cute.gif"]:hover {
  * 13. 优雅相框与画报展示（内页通用）
  * ================================================== */
 .garden-photo-frame {
-  margin: 2.2rem auto;
+  margin: 2.8rem auto 1.8rem;
   text-align: center;
 }
 
 .garden-photo-frame img {
   display: inline-block;
-  max-width: 480px;
+  max-width: 380px;
   width: 100%;
-  border: 6px solid #ffffff;
-  border-radius: 18px;
-  box-shadow: 0 10px 30px rgba(130, 65, 45, 0.12);
-  transition: transform 0.35s ease;
+  border: 8px solid #ffffff;
+  border-radius: 22px;
+  box-shadow: 0 12px 36px rgba(130, 65, 45, 0.14);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
 .garden-photo-frame img:hover {
-  transform: scale(1.015);
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 18px 46px rgba(130, 65, 45, 0.2);
 }
 
 .garden-photo-caption {
-  font-size: 0.84rem;
+  font-size: 0.86rem;
   color: var(--wi-muted);
-  margin-top: 10px;
-  letter-spacing: 0.5px;
+  margin-top: 14px;
+  letter-spacing: 0.6px;
+  font-style: italic;
 }
 
 /* ==================================================
