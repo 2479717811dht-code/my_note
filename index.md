@@ -65,22 +65,54 @@ features:
 
 ## 阅览与排版特性 · Features
 
-全站面向学术笔记阅读体验深度打磨，具备以下特性：
+全站面向学术专业笔记体验深度调校，具备以下核心阅读特性：
 
-- 📐 **LaTeX 公式支持**：复杂数学公式与算法渐近复杂度符号全量排版渲染。
-- 📊 **Mermaid 结构图**：流程图、时序图与有限状态机直观呈现。
-- 🎵 **背景音乐伴读**：右上角支持治愈系背景音乐开关（带轻柔光环律动）。
-- 📑 **自动层级目录**：笔记内保留 `[toc]`，渲染引擎将自动生成树状速览导航。
+<div class="features-bento-grid">
+  <div class="feature-bento-card">
+    <div class="feature-icon-box">📐</div>
+    <div class="feature-content">
+      <span class="feature-title">LaTeX 公式全量排版</span>
+      <span class="feature-desc">复杂数学推导、渐近算法复杂度与概率分布模型清晰呈现</span>
+    </div>
+  </div>
+
+  <div class="feature-bento-card">
+    <div class="feature-icon-box">📊</div>
+    <div class="feature-content">
+      <span class="feature-title">Mermaid 动态图表</span>
+      <span class="feature-desc">有限状态机 FSM、流水线数据通路与系统流程图原生直观解析</span>
+    </div>
+  </div>
+
+  <div class="feature-bento-card">
+    <div class="feature-icon-box">🎵</div>
+    <div class="feature-content">
+      <span class="feature-title">沉浸式伴读音乐</span>
+      <span class="feature-desc">右上角治愈旋律一键启停，光环微律动陪伴深夜专注推导</span>
+    </div>
+  </div>
+
+  <div class="feature-bento-card">
+    <div class="feature-icon-box">📑</div>
+    <div class="feature-content">
+      <span class="feature-title">印鉴式层级导读目录</span>
+      <span class="feature-desc">笔记保留 [toc] 自动构建树状速览，双侧目录无缝锚点跳转</span>
+    </div>
+  </div>
+</div>
 
 ## 学习心法 · Philosophy
 
-> **格物致知 · 体系化推导**
-> 
-> 学习不是把零碎的概念机械背诵，而是逐渐建立起能够自己推导、解释与解决真实工程问题的思维框架。纸上得来终觉浅，绝知此事要躬行。
+<div class="garden-quote-box">
+  <div class="garden-quote-title">格物致知 · 体系化推导</div>
+  <div class="garden-quote-content">
+    “学习不是把零碎的概念机械背诵，而是逐渐建立起能够自己推导、解释与解决真实工程问题的思维框架。纸上得来终觉浅，绝知此事要躬行。”
+  </div>
+</div>
 
 ## 轻松一刻 · Memes
 
-也许这些内容不太适合补天喵，但适合给紧绷的心情放个假 ~
+代码推导写累了？让思绪随奔跑的脚步放个假 ~
 
 <div class="garden-meme-gallery">
   <div class="garden-meme-item">

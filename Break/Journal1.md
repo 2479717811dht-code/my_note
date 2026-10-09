@@ -1,6 +1,15 @@
-# <center>Red-Black Tree</center>
+---
+title: Journal 1 · 红黑树
+description: 在红与黑的交替中，生命最终归于沉寂。写于紫金港管院六楼。
+---
 
-<center>2026.8.14</center>
+<div class="journal-reader">
+
+<div class="journal-header-box">
+  <div class="journal-meta-badge">🍂 随笔 01 · 算法隐喻 · 2026.08.14</div>
+  <h1 class="journal-main-title">红黑树 · Red-Black Tree</h1>
+  <p class="journal-subtitle">“爱是炙热的红，恨是深沉的黑。所谓的红黑树，生来便是一个彻头彻尾的矛盾体。”</p>
+</div>
 
 红黑树的身体里流淌着他的血液，恰到好处的一半，分毫不差。
 
@@ -52,3 +61,12 @@
 终于，在那最后一丝生命力彻底耗尽之后，它失去了所有的支撑。它那庞大而枯槁的躯体，在重力的牵引下，缓缓地、决绝地从管院六楼的边缘倾倒，随后向着无底的深渊坠落。
 
 那一刻，风在耳边凄厉地呼啸，仿佛在为这棵矛盾之树唱响最后的挽歌。红与黑的色彩在急速的下降中交织、融合，最终化作一道惨烈的弧线，重重地砸向地面。所有的纠葛、所有的怨怼、所有的不甘，都在这震耳欲聋的撞击声中，碎裂成无数无法拼凑的齑粉，散落在冰冷的尘埃里。
+
+<div class="journal-postscript-card">
+  <div class="journal-postscript-title">Postscript · 卷末题注</div>
+  <div class="journal-postscript-text">
+    写于浙大紫金港管院。关于强加的期待、关于病态的控制、关于无法承受的纯粹。红与黑的张力维系着自平衡，一旦容不下对立的另一半，整棵大树便只剩崩溃。
+  </div>
+</div>
+
+</div>

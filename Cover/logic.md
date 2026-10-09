@@ -1,154 +1,273 @@
 ---
-title: Course Map
-description: 浙江大学计算机科学与技术课程笔记总览
+title: 知识图谱 · Course Map
+description: 浙江大学计算机科学与技术专业课程脉络与知识图谱全局导览
 ---
 
-# Hello, ZJUer!
+# 知识图谱 · Course Map
 
-Welcome to **My Note**.
+<div class="garden-badge">🧭 体系化视野 · 浙江大学计算机科学专业培养逻辑</div>
 
-这里整理的是我在学习浙江大学计算机科学与技术相关课程时积累的笔记、推导、代码、易错点与复习内容。
+Welcome to **My Note**，浙大计科学子与技术探索者的数字花园。
 
-这些内容不是标准答案，也不追求“一次写完”。它们会随着学习不断补充、修正和重构。
+这里整理的是在学习浙江大学计算机科学与技术相关专业课时积累的深度笔记、数学推导、Verilog 硬件工程、易错点与期末复习总结。这些内容不是死记硬背的考前小抄，而是随着学习不断修正、重构与演进的知识宝库。
 
-> These notes are your treasure.
-> Start your journey, keep thinking, and enjoy learning.
+> **“These notes are your treasure. Start your journey, keep thinking, and enjoy learning.”**
 
 [toc]
 
-## Start Here
+---
 
-这套笔记目前主要覆盖以下课程：
+## 培养路线阶梯 · Curriculum Roadmap
 
-* 程序设计与算法基础
-* 数字逻辑设计
-* 数据结构基础
-* 离散数学
-* 计算机组成
-* 高级数据结构与算法分析
-* 马克思主义基本原理
+计算机专业知识体系是一座自底向上的精密大厦，推荐循序渐进阅读：
 
-建议不要只把它当作考前速记资料。
+<div class="roadmap-step-grid">
+  <div class="roadmap-step-card">
+    <span class="step-phase-badge">阶段一 · 筑基思维</span>
+    <span class="step-title">程序设计与形式逻辑</span>
+    <span class="step-desc">建立严密的结构化编程习惯与指针内存模型，掌握离散数学命题谓词与集合推导。</span>
+    <div class="step-tags">
+      <span class="step-tag-pill">FPA · 算法基础</span>
+      <span class="step-tag-pill">DM · 离散数学</span>
+    </div>
+  </div>
 
-更好的使用方式是：
+  <div class="roadmap-step-card">
+    <span class="step-phase-badge">阶段二 · 核心基石</span>
+    <span class="step-title">硬件门级电路与数据结构</span>
+    <span class="step-desc">自底向上理解卡诺图与有限状态机；掌握树、堆、图论与经典算法渐近复杂度分析。</span>
+    <div class="step-tags">
+      <span class="step-tag-pill">DLD · 数字逻辑</span>
+      <span class="step-tag-pill">FDS · 数据结构</span>
+    </div>
+  </div>
 
-1. 先阅读课程对应章节，建立基本概念。
-2. 遇到不懂的地方，通过右上角搜索定位关键词。
-3. 结合例题、代码和图示理解过程。
-4. 将自己容易错的内容补充进笔记。
-5. 在复习时回来看重点、公式与易错点。
+  <div class="roadmap-step-card">
+    <span class="step-phase-badge">阶段三 · 软硬协同</span>
+    <span class="step-title">微体系结构与工程落地</span>
+    <span class="step-desc">深入单周期与流水线数据通路、Cache层次；通过 Vivado 与 FPGA 上板实现真实电路。</span>
+    <div class="step-tags">
+      <span class="step-tag-pill">CO · 计算机组成</span>
+      <span class="step-tag-pill">Labs · 硬件实验</span>
+    </div>
+  </div>
 
-## Course Map
-
-### Fundamentals of Programming and Algorithms
-
-程序设计与算法基础。
-
-主要包括程序设计思维、基础算法、代码实现与常见题型分析。
-
-[进入课程笔记 →](/Theory/note-cs-code-cleaned)
+  <div class="roadmap-step-card">
+    <span class="step-phase-badge">阶段四 · 高阶沉淀</span>
+    <span class="step-title">高阶算法与通识素养</span>
+    <span class="step-desc">探索平衡树进阶、摊还分析与近似算法；夯实概率统计模型与马克思主义唯物辩证法。</span>
+    <div class="step-tags">
+      <span class="step-tag-pill">ADS · 高阶算法</span>
+      <span class="step-tag-pill">PMS · 概率统计</span>
+      <span class="step-tag-pill">MARX · 马原</span>
+    </div>
+  </div>
+</div>
 
 ---
 
-### Digital Logic Design
+## 核心科目专栏导航 · Courses
 
-数字逻辑设计。
+<div class="garden-bento-grid">
+  <a href="/Theory/note-cs-code-cleaned" class="bento-card">
+    <div>
+      <div class="bento-card-top">
+        <span class="bento-code-badge">FPA</span>
+        <span class="bento-tag-badge core">编程基石</span>
+      </div>
+      <div class="bento-card-body">
+        <div class="bento-icon-box">💻</div>
+        <div class="bento-content">
+          <span class="bento-title">程序设计与算法基础</span>
+          <span class="bento-desc">程序设计思维、C/C++规范、指针与内存模型、高频算法题型分析</span>
+        </div>
+      </div>
+    </div>
+    <div class="bento-card-footer">
+      <span class="bento-chip">C/C++ 实战</span>
+      <span class="bento-arrow">→</span>
+    </div>
+  </a>
 
-主要包括数制系统、布尔代数、组合逻辑电路、时序逻辑电路、有限状态机与 Verilog 设计。
+  <a href="/Theory/dldnote" class="bento-card">
+    <div>
+      <div class="bento-card-top">
+        <span class="bento-code-badge">DLD</span>
+        <span class="bento-tag-badge core">硬件逻辑</span>
+      </div>
+      <div class="bento-card-body">
+        <div class="bento-icon-box">⚡</div>
+        <div class="bento-content">
+          <span class="bento-title">数字逻辑设计</span>
+          <span class="bento-desc">数制系统、布尔代数、卡诺图化简、时序电路、有限状态机与 Verilog</span>
+        </div>
+      </div>
+    </div>
+    <div class="bento-card-footer">
+      <span class="bento-chip">状态机设计</span>
+      <span class="bento-arrow">→</span>
+    </div>
+  </a>
 
-[进入理论笔记 →](/Theory/dldnote)
+  <a href="/Theory/Fundamentals_of_Data_Structure" class="bento-card">
+    <div>
+      <div class="bento-card-top">
+        <span class="bento-code-badge">FDS</span>
+        <span class="bento-tag-badge core">算法核心</span>
+      </div>
+      <div class="bento-card-body">
+        <div class="bento-icon-box">🌲</div>
+        <div class="bento-content">
+          <span class="bento-title">数据结构基础</span>
+          <span class="bento-desc">线性表、树与森林、二叉平衡树、优先队列、图论算法与散列技术</span>
+        </div>
+      </div>
+    </div>
+    <div class="bento-card-footer">
+      <span class="bento-chip">84K字精研</span>
+      <span class="bento-arrow">→</span>
+    </div>
+  </a>
 
-[进入实验内容 →](/Lab/Digital-Logic-Design-Lab)
+  <a href="/Theory/Discrete_Mathematics" class="bento-card">
+    <div>
+      <div class="bento-card-top">
+        <span class="bento-code-badge">DM</span>
+        <span class="bento-tag-badge math">数理形式化</span>
+      </div>
+      <div class="bento-card-body">
+        <div class="bento-icon-box">📐</div>
+        <div class="bento-content">
+          <span class="bento-title">离散数学</span>
+          <span class="bento-desc">命题谓词逻辑、集合与关系、等价偏序、图论定理、组合计数与生成函数</span>
+        </div>
+      </div>
+    </div>
+    <div class="bento-card-footer">
+      <span class="bento-chip">偏序/母函数</span>
+      <span class="bento-arrow">→</span>
+    </div>
+  </a>
+
+  <a href="/Theory/Computer_Organization" class="bento-card">
+    <div>
+      <div class="bento-card-top">
+        <span class="bento-code-badge">CO</span>
+        <span class="bento-tag-badge core">体系架构</span>
+      </div>
+      <div class="bento-card-body">
+        <div class="bento-icon-box">🖥️</div>
+        <div class="bento-content">
+          <span class="bento-title">计算机组成与体系</span>
+          <span class="bento-desc">MIPS 架构、单周期与多周期控制器、流水线数据通路、冒险暂停与 Cache 映射</span>
+        </div>
+      </div>
+    </div>
+    <div class="bento-card-footer">
+      <span class="bento-chip">流水线微架构</span>
+      <span class="bento-arrow">→</span>
+    </div>
+  </a>
+
+  <a href="/Theory/Advanced_Data_Structure_Algorithm_Analysis" class="bento-card">
+    <div>
+      <div class="bento-card-top">
+        <span class="bento-code-badge">ADS</span>
+        <span class="bento-tag-badge core">高阶算法</span>
+      </div>
+      <div class="bento-card-body">
+        <div class="bento-icon-box">🚀</div>
+        <div class="bento-content">
+          <span class="bento-title">高级数据结构与算法</span>
+          <span class="bento-desc">AVL 树、伸展树、B+ 树、左倾堆、红黑树、摊还分析与近似算法</span>
+        </div>
+      </div>
+    </div>
+    <div class="bento-card-footer">
+      <span class="bento-chip">cyll版讲义</span>
+      <span class="bento-arrow">→</span>
+    </div>
+  </a>
+
+  <a href="/Theory/Probability_and_Mathematical_Statistics" class="bento-card">
+    <div>
+      <div class="bento-card-top">
+        <span class="bento-code-badge">PMS</span>
+        <span class="bento-tag-badge math">数学课</span>
+      </div>
+      <div class="bento-card-body">
+        <div class="bento-icon-box">🎲</div>
+        <div class="bento-content">
+          <span class="bento-title">概率论与数理统计</span>
+          <span class="bento-desc">随机变量及其分布律、极限定理、参数点估计与置信区间、假设检验推导</span>
+        </div>
+      </div>
+    </div>
+    <div class="bento-card-footer">
+      <span class="bento-chip">估计检验</span>
+      <span class="bento-arrow">→</span>
+    </div>
+  </a>
+
+  <a href="/Theory/Marxism" class="bento-card">
+    <div>
+      <div class="bento-card-top">
+        <span class="bento-code-badge">MARX</span>
+        <span class="bento-tag-badge math">闭卷要点</span>
+      </div>
+      <div class="bento-card-body">
+        <div class="bento-icon-box">🚩</div>
+        <div class="bento-content">
+          <span class="bento-title">马克思主义基本原理</span>
+          <span class="bento-desc">唯物论辩证法、实践认识论、资本主义生产与剩余价值、考研核心考点</span>
+        </div>
+      </div>
+    </div>
+    <div class="bento-card-footer">
+      <span class="bento-chip">背诵导图</span>
+      <span class="bento-arrow">→</span>
+    </div>
+  </a>
+</div>
 
 ---
 
-### Fundamentals of Data Structure
+## 研读自查清单 · Study Checklist
 
-数据结构基础。
-
-主要包括线性表、栈、队列、树、堆、图、排序、散列、最短路径、最小生成树与网络流等内容。
-
-[进入课程笔记 →](/Theory/Fundamentals_of_Data_Structure)
-
----
-
-### Discrete Mathematics
-
-离散数学。
-
-主要包括命题逻辑、谓词逻辑、集合、关系、函数、图论、组合计数与生成函数等内容。
-
-[进入课程笔记 →](/Theory/Discrete_Mathematics)
+* [ ] 阅读课程核心概念与物理/数学直观
+* [ ] 独立推导核心公式、定理证明与真值表
+* [ ] 手算典型例题（如状态机化简、Dijkstra 每步过程）
+* [ ] 定期总结易错点与极端边界条件（Corner Cases）
+* [ ] 尝试用自己的语言向他人解释某概念（费曼学习法）
+* [ ] 期末复习时回顾错题与易混淆概念对比
 
 ---
 
-### Computer Organization
+## 治学心法 · Thinking In Systems
 
-计算机组成。
+学习计算机课程时，最宝贵的不是记住零散的最终结论，而是能自主解答这四个问题：
 
-主要包括数据表示、指令系统、CPU、控制器、存储器、数据通路、流水线与性能分析等内容。
-
-[进入理论笔记 →](/Theory/Computer_Organization)
-
-[进入实验内容 →](/Lab/Computer-Organization-Lab)
-
----
-
-### Advanced Data Structure & Algorithm Analysis
-
-高级数据结构与算法分析。
-
-主要包括各种高级的算法，且为 cyll 执教的版本，也许有一定的代表性。
-
-[进入课程笔记 →](/Theory/Advanced_Data_Structure_Algorithm_Analysis)
+1. **这个概念或硬件机制到底在解决什么核心痛点？**
+2. **为什么前人要这样设计，而非采用更简单的方式？**
+3. **它和系统上下层（编译器、硬件、操作系统）有什么联动？**
+4. **换一种题目形式或工程场景后，我还能不能自己严密推出答案？**
 
 ---
 
-###  Probability and Mathematical Statistics
+## 卷末寄语 · Final Remarks
 
-概率论与数理统计
+最后，我想用 SGA 在 2026 年西决第七场不敌马刺的赛后采访中，他笑着说出的最后一句来作结，愿我们都能够：
 
-简称概与统，比概和统稍微简单些，表面上是计科的专业课，本质上是一门数学课。
+<div style="text-align: center; margin: 2rem auto; font-size: 1.35rem; font-weight: 700; color: var(--wi-accent-dark); letter-spacing: 2px;">
+  “拿得起，也放得下。”
+</div>
 
-[进入课程笔记 →](/Theory/Probability_and_Mathematical_Statistics)
-
----
-
-### 马克思主义基本原理
-
-马克思主义基本原理
-
-一门需要闭卷的学科，考研也会涉及。
-
-[进入课程笔记 →](/Theory/Marxism)
-
----
-
-## Study Checklist
-
-* [ ] 阅读课程基本概念
-* [ ] 整理公式、定义与定理
-* [ ] 完成典型例题
-* [ ] 总结易错点
-* [ ] 尝试独立解释每一个核心概念
-* [ ] 复习时回顾自己的错误记录
-
-## A Small Reminder
-
-学习计算机课程时，最重要的并不是记住所有结论，而是能够回答：
-
-* 这个概念到底在解决什么问题？
-* 为什么要这样设计？
-* 它和前面的知识有什么联系？
-* 换一种题目形式后，我还能不能自己推出答案？
-
-> Keep learning. Keep building. Keep thinking.
-
-## Final Remarks
-
-最后，我想用 SGA 在 2026 年西决第七场不敌马刺的赛后采访中，他笑着说出的最后一句来作结，愿我们都能够
-
-<center>拿得起，也放得下</center>
-
-**Thanks, guys. You have a great summer. See you.** ($Shai$ $Gilgeous$ - $Alexander$)
-
+<div class="garden-quote-box" style="text-align: center;">
+  <div class="garden-quote-title">🏀 SGA's Summer Whisper</div>
+  <div class="garden-quote-content" style="font-style: italic; font-family: Georgia, serif; font-size: 1.15rem;">
+    “Thanks, guys. You have a great summer. See you.”
+  </div>
+  <div style="text-align: right; margin-top: 10px; font-weight: 700; color: var(--wi-accent);">
+    —— Shai Gilgeous-Alexander ⚡
+  </div>
+</div>

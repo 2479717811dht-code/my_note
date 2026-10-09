@@ -133,6 +133,17 @@ const courses = [
     desc: '浙江大学计科培养方案全局脉络 · 选课规划 · 学习心法与 SGA 寄语',
     chips: ['培养路线', '全局框架'],
     link: '/Cover/logic'
+  },
+  {
+    category: 'lab',
+    code: 'BREAK',
+    tag: '摸鱼小憩',
+    tagType: 'life',
+    icon: '☕',
+    title: '摸鱼放松小站',
+    desc: '赛博木鱼积攒功德 · 怀旧贪吃蛇 · 2048消除 · 极客冲浪社区与随笔',
+    chips: ['木鱼功德+1', '益智街机'],
+    link: '/Break/break'
   }
 ]
 

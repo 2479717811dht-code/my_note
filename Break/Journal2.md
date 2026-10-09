@@ -1,6 +1,15 @@
-# <center>大海</center>
+---
+title: Journal 2 · 大海
+description: 这场激素的瘟疫比想象中的来得更快。站在浪潮退去的堤坝上。
+---
 
-<center>2026.8.20</center>
+<div class="journal-reader">
+
+<div class="journal-header-box">
+  <div class="journal-meta-badge">🌊 随笔 02 · 记忆潮汐 · 2026.08.20</div>
+  <h1 class="journal-main-title">大海 · The Sea</h1>
+  <p class="journal-subtitle">“不是因为鱼缸。是因为选择——是因为大海。”</p>
+</div>
 
 这场激素的瘟疫比想象中的来得更快。
 
@@ -107,3 +116,12 @@
 祝你幸福~
 
 晚安……
+
+<div class="journal-postscript-card">
+  <div class="journal-postscript-title">Postscript · 卷末题注</div>
+  <div class="journal-postscript-text">
+    愿每一个在深夜凝望大海与鱼缸的灵魂，都能在晨光穿透冰层之时，找回真正属于自己的自由与安宁。致曾经热烈、执着、满身伤痕却依然仰望星空的少年。
+  </div>
+</div>
+
+</div>
