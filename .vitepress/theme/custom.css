@@ -1,300 +1,625 @@
 /* ==================================================
- * 0. 引入霞鹜文楷在线字体（确保手机及未装字体的设备正常显示）
+ * 0. 字体引入与跨平台字体族（霞鹜文楷 + 优质等宽字体）
  * ================================================== */
 @import url('https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css');
 
 /* ==================================================
- * 1. 暖陶（Warm Terracotta）底层架构与全局覆写
+ * 1. 暖陶纸境（Warm Terracotta）核心色彩与视觉变量
  * ================================================== */
 :root {
-  --vp-c-brand-1: #b85b44 !important;      
-  --vp-c-brand-2: #9c4633 !important;      
-  --vp-c-brand-3: #d17561 !important;      
-  --vp-c-brand-soft: rgba(184, 91, 68, 0.15) !important;
+  /* 品牌主色系：陶土、暖砂、杏柿 */
+  --vp-c-brand-1: #b85b44;
+  --vp-c-brand-2: #9e4632;
+  --vp-c-brand-3: #cf6e57;
+  --vp-c-brand-soft: rgba(184, 91, 68, 0.1);
 
-  --vp-c-bg: #fdfaf5 !important;           
-  --vp-c-bg-alt: #f6efe6 !important;
-  
-  --vp-font-family-base: "LXGW WenKai Screen", "LXGW WenKai GB Screen", "霞鹜文楷 GB 屏幕阅读版", "Microsoft YaHei", sans-serif !important;
-  --vp-font-family-mono: "Maple Mono CN", "JetBrains Mono", Consolas, monospace !important;
+  /* 纸境背景层级：暖白凝脂纸、暖木柔调 */
+  --vp-c-bg: #fcf9f2;
+  --vp-c-bg-alt: #f6efe4;
+  --vp-c-bg-elv: #ffffff;
+  --vp-c-bg-soft: #f4ecdf;
+
+  /* 边框与分割线：淡陶暖线 */
+  --vp-c-border: #ebdcd2;
+  --vp-c-divider: #f0e4dc;
+
+  /* 文档专属色彩体系 */
+  --wi-text: #3e332f;
+  --wi-text-soft: #63554e;
+  --wi-muted: #95847d;
+  --wi-heading: #2b1f1c;
+  --wi-accent: #b85b44;
+  --wi-accent-dark: #963d28;
+  --wi-accent-light: #fcf1ec;
+  --wi-border: #e6dacd;
+  --wi-border-light: #f3eae0;
+  --wi-highlight: #fae4a6;
+  --wi-gold: #c68a4c;
+
+  /* 柔和阴影系统 */
+  --wi-shadow-xs: 0 2px 6px rgba(140, 70, 50, 0.04);
+  --wi-shadow-sm: 0 4px 14px rgba(140, 70, 50, 0.06);
+  --wi-shadow-md: 0 8px 24px rgba(140, 70, 50, 0.09);
+  --wi-shadow-lg: 0 16px 38px rgba(140, 70, 50, 0.13);
+
+  /* 跨平台字体栈：保证 Mac/iOS/Windows/Android 均有最适宜回退 */
+  --vp-font-family-base: "LXGW WenKai Screen", "LXGW WenKai GB Screen", "霞鹜文楷 GB 屏幕阅读版",
+    -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Segoe UI", sans-serif;
+  --vp-font-family-mono: "Maple Mono CN", "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 }
 
+/* 文字选中高亮 */
 ::selection {
-  background: rgba(184, 91, 68, 0.8);
-  color: #ffffff;
+  background: rgba(184, 91, 68, 0.25);
+  color: #2b1f1c;
 }
 
 /* ==================================================
- * 2. 全局文字设定与【正文专属微加粗】
+ * 2. 全局正文排版（自然渲染，告别物理描边）
  * ================================================== */
-.vp-doc {
-  --wi-text: #463a37;           
-  --wi-text-soft: #6b5c58;      
-  --wi-muted: #9c8a84;          
-  --wi-heading: #2e2321;        
-  --wi-accent: #b85b44;         
-  --wi-accent-dark: #9c4633;    
-  --wi-border: #e3d2c8;         
-  --wi-border-light: #f2e6de;   
-  --wi-highlight: #fce29f;      
-
-  font-family: var(--vp-font-family-base);
+body {
+  background-color: var(--vp-c-bg);
   color: var(--wi-text);
+  font-family: var(--vp-font-family-base);
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* 强制各级容器继承字体 */
-.vp-doc p, .vp-doc h1, .vp-doc h2, .vp-doc h3, .vp-doc h4, .vp-doc h5, .vp-doc h6,
-.vp-doc li, .vp-doc blockquote, .vp-doc table { font-family: var(--vp-font-family-base); }
-.vp-doc code, .vp-doc tt, .vp-doc pre, .vp-doc div[class*="language-"] code, .vp-doc div[class*="language-"] pre { font-family: var(--vp-font-family-mono); }
+.vp-doc {
+  font-family: var(--vp-font-family-base);
+  color: var(--wi-text);
+  font-size: 16px;
+  line-height: 1.85;
+  letter-spacing: 0.015em;
+}
 
-/* 【核心修改】专门针对正文（段落、列表、表格内容）进行物理加粗 */
 .vp-doc p, 
 .vp-doc li, 
 .vp-doc td {
-  font-weight: 500; 
-  -webkit-text-stroke: 0.35px var(--wi-text); /* 专门控制正文的粗细，数值越大越粗，0.35px 是个很舒服的微胖状态 */
-  text-shadow: 0.3px 0.3px 0px rgba(70, 58, 55, 0.15); /* 增加一点点墨晕感，防止描边后字体发虚 */
+  font-weight: 450;
+  color: var(--wi-text);
+}
+
+/* 段落间距呼吸感 */
+.vp-doc p {
+  margin: 1.15rem 0;
 }
 
 /* ==================================================
- * 3. 基础元素与动态特效
+ * 3. 标题体系与垂直节奏（层级分明，优雅锚点）
  * ================================================== */
-.vp-doc input[type='checkbox'] {
-  width: 1.15em; height: 1.15em; margin-right: 0.5em;
-  accent-color: var(--wi-accent);
-  box-shadow: 0 2px 4px rgba(184, 91, 68, 0.2);
-  transition: all 0.2s ease;
-}
-.vp-doc input[type='checkbox']:hover { transform: scale(1.15) translateY(-1px); }
-
-.vp-doc mark {
-  color: inherit;
-  background: linear-gradient(120deg, rgba(252,226,159,1) 0%, rgba(252,226,159,0.6) 100%);
-  padding: 0.15em 0.3em;
-  border-radius: 4px;
-  box-shadow: 0 1px 3px rgba(252, 226, 159, 0.8);
-}
-
-.vp-doc a {
-  position: relative;
-  color: var(--wi-accent-dark);
-  text-decoration: none;
-  font-weight: 700;
-  -webkit-text-stroke: 0.4px var(--wi-accent-dark); /* 链接额外加粗 */
-  border-bottom: none !important;
-  transition: color 0.3s ease;
-}
-.vp-doc a::after {
-  content: ''; position: absolute;
-  width: 100%; height: 2px; 
-  bottom: -2px; left: 0;
-  background-color: var(--wi-accent);
-  transform: scaleX(0); transform-origin: bottom right;
-  transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-}
-.vp-doc a:hover { color: var(--wi-accent); }
-.vp-doc a:hover::after { transform: scaleX(1); transform-origin: bottom left; }
-
-/* ==================================================
- * 4. 标题设计（H2 极简标注版）
- * ================================================== */
-.vp-doc h1, .vp-doc h2, .vp-doc h3, .vp-doc h4 {
+.vp-doc h1, .vp-doc h2, .vp-doc h3, .vp-doc h4, .vp-doc h5, .vp-doc h6 {
+  font-family: var(--vp-font-family-base);
   color: var(--wi-heading);
-  line-height: 1.4;
-  margin-top: 1.5rem !important;
-  margin-bottom: 0.5rem !important;
-  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); 
-  -webkit-text-stroke: 0.6px var(--wi-heading); /* 标题更粗 */
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  scroll-margin-top: calc(var(--vp-nav-height) + 24px);
 }
 
 .vp-doc h1 {
-  padding-bottom: 0.8rem !important;
-  border-bottom: 4px double var(--wi-border) !important;
+  font-size: 2.1rem;
+  line-height: 1.35;
+  margin-top: 2.6rem;
+  margin-bottom: 1.2rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 2px solid var(--wi-border);
+  position: relative;
 }
-.vp-doc h1:hover { color: var(--wi-accent) !important; transform: translateX(4px); }
 
-/* 【核心修改】H2 极简淡色标注 */
-.vp-doc h2 {
-  padding: 0 !important;
-  padding-bottom: 0.5rem !important;
-  color: var(--wi-heading) !important; /* 恢复为主标题色，不那么跳脱 */
-  background: transparent !important;
-  border-left: none !important;
-  border-bottom: 1px dashed var(--wi-border) !important;
-  border-top: none !important;
+.vp-doc h1::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 60px;
+  height: 2px;
+  background-color: var(--wi-accent);
 }
+
+.vp-doc h2 {
+  font-size: 1.55rem;
+  line-height: 1.4;
+  margin-top: 2.4rem;
+  margin-bottom: 0.8rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px dashed var(--wi-border);
+  display: flex;
+  align-items: center;
+}
+
 .vp-doc h2::before {
-  content: '❖'; /* 淡淡的菱形标注，也可换成 '#' 或 '·' */
+  content: '❖';
   margin-right: 10px;
-  color: rgba(184, 91, 68, 0.3); /* 半透明的暖色，极淡 */
-  font-size: 0.9em;
+  color: var(--wi-accent);
+  opacity: 0.8;
+  font-size: 0.85em;
   font-weight: normal;
-  -webkit-text-stroke: 0; /* 标注不加粗 */
-  transition: color 0.3s ease, transform 0.3s ease;
+  transition: transform 0.3s ease, opacity 0.3s ease;
   display: inline-block;
 }
-.vp-doc h2:hover {
-  transform: translateX(4px);
-}
+
 .vp-doc h2:hover::before {
-  color: var(--wi-accent); /* 悬停时标注变亮 */
-  transform: rotate(90deg); /* 悬停时小菱形微微旋转 */
+  transform: rotate(45deg) scale(1.1);
+  opacity: 1;
 }
 
-.vp-doc h3 { color: var(--wi-accent-dark) !important; }
-.vp-doc h3:hover { transform: translateX(4px); }
+.vp-doc h3 {
+  font-size: 1.25rem;
+  line-height: 1.45;
+  color: var(--wi-accent-dark);
+  margin-top: 1.8rem;
+  margin-bottom: 0.6rem;
+}
+
+.vp-doc h4 {
+  font-size: 1.1rem;
+  color: var(--wi-heading);
+  margin-top: 1.4rem;
+  margin-bottom: 0.5rem;
+}
 
 /* ==================================================
- * 5. 封面 cute.gif 专属相框 & 其它区块
+ * 4. 超链接与交互（排除锚点与图片下划线）
  * ================================================== */
-
-/* 【核心修改】精准定位封面图或名为 cute.gif 的图片，加上暖陶画框 */
-.VPHero .image-src,
-img[src*="cute.gif"] {
-  border: 8px solid #fff !important;           /* 白色内衬画框 */
-  outline: 2px solid #e3d2c8 !important;       /* 暖色外边框 */
-  border-radius: 24px !important;              /* 大圆角 */
-  box-shadow: 0 12px 30px rgba(184, 91, 68, 0.15), 0 4px 8px rgba(0,0,0,0.05) !important; /* 立体投影 */
-  background-color: #fff;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-.VPHero .image-src:hover,
-img[src*="cute.gif"]:hover {
-  transform: translateY(-5px) scale(1.02) !important;
-  box-shadow: 0 18px 40px rgba(184, 91, 68, 0.22), 0 6px 12px rgba(0,0,0,0.08) !important;
+.vp-doc a:not(.header-anchor) {
+  position: relative;
+  color: var(--wi-accent);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.25s ease;
+  padding: 0 2px;
 }
 
-/* 其他普通图片的基础修饰 */
-.vp-doc img:not([src*="cute.gif"]) {
-  border-radius: 8px;
-  box-shadow: 0 6px 16px rgba(120, 70, 60, 0.08);
+.vp-doc a:not(.header-anchor):not(:has(img))::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1.5px;
+  bottom: 0px;
+  left: 0;
+  background-color: var(--wi-accent);
+  opacity: 0.4;
+  transform: scaleX(0.85);
+  transform-origin: bottom center;
+  transition: all 0.25s ease;
 }
 
+.vp-doc a:not(.header-anchor):not(:has(img)):hover {
+  color: var(--wi-accent-dark);
+}
+
+.vp-doc a:not(.header-anchor):not(:has(img)):hover::after {
+  opacity: 1;
+  transform: scaleX(1);
+  height: 2px;
+}
+
+/* ==================================================
+ * 5. 行内代码与代码块优雅适配
+ * ================================================== */
 .vp-doc :not(pre) > code {
-  color: #7a3525;
-  background: #f7e6e1;
-  border: 1px solid #e8cec5;
-  border-bottom: 2px solid #dcaea1; 
-  padding: 0.15em 0.4em;
-  border-radius: 5px;
+  color: var(--wi-accent-dark);
+  background: var(--wi-accent-light);
+  border: 1px solid rgba(184, 91, 68, 0.18);
+  padding: 0.2em 0.45em;
+  border-radius: 6px;
+  font-size: 0.9em;
+  font-family: var(--vp-font-family-mono);
+  box-shadow: 0 1px 2px rgba(184, 91, 68, 0.04);
 }
 
+/* 代码块容器 */
+.vp-doc div[class*="language-"] {
+  border-radius: 12px;
+  border: 1px solid var(--wi-border);
+  box-shadow: var(--wi-shadow-xs);
+  margin: 1.4rem 0;
+}
+
+/* ==================================================
+ * 6. 引用块（Blockquote）：纸境雅致文摘
+ * ================================================== */
 .vp-doc blockquote:not(.md-alert) {
   position: relative;
   margin: 1.6rem 0;
-  padding: 1.2rem 1.5rem;
-  color: #5c4b47;
-  background: linear-gradient(135deg, #fdf7f2 0%, #f4e8df 100%);
-  border: 1px solid #ebdcd2;
-  border-left: 6px solid var(--wi-accent);
-  border-radius: 8px;
-  box-shadow: 2px 6px 15px rgba(140, 70, 50, 0.06);
-  transition: all 0.3s ease;
+  padding: 1.2rem 1.6rem 1.2rem 1.8rem;
+  color: var(--wi-text-soft);
+  background: linear-gradient(135deg, #fdfaf6 0%, #f7eee4 100%);
+  border: 1px solid var(--wi-border-light);
+  border-left: 5px solid var(--wi-accent);
+  border-radius: 10px;
+  box-shadow: var(--wi-shadow-sm);
   overflow: hidden;
   z-index: 1;
 }
+
 .vp-doc blockquote:not(.md-alert)::after {
   content: '”';
   position: absolute;
-  bottom: -40px; right: -10px;
-  font-size: 8rem;
-  color: rgba(184, 91, 68, 0.06);
-  font-family: Georgia, serif;
-  z-index: -1; line-height: 1;
-}
-.vp-doc blockquote:not(.md-alert):hover {
-  transform: translateY(-4px);
-  box-shadow: 4px 10px 20px rgba(140, 70, 50, 0.12);
-  border-left-width: 10px; 
+  bottom: -35px;
+  right: -5px;
+  font-size: 7.5rem;
+  color: rgba(184, 91, 68, 0.07);
+  font-family: Georgia, "Songti SC", "SimSun", serif;
+  z-index: -1;
+  line-height: 1;
+  pointer-events: none;
 }
 
+.vp-doc blockquote:not(.md-alert) p {
+  margin: 0.4rem 0;
+}
+
+/* ==================================================
+ * 7. 表格系统：全宽与响应式移动端滚动保护
+ * ================================================== */
 .vp-doc table {
-  display: table !important;      /* 核心：恢复原生表格属性，这才是 Typora 撑满的秘诀 */
-  width: 100% !important;         /* 强制撑满整个屏幕宽度 */
-  table-layout: auto !important;  /* 让浏览器像 Typora 一样，自动根据内容按比例分配每列宽度 */
-  word-break: break-word;         /* 核心防御：遇到超长无空格的代码时自动换行，防止撑爆网页 */
-  
+  width: 100%;
   border-collapse: separate;
   border-spacing: 0;
   border: 1px solid var(--wi-border);
-  border-radius: 8px;
+  border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 4px 12px rgba(120, 70, 60, 0.04);
-  margin: 1.5rem 0;
+  box-shadow: var(--wi-shadow-xs);
+  margin: 1.6rem 0;
+  background-color: #ffffff;
+  display: table;
+  table-layout: auto;
+  word-break: break-word;
 }
 
 .vp-doc th {
   color: var(--wi-heading);
-  background: linear-gradient(to bottom, #f2e6de 0%, #ebd8cb 100%); 
-  padding: 0.8rem 1.5rem; /* 保持舒服的内边距 */
-  text-align: left;       /* Typora 默认通常是左对齐，看起来更规整 */
+  background: linear-gradient(to bottom, #f5ebd3 0%, #ede0d4 100%);
+  padding: 0.85rem 1.2rem;
+  font-weight: 600;
+  border-bottom: 1px solid var(--wi-border);
+  text-align: left;
 }
 
-.vp-doc td { 
-  padding: 0.7rem 1.5rem; 
+.vp-doc td {
+  padding: 0.75rem 1.2rem;
+  border-bottom: 1px solid var(--wi-border-light);
+  line-height: 1.6;
 }
 
-.vp-doc tbody tr:nth-child(even) { 
-  background: #faf4ef; 
+.vp-doc tbody tr:last-child td {
+  border-bottom: none;
 }
 
-.vp-doc tbody tr:hover { 
-  background: #f2e3d8; 
-  transition: background 0.2s ease; 
+.vp-doc tbody tr:nth-child(even) {
+  background-color: #fbf6f0;
+}
+
+.vp-doc tbody tr:hover {
+  background-color: #f6ecdf;
+  transition: background-color 0.15s ease;
+}
+
+/* 移动端视口保护：表格自动横向滑动，防止撑裂排版 */
+@media (max-width: 768px) {
+  .vp-doc table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
 }
 
 /* ==================================================
- * 6. 专属招牌
+ * 8. 任务列表与标记高亮
  * ================================================== */
-.vp-doc .my-motto,
-.vp-doc p.my-motto {
-  display: block !important;
-  text-align: center !important;
-  margin: 80px auto 40px !important;
-  padding: 30px 20px !important;
-  width: 90% !important;
-  border-top: 2px dashed var(--wi-accent) !important;
-  border-bottom: 2px dashed var(--wi-accent) !important;
-  color: var(--wi-accent-dark) !important;
-  background: radial-gradient(circle, rgba(184, 91, 68, 0.05) 0%, transparent 80%) !important;
-  font-family: "钟齐志莽行书", "沐瑶随心体", cursive !important;
-  font-size: 22px !important;
-  line-height: 2 !important;
-  letter-spacing: 4px !important;
-  border-radius: 20px !important;
-  transition: all 0.5s ease !important;
-  box-shadow: inset 0 0 20px rgba(184, 91, 68, 0.02) !important;
-  -webkit-text-stroke: 0.5px var(--wi-accent-dark); /* 招牌也对应加粗 */
+.vp-doc input[type='checkbox'] {
+  width: 1.15em;
+  height: 1.15em;
+  margin-right: 0.5em;
+  accent-color: var(--wi-accent);
+  box-shadow: 0 1px 3px rgba(184, 91, 68, 0.2);
+  vertical-align: -0.15em;
+  cursor: pointer;
 }
+
+.vp-doc mark {
+  color: inherit;
+  background: linear-gradient(120deg, rgba(250, 228, 166, 0.85) 0%, rgba(250, 228, 166, 0.45) 100%);
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+}
+
+/* ==================================================
+ * 9. 首页（Home Page）高端视觉定制
+ * ================================================== */
+/* 导航栏毛玻璃底色 */
+.VPNavBar {
+  background-color: rgba(252, 249, 242, 0.88) !important;
+  backdrop-filter: blur(12px) !important;
+  border-bottom: 1px solid var(--wi-border-light) !important;
+}
+
+/* 首页 Hero 标题质感 */
+.VPHero .name {
+  background: linear-gradient(135deg, #b85b44 0%, #8c3624 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
+
+.VPHero .text {
+  color: var(--wi-heading) !important;
+  font-weight: 700 !important;
+}
+
+.VPHero .tagline {
+  color: var(--wi-text-soft) !important;
+}
+
+/* 封面吉祥物 cute.gif 专属瓷质画框与悬浮微光 */
+.VPHero .image-src,
+img[src*="cute.gif"] {
+  border: 7px solid #ffffff !important;
+  outline: 1.5px solid var(--wi-border) !important;
+  border-radius: 26px !important;
+  box-shadow: var(--wi-shadow-md) !important;
+  background-color: #ffffff;
+  transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1) !important;
+}
+
+.VPHero .image-src:hover,
+img[src*="cute.gif"]:hover {
+  transform: translateY(-5px) scale(1.02) !important;
+  box-shadow: var(--wi-shadow-lg) !important;
+  outline-color: var(--wi-accent) !important;
+}
+
+/* 首页按钮质感升级 */
+.VPButton.brand {
+  background: linear-gradient(135deg, #b85b44 0%, #a44b36 100%) !important;
+  border: 1px solid #9b412d !important;
+  box-shadow: 0 4px 14px rgba(184, 91, 68, 0.25) !important;
+  border-radius: 999px !important;
+  font-weight: 600 !important;
+  transition: all 0.3s ease !important;
+}
+
+.VPButton.brand:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(184, 91, 68, 0.35) !important;
+}
+
+.VPButton.alt {
+  background: #ffffff !important;
+  border: 1px solid var(--wi-border) !important;
+  color: var(--wi-text) !important;
+  border-radius: 999px !important;
+  box-shadow: var(--wi-shadow-xs) !important;
+  transition: all 0.3s ease !important;
+}
+
+.VPButton.alt:hover {
+  transform: translateY(-2px);
+  border-color: var(--wi-accent) !important;
+  color: var(--wi-accent) !important;
+}
+
+/* 首页 Feature 卡片：轻拟物与暖砂纸感 */
+.VPFeatures .VPFeature {
+  background: rgba(255, 255, 255, 0.85) !important;
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--wi-border-light) !important;
+  border-radius: 18px !important;
+  box-shadow: var(--wi-shadow-sm) !important;
+  padding: 24px 28px !important;
+  transition: all 0.35s cubic-bezier(0.2, 0.8, 0.2, 1) !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.VPFeatures .VPFeature:hover {
+  transform: translateY(-5px);
+  border-color: var(--wi-accent) !important;
+  box-shadow: var(--wi-shadow-md) !important;
+}
+
+.VPFeatures .VPFeature .title {
+  color: var(--wi-heading) !important;
+  font-size: 1.15rem !important;
+  font-weight: 700 !important;
+  margin-top: 10px !important;
+}
+
+.VPFeatures .VPFeature .details {
+  color: var(--wi-text-soft) !important;
+  font-size: 0.95rem !important;
+  line-height: 1.6 !important;
+}
+
+/* ==================================================
+ * 10. index.md 专属高级组件排版（逼格提升模块）
+ * ================================================== */
+
+/* 顶部/文前微型徽章 */
+.garden-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(184, 91, 68, 0.09);
+  color: var(--wi-accent-dark);
+  border: 1px solid rgba(184, 91, 68, 0.2);
+  border-radius: 999px;
+  padding: 4px 14px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+/* 首页主视觉画报卡片 (Hero Picture Container) */
+.garden-banner-card {
+  margin: 2.4rem auto;
+  width: 100%;
+  max-width: 920px;
+  border-radius: 22px;
+  padding: 10px;
+  background: linear-gradient(135deg, #ffffff 0%, #fcf7f1 100%);
+  border: 1px solid var(--wi-border);
+  box-shadow: var(--wi-shadow-md);
+  transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+  position: relative;
+}
+
+.garden-banner-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--wi-shadow-lg);
+  border-color: rgba(184, 91, 68, 0.4);
+}
+
+.garden-banner-img {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+/* 优雅金漆书签引言卡片 */
+.garden-quote-box {
+  background: linear-gradient(135deg, #fffdfa 0%, #f8f1e7 100%);
+  border: 1px solid var(--wi-border);
+  border-left: 5px solid var(--wi-accent);
+  border-radius: 14px;
+  padding: 1.4rem 1.8rem;
+  margin: 2rem 0;
+  box-shadow: var(--wi-shadow-xs);
+  position: relative;
+}
+
+.garden-quote-title {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--wi-accent);
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.garden-quote-content {
+  font-size: 1.05rem;
+  color: var(--wi-text);
+  line-height: 1.8;
+  font-style: normal;
+}
+
+/* 导航快速直达矩阵 */
+.garden-quick-nav {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+  margin: 1.8rem 0;
+}
+
+.garden-nav-pill {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px;
+  background: #ffffff;
+  border: 1px solid var(--wi-border);
+  border-radius: 12px;
+  text-decoration: none !important;
+  color: var(--wi-heading) !important;
+  font-weight: 600;
+  transition: all 0.25s ease;
+  box-shadow: var(--wi-shadow-xs);
+}
+
+.garden-nav-pill:hover {
+  transform: translateY(-3px);
+  border-color: var(--wi-accent);
+  box-shadow: var(--wi-shadow-sm);
+  color: var(--wi-accent) !important;
+}
+
+.garden-nav-pill .icon {
+  font-size: 1.3rem;
+  margin-right: 10px;
+}
+
+.garden-nav-pill .arrow {
+  color: var(--wi-muted);
+  font-size: 1.1rem;
+  transition: transform 0.25s ease;
+}
+
+.garden-nav-pill:hover .arrow {
+  transform: translateX(4px);
+  color: var(--wi-accent);
+}
+
+/* 表情包卡片工整画廊 */
+.garden-meme-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  margin: 2rem 0;
+}
+
+.garden-meme-item {
+  background: #ffffff;
+  border: 1px solid var(--wi-border);
+  border-radius: 14px;
+  padding: 12px;
+  box-shadow: var(--wi-shadow-xs);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.garden-meme-item:hover {
+  transform: translateY(-4px);
+  border-color: var(--wi-accent);
+  box-shadow: var(--wi-shadow-sm);
+}
+
+.garden-meme-item img {
+  width: 100%;
+  max-width: 240px;
+  border-radius: 10px;
+  display: block;
+}
+
+/* 座右铭与落款（支持优雅衬线回退，绝不降级到 Comic Sans） */
+.vp-doc .my-motto {
+  display: block;
+  text-align: center;
+  margin: 60px auto 30px;
+  padding: 26px 20px;
+  max-width: 780px;
+  border-top: 2px dashed var(--wi-accent);
+  border-bottom: 2px dashed var(--wi-accent);
+  color: var(--wi-accent-dark);
+  background: radial-gradient(circle, rgba(184, 91, 68, 0.05) 0%, transparent 80%);
+  font-family: "LXGW WenKai Screen", "Kaiti SC", "STKaiti", "楷体", serif;
+  font-size: 20px;
+  line-height: 2;
+  letter-spacing: 3px;
+  border-radius: 18px;
+  transition: all 0.4s ease;
+}
+
 .vp-doc .my-motto:hover {
-  transform: scale(1.04) translateY(-2px) !important;
-  text-shadow: 0 0 15px rgba(184, 91, 68, 0.4) !important;
-  border-color: var(--wi-accent-dark) !important;
+  transform: scale(1.02);
+  background: radial-gradient(circle, rgba(184, 91, 68, 0.09) 0%, transparent 90%);
 }
-.vp-doc .my-motto span {
-  display: block !important;
-  text-align: right !important;
-  margin-top: 15px !important;
-  font-size: 0.95em !important;
-  opacity: 0.85;
-  -webkit-text-stroke: 0;
-}
-.vp-doc .my-sign,
-.vp-doc p.my-sign {
-  display: block !important;
-  text-align: right !important;
-  margin-top: 60px !important;
-  padding-right: 25px !important;
-  color: #7a3525 !important;
-  font-family: "钟齐志莽行书", cursive !important;
-  font-size: 32px !important; 
-  letter-spacing: 3px !important;
-  font-style: italic !important;
-  transition: all 0.4s ease !important;
-  -webkit-text-stroke: 1px #7a3525; /* 签名进一步加粗 */
-}
-.vp-doc .my-sign:hover {
-  transform: translateX(-8px) scale(1.05) !important;
-  text-shadow: 3px 3px 10px rgba(122, 53, 37, 0.3) !important;
+
+.vp-doc .my-sign {
+  display: block;
+  text-align: right;
+  margin-top: 30px;
+  padding-right: 20px;
+  color: var(--wi-accent-dark);
+  font-family: "LXGW WenKai Screen", "Kaiti SC", "STKaiti", "楷体", serif;
+  font-size: 24px;
+  letter-spacing: 2px;
+  font-style: italic;
+  font-weight: bold;
 }
