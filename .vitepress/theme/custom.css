@@ -182,10 +182,27 @@ body {
   color: var(--wi-accent) !important;
 }
 
-/* 侧边栏高亮当前项：暖陶微胶囊背景 */
-.VPSidebarItem.is-active > .item {
-  background: rgba(184, 91, 68, 0.11) !important;
+/* 侧边栏高亮当前项：淡色背景向左多延伸，形成贴合导引线的精致高亮胶囊 */
+.VPSidebarItem .item {
+  transition: all 0.22s ease !important;
   border-radius: 8px !important;
+}
+
+.VPSidebarItem.is-active > .item {
+  background: rgba(184, 91, 68, 0.12) !important;
+  border-radius: 8px !important;
+  margin-left: -14px !important;
+  padding-left: 14px !important;
+  border-left: 3px solid var(--wi-accent) !important;
+}
+
+.VPSidebarItem.level-0.is-active > .item {
+  margin-left: -8px !important;
+  padding-left: 12px !important;
+}
+
+.VPSidebarItem .item:hover {
+  background: rgba(184, 91, 68, 0.05);
 }
 
 .VPSidebarItem.is-active > .item .text {
@@ -281,7 +298,8 @@ nav.table-of-contents a:hover {
 /* ==================================================
  * 5. 超链接、行内代码与引用块
  * ================================================== */
-.vp-doc a:not(.header-anchor) {
+.vp-doc p a:not(.header-anchor):not([class*="card"]):not([class*="btn"]):not([class*="pill"]):not([class*="matrix"]):not(:has(img)),
+.vp-doc li a:not(.header-anchor):not([class*="card"]):not([class*="btn"]):not([class*="pill"]):not([class*="matrix"]):not(:has(img)) {
   position: relative;
   color: var(--wi-accent);
   text-decoration: none;
@@ -290,7 +308,8 @@ nav.table-of-contents a:hover {
   padding: 0 2px;
 }
 
-.vp-doc a:not(.header-anchor):not(:has(img))::after {
+.vp-doc p a:not(.header-anchor):not([class*="card"]):not([class*="btn"]):not([class*="pill"]):not([class*="matrix"]):not(:has(img))::after,
+.vp-doc li a:not(.header-anchor):not([class*="card"]):not([class*="btn"]):not([class*="pill"]):not([class*="matrix"]):not(:has(img))::after {
   content: '';
   position: absolute;
   width: 100%;
@@ -304,14 +323,26 @@ nav.table-of-contents a:hover {
   transition: all 0.25s ease;
 }
 
-.vp-doc a:not(.header-anchor):not(:has(img)):hover {
+.vp-doc p a:not(.header-anchor):hover,
+.vp-doc li a:not(.header-anchor):hover {
   color: var(--wi-accent-dark);
 }
 
-.vp-doc a:not(.header-anchor):not(:has(img)):hover::after {
+.vp-doc p a:not(.header-anchor):hover::after,
+.vp-doc li a:not(.header-anchor):hover::after {
   opacity: 1;
   transform: scaleX(1);
   height: 2px;
+}
+
+/* 坚决杜绝卡片容器产生下划线干扰 */
+.vp-doc a[class*="card"]::after,
+.vp-doc a[class*="pill"]::after,
+.vp-doc a[class*="bento"]::after,
+.vp-doc a[class*="bookmark"]::after,
+.vp-doc a[class*="matrix"]::after {
+  display: none !important;
+  content: none !important;
 }
 
 .vp-doc :not(pre) > code {
