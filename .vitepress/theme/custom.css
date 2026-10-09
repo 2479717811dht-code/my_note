@@ -352,7 +352,7 @@ body {
   color: var(--wi-text-soft) !important;
 }
 
-/* 封面吉祥物 cute.gif 专属瓷质画框与悬浮微光 */
+/* 封面吉祥物 cute.gif 专属瓷质画框与平稳悬浮动效 */
 .VPHero .image-src,
 img[src*="cute.gif"] {
   border: 7px solid #ffffff !important;
@@ -360,12 +360,15 @@ img[src*="cute.gif"] {
   border-radius: 26px !important;
   box-shadow: var(--wi-shadow-md) !important;
   background-color: #ffffff;
-  transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1) !important;
+  /* 严格锁定 translate(-50%, -50%) 居中基准，杜绝定位冲突导致的向右下角飞移 */
+  transform: translate(-50%, -50%) !important;
+  transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.35s ease, outline-color 0.35s ease !important;
 }
 
 .VPHero .image-src:hover,
 img[src*="cute.gif"]:hover {
-  transform: translateY(-5px) scale(1.02) !important;
+  /* 平稳向上微浮 6px，居中基准点纹丝不动 */
+  transform: translate(-50%, calc(-50% - 6px)) scale(1.02) !important;
   box-shadow: var(--wi-shadow-lg) !important;
   outline-color: var(--wi-accent) !important;
 }

@@ -1407,7 +1407,7 @@ enum EnumName {
 >- **Parent and child:** The root of a node's subtree is called its child; correspondingly, the node is called the parent of its child.
 >- **Level:** The level of a node is defined starting from the root. The root is at level 1, the children of the root are at level 2, and so on.
 ##### (2) Properties
->** Property 1:** The total number of nodes in a tree is equal to the sum of the degrees of all nodes plus one.
+>**Property 1:** The total number of nodes in a tree is equal to the sum of the degrees of all nodes plus one.
 
 >**Property 2:** For a tree of degree $m$, the $i$-th level can have at most $m^{i−1}$ nodes.
 

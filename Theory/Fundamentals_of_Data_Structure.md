@@ -12760,7 +12760,7 @@ Assume that each operation of push or pop takes $1$ unit of time.  You job is to
 
 **Input Specification:**
 Each input file contains one test case. For each case, the first line gives a positive integer $(N \le 10^3)$, which are the number of operations. Then $N$ lines follow, each gives an operation in the format
-```Operation Element```
+`Operation Element`
 where `Operation` being `I` represents enqueue and `O` represents dequeue.  For each `I`, Element is a positive integer that is no more than $10^6$. No Element is given for `O` operations.
 It is guaranteed that there is at least one `O` operation.
 
@@ -13686,7 +13686,7 @@ S
 
 **Sample Output 2:**
 
->输出样例 2$：
+>输出样例 $2$：
 
 ```c
 no
@@ -14318,7 +14318,7 @@ Given the shape of a binary tree shown by the figure below. If its inorder trave
 
 **A. D and G**
 
-**B. E ** :white_check_mark:
+**B. E** :white_check_mark:
 
 **C. B**
 
