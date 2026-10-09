@@ -233,13 +233,14 @@ body {
 .vp-doc h1:has(center),
 .vp-doc h1:has(> center) {
   text-align: center;
+  border-bottom: none !important;
+  padding-bottom: 0 !important;
 }
 
 .vp-doc h1:has(center)::after,
 .vp-doc h1:has(> center)::after {
-  left: 50% !important;
-  transform: translateX(-50%) !important;
-  width: 76px !important;
+  display: none !important;
+  content: none !important;
 }
 
 .vp-doc h2 {
@@ -540,42 +541,19 @@ nav.table-of-contents a::after {
   max-width: 100%;
 }
 
-/* 学术笔记专属刊头（Emblem Ribbon / School Badges）优雅横排 */
-.vp-doc center:has(img) {
-  display: flex !important;
-  flex-direction: row !important;
-  flex-wrap: wrap !important;
-  align-items: center !important;
-  justify-content: center !important;
-  gap: 24px 36px !important;
-  margin: 1.8rem auto 2.4rem !important;
-  padding: 16px 32px !important;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.88) 0%, rgba(250, 245, 238, 0.78) 100%) !important;
-  border: 1px solid rgba(184, 91, 68, 0.16) !important;
-  border-radius: 18px !important;
-  box-shadow: var(--wi-shadow-xs) !important;
-  max-width: 760px !important;
+/* 内页居中内容与封面图片（完全尊重 Markdown 原生排版与内联 zoom 比例，不添加卡片框或强制高度） */
+.vp-doc center {
+  text-align: center !important;
+  margin: 1.2rem auto !important;
 }
 
 .vp-doc center img {
   display: inline-block !important;
-  zoom: 1 !important;
-  height: 48px !important;
-  max-height: 48px !important;
-  width: auto !important;
-  max-width: 240px !important;
-  object-fit: contain !important;
-  margin: 4px 10px !important;
-  border-radius: 4px !important;
+  margin: 0 8px !important;
+  border-radius: 0 !important;
   box-shadow: none !important;
   background: transparent !important;
-  filter: drop-shadow(0 2px 5px rgba(184, 91, 68, 0.08));
   vertical-align: middle !important;
-  transition: transform 0.25s ease;
-}
-
-.vp-doc center img:hover {
-  transform: scale(1.06);
 }
 
 .vp-doc center:not(:has(img)) {
@@ -588,16 +566,8 @@ nav.table-of-contents a::after {
 
 .vp-doc hr {
   border: none !important;
-  border-top: 1px dashed rgba(184, 91, 68, 0.2) !important;
+  border-top: 1px solid var(--wi-border) !important;
   margin: 1.8rem 0 !important;
-}
-
-.dark .vp-doc center:has(img) {
-  background: linear-gradient(135deg, rgba(32, 27, 26, 0.88) 0%, rgba(25, 21, 20, 0.78) 100%) !important;
-  border-color: rgba(217, 120, 96, 0.2) !important;
-}
-.dark .vp-doc center img {
-  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.4));
 }
 
 .vp-doc blockquote:not(.md-alert) {
