@@ -359,8 +359,44 @@ body {
   width: 2.5px;
   border-radius: 2px;
 }
+/* 保证在中等屏幕与笔记本缩放环境（960px ~ 1279px）下右侧本页大纲栏常驻可见 */
+@media (min-width: 960px) and (max-width: 1279px) {
+  .VPDoc.has-aside .container {
+    display: flex !important;
+    justify-content: center !important;
+  }
 
+  .VPDoc.has-aside .aside {
+    display: block !important;
+    position: relative !important;
+    order: 2 !important;
+    flex-grow: 1 !important;
+    padding-left: 20px !important;
+    width: 100% !important;
+    max-width: 220px !important;
+  }
 
+  .VPDoc.has-aside .aside-container {
+    width: 200px !important;
+  }
+
+  .VPDoc.has-aside .content {
+    order: 1 !important;
+    flex-grow: 1 !important;
+    margin: 0 !important;
+    min-width: 0 !important;
+    padding: 0 16px 128px !important;
+  }
+
+  .VPDoc.has-aside .content-container {
+    max-width: 620px !important;
+    margin: 0 auto !important;
+  }
+
+  .VPLocalNav {
+    display: none !important;
+  }
+}
 
 .VPDocAsideOutline .outline-link {
   white-space: normal !important;
