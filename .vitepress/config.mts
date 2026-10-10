@@ -185,12 +185,41 @@ export default withMermaid(
           collapsed: false,
           items: [
             {
-              text: 'Read Me',
+              text: 'Read Me · 实验总览',
               link: '/Lab/lab'
             },
             {
               text: 'Digital Logic Design',
-              link: '/Lab/Digital-Logic-Design-Lab'
+              collapsed: false,
+              items: [
+                {
+                  text: 'DLD 实验与课设总览',
+                  link: '/Lab/Digital-Logic-Design-Lab'
+                },
+                {
+                  text: '🎮 期末大作业设计报告',
+                  link: '/Lab/Lab_for_all/Digital_Logic_Design/projects/Degital_Logic_Design_Final_Porject/report/Report'
+                },
+                {
+                  text: '13 次系列实验报告',
+                  collapsed: true,
+                  items: [
+                    { text: 'Lab 1 · 电子仪器与信号测量', link: '/Lab/Lab_for_all/Digital_Logic_Design/Lab/3.2/第一次实验报告-邓欢桐、杨海涛' },
+                    { text: 'Lab 2 · 基本开关电路', link: '/Lab/Lab_for_all/Digital_Logic_Design/Lab/3.9/第二次实验报告-邓欢桐、杨海涛' },
+                    { text: 'Lab 3 · 集成逻辑门电路测试', link: '/Lab/Lab_for_all/Digital_Logic_Design/Lab/3.16/第三次实验报告-邓欢桐、杨海涛' },
+                    { text: 'Lab 4 · EDA平台与环境运用', link: '/Lab/Lab_for_all/Digital_Logic_Design/Lab/3.23/第四次实验报告' },
+                    { text: 'Lab 5 · 变量译码器设计与应用', link: '/Lab/Lab_for_all/Digital_Logic_Design/Lab/3.30/第五次实验报告-邓欢桐、杨海涛' },
+                    { text: 'Lab 6 · 7段数码管显示译码器', link: '/Lab/Lab_for_all/Digital_Logic_Design/Lab/4.13/第六次实验报告-邓欢桐、杨海涛' },
+                    { text: 'Lab 7 · 多路选择器设计及应用', link: '/Lab/Lab_for_all/Digital_Logic_Design/Lab/4.20/第七次实验报告（邓欢桐、杨海涛）' },
+                    { text: 'Lab 8 · 加法器设计与应用', link: '/Lab/Lab_for_all/Digital_Logic_Design/Lab/4.27/第八次实验报告-邓欢桐、杨海涛' },
+                    { text: 'Lab 9 · 锁存器与触发器基本原理', link: '/Lab/Lab_for_all/Digital_Logic_Design/Lab/5.11/第九次实验报告-邓欢桐、杨海涛' },
+                    { text: 'Lab 10 · 同步时序电路设计', link: '/Lab/Lab_for_all/Digital_Logic_Design/Lab/5.18/第十次实验报告-邓欢桐、杨海涛' },
+                    { text: 'Lab 11 · 寄存器及传输设计', link: '/Lab/Lab_for_all/Digital_Logic_Design/Lab/5.25/第十一次实验报告-邓欢桐，杨海涛' },
+                    { text: 'Lab 12 · 移位寄存器设计与应用', link: '/Lab/Lab_for_all/Digital_Logic_Design/Lab/6.1/第十二次实验报告-邓欢桐、杨海涛' },
+                    { text: 'Lab 13 · 计数器定时器设计与应用', link: '/Lab/Lab_for_all/Digital_Logic_Design/Lab/6.8/第十三次实验报告-邓欢桐、杨海涛' }
+                  ]
+                }
+              ]
             },
             {
               text: 'Computer Organization',

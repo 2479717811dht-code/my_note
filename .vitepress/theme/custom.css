@@ -210,13 +210,21 @@ body {
 }
 
 .vp-doc h1 {
-  font-size: 2.1rem;
-  line-height: 1.35;
-  margin-top: 2.4rem;
-  margin-bottom: 1.2rem;
+  font-size: 2.2rem !important;
+  line-height: 1.35 !important;
+  font-weight: 700 !important;
+  margin-top: 2.4rem !important;
+  margin-bottom: 1.2rem !important;
   padding-bottom: 0.8rem;
   border-bottom: 2px solid var(--wi-border);
   position: relative;
+}
+
+.vp-doc h1 center,
+.vp-doc h1 * {
+  font-size: 2.2rem !important;
+  font-weight: 700 !important;
+  line-height: 1.35 !important;
 }
 
 .vp-doc h1::after {
@@ -350,6 +358,14 @@ body {
   background-color: var(--wi-accent) !important;
   width: 2.5px;
   border-radius: 2px;
+}
+
+
+
+.VPDocAsideOutline .outline-link {
+  white-space: normal !important;
+  word-break: break-word !important;
+  line-height: 1.5 !important;
 }
 
 /* 内置 [toc] 渲染美化：书籍导读盒 */
@@ -554,14 +570,6 @@ nav.table-of-contents a::after {
   box-shadow: none !important;
   background: transparent !important;
   vertical-align: middle !important;
-}
-
-.vp-doc center:not(:has(img)) {
-  font-size: 0.96rem;
-  color: var(--wi-text-soft);
-  letter-spacing: 0.8px;
-  font-weight: 500;
-  margin: 0.8rem auto 1.4rem;
 }
 
 .vp-doc hr {
