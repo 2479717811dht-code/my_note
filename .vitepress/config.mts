@@ -41,7 +41,7 @@ export default withMermaid(
     description: '我的数字花园',
 
     // 开启深色 / 浅色模式切换
-    appearance: false,
+    appearance: true,
 
     // 读取 Git 提交时间，显示文章最后更新时间
     lastUpdated: true,
@@ -92,7 +92,7 @@ export default withMermaid(
       // 右侧目录：显示 h2 到 h6
       outline: {
         level: 'deep',
-        label: '本页目录'
+        label: '本页大纲 · 导航追踪'
       },
 
       nav: [
