@@ -973,99 +973,99 @@ onUnmounted(() => {
 }
 
 /* 深色模式适配 */
-:global(.dark) .break-games-card {
+.dark .break-games-card {
   background: linear-gradient(145deg, rgba(32, 27, 26, 0.94) 0%, rgba(25, 21, 20, 0.88) 100%);
   border-color: rgba(255, 255, 255, 0.08);
   box-shadow: 0 12px 36px -6px rgba(0, 0, 0, 0.45);
 }
 
-:global(.dark) .break-games-card:hover {
+.dark .break-games-card:hover {
   border-color: rgba(217, 120, 96, 0.35);
 }
 
-:global(.dark) .games-header {
+.dark .games-header {
   border-bottom-color: rgba(255, 255, 255, 0.08);
 }
 
-:global(.dark) .games-title {
+.dark .games-title {
   color: #f0eae4;
 }
 
-:global(.dark) .games-tabs {
+.dark .games-tabs {
   background: rgba(255, 255, 255, 0.05);
   border-color: rgba(255, 255, 255, 0.08);
 }
 
-:global(.dark) .tab-btn {
+.dark .tab-btn {
   color: #a89f9c;
 }
 
-:global(.dark) .tab-btn:hover {
+.dark .tab-btn:hover {
   color: #e58d76;
 }
 
-:global(.dark) .tab-btn.active {
+.dark .tab-btn.active {
   background: rgba(217, 120, 96, 0.22);
   color: #f2a694;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
-:global(.dark) .muyu-counter {
+.dark .muyu-counter {
   color: #a89f9c;
 }
 
-:global(.dark) .muyu-counter .count-num {
+.dark .muyu-counter .count-num {
   color: #f2a694;
 }
 
-:global(.dark) .action-pill.alt {
+.dark .action-pill.alt {
   background: rgba(255, 255, 255, 0.06);
   color: #e58d76;
   border-color: rgba(217, 120, 96, 0.35);
 }
 
-:global(.dark) .muyu-tip {
+.dark .muyu-tip {
   color: #8c7e77;
 }
 
-:global(.dark) .game-stats {
+.dark .game-stats {
   color: #a89f9c;
 }
 
-:global(.dark) .canvas-wrap {
+.dark .canvas-wrap {
   border-color: rgba(217, 120, 96, 0.2);
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
 }
 
-:global(.dark) .game-overlay {
+.dark .game-overlay {
   background: rgba(26, 22, 21, 0.92);
 }
 
-:global(.dark) .over-text {
+.dark .over-text {
   color: #f2a694;
 }
 
-:global(.dark) .pad-btn {
+.dark .pad-btn {
   background: rgba(255, 255, 255, 0.06);
   border-color: rgba(255, 255, 255, 0.1);
   color: #ece5df;
 }
 
-:global(.dark) .pad-btn:active {
+.dark .pad-btn:active {
   background: rgba(217, 120, 96, 0.2);
 }
 
-:global(.dark) .mini-btn {
+.dark .mini-btn {
   background: rgba(255, 255, 255, 0.06);
   border-color: rgba(217, 120, 96, 0.3);
   color: #e58d76;
 }
 
-:global(.dark) .board-2048 {
+.dark .board-2048 {
   background: rgba(255, 255, 255, 0.04);
 }
 
-:global(.dark) .floating-badge {
+.dark .floating-badge {
   color: #f2a694;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8), 0 0 12px rgba(217, 120, 96, 0.4);
 }

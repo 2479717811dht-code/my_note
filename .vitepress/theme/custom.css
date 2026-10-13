@@ -39,6 +39,12 @@
   --wi-border-light: #f2e8de;
   --wi-highlight: #fae4a6;
   --wi-gold: #c68a4c;
+  --wi-question: #9d664b;
+  --wi-question-bg: #fffaf4;
+  --wi-question-header: #f2e5d6;
+  --wi-question-divider: #d2b69f;
+  --wi-signature: #6b4423;
+  --wi-quote-text: #2d4856;
 
   /* 柔和阴影系统 */
   --wi-shadow-xs: 0 2px 8px rgba(130, 65, 45, 0.04);
@@ -82,6 +88,12 @@
   --wi-border-light: #2f2622;
   --wi-highlight: #4d3d20;
   --wi-gold: #e5a764;
+  --wi-question: #d9a17a;
+  --wi-question-bg: #241d19;
+  --wi-question-header: #36281f;
+  --wi-question-divider: #87644e;
+  --wi-signature: #efc19d;
+  --wi-quote-text: #d4dfe5;
 
   --wi-shadow-xs: 0 2px 8px rgba(0, 0, 0, 0.35);
   --wi-shadow-sm: 0 4px 16px rgba(0, 0, 0, 0.45);
@@ -165,9 +177,10 @@
 /* 深色模式下的引用块 */
 .dark .vp-doc blockquote:not(.md-alert) {
   background: linear-gradient(135deg, #241e1b 0%, #1b1715 100%) !important;
-  border-color: #3d3029 !important;
+  border-color: #665246 !important;
   border-left-color: var(--wi-accent) !important;
   color: #cfbfb7 !important;
+  box-shadow: none !important;
 }
 .dark .vp-doc blockquote:not(.md-alert)::after {
   color: rgba(226, 122, 98, 0.08) !important;
@@ -242,11 +255,10 @@
 
 /* 深色模式下的图片防刺眼温润滤镜 */
 .dark .vp-doc img:not(.no-dark-filter) {
-  filter: brightness(0.92) contrast(1.02);
-  transition: filter 0.3s ease;
+  filter: none;
 }
 .dark .vp-doc img:not(.no-dark-filter):hover {
-  filter: brightness(1) contrast(1);
+  filter: none;
 }
 
 /* 文字选中高亮 */
@@ -528,7 +540,7 @@ body {
 
 .dark .VPDocAsideOutline .outline-link.active {
   color: var(--wi-accent) !important;
-  text-shadow: 0 0 10px rgba(226, 122, 98, 0.35);
+  text-shadow: none;
 }
 
 .VPDocAsideOutline .outline-marker {
@@ -767,13 +779,125 @@ nav.table-of-contents a::after {
   margin-bottom: 6px;
 }
 
+/* Keep callout text readable on dark surfaces with crisp, visible boundaries. */
+.dark .vp-doc .custom-block {
+  background: #25211e !important;
+  border-color: #7c6b60 !important;
+  border-left: 4px solid #bda18b !important;
+  color: var(--wi-text) !important;
+  box-shadow: none !important;
+}
+
+.dark .vp-doc .custom-block.info {
+  background: #1e2833 !important;
+  border-color: #6d8caa !important;
+  border-left-color: #9fc6ed !important;
+}
+
+.dark .vp-doc .custom-block.tip {
+  background: #282019 !important;
+  border-color: #9d7455 !important;
+  border-left-color: #edb57d !important;
+}
+
+.dark .vp-doc .custom-block.warning {
+  background: #2d2718 !important;
+  border-color: #aa8646 !important;
+  border-left-color: #e4b35c !important;
+}
+
+.dark .vp-doc .custom-block.danger,
+.dark .vp-doc .custom-block.caution {
+  background: #30201e !important;
+  border-color: #a86962 !important;
+  border-left-color: #f09182 !important;
+}
+
+.dark .vp-doc .custom-block .custom-block-title {
+  color: var(--wi-heading) !important;
+}
+
+/* A disclosure is one card: a distinct heading, then a separated content area. */
+.vp-doc details:not(.custom-block) {
+  margin: 1.6rem 0;
+  padding: 0 1.25rem 0;
+  border: 1px solid var(--wi-box-color, var(--wi-question));
+  border-left-width: 4px;
+  border-radius: 10px;
+  background: var(--wi-box-bg, var(--wi-question-bg));
+  color: var(--wi-text);
+  box-shadow: none;
+}
+
+.vp-doc details:not(.custom-block) > summary {
+  position: relative;
+  display: block;
+  margin: 0 -1.25rem;
+  padding: 0.9rem 2.75rem 0.9rem 1.25rem;
+  border-radius: 9px;
+  background: var(--wi-question-header);
+  color: var(--wi-heading);
+  font-weight: 700;
+  line-height: 1.6;
+  cursor: pointer;
+  list-style: none;
+}
+
+.vp-doc details:not(.custom-block) > summary::-webkit-details-marker {
+  display: none;
+}
+
+.vp-doc details:not(.custom-block) > summary::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 1.2rem;
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid var(--wi-box-color, var(--wi-question));
+  border-bottom: 2px solid var(--wi-box-color, var(--wi-question));
+  transform: translateY(-70%) rotate(45deg);
+}
+
+.vp-doc details:not(.custom-block)[open] > summary {
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--wi-question-divider);
+  border-radius: 9px 9px 0 0;
+}
+
+.vp-doc details:not(.custom-block)[open] > summary::after {
+  transform: translateY(-30%) rotate(225deg);
+}
+
+.vp-doc details:not(.custom-block)[open] {
+  padding-bottom: 0.5rem;
+}
+
+.vp-doc details:not(.custom-block) > summary:focus-visible {
+  outline: 2px solid var(--wi-box-color, var(--wi-question));
+  outline-offset: 4px;
+}
+
+.vp-doc details:not(.custom-block) > summary ~ * {
+  color: var(--wi-text);
+}
+
+.vp-doc details:not(.custom-block) > p:first-of-type {
+  margin-top: 0.75rem;
+}
+
 /* 内页普通插图柔和装裱 */
-.vp-doc img:not(.garden-banner-img):not(.garden-meme-item img):not(.garden-photo-frame img):not([src*="cute.gif"]):not(center img) {
+.vp-doc img:not(.garden-banner-img):not(.garden-meme-item img):not(.garden-photo-frame img):not([src*="cute.gif"]):not(.note-center img):not([src*="6a3f74ac4e6d4eiq3mp2la2263.png"]) {
   border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(130, 65, 45, 0.08);
+  border: 1px solid #d1bda9;
+  box-shadow: none;
   margin: 1.6rem auto;
   display: block;
   max-width: 100%;
+}
+
+.dark .vp-doc img:not(.garden-banner-img):not(.garden-meme-item img):not(.garden-photo-frame img):not([src*="cute.gif"]):not(.note-center img):not([src*="6a3f74ac4e6d4eiq3mp2la2263.png"]) {
+  border-color: #8a7566;
 }
 
 /* 内页居中内容与封面图片（完全尊重 Markdown 原生排版与内联 zoom 比例，不添加卡片框或强制高度） */

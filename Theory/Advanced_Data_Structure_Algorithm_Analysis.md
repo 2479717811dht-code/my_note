@@ -14,7 +14,7 @@
 
 [TOC]
 
-<div style="display: block !important; text-align: center !important; margin: 60px auto 20px !important; padding: 20px 0 !important; width: 85% !important; border-top: 1px dashed #b1c2ca !important; border-bottom: 1px dashed #b1c2ca !important; font-family: '钟齐志莽行书', cursive !important; font-size: 20px !important; line-height: 1.8 !important; letter-spacing: 2px !important; font-weight: normal !important; font-style: italic !important; color: #2d4856 !important;">" 我终于, 自由了!"<span style="display: block !important; text-align: right !important; margin-top: 10px !important; font-size: 18px !important;">-- 2026.7.4 玉湖七幢</span></div>
+<div style="display: block !important; text-align: center !important; margin: 60px auto 20px !important; padding: 20px 0 !important; width: 85% !important; border-top: 1px dashed #b1c2ca !important; border-bottom: 1px dashed #b1c2ca !important; font-family: '钟齐志莽行书', cursive !important; font-size: 20px !important; line-height: 1.8 !important; letter-spacing: 2px !important; font-weight: normal !important; font-style: italic !important; color: var(--wi-quote-text) !important;">" 我终于, 自由了!"<span style="display: block !important; text-align: right !important; margin-top: 10px !important; font-size: 18px !important;">-- 2026.7.4 玉湖七幢</span></div>
 
 ## Chapter 1: Trees
 
@@ -4827,4 +4827,4 @@ H1->Npl = H1->Right->Npl + 1
 | Insert | 数组末尾的新节点 | 上滤 | $O(\log N)$ |
 | DeleteMin | 根处的末尾替代值 | 下滤 | $O(\log N)$ |
 
-<div style="display: block !important; text-align: right !important; margin-top: 60px !important; padding-right: 20px !important; font-family: '钟齐志莽行书', cursive !important; font-size: 26px !important; font-weight: bold !important; font-style: italic !important; color: #6b4423 !important;">邓欢桐</div>
+<div style="display: block !important; text-align: right !important; margin-top: 60px !important; padding-right: 20px !important; font-family: '钟齐志莽行书', cursive !important; font-size: 26px !important; font-weight: bold !important; font-style: italic !important; color: var(--wi-signature) !important;">邓欢桐</div>

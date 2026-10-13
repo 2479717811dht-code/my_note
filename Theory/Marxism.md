@@ -16,7 +16,7 @@
 
 [TOC]
 
-<div style="display: block !important; text-align: center !important; margin: 60px auto 20px !important; padding: 20px 0 !important; width: 85% !important; border-top: 1px dashed #b1c2ca !important; border-bottom: 1px dashed #b1c2ca !important; font-family: '钟齐志莽行书', cursive !important; font-size: 20px !important; line-height: 1.8 !important; letter-spacing: 2px !important; font-weight: normal !important; font-style: italic !important; color: #2d4856 !important;">" 是晚风,是星河,是我哼的歌,是宇宙坐标闪烁."<span style="display: block !important; text-align: right !important; margin-top: 10px !important; font-size: 18px !important;">-- 房东的猫"和宇宙的温柔关联"</span></div>
+<div style="display: block !important; text-align: center !important; margin: 60px auto 20px !important; padding: 20px 0 !important; width: 85% !important; border-top: 1px dashed #b1c2ca !important; border-bottom: 1px dashed #b1c2ca !important; font-family: '钟齐志莽行书', cursive !important; font-size: 20px !important; line-height: 1.8 !important; letter-spacing: 2px !important; font-weight: normal !important; font-style: italic !important; color: var(--wi-quote-text) !important;">" 是晚风,是星河,是我哼的歌,是宇宙坐标闪烁."<span style="display: block !important; text-align: right !important; margin-top: 10px !important; font-size: 18px !important;">-- 房东的猫"和宇宙的温柔关联"</span></div>
 
 ## 一,导论
 
@@ -207,4 +207,4 @@ graph TD
 
 > 理念即纯形式的共相.
 
-<div style="display: block !important; text-align: right !important; margin-top: 60px !important; padding-right: 20px !important; font-family: '钟齐志莽行书', cursive !important; font-size: 26px !important; font-weight: bold !important; font-style: italic !important; color: #6b4423 !important;">邓欢桐</div>
+<div style="display: block !important; text-align: right !important; margin-top: 60px !important; padding-right: 20px !important; font-family: '钟齐志莽行书', cursive !important; font-size: 26px !important; font-weight: bold !important; font-style: italic !important; color: var(--wi-signature) !important;">邓欢桐</div>
