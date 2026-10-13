@@ -887,7 +887,7 @@ nav.table-of-contents a::after {
 }
 
 /* 内页普通插图柔和装裱 */
-.vp-doc img:not(.garden-banner-img):not(.garden-meme-item img):not(.garden-photo-frame img):not([src*="cute.gif"]):not(.note-center img):not([src*="6a3f74ac4e6d4eiq3mp2la2263.png"]) {
+.vp-doc img:not(.garden-banner-img):not(.garden-meme-item img):not(.garden-photo-frame img):not([src*="cute.gif"]):not(.note-center img):not([src*="ckc.png"]) {
   border-radius: 12px;
   border: 1px solid #d1bda9;
   box-shadow: none;
@@ -896,7 +896,7 @@ nav.table-of-contents a::after {
   max-width: 100%;
 }
 
-.dark .vp-doc img:not(.garden-banner-img):not(.garden-meme-item img):not(.garden-photo-frame img):not([src*="cute.gif"]):not(.note-center img):not([src*="6a3f74ac4e6d4eiq3mp2la2263.png"]) {
+.dark .vp-doc img:not(.garden-banner-img):not(.garden-meme-item img):not(.garden-photo-frame img):not([src*="cute.gif"]):not(.note-center img):not([src*="ckc.png"]) {
   border-color: #8a7566;
 }
 
@@ -1854,14 +1854,14 @@ img[src*="cute.gif"]:hover {
 }
 
 /* Keep the supplied college emblem exact; invert only its lower text at night. */
-.vp-doc img[src*="6a3f74ac4e6d4eiq3mp2la2263.png"],
-.vp-doc img[src*="6a3f74ac4e6d4eiq3mp2la2263.png"]:hover {
+.vp-doc img[src*="ckc.png"],
+.vp-doc img[src*="ckc.png"]:hover {
   filter: none !important;
   transition: none !important;
 }
 
-.dark .vp-doc img[src*="6a3f74ac4e6d4eiq3mp2la2263.png"],
-.dark .vp-doc img[src*="6a3f74ac4e6d4eiq3mp2la2263.png"]:hover {
+.dark .vp-doc img[src*="ckc.png"],
+.dark .vp-doc img[src*="ckc.png"]:hover {
   filter: url(#college-logo-night) !important;
 }
 

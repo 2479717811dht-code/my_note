@@ -7,7 +7,7 @@
 <div class="note-center">
 <img src="/20260323101520_871_96.png" style="zoom: 60%;" />
 <img src="/20260323101521_872_96.png" style="zoom: 20%;" />
-<img src="/6a3f74ac4e6d4eiq3mp2la2263.png" style="zoom: 25%;" />
+<img src="/ckc.png" style="zoom: 25%;" />
 </div>
 
 ---
