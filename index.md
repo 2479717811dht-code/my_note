@@ -19,25 +19,25 @@ hero:
 features:
   - icon: "🧭"
     title: "Course Map · 知识图谱"
-    details: "课程脉络与全局导航，系统化梳理大学计算机专业知识图谱与选课逻辑"
+    details: "课程脉络与全局导航,系统化梳理大学计算机专业知识图谱与选课逻辑"
     link: /Cover/logic
     linkText: "探索知识图谱 →"
 
   - icon: "💻"
     title: "Theory Notes · 专业理论"
-    details: "理论课深度笔记，涵盖数据结构、计算机组成、离散数学与经典算法"
+    details: "理论课深度笔记,涵盖数据结构,计算机组成,离散数学与经典算法"
     link: /Theory/theory
     linkText: "阅读理论课 →"
 
   - icon: "🧪"
     title: "Engineering Lab · 实验实战"
-    details: "实验实战与设计报告，从 Verilog 硬件逻辑到软硬件协同代码归档"
+    details: "实验实战与设计报告,从 Verilog 硬件逻辑到软硬件协同代码归档"
     link: /Lab/lab
     linkText: "进入实验集 →"
 
   - icon: "☕"
     title: "Take a Break · 摸鱼小憩"
-    details: "在学术与代码间隙停下脚步，赛博木鱼、贪吃蛇、2048与心境随笔"
+    details: "在学术与代码间隙停下脚步,赛博木鱼,贪吃蛇,2048与心境随笔"
     link: /Break/break
     linkText: "呼吸片刻 →"
 ---
@@ -49,7 +49,7 @@ features:
 <div class="garden-quote-box">
   <div class="garden-quote-title">Moonlight & Starlight</div>
   <div class="garden-quote-content">
-    “I got you, moonlight, you're my starlight. 在月光下与你紧紧相拥，你就是我的熠熠星辉。”
+    "I got you, moonlight, you're my starlight. 在月光下与你紧紧相拥,你就是我的熠熠星辉."
   </div>
 </div>
 
@@ -59,20 +59,20 @@ features:
 
 ## 全景知识矩阵 · Course & Notes Hub
 
-涵盖理论专业课、数理基础、工程实验与后花园，全景速达：
+涵盖理论专业课,数理基础,工程实验与后花园,全景速达:
 
 <CourseMatrix />
 
 ## 阅览与排版特性 · Features
 
-全站面向学术专业笔记体验深度调校，具备以下核心阅读特性：
+全站面向学术专业笔记体验深度调校,具备以下核心阅读特性:
 
 <div class="features-bento-grid">
   <div class="feature-bento-card">
     <div class="feature-icon-box">📐</div>
     <div class="feature-content">
       <span class="feature-title">LaTeX 公式全量排版</span>
-      <span class="feature-desc">复杂数学推导、渐近算法复杂度与概率分布模型清晰呈现</span>
+      <span class="feature-desc">复杂数学推导,渐近算法复杂度与概率分布模型清晰呈现</span>
     </div>
   </div>
 
@@ -80,7 +80,7 @@ features:
     <div class="feature-icon-box">📊</div>
     <div class="feature-content">
       <span class="feature-title">Mermaid 动态图表</span>
-      <span class="feature-desc">有限状态机 FSM、流水线数据通路与系统流程图原生直观解析</span>
+      <span class="feature-desc">有限状态机 FSM,流水线数据通路与系统流程图原生直观解析</span>
     </div>
   </div>
 
@@ -88,7 +88,7 @@ features:
     <div class="feature-icon-box">🎵</div>
     <div class="feature-content">
       <span class="feature-title">沉浸式伴读音乐</span>
-      <span class="feature-desc">右上角治愈旋律一键启停，光环微律动陪伴深夜专注推导</span>
+      <span class="feature-desc">右上角治愈旋律一键启停,光环微律动陪伴深夜专注推导</span>
     </div>
   </div>
 
@@ -96,7 +96,7 @@ features:
     <div class="feature-icon-box">📑</div>
     <div class="feature-content">
       <span class="feature-title">印鉴式层级导读目录</span>
-      <span class="feature-desc">笔记保留 [toc] 自动构建树状速览，双侧目录无缝锚点跳转</span>
+      <span class="feature-desc">笔记保留 [toc] 自动构建树状速览,双侧目录无缝锚点跳转</span>
     </div>
   </div>
 </div>
@@ -106,13 +106,13 @@ features:
 <div class="garden-quote-box">
   <div class="garden-quote-title">格物致知 · 体系化推导</div>
   <div class="garden-quote-content">
-    “学习不是把零碎的概念机械背诵，而是逐渐建立起能够自己推导、解释与解决真实工程问题的思维框架。纸上得来终觉浅，绝知此事要躬行。”
+    "学习不是把零碎的概念机械背诵,而是逐渐建立起能够自己推导,解释与解决真实工程问题的思维框架.纸上得来终觉浅,绝知此事要躬行."
   </div>
 </div>
 
 ## 轻松一刻 · Memes
 
-代码推导写累了？让思绪随奔跑的脚步放个假 ~
+代码推导写累了?让思绪随奔跑的脚步放个假 ~
 
 <div class="garden-meme-gallery">
   <div class="garden-meme-item">
@@ -126,9 +126,9 @@ features:
 <div class="lebron-motto">
   <div class="motto-crown-icon">👑</div>
   <div class="motto-tagline">STRIVE FOR GREATNESS · 追求伟大</div>
-  <div class="motto-quote-en">“In Northeast Ohio, nothing is given. Everything is earned. You work for what you have.”</div>
-  <div class="motto-quote-cn">“在俄亥俄州东北部，没有什么是理所当然给予你的，一切都必须靠自己去赢取。唯有拼尽全力，方能追求伟大。”</div>
-  <div class="motto-author">—— LeBron Raymone James Sr. 👑</div>
+  <div class="motto-quote-en">"In Northeast Ohio, nothing is given. Everything is earned. You work for what you have."</div>
+  <div class="motto-quote-cn">"在俄亥俄州东北部,没有什么是理所当然给予你的,一切都必须靠自己去赢取.唯有拼尽全力,方能追求伟大."</div>
+  <div class="motto-author">-- LeBron Raymone James Sr. 👑</div>
 </div>
 
 <script setup>

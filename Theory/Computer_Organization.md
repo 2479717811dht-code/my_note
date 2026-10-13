@@ -1,16 +1,16 @@
-# <center>计算机组成</center>
+# <span class="note-center">计算机组成</span>
 
 ---
 
-<center>浙江大学 竺可桢学院 混合2504班 邓欢桐 3250102223</center>
+<div class="note-center">浙江大学 竺可桢学院 混合2504班 邓欢桐 3250102223</div>
 
 ---
 
-<center>
-<img src="../public/20260323101520_871_96.png" style="zoom: 60%;" />
-<img src="../public/20260323101521_872_96.png" style="zoom: 20%;" />
-<img src="../public/ckc.png" style="zoom: 25%;" />
-</center>
+<div class="note-center">
+<img src="/20260323101520_871_96.png" style="zoom: 60%;" />
+<img src="/20260323101521_872_96.png" style="zoom: 20%;" />
+<img src="/6a3f74ac4e6d4eiq3mp2la2263.png" style="zoom: 25%;" />
+</div>
 
 
 ---
@@ -100,9 +100,9 @@ RISC-V 中有 32 个通用寄存器, RV64(RISC-V 64-bit) 寄存器中每个寄�
 
 也就是说: Memory → Register → ALU → Register → Memory
 
-#### 2.1.6 内存操作数（Memory Operands）
+#### 2.1.6 内存操作数(Memory Operands)
 
-主要用于复合数据, 比如数组、结构体、动态内存数据等等. 
+主要用于复合数据, 比如数组,结构体,动态内存数据等等. 
 
 RISV-C 用 load 和 store 访问内存, 例如: 
 
@@ -114,7 +114,7 @@ RISV-C 用 load 和 store 访问内存, 例如:
 >
 >x22 是 base register, 64 或 96 是 offset
 
-#### 2.1.7 内存对齐（Memory Alignment）
+#### 2.1.7 内存对齐(Memory Alignment)
 
 有些数据类型最好放在对应的地址边界上, 例如: 
 
@@ -142,11 +142,11 @@ struct {
 |  Big endian   | 最高有效字节放低地址 |
 | Little endian | 最低有效字节放低地址 |
 
-比如 0×12345678, 低地址先放 78, 再放 56、34、12. 
+比如 0×12345678, 低地址先放 78, 再放 56,34,12. 
 
-> 一个地址是 1 个字节（1 Byte = 8 bits），一个数字是 4 bits，也就是一个地址存两个数. 
+> 一个地址是 1 个字节(1 Byte = 8 bits),一个数字是 4 bits,也就是一个地址存两个数. 
 
-#### 2.1.8 立即数（Immediate）
+#### 2.1.8 立即数(Immediate)
 
 如: g = h + 55, 不需要先从内存取 55, 而是可以写 addi x3, x3, 55.
 
@@ -173,11 +173,11 @@ RISC-V 的指令通常是 32 位, 常见格式如下:
 
 > [!NOTE]
 >
-> 1. **opcode (操作码)**：指令的“大类”（比如是算术运算，还是读写内存）.
-> 2. **funct3 / funct7 (辅助功能码)**：配合 opcode，进一步锁定“具体动作”（大类是算术，这里细分是加法还是减法）.
-> 3. **rd (Register Destination)**：**目标**寄存器，负责接收最终的计算结果.
-> 4. **rs1 / rs2 (Register Source)**：**源**寄存器 1 和 2，提供计算所需的原材料.
-> 5. **imm (Immediate)**：**立即数**，直接硬编码在代码里的常数（比如数字 1000 或 64）.
+> 1. **opcode (操作码)**:指令的"大类"(比如是算术运算,还是读写内存).
+> 2. **funct3 / funct7 (辅助功能码)**:配合 opcode,进一步锁定"具体动作"(大类是算术,这里细分是加法还是减法).
+> 3. **rd (Register Destination)**:**目标**寄存器,负责接收最终的计算结果.
+> 4. **rs1 / rs2 (Register Source)**:**源**寄存器 1 和 2,提供计算所需的原材料.
+> 5. **imm (Immediate)**:**立即数**,直接硬编码在代码里的常数(比如数字 1000 或 64).
 
 **R-format:** 
 
@@ -216,7 +216,7 @@ imm | rs1 | funct3 | rd | opcode
 sd x9, 64(x22)
 ```
 
-注意 S-format 没有 rd，因为 store 不写回寄存器. 
+注意 S-format 没有 rd,因为 store 不写回寄存器. 
 
 它把 immediate 拆成两段: 
 
@@ -225,7 +225,7 @@ imm[11:5]
 imm[4:0]
 ```
 
-#### 2.2.2 逻辑操作（Logical Operations）
+#### 2.2.2 逻辑操作(Logical Operations)
 
 > Instructions for bitwise manipulation
 > 用于按位操作的指令
@@ -239,19 +239,19 @@ imm[4:0]
 |    或    |  `or`, `ori`  |              按位或              |
 |   异或   | `xor`, `xori` |             按位异或             |
 
-1. 左移：slli x5, x6, 2
+1. 左移:slli x5, x6, 2
 
-   表示：x5 = x6 << 2
+   表示:x5 = x6 << 2
 
-   没有溢出时，相当于：x5 = x6 × 4
+   没有溢出时,相当于:x5 = x6 × 4
 
-2. 逻辑右移：srli x5, x6, 2
+2. 逻辑右移:srli x5, x6, 2
 
-   左边补 0，常用于 unsigned.
+   左边补 0,常用于 unsigned.
 
-3. 算术右移：srai x5, x6, 2
+3. 算术右移:srai x5, x6, 2
 
-   左边补符号位，常用于 signed.
+   左边补符号位,常用于 signed.
 
 4. AND: x & 00001111 保留 x 的低 4 位, 其他位清零.
 
@@ -265,7 +265,7 @@ imm[4:0]
 
    > Differencing operation
 
-#### 2.2.3 条件分支（Branch Instruction）
+#### 2.2.3 条件分支(Branch Instruction)
 
 beq rs1, rs2, L1 即 如果 rs1 == rs2, 跳到 L1
 
@@ -281,8 +281,8 @@ Loop:
 
 #### 2.2.5 slt 和更多条件分支
 
->Most popular Compare Operation — set on less than: slt
->最常见的比较操作：小于则置位 slt.
+>Most popular Compare Operation - set on less than: slt
+>最常见的比较操作:小于则置位 slt.
 
 1. slt rd, rs1, rs2: 若 rs1 < rs2, 则 rd = 1, 否则 rd = 0.
 2. blt rs1, rs2, L1: 若 rs1 < rs2, 则跳转 L1.
@@ -297,14 +297,14 @@ Loop:
 
 关键指令: jalr x0, 0(x7), 意思是跳到 x7 保存的地址, 不保留返回地址.
 
-#### 2.2.7 基本块（Basic Block）
+#### 2.2.7 基本块(Basic Block)
 
 >A basic block is a sequence of instructions with no embedded branches and no branch targets except at beginning.
->基本块是一段连续指令，中间没有分支，除了开头之外没有其他跳转目标.
+>基本块是一段连续指令,中间没有分支,除了开头之外没有其他跳转目标.
 
 基本块内部是顺序执行的, 只有一个入口, 通常最后才有分支或跳转, 编译器一般都会用基本块进行优化.
 
-#### 2.2.8 过程调用（Procedure / Function）
+#### 2.2.8 过程调用(Procedure / Function)
 
 1. 传参数
 2. 跳到函数
@@ -312,34 +312,34 @@ Loop:
 4. 返回结果
 5. 跳回原来的地方
 
-#### 2.2.9 栈（Stack）
+#### 2.2.9 栈(Stack)
 
 > Stack grows from higher address to lower address.
 > 栈从高地址向低地址增长.
 
-RISC-V 里：
+RISC-V 里:
 
 ```
 x2 = sp
 ```
 
-`sp` 是 stack pointer，栈指针.
+`sp` 是 stack pointer,栈指针.
 
-压栈：
+压栈:
 
 ```
 addi sp, sp, -8
 sd x5, 0(sp)
 ```
 
-出栈：
+出栈:
 
 ```
 ld x5, 0(sp)
 addi sp, sp, 8
 ```
 
-栈用于：
+栈用于:
 
 - 保存返回地址
 - 保存寄存器
@@ -352,15 +352,15 @@ addi sp, sp, 8
 
 不调用其他函数的函数叫 leaf procedure.
 
-它比较简单，只要保存自己会破坏、但之后还要恢复的寄存器. 
+它比较简单,只要保存自己会破坏,但之后还要恢复的寄存器. 
 
 **Nested Procedure**
 
-函数里还调用其他函数，叫 nested procedure.
+函数里还调用其他函数,叫 nested procedure.
 
 > 递归就是典型例子.
 
-这种必须保存：
+这种必须保存:
 
 - ra
 - 参数
@@ -375,17 +375,17 @@ addi sp, sp, 8
 
 |   类型   |                规则                |
 | :------: | :--------------------------------: |
-| `s0-s11` |  saved registers，被调用者要恢复   |
-| `t0-t6`  |  temporary registers，不保证保留   |
-| `a0-a7`  |   参数和返回值寄存器，不保证保留   |
-|   `sp`   |        栈指针，需要保持正确        |
-|   `ra`   | 如果函数还会调用别的函数，就要保存 |
+| `s0-s11` |  saved registers,被调用者要恢复   |
+| `t0-t6`  |  temporary registers,不保证保留   |
+| `a0-a7`  |   参数和返回值寄存器,不保证保留   |
+|   `sp`   |        栈指针,需要保持正确        |
+|   `ra`   | 如果函数还会调用别的函数,就要保存 |
 
-- s 开头：要保存
-- t 开头：临时用，不保证保存
-- a 开头：传参和返回值
+- s 开头:要保存
+- t 开头:临时用,不保证保存
+- a 开头:传参和返回值
 
-#### 2.3.2 内存布局（Memory Layout）
+#### 2.3.2 内存布局(Memory Layout)
 
 **程序内存布局:**
 
@@ -400,40 +400,40 @@ Reserved
 |    区域     |              含义              |
 | :---------: | :----------------------------: |
 |    Text     |            程序代码            |
-| Static data |       全局变量、静态变量       |
-|    Heap     |    动态分配区，例如 malloc     |
-|    Stack    | 函数调用、局部变量、保存寄存器 |
+| Static data |       全局变量,静态变量       |
+|    Heap     |    动态分配区,例如 malloc     |
+|    Stack    | 函数调用,局部变量,保存寄存器 |
 
-#### 2.2.4 字符数据（Character Data）
+#### 2.2.4 字符数据(Character Data)
 
 > Byte-encoded character sets
 > 字节编码字符集.
 
 |  编码   |        特点        |
 | :-----: | :----------------: |
-|  ASCII  | 7-bit，128 个字符  |
-| Latin-1 | 8-bit，256 个字符  |
+|  ASCII  | 7-bit,128 个字符  |
+| Latin-1 | 8-bit,256 个字符  |
 | Unicode |    更大的字符集    |
-|  UTF-8  | 可变长度编码，常用 |
+|  UTF-8  | 可变长度编码,常用 |
 | UTF-16  |    可变长度编码    |
 
 #### 2.2.5 Byte / Halfword / Word Operations
 
 RISC-V 支持不同宽度的 load / store.
 
-load：
+load:
 
 | 指令  |              含义              |
 | :---: | :----------------------------: |
-| `lb`  |     load byte，有符号扩展      |
-| `lbu` |   load byte unsigned，零扩展   |
-| `lh`  |   load halfword，有符号扩展    |
-| `lhu` | load halfword unsigned，零扩展 |
+| `lb`  |     load byte,有符号扩展      |
+| `lbu` |   load byte unsigned,零扩展   |
+| `lh`  |   load halfword,有符号扩展    |
+| `lhu` | load halfword unsigned,零扩展 |
 | `lw`  |           load word            |
 | `lwu` |       load word unsigned       |
 | `ld`  |        load doubleword         |
 
-store：
+store:
 
 | 指令 |       含义       |
 | :--: | :--------------: |
@@ -442,12 +442,12 @@ store：
 | `sw` |    store word    |
 | `sd` | store doubleword |
 
-重点：
+重点:
 
-> 带 u 的 load 是 unsigned，左边补 0
+> 带 u 的 load 是 unsigned,左边补 0
 > 不带 u 的 load 会按 signed 做符号扩展
 
-例如：
+例如:
 
 > lb 会把 byte 当成有符号数扩展到 64 位.
 >
@@ -465,11 +465,11 @@ $$
 1001
 $$
 
-- 如果它是无符号数（unsigned number）, 则为 $9$; 
+- 如果它是无符号数(unsigned number), 则为 $9$; 
 
-- 如果它是$4$位补码（signed number）, 则为 $-7$. 
+- 如果它是$4$位补码(signed number), 则为 $-7$. 
 
->1. 对于正数和 $0$, 其原码、补码、反码完全相同; 
+>1. 对于正数和 $0$, 其原码,补码,反码完全相同; 
 >2. 对于负数: 
 >  - 原码 $\rightarrow$ 反码: 符号位不变, 其余取反; 
 >  - 反码 $\rightarrow$ 补码: 反码 $+1$; 
@@ -509,7 +509,7 @@ A+(\sim B+1)
 $$
 这样就不用单独做一个减法器, 只需要按位取反再 $+1$ 即可放进加法器正常计算. 
 
-#### 3.1.4 溢出（overflow）
+#### 3.1.4 溢出(overflow)
 
 例如: 
 $$
@@ -522,11 +522,11 @@ $$
 - 加法: 同号相加变号, 则成为溢出; 
 - 减法: 相减后结果符号不同于被减数, 则溢出. 
 
-### 3.2 算数逻辑单元（ALU, Arithmetic Logic Unit）
+### 3.2 算数逻辑单元(ALU, Arithmetic Logic Unit)
 
-> **ALU** 可以做 $AND$、$OR$、$ADD$、$SUB$、$SLT$、$XOR$、$NOR$、$Shift$
+> **ALU** 可以做 $AND$,$OR$,$ADD$,$SUB$,$SLT$,$XOR$,$NOR$,$Shift$
 
-#### 3.2.1 全加器（Full Adder）
+#### 3.2.1 全加器(Full Adder)
 
 输入: $A$, $B$, $CarryIn$
 
@@ -538,11 +538,11 @@ Sum = A \oplus B \oplus CarryIn
 $$
 而 $CarryOut$ 仅需要两个及以上输入为 $1$, 则为 $1$. 
 
-#### 3.2.2 串行进位加法器（Ripple Carry Adder）
+#### 3.2.2 串行进位加法器(Ripple Carry Adder)
 
 将前一位的 $CarryOut$ 传给下一位的 $CarryIn$, 极其简单易懂, 但缺点也极明显, 就是慢. 
 
-#### 3.2.3 超前进位加法器（CLA, Carry Lookahead Adder）
+#### 3.2.3 超前进位加法器(CLA, Carry Lookahead Adder)
 
 基本思想是, 不要等一级一级地传, 而是要提前计算好进位. 
 
@@ -578,7 +578,7 @@ $$
 3. $P$ 表示如果自己有一个 $1$, 那么右边如果有进位就传了, 没进位就不理; 
 4. $C$ 表示右边传进来给本位的或者本位传出去的给下一位的. 
 
-### 3.3 乘法器（Multiplier）
+### 3.3 乘法器(Multiplier)
 
 乘法的本质在于 **移位** **+** **加法**. 
 
@@ -644,7 +644,7 @@ $$
 
 值得注意的是, 如果除数为 $0$, 硬件会单独处理, 记为不合法或者特殊情况. 
 
-#### 3.4.2 恢复余数除法（Restoring Division）
+#### 3.4.2 恢复余数除法(Restoring Division)
 
 > 基本思想是, 显示着减一下, 减成负数了再加回来即可
 
@@ -676,7 +676,7 @@ $$
 
 其实该方法时很慢的, 因为每一次都要算, 每一位都要算, 个人认为和串行进位加法器有点类似, 极其缓慢. 
 
-### 3.5 浮点数（Floating Point）
+### 3.5 浮点数(Floating Point)
 
 #### 3.5.1 一些要素
 
@@ -707,7 +707,7 @@ $fraction$: 尾数, 也叫 $significand / mantissa$
 
 1. 单精度浮点数 $float$ 为 $32$ 位
 
-   > $[ sign ][ exponent ][ fraction ] \rightarrow$ $1$ 位 $sign$、$8$ 位 $exponent$、$23$ 位 $fraction$
+   > $[ sign ][ exponent ][ fraction ] \rightarrow$ $1$ 位 $sign$,$8$ 位 $exponent$,$23$ 位 $fraction$
 
 2. 双精度浮点数 $double$ 为 $64$ 位
 
@@ -742,20 +742,20 @@ $$
 
 #### 3.5.4 浮点数加减法和乘除法
 
-加（减）法如下: 
+加(减)法如下: 
 
 1. 比较两个数的 $exponent$
-2. 把 $exponent$ 小的那个数右移（逻辑, 直接左边补 $0$, 右边扔掉）, 使指数变成和最大的那个一样, 对齐
+2. 把 $exponent$ 小的那个数右移(逻辑, 直接左边补 $0$, 右边扔掉), 使指数变成和最大的那个一样, 对齐
 3. 加或减 $significand$
 4. 规格化结果
 5. 舍入
 6. 检查 $overflow / underflow$
 
-乘（除）法如下: 
+乘(除)法如下: 
 
-1. $sign$ 相乘（除）
-2. $exponent$ 相加（减）
-3. $fraction$ 相乘（除）
+1. $sign$ 相乘(除)
+2. $exponent$ 相加(减)
+3. $fraction$ 相乘(除)
 4. 规格化
 5. 舍入
 
@@ -848,9 +848,9 @@ $Control test$
 3. 寄存器多
 4. 还要多做一次迭代
 
-#### 3.6.2 改进版除法（Modified Division）
+#### 3.6.2 改进版除法(Modified Division)
 
-> 其本质是: $Divisor$ 不动、$Remainder$ 整体左移
+> 其本质是: $Divisor$ 不动,$Remainder$ 整体左移
 
 ![](../public/20260711171912_362_1.png)
 

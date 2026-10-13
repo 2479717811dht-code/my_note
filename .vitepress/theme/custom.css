@@ -182,9 +182,14 @@
 }
 
 .dark .vp-code-group,
-.dark .vp-doc pre {
+.dark .vp-doc div[class*="language-"] {
   background-color: #1b1715 !important;
   border: 1px solid #362a24 !important;
+}
+
+.dark .vp-doc pre {
+  background-color: transparent !important;
+  border: none !important;
 }
 
 /* 深色模式下的文字链接 */
@@ -316,7 +321,7 @@ body {
   position: relative;
 }
 
-.vp-doc h1 center,
+.vp-doc h1 .note-center,
 .vp-doc h1 * {
   font-size: 2.2rem !important;
   font-weight: 700 !important;
@@ -334,15 +339,15 @@ body {
   border-radius: 2px;
 }
 
-.vp-doc h1:has(center),
-.vp-doc h1:has(> center) {
+.vp-doc h1:has(.note-center),
+.vp-doc h1:has(> .note-center) {
   text-align: center;
   border-bottom: none !important;
   padding-bottom: 0 !important;
 }
 
-.vp-doc h1:has(center)::after,
-.vp-doc h1:has(> center)::after {
+.vp-doc h1:has(.note-center)::after,
+.vp-doc h1:has(> .note-center)::after {
   display: none !important;
   content: none !important;
 }
@@ -772,12 +777,12 @@ nav.table-of-contents a::after {
 }
 
 /* 内页居中内容与封面图片（完全尊重 Markdown 原生排版与内联 zoom 比例，不添加卡片框或强制高度） */
-.vp-doc center {
+.vp-doc .note-center {
   text-align: center !important;
   margin: 1.2rem auto !important;
 }
 
-.vp-doc center img {
+.vp-doc .note-center img {
   display: inline-block !important;
   margin: 0 8px !important;
   border-radius: 0 !important;
@@ -1664,21 +1669,76 @@ img[src*="cute.gif"]:hover {
  * ================================================== */
 .vp-doc div[class*="language-"] {
   position: relative;
-  padding-top: 24px;
+  padding-top: 34px !important;
 }
 
 .vp-doc div[class*="language-"]::before {
   content: '';
   position: absolute;
-  top: 10px;
+  top: 12px;
   left: 14px;
-  width: 10px;
+  width: 42px;
   height: 10px;
-  border-radius: 50%;
-  background: #ff5f56;
-  box-shadow: 16px 0 0 #ffbd2e, 32px 0 0 #27c93f;
-  z-index: 2;
+  border-radius: 0;
+  /* Paint all three circles on one row without separate shadow rasterization. */
+  background:
+    radial-gradient(circle at 5px 5px, #ff5f56 4.5px, transparent 5px),
+    radial-gradient(circle at 21px 5px, #ffbd2e 4.5px, transparent 5px),
+    radial-gradient(circle at 37px 5px, #27c93f 4.5px, transparent 5px);
+  box-shadow: none;
+  z-index: 10;
   pointer-events: none;
+}
+
+/* 行号栏与代码内容统一起始高度，避免垂直分割线穿插红黄绿圆点 */
+.vp-doc div[class*="language-"] .line-numbers-wrapper {
+  top: 34px !important;
+  padding-top: 12px !important;
+}
+
+.vp-doc div[class*="language-"] pre {
+  padding-top: 12px !important;
+  border: none !important;
+  background-color: transparent !important;
+}
+
+/* 右侧语言标签与复制按钮与顶部三色圆点垂直居中呼应 */
+.vp-doc div[class*="language-"] > span.lang {
+  top: 6px !important;
+}
+
+.vp-doc div[class*="language-"] > button.copy {
+  top: 4px !important;
+}
+
+/* 代码组内部无需重复显示圆点 */
+.vp-code-group div[class*="language-"] {
+  padding-top: 0 !important;
+}
+
+.vp-code-group div[class*="language-"]::before {
+  display: none !important;
+}
+
+.vp-code-group div[class*="language-"] .line-numbers-wrapper {
+  top: 0 !important;
+  padding-top: 20px !important;
+}
+
+.vp-code-group div[class*="language-"] pre {
+  padding-top: 20px !important;
+}
+
+/* Keep the supplied college emblem exact; invert only its lower text at night. */
+.vp-doc img[src*="6a3f74ac4e6d4eiq3mp2la2263.png"],
+.vp-doc img[src*="6a3f74ac4e6d4eiq3mp2la2263.png"]:hover {
+  filter: none !important;
+  transition: none !important;
+}
+
+.dark .vp-doc img[src*="6a3f74ac4e6d4eiq3mp2la2263.png"],
+.dark .vp-doc img[src*="6a3f74ac4e6d4eiq3mp2la2263.png"]:hover {
+  filter: url(#college-logo-night) !important;
 }
 
 /* ==================================================
@@ -1881,4 +1941,10 @@ img[src*="cute.gif"]:hover {
   padding: 2px 7px;
   border-radius: 4px;
   border: 1px solid rgba(184, 91, 68, 0.08);
+}
+
+/* Standard HTML centering also renders correctly during static generation. */
+.vp-doc .note-center {
+  display: block;
+  text-align: center;
 }

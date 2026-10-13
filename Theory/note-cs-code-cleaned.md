@@ -1,16 +1,16 @@
-# <center>程序设计与算法基础</center>
-<center>(C Language Description)</center>
+# <span class="note-center">程序设计与算法基础</span>
+<div class="note-center">(C Language Description)</div>
 
-<center>Mixed Class 2504 of Chu Kochen Honors College</center>
-<center>Huantong Deng</center>
+<div class="note-center">Mixed Class 2504 of Chu Kochen Honors College</div>
+<div class="note-center">Huantong Deng</div>
 
 ---
 
-<center>
-<img src="../public/20260323101520_871_96.png" style="zoom: 60%;" />
-<img src="../public/20260323101521_872_96.png" style="zoom: 20%;" />
-<img src="../public/ckc.png" style="zoom: 25%;" />
-</center>
+<div class="note-center">
+<img src="/20260323101520_871_96.png" style="zoom: 60%;" />
+<img src="/20260323101521_872_96.png" style="zoom: 20%;" />
+<img src="/6a3f74ac4e6d4eiq3mp2la2263.png" style="zoom: 25%;" />
+</div>
 
 
 ---
@@ -1776,8 +1776,8 @@ int main(){
 }
 ```
 #### 5. Developing toilets in city.
-Metro City Planners proposes that a community conserve its water supply by replacing all the community’s toilets with low-flush models that use only $2$ liters per flush. Assume that there is about $1$ toilet for every $3$ persons, that existing toilets use an average of $15$ liters per flush, that a toilet is flushed on average $14$ times per day, and that the cost to install each new toilet is $150$-$yuan$.
-Write a program that would estimate the magnitude (liters/day) and cost of the water saved based on the community’s population.
+Metro City Planners proposes that a community conserve its water supply by replacing all the community's toilets with low-flush models that use only $2$ liters per flush. Assume that there is about $1$ toilet for every $3$ persons, that existing toilets use an average of $15$ liters per flush, that a toilet is flushed on average $14$ times per day, and that the cost to install each new toilet is $150$-$yuan$.
+Write a program that would estimate the magnitude (liters/day) and cost of the water saved based on the community's population.
 
 **Input format:**
 One integer number for the population in the community.
@@ -2046,7 +2046,7 @@ int main()
 }
 ```
 #### 15. Jet fighter from a carrier
-Write a program that calculates the acceleration ($m/s²$) of a jet fighter launched from an aircraft-carrier catapult, given the jet’s takeoff speed in $km/h$ and the distance (meters) over which the catapult accelerates the jet from rest to takeoff. Assume constant acceleration. Also calculate the time (seconds) for the fighter to be accelerated to takeoff speed. 
+Write a program that calculates the acceleration ($m/s²$) of a jet fighter launched from an aircraft-carrier catapult, given the jet's takeoff speed in $km/h$ and the distance (meters) over which the catapult accelerates the jet from rest to takeoff. Assume constant acceleration. Also calculate the time (seconds) for the fighter to be accelerated to takeoff speed. 
 
 Relevant formulas ($v$ = velocity, $a$ = acceleration, $t$ = time, and $s$ = distance):
 $v=at$;
@@ -2103,7 +2103,7 @@ int isMultipleOf (int a,int b){
 }
 ```
 #### 17. Not telling you.
-When you’re doing homework, the kid sitting next to you asks: “What’s five times seven?” You should smile politely and tell them: “Fifty-three.” This problem requires you to reverse and output the product of any given pair of positive integers.
+When you're doing homework, the kid sitting next to you asks: "What's five times seven?" You should smile politely and tell them: "Fifty-three." This problem requires you to reverse and output the product of any given pair of positive integers.
 
 **Input format:** 
 Two positive integers $A$ and $B$ (each no more than $1000$) are given in the first line, separated by a space.
@@ -2128,7 +2128,7 @@ int main()
 }
 ```
 #### 18. The trapped number
-For any natural number $N$<sub>$0$</sub>​, first calculate the sum of its digits, then multiply the sum by $3$ and add $1$ to form a new natural number $N$<sub>$1$</sub>​. Then repeat this operation on $N$<sub>$1$</sub>​ to generate a new natural number $N$<sub>$2$</sub>​; … After repeating this operation multiple times, the result will eventually become a fixed number $N$<sub>$k$</sub>​, just like falling into a digital "trap".
+For any natural number $N$<sub>$0$</sub>​, first calculate the sum of its digits, then multiply the sum by $3$ and add $1$ to form a new natural number $N$<sub>$1$</sub>​. Then repeat this operation on $N$<sub>$1$</sub>​ to generate a new natural number $N$<sub>$2$</sub>​; ... After repeating this operation multiple times, the result will eventually become a fixed number $N$<sub>$k$</sub>​, just like falling into a digital "trap".
 This problem requires you to output the process of a given natural number falling into the "trap".
 
 **Input format:** 
@@ -2167,10 +2167,10 @@ int main()
 }
 ```
 #### 19. Dividing a repunit
-The so-called "repunit" here doesn't mean a single person at all—it refers to numbers consisting entirely of the digit 1, such as 1, 11, 111, 1111, and so on. It's said that every repunit is divisible by any odd number that does not end with 5. For example, 111111 is divisible by 13. Now, your program should read an integer x, which is definitely an odd number and does not end with 5. After calculation, output two numbers: the first number s, meaning that x multiplied by s equals a repunit; the second number n is the number of digits of this repunit. Such a solution is certainly not unique, and the problem requires you to output the smallest one.
+The so-called "repunit" here doesn't mean a single person at all-it refers to numbers consisting entirely of the digit 1, such as 1, 11, 111, 1111, and so on. It's said that every repunit is divisible by any odd number that does not end with 5. For example, 111111 is divisible by 13. Now, your program should read an integer x, which is definitely an odd number and does not end with 5. After calculation, output two numbers: the first number s, meaning that x multiplied by s equals a repunit; the second number n is the number of digits of this repunit. Such a solution is certainly not unique, and the problem requires you to output the smallest one.
 
 **Note:** 
-An obvious method is to gradually increase the number of digits of the repunit until it is divisible by x. The difficulty, however, is that s can be an extremely large number—for example, if the program inputs 31, it should output 3584229390681 and 15, because the product of 31 and 3584229390681 is 111111111111111, which has 15 ones in total.
+An obvious method is to gradually increase the number of digits of the repunit until it is divisible by x. The difficulty, however, is that s can be an extremely large number-for example, if the program inputs 31, it should output 3584229390681 and 15, because the product of 31 and 3584229390681 is 111111111111111, which has 15 ones in total.
 
 **Input format:** 
 A positive odd integer x (x < 1000) that does not end with 5 is given in a single line.
@@ -3104,7 +3104,7 @@ ElementType FindKth( List L, int K ){
 ```
 #### 4. Balloon Popping (PTA)
 ![](https://images.ptausercontent.com/6b53b1a2-7325-4de6-8dd5-bc403552b751.jpg)
-Balloon popping is a fun game for kids.  Now $n$ balloons are positioned in a line. The goal of the game is very simple: to pop as many balloons as possible.  Here we add a special rule to this game -- that is, you can only make $ONE$ jump.  Assume that a smart baby covers his/her body by thorns（刺）, jumps to some position and lies down (as shown by the figures below), so that the balloons will be popped as soon as they are touched by any part of the baby's body.  Now it is your job to tell the baby at which position he/she must jump to pop the most number of balloons.
+Balloon popping is a fun game for kids.  Now $n$ balloons are positioned in a line. The goal of the game is very simple: to pop as many balloons as possible.  Here we add a special rule to this game -- that is, you can only make $ONE$ jump.  Assume that a smart baby covers his/her body by thorns(刺), jumps to some position and lies down (as shown by the figures below), so that the balloons will be popped as soon as they are touched by any part of the baby's body.  Now it is your job to tell the baby at which position he/she must jump to pop the most number of balloons.
 ![](https://images.ptausercontent.com/8ac137cc-1253-42d6-ba2f-3da93df331bc.jpg)
 ![](https://images.ptausercontent.com/7a0b9adf-ee5a-45ed-81e3-4ad970784ff2.jpg)
 **Input Specification:**
@@ -3361,7 +3361,7 @@ List Reverse(List L) {
 A queue (FIFO structure) can be implemented by two stacks (LIFO structure) in the following way:
 - Start from two empty stacks $s_1$ and $s_2$.
 - When element $e$ is enqueued, it is actually pushed onto $s_1$.
-- When we are supposed to dequeue, $s_2$ is checked first. If $s_2$ is empty, everything in $s_1$ will be transferred to $s_2$ by popping from $s_1$ and immediately pushing onto $s_2$ . Then we just pop from $s_2$ —— the top element of $s_2$ must be the first one to enter $s_1$ thus is the first element that was enqueued.
+- When we are supposed to dequeue, $s_2$ is checked first. If $s_2$ is empty, everything in $s_1$ will be transferred to $s_2$ by popping from $s_1$ and immediately pushing onto $s_2$ . Then we just pop from $s_2$ -- the top element of $s_2$ must be the first one to enter $s_1$ thus is the first element that was enqueued.
 
 Assume that each operation of push or pop takes $1$ unit of time.  You job is to tell the time taken for each dequeue.
 
@@ -3455,7 +3455,7 @@ int main() {
 #### 1. Normal-1 Performance Measurement (Search)
 Given a list of ordered $N$ integers, numbered from $0$ to $N−1$, checking to see that $N$ is not in this list provides a worst case for many search algorithms.
 
-Consider two algorithms: one is called “sequential search” which scans through the list from left to right; and the other is “binary search” which is introduced in your textbook.  Your tasks are:
+Consider two algorithms: one is called "sequential search" which scans through the list from left to right; and the other is "binary search" which is introduced in your textbook.  Your tasks are:
 
 - Implement an iterative version and a recursive version of binary search, together with an iterative version and a recursive version of sequential search;
 - Analyze the worst case complexities of the above four versions of searching methods;
@@ -3793,13 +3793,13 @@ int main() {
 }
 ```
 #### 3. River-Crossing Pawn
-On a chessboard, there is a river-crossing pawn at point $A$ that needs to reach the target point $B$. The pawn moves according to the rules: it may move either downward or rightward. There is also an opposing knight at point $C$ on the board; the knight’s own square and all squares reachable by a single knight move are called the knight’s controlled squares. Therefore, this is called “the knight blocks the river-crossing pawn.”
+On a chessboard, there is a river-crossing pawn at point $A$ that needs to reach the target point $B$. The pawn moves according to the rules: it may move either downward or rightward. There is also an opposing knight at point $C$ on the board; the knight's own square and all squares reachable by a single knight move are called the knight's controlled squares. Therefore, this is called "the knight blocks the river-crossing pawn."
 
-The board is represented using coordinates: point $A$ is at $(0, 0)$, point $B$ is at $(n, m)$, and the knight’s position is also given.
+The board is represented using coordinates: point $A$ is at $(0, 0)$, point $B$ is at $(n, m)$, and the knight's position is also given.
 
 ![](https://cdn.luogu.com.cn/upload/image_hosting/ipmwl52i.png)
 
-You are to compute the number of distinct paths by which the pawn can travel from point $A$ to point $B$, assuming the knight’s position is fixed and does not move in response to the pawn’s moves.
+You are to compute the number of distinct paths by which the pawn can travel from point $A$ to point $B$, assuming the knight's position is fixed and does not move in response to the pawn's moves.
 
 **Input Format:**
 One line contains four integers, representing the coordinates of point $B$ and the coordinates of the knight, in order: $n$, $m$, $x$, $y$.
@@ -3961,7 +3961,7 @@ int main() {
 }
 ```
 #### 5. Who Got the Most Scholarship Money
-It is customary at this school to award scholarships after each semester’s final exams. There are five types of scholarships, each with different requirements:
+It is customary at this school to award scholarships after each semester's final exams. There are five types of scholarships, each with different requirements:
 
 1. Academician Scholarship: $8000$ yuan per person. Students whose final average score is greater than $80$ ($>80$) and who have published $1$ or more papers during this semester are eligible.
 2. May Fourth Scholarship: $4000$ yuan per person. Students whose final average score is greater than $85$ ($>85$) and whose class evaluation score is greater than $80$ ($>80$) are eligible.
@@ -3969,14 +3969,14 @@ It is customary at this school to award scholarships after each semester’s fin
 4. Western Scholarship: $1000$ yuan per person. Students from western provinces whose final average score is greater than $85$ ($>85$) are eligible.
 5. Class Contribution Award: $850$ yuan per person. Student cadres whose class evaluation score is greater than $80$ ($>80$) are eligible.
 
-As long as the conditions are met, the scholarship will be awarded. There is no limit on the number of recipients for each scholarship, and each student may receive multiple scholarships simultaneously. For example, if Yao Lin’s final average score is $87$ and the class evaluation score is $82$, and he is also a student cadre, then he can receive both the May Fourth Scholarship and the Class Contribution Award, for a total of $4850$ yuan.
+As long as the conditions are met, the scholarship will be awarded. There is no limit on the number of recipients for each scholarship, and each student may receive multiple scholarships simultaneously. For example, if Yao Lin's final average score is $87$ and the class evaluation score is $82$, and he is also a student cadre, then he can receive both the May Fourth Scholarship and the Class Contribution Award, for a total of $4850$ yuan.
 
 Now, given data for several students, calculate which student(s) received the highest total amount of scholarship money (assume there is always at least one student who meets some scholarship condition).
 
 **Input Format:**
 The first line contains $1$ integer $N$, the total number of students.
 
-Each of the following $N$ lines contains one student’s data, in order: name, final average score, class evaluation score, whether the student is a student cadre, whether the student is from a western province, and the number of published papers. The name is a string of uppercase and lowercase English letters with length at most $20$ (no spaces). The final average score and the class evaluation score are integers between $0$ and $100$ (inclusive). Whether the student is a student cadre and whether the student is from a western province are each represented by $1$ character: $\tt Y$ means yes, and $\tt N$ means no. The number of published papers is an integer between $0$ and $10$ (inclusive). Each pair of adjacent data items is separated by a single space.
+Each of the following $N$ lines contains one student's data, in order: name, final average score, class evaluation score, whether the student is a student cadre, whether the student is from a western province, and the number of published papers. The name is a string of uppercase and lowercase English letters with length at most $20$ (no spaces). The final average score and the class evaluation score are integers between $0$ and $100$ (inclusive). Whether the student is a student cadre and whether the student is from a western province are each represented by $1$ character: $\tt Y$ means yes, and $\tt N$ means no. The number of published papers is an integer between $0$ and $10$ (inclusive). Each pair of adjacent data items is separated by a single space.
 
 **Output Format:**
 Output $3$ lines.
@@ -4186,7 +4186,7 @@ Suddenly, you receive a message from headquarters: enemy bombers are flying towa
 
 Each soldier has an initial facing direction and will walk uniformly in that direction without changing it on his own. However, if two soldiers meet face to face, they cannot pass through each other, so they both turn around and keep walking. Turning around takes no time.
 
-Due to earlier anger, you can no longer control your soldiers. You do not even know each soldier’s initial facing direction. Therefore, you want to know the minimum possible time for your unit to completely evacuate the bridge. In addition, as headquarters is arranging to block the enemy’s advance, you also need to know the maximum possible time for your unit to completely evacuate the bridge.
+Due to earlier anger, you can no longer control your soldiers. You do not even know each soldier's initial facing direction. Therefore, you want to know the minimum possible time for your unit to completely evacuate the bridge. In addition, as headquarters is arranging to block the enemy's advance, you also need to know the maximum possible time for your unit to completely evacuate the bridge.
 
 **Input Format:**
 The first line contains a single integer $L$, the length of the bridge. The coordinates on the bridge are $1, 2, \cdots, L$.
@@ -4433,7 +4433,7 @@ int main() {
 }
 ```
 #### 12. Herb Picking
-Chenchen is a gifted child whose dream is to become the greatest physician in the world. To this end, he wants to apprentice with the most respected physician nearby. To assess his aptitude, the physician gave him a challenge. He took him to a cave full of herbs and said, “Child, there are different kinds of herbs in this cave. Picking each herb takes some time, and each has its own value. I will give you a period of time. During this time, you can pick some herbs. If you are clever, you should be able to maximize the total value of the herbs you pick.”
+Chenchen is a gifted child whose dream is to become the greatest physician in the world. To this end, he wants to apprentice with the most respected physician nearby. To assess his aptitude, the physician gave him a challenge. He took him to a cave full of herbs and said, "Child, there are different kinds of herbs in this cave. Picking each herb takes some time, and each has its own value. I will give you a period of time. During this time, you can pick some herbs. If you are clever, you should be able to maximize the total value of the herbs you pick."
 
 If you were Chenchen, could you complete this task?
 
@@ -4492,7 +4492,7 @@ One of the famous proofs in modern mathematics is Georg Cantor's proof that the 
 
 ![](https://cdn.luogu.com.cn/upload/image_hosting/jdjdaf73.png)
 
-We number each entry of the table in a Z-shaped order. The first entry is $1/1$, then $1/2$, $2/1$, $3/1$, $2/2$, …
+We number each entry of the table in a Z-shaped order. The first entry is $1/1$, then $1/2$, $2/1$, $3/1$, $2/2$, ...
 
 **Input Format:**
 An integer $N$ ($1 \leq N \leq 10^7$).
@@ -4657,7 +4657,7 @@ Since taking office, Adham Sharara, the current President of the International T
 
 Huahua analyzes the match in the following way: first, list the outcome of each rally, then compute the match results under the $11$-point system and the $21$-point system (up to the end of the record).
 
-For example, consider the following record (where $\texttt W$ means Huahua scores a point, and $\texttt L$ means Huahua’s opponent scores a point):
+For example, consider the following record (where $\texttt W$ means Huahua scores a point, and $\texttt L$ means Huahua's opponent scores a point):
 
 $$\texttt{WWWWWWWWWWWWWWWWWWWWWWLW}$$
 
@@ -4806,7 +4806,7 @@ int main() {
 }
 ```
 #### 18. Happy Jinming
-Jinming is very happy today because his family is about to receive the keys to their new home, which has a spacious room just for him. What makes him even happier is that his mom told him yesterday: “You decide which items to buy and how to furnish your room, as long as the total cost does not exceed $N$ yuan.” Early this morning, Jinming started making a budget, but there are too many things he wants to buy, so the total will definitely exceed the limit $N$. Therefore, he assigns an importance level to each item, divided into 5 levels, represented by integers 1–5, with level 5 being the most important. He also found the price of each item on the Internet (all in integer yuan). He hopes to maximize the sum of price times importance for the selected items, under the constraint that the total cost does not exceed $N$ yuan (it may be equal to $N$ yuan).
+Jinming is very happy today because his family is about to receive the keys to their new home, which has a spacious room just for him. What makes him even happier is that his mom told him yesterday: "You decide which items to buy and how to furnish your room, as long as the total cost does not exceed $N$ yuan." Early this morning, Jinming started making a budget, but there are too many things he wants to buy, so the total will definitely exceed the limit $N$. Therefore, he assigns an importance level to each item, divided into 5 levels, represented by integers 1–5, with level 5 being the most important. He also found the price of each item on the Internet (all in integer yuan). He hopes to maximize the sum of price times importance for the selected items, under the constraint that the total cost does not exceed $N$ yuan (it may be equal to $N$ yuan).
 
 Let the price of item $j$ be $v_j$ and its importance be $w_j$. If $k$ items are selected with indices $j_1, j_2, \dots, j_k$, then the desired total is:
 $$v_{j_1} \times w_{j_1} + v_{j_2} \times w_{j_2} + \cdots + v_{j_k} \times w_{j_k}.$$
@@ -4896,7 +4896,7 @@ Please write a program to determine the interview cutoff score and output the re
 
 **Input Format:**
 - Line 1: Two integers $n, m$ ($5 \leq n \leq 5000, 3 \leq m \leq n$), separated by a space. Here $n$ is the total number of contestants who registered for the written test, and $m$ is the planned number of volunteers to admit. It is guaranteed that $m \times 150\%$, after rounding down, is less than or equal to $n$.
-- Lines $2$ to $n+1$: Each line contains two integers separated by a space: the contestant’s registration ID $k$ ($1000 \leq k \leq 9999$) and written score $s$ ($1 \leq s \leq 100$). It is guaranteed that all registration IDs are distinct.
+- Lines $2$ to $n+1$: Each line contains two integers separated by a space: the contestant's registration ID $k$ ($1000 \leq k \leq 9999$) and written score $s$ ($1 \leq s \leq 100$). It is guaranteed that all registration IDs are distinct.
 
 **Output Format:**
 - Line 1: Two integers separated by a space. The first integer is the interview cutoff score; the second integer is the actual number of contestants who enter the interview.
@@ -4967,9 +4967,9 @@ int main() {
 }
 ```
 #### 21. The Infiltrator
-Countries R and S are at war and have sent spies into each other’s territory. After many hardships, Xiao C (pinyin) from country R, who is undercover in country S, finally figured out the encoding rules of country S’s military cipher:
+Countries R and S are at war and have sent spies into each other's territory. After many hardships, Xiao C (pinyin) from country R, who is undercover in country S, finally figured out the encoding rules of country S's military cipher:
 
-1. The plaintext to be sent by country S’s military is encrypted and then sent over the network. Both the plaintext and the ciphertext consist only of uppercase letters $\texttt{A}\sim\texttt{Z}$ (no spaces or other characters).
+1. The plaintext to be sent by country S's military is encrypted and then sent over the network. Both the plaintext and the ciphertext consist only of uppercase letters $\texttt{A}\sim\texttt{Z}$ (no spaces or other characters).
 2. For each letter, country S specifies a corresponding cipher letter. Encryption replaces every letter in the plaintext with its corresponding cipher letter.
 3. Each letter corresponds to exactly one unique cipher letter, and different letters correspond to different cipher letters. A letter may map to itself.
 
@@ -4979,11 +4979,11 @@ Now Xiao C has, via an inside source, one encrypted message together with its co
 
 1. All information has been scanned, and all $26$ letters $\texttt{A}\sim\texttt{Z}$ have appeared in the plaintext and obtained their corresponding cipher letters.
 2. All information has been scanned, but there exists at least one letter that does not appear in the plaintext.
-3. During scanning, an obvious contradiction or error is found (violating the encoding rules of country S’s cipher).
+3. During scanning, an obvious contradiction or error is found (violating the encoding rules of country S's cipher).
 
 **Example:**
 
-If some plaintext $\tt XYZ$ is translated as $\tt ABA$, it violates the rule “different letters correspond to different cipher letters.”
+If some plaintext $\tt XYZ$ is translated as $\tt ABA$, it violates the rule "different letters correspond to different cipher letters."
 
 While Xiao C is overwhelmed, the headquarters of country R sends another telegram asking him to translate a newly intercepted encrypted message from country S. Please help Xiao C: deduce the cipher from the known pair, and then use the deduced cipher to translate the encrypted message in the telegram.
 
@@ -4992,7 +4992,7 @@ There are three lines. Each line is a string with length between $1$ and $100$.
 
 - The first line is an encrypted message known to Xiao C.
 - The second line is the plaintext corresponding to the first line.
-- The third line is the encrypted message that country R’s headquarters asks Xiao C to translate.
+- The third line is the encrypted message that country R's headquarters asks Xiao C to translate.
 
 The testdata guarantees that all strings consist only of uppercase letters $\texttt{A}\sim\texttt{Z}$, and that the lengths of the first and second lines are equal.
 
@@ -5304,7 +5304,7 @@ Here, $a_ix^i$ is called the $i$-th degree term, and $a_i$ is its coefficient. G
 1. The indeterminate is $x$. List the terms from left to right in descending order of degree.
 2. Include only terms whose coefficients are nonzero.
 3. If the leading (degree-$n$) coefficient is positive, the polynomial must not start with a `+` sign; if it is negative, the polynomial must start with a `-` sign.
-4. For any non-leading term, connect it to the previous term with `+` or `-`, indicating a positive or negative coefficient, respectively. Immediately follow with the absolute value of the coefficient as a positive integer (for terms of degree greater than $0$, omit the $1$ if the coefficient’s absolute value is $1$). If the exponent of $x$ is greater than $1$, write it as “$x^b$”, where $b$ is the exponent; if the exponent is $1$, write it as $x$; if the exponent is $0$, output only the coefficient.
+4. For any non-leading term, connect it to the previous term with `+` or `-`, indicating a positive or negative coefficient, respectively. Immediately follow with the absolute value of the coefficient as a positive integer (for terms of degree greater than $0$, omit the $1$ if the coefficient's absolute value is $1$). If the exponent of $x$ is greater than $1$, write it as "$x^b$", where $b$ is the exponent; if the exponent is $1$, write it as $x$; if the exponent is $0$, output only the coefficient.
 5. There must be no extra spaces at the beginning or the end of the polynomial.
 
 **Input Format:**
@@ -5371,7 +5371,7 @@ int main() {
 }
 ```
 #### 26. ISBN Number
-Every formally published book has an ISBN number associated with it. An ISBN consists of $9$ digits, $1$ check digit, and $3$ separators. Its prescribed format is `x-xxx-xxxxx-x`, where the symbol `-` is the separator (the minus sign on the keyboard), and the last character is the check digit. For example, `0-670-82162-4` is a standard ISBN. The first digit indicates the publication language of the book (for example, $0$ represents English); the three digits after the first separator `-` indicate the publisher (for example, $670$ represents Viking Press); the five digits after the second separator indicate the book’s identifier at that publisher; the last character is the check digit.
+Every formally published book has an ISBN number associated with it. An ISBN consists of $9$ digits, $1$ check digit, and $3$ separators. Its prescribed format is `x-xxx-xxxxx-x`, where the symbol `-` is the separator (the minus sign on the keyboard), and the last character is the check digit. For example, `0-670-82162-4` is a standard ISBN. The first digit indicates the publication language of the book (for example, $0$ represents English); the three digits after the first separator `-` indicate the publisher (for example, $670$ represents Viking Press); the five digits after the second separator indicate the book's identifier at that publisher; the last character is the check digit.
 
 The check digit is computed as follows:
 
@@ -5380,7 +5380,7 @@ Multiply the first digit by $1$, add the second digit multiplied by $2$, and so 
 Your task is to write a program to determine whether the check digit in the input ISBN number is correct. If it is correct, output `Right` only; if it is incorrect, output the ISBN number you believe to be correct.
 
 **Input Format:**
-A character sequence representing a book’s ISBN number (the input is guaranteed to conform to the format requirements of ISBN numbers).
+A character sequence representing a book's ISBN number (the input is guaranteed to conform to the format requirements of ISBN numbers).
 
 **Output Format:**
 One line. If the check digit of the input ISBN number is correct, output `Right`; otherwise, output the correct ISBN number in the prescribed format (including the separator `-`).
@@ -5502,7 +5502,7 @@ int main() {
 }
 ```
 #### 28. Souvenir Grouping
-New Year’s Day is coming, and the student council has tasked Lele with distributing souvenirs at the New Year’s party. To keep the value of souvenirs received by participants relatively balanced, he wants to group the purchased souvenirs by price. Each group can contain at most two souvenirs, and the sum of prices in a group cannot exceed a given integer $w$. To finish the distribution as quickly as possible, Lele wants to minimize the number of groups.
+New Year's Day is coming, and the student council has tasked Lele with distributing souvenirs at the New Year's party. To keep the value of souvenirs received by participants relatively balanced, he wants to group the purchased souvenirs by price. Each group can contain at most two souvenirs, and the sum of prices in a group cannot exceed a given integer $w$. To finish the distribution as quickly as possible, Lele wants to minimize the number of groups.
 
 Your task is to write a program that finds a grouping scheme with the minimal number of groups and outputs that minimal number.
 
@@ -5562,9 +5562,9 @@ int main() {
 }
 ```
 #### 29. Peanut Picking
-Mr. Robinson has a pet monkey named Dodo. One day, while they were walking along a country road, they found a small note on a roadside sign: “Welcome to taste my peanuts for free! — Xiong.”
+Mr. Robinson has a pet monkey named Dodo. One day, while they were walking along a country road, they found a small note on a roadside sign: "Welcome to taste my peanuts for free! - Xiong."
 
-They were happy because peanuts are their favorite. Behind the sign, there is indeed a peanut field by the roadside, where peanut plants are arranged in a rectangular grid (see Figure 1). Experienced Dodo can tell how many peanuts are under each plant at a glance. To train Dodo’s arithmetic, Mr. Robinson says: “First find the plant with the most peanuts and pick its peanuts; then among the remaining plants, find the one with the most peanuts and pick it; and so on. But you must return to the roadside within the time limit I set.”
+They were happy because peanuts are their favorite. Behind the sign, there is indeed a peanut field by the roadside, where peanut plants are arranged in a rectangular grid (see Figure 1). Experienced Dodo can tell how many peanuts are under each plant at a glance. To train Dodo's arithmetic, Mr. Robinson says: "First find the plant with the most peanuts and pick its peanuts; then among the remaining plants, find the one with the most peanuts and pick it; and so on. But you must return to the roadside within the time limit I set."
 
 ![](https://cdn.luogu.com.cn/upload/image_hosting/unwk7hd0.png)
 
@@ -5727,7 +5727,7 @@ int main() {
 }
 ```
 #### 32. Platforms
-There are several platforms in space. Given the position of each platform, determine which platform you will land on after stepping off each platform’s edges.
+There are several platforms in space. Given the position of each platform, determine which platform you will land on after stepping off each platform's edges.
 
 **Note:** 
 If the x-coordinates of some edge of two platforms are the same, then an object falling from the upper platform will not land on the lower one (i.e., each platform covers an open interval, excluding endpoints). Platforms may overlap.
@@ -5737,7 +5737,7 @@ When stepping off a platform, the fall is considered to start just below that pl
 **Input Format:**
 The first line contains an integer $N$, the number of platforms.
 
-Each of the next $N$ lines contains three integers: the height $H_i$, the left endpoint’s $X$-coordinate $L_i$, and the right endpoint’s $X$-coordinate $R_i$.
+Each of the next $N$ lines contains three integers: the height $H_i$, the left endpoint's $X$-coordinate $L_i$, and the right endpoint's $X$-coordinate $R_i$.
 
 **Output Format:**
 Output $N$ lines. For each $i$, output two integers: the index of the platform reached by falling from the left edge of platform $i$, and the index reached by falling from the right edge of platform $i$.
@@ -6081,5 +6081,5 @@ int main() {
 	return 0;
 }
 ```
-## <center>End</center>
+## <span class="note-center">End</span>
 

@@ -7,13 +7,13 @@ description: 浙江大学计算机科学与技术专业核心理论课深度笔�
 
 <div class="garden-badge">💡 格物致知 · 体系化推导与知识沉淀</div>
 
-欢迎查阅计算机系专业理论课深度笔记。这里记录了从大一编程基石、大二软硬件核心，到高阶算法与数理基石的完整推导过程与题型总结。
+欢迎查阅计算机系专业理论课深度笔记.这里记录了从大一编程基石,大二软硬件核心,到高阶算法与数理基石的完整推导过程与题型总结.
 
 ---
 
 ## 理论核心课程矩阵 · Core Theory Courses
 
-点击卡片直接进入各科目完整深度笔记：
+点击卡片直接进入各科目完整深度笔记:
 
 <div class="garden-bento-grid">
   <a href="./Fundamentals_of_Data_Structure.html" class="bento-card">
@@ -26,7 +26,7 @@ description: 浙江大学计算机科学与技术专业核心理论课深度笔�
         <div class="bento-icon-box">🌲</div>
         <div class="bento-content">
           <span class="bento-title">数据结构基础</span>
-          <span class="bento-desc">线性表、树与森林、二叉平衡树、堆、散列、图论算法与并查集</span>
+          <span class="bento-desc">线性表,树与森林,二叉平衡树,堆,散列,图论算法与并查集</span>
         </div>
       </div>
     </div>
@@ -49,7 +49,7 @@ description: 浙江大学计算机科学与技术专业核心理论课深度笔�
         <div class="bento-icon-box">🚀</div>
         <div class="bento-content">
           <span class="bento-title">高级数据结构与算法</span>
-          <span class="bento-desc">AVL 树、伸展树、B+ 树、红黑树、左倾堆、摊还分析与NP完全问题</span>
+          <span class="bento-desc">AVL 树,伸展树,B+ 树,红黑树,左倾堆,摊还分析与NP完全问题</span>
         </div>
       </div>
     </div>
@@ -72,7 +72,7 @@ description: 浙江大学计算机科学与技术专业核心理论课深度笔�
         <div class="bento-icon-box">🖥️</div>
         <div class="bento-content">
           <span class="bento-title">计算机组成与体系</span>
-          <span class="bento-desc">MIPS 架构、单周期与流水线数据通路、结构/数据/控制冒险、Cache 层次</span>
+          <span class="bento-desc">MIPS 架构,单周期与流水线数据通路,结构/数据/控制冒险,Cache 层次</span>
         </div>
       </div>
     </div>
@@ -95,7 +95,7 @@ description: 浙江大学计算机科学与技术专业核心理论课深度笔�
         <div class="bento-icon-box">⚡</div>
         <div class="bento-content">
           <span class="bento-title">数字逻辑设计</span>
-          <span class="bento-desc">布尔代数、卡诺图化简、组合逻辑、时序电路、触发器、有限状态机 FSM</span>
+          <span class="bento-desc">布尔代数,卡诺图化简,组合逻辑,时序电路,触发器,有限状态机 FSM</span>
         </div>
       </div>
     </div>
@@ -118,7 +118,7 @@ description: 浙江大学计算机科学与技术专业核心理论课深度笔�
         <div class="bento-icon-box">💻</div>
         <div class="bento-content">
           <span class="bento-title">程序设计与算法基础</span>
-          <span class="bento-desc">C/C++ 核心语法规范、指针与内存模型、结构体、面向对象与高频例题</span>
+          <span class="bento-desc">C/C++ 核心语法规范,指针与内存模型,结构体,面向对象与高频例题</span>
         </div>
       </div>
     </div>
@@ -141,7 +141,7 @@ description: 浙江大学计算机科学与技术专业核心理论课深度笔�
         <div class="bento-icon-box">📐</div>
         <div class="bento-content">
           <span class="bento-title">离散数学</span>
-          <span class="bento-desc">命题与谓词逻辑、集合与关系、偏序集、图论与树、组合计数与母函数</span>
+          <span class="bento-desc">命题与谓词逻辑,集合与关系,偏序集,图论与树,组合计数与母函数</span>
         </div>
       </div>
     </div>
@@ -164,7 +164,7 @@ description: 浙江大学计算机科学与技术专业核心理论课深度笔�
         <div class="bento-icon-box">🎲</div>
         <div class="bento-content">
           <span class="bento-title">概率论与数理统计</span>
-          <span class="bento-desc">随机变量及其分布律、多维变量、极限定理、参数估计与假设检验</span>
+          <span class="bento-desc">随机变量及其分布律,多维变量,极限定理,参数估计与假设检验</span>
         </div>
       </div>
     </div>
@@ -187,7 +187,7 @@ description: 浙江大学计算机科学与技术专业核心理论课深度笔�
         <div class="bento-icon-box">🚩</div>
         <div class="bento-content">
           <span class="bento-title">马克思主义基本原理</span>
-          <span class="bento-desc">唯物辩证法、实践与认识论、资本主义生产与剩余价值、唯物史观背诵</span>
+          <span class="bento-desc">唯物辩证法,实践与认识论,资本主义生产与剩余价值,唯物史观背诵</span>
         </div>
       </div>
     </div>
@@ -206,23 +206,23 @@ description: 浙江大学计算机科学与技术专业核心理论课深度笔�
 ## 理论进阶路线 · Study Roadmap
 
 ::: tip 💡 计算机科学理论学习递进建议
-1. **编程思维筑基**：以《程序设计基础》熟悉内存、指针与结构化思维，通过《离散数学》建立严谨的形式化推导习惯。
-2. **算法与数据结构**：深研《数据结构基础（FDS）》，吃透树、堆、图与并查集，随后衔接《高级数据结构与算法（ADS）》的摊还分析与平衡树进阶。
-3. **软硬件协同自底向上**：由《数字逻辑设计》理解门电路与状态机，再跃升至《计算机组成与体系》推导指令译码、单周期与流水线数据通路。
+1. **编程思维筑基**:以"程序设计基础"熟悉内存,指针与结构化思维,通过"离散数学"建立严谨的形式化推导习惯.
+2. **算法与数据结构**:深研"数据结构基础(FDS)",吃透树,堆,图与并查集,随后衔接"高级数据结构与算法(ADS)"的摊还分析与平衡树进阶.
+3. **软硬件协同自底向上**:由"数字逻辑设计"理解门电路与状态机,再跃升至"计算机组成与体系"推导指令译码,单周期与流水线数据通路.
 :::
 
 ---
 
 ## 助学智囊团 · AI Research Assistants
 
-遇到复杂的概念推导、数学证明或代码调试时，可随时借助以下 AI 助手：
+遇到复杂的概念推导,数学证明或代码调试时,可随时借助以下 AI 助手:
 
 <div class="ai-assistant-grid">
   <a href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer" class="ai-assistant-card">
     <div class="ai-card-icon">🤖</div>
     <div class="ai-card-info">
       <span class="ai-card-name">ChatGPT</span>
-      <span class="ai-card-desc">综合能力强，适合概念推导、代码实现与综合答疑</span>
+      <span class="ai-card-desc">综合能力强,适合概念推导,代码实现与综合答疑</span>
     </div>
   </a>
 
@@ -230,7 +230,7 @@ description: 浙江大学计算机科学与技术专业核心理论课深度笔�
     <div class="ai-card-icon">🧠</div>
     <div class="ai-card-info">
       <span class="ai-card-name">Claude</span>
-      <span class="ai-card-desc">逻辑清晰，长文本学术资料阅读与严密推理极佳</span>
+      <span class="ai-card-desc">逻辑清晰,长文本学术资料阅读与严密推理极佳</span>
     </div>
   </a>
 
@@ -238,7 +238,7 @@ description: 浙江大学计算机科学与技术专业核心理论课深度笔�
     <div class="ai-card-icon">⚡</div>
     <div class="ai-card-info">
       <span class="ai-card-name">DeepSeek</span>
-      <span class="ai-card-desc">国产推理先锋，擅长数学公式推导与复杂代码分析</span>
+      <span class="ai-card-desc">国产推理先锋,擅长数学公式推导与复杂代码分析</span>
     </div>
   </a>
 
@@ -246,7 +246,7 @@ description: 浙江大学计算机科学与技术专业核心理论课深度笔�
     <div class="ai-card-icon">💎</div>
     <div class="ai-card-info">
       <span class="ai-card-name">Gemini</span>
-      <span class="ai-card-desc">Google 旗下多模态模型，支持海量上下文与多模态图表</span>
+      <span class="ai-card-desc">Google 旗下多模态模型,支持海量上下文与多模态图表</span>
     </div>
   </a>
 
@@ -254,7 +254,7 @@ description: 浙江大学计算机科学与技术专业核心理论课深度笔�
     <div class="ai-card-icon">🌙</div>
     <div class="ai-card-info">
       <span class="ai-card-name">Kimi</span>
-      <span class="ai-card-desc">长文本阅读专家，擅长期末论文研读与复习资料总结</span>
+      <span class="ai-card-desc">长文本阅读专家,擅长期末论文研读与复习资料总结</span>
     </div>
   </a>
 
@@ -262,12 +262,12 @@ description: 浙江大学计算机科学与技术专业核心理论课深度笔�
     <div class="ai-card-icon">🚀</div>
     <div class="ai-card-info">
       <span class="ai-card-name">Grok</span>
-      <span class="ai-card-desc">风格直接幽默，快速探讨技术观点与前沿热点</span>
+      <span class="ai-card-desc">风格直接幽默,快速探讨技术观点与前沿热点</span>
     </div>
   </a>
 </div>
 
 <div class="garden-photo-frame">
   <img src="/20260602162149_1020_180.jpg" alt="Keep Moving Forward" />
-  <div class="garden-photo-caption">Strive for Greatness · 积跬步以至千里，致广大而尽精微</div>
+  <div class="garden-photo-caption">Strive for Greatness · 积跬步以至千里,致广大而尽精微</div>
 </div>

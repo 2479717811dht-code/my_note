@@ -1,19 +1,19 @@
 ---
 title: 摸鱼小憩 · Break
-description: 赛博木鱼、极客贪吃蛇、2048小游戏与极客冲浪社区
+description: 赛博木鱼,极客贪吃蛇,2048小游戏与极客冲浪社区
 ---
 
 # 休息一下 · Break
 
 <div class="garden-badge">☕ 劳逸结合 · 严禁过度内卷喵</div>
 
-辛苦了！学习与推导之余，不妨停下紧绷的思绪，敲敲木鱼积攒功德，玩几局怀旧游戏，或是到极客社区逛逛。
+辛苦了!学习与推导之余,不妨停下紧绷的思绪,敲敲木鱼积攒功德,玩几局怀旧游戏,或是到极客社区逛逛.
 
 <BreakGames />
 
 ## 极客冲浪 · 推荐站点
 
-优质学术、体育、科技与开发者交流社区直达：
+优质学术,体育,科技与开发者交流社区直达:
 
 <div class="garden-bookmarks-grid">
   <a href="https://www.cc98.org/" target="_blank" rel="noopener noreferrer" class="bookmark-card">
@@ -25,7 +25,7 @@ description: 赛博木鱼、极客贪吃蛇、2048小游戏与极客冲浪社区
         </div>
         <span class="bookmark-tag">浙大专属</span>
       </div>
-      <div class="bookmark-desc">ZJUer 的精神桃花源与校园树洞，课程测评与二手交流</div>
+      <div class="bookmark-desc">ZJUer 的精神桃花源与校园树洞,课程测评与二手交流</div>
     </div>
     <div class="bookmark-link-text">访问站点 ↗</div>
   </a>
@@ -39,7 +39,7 @@ description: 赛博木鱼、极客贪吃蛇、2048小游戏与极客冲浪社区
         </div>
         <span class="bookmark-tag">篮球主场</span>
       </div>
-      <div class="bookmark-desc">纯粹的篮球社区，NBA 战报讨论与 JRs 的步行街日常</div>
+      <div class="bookmark-desc">纯粹的篮球社区,NBA 战报讨论与 JRs 的步行街日常</div>
     </div>
     <div class="bookmark-link-text">访问站点 ↗</div>
   </a>
@@ -53,7 +53,7 @@ description: 赛博木鱼、极客贪吃蛇、2048小游戏与极客冲浪社区
         </div>
         <span class="bookmark-tag">全球体育</span>
       </div>
-      <div class="bookmark-desc">掌握 NBA 第一手即时比分、伤病报告与全美深度球评分析</div>
+      <div class="bookmark-desc">掌握 NBA 第一手即时比分,伤病报告与全美深度球评分析</div>
     </div>
     <div class="bookmark-link-text">访问站点 ↗</div>
   </a>
@@ -81,7 +81,7 @@ description: 赛博木鱼、极客贪吃蛇、2048小游戏与极客冲浪社区
         </div>
         <span class="bookmark-tag">学术预印本</span>
       </div>
-      <div class="bookmark-desc">计算机科学、人工智能与数学前沿研究顶会预印本数据库</div>
+      <div class="bookmark-desc">计算机科学,人工智能与数学前沿研究顶会预印本数据库</div>
     </div>
     <div class="bookmark-link-text">访问站点 ↗</div>
   </a>
@@ -95,7 +95,7 @@ description: 赛博木鱼、极客贪吃蛇、2048小游戏与极客冲浪社区
         </div>
         <span class="bookmark-tag">极客创意</span>
       </div>
-      <div class="bookmark-desc">程序员与独立开发者的创意工作社区，探讨前沿技术与架构</div>
+      <div class="bookmark-desc">程序员与独立开发者的创意工作社区,探讨前沿技术与架构</div>
     </div>
     <div class="bookmark-link-text">访问站点 ↗</div>
   </a>
@@ -109,7 +109,7 @@ description: 赛博木鱼、极客贪吃蛇、2048小游戏与极客冲浪社区
         </div>
         <span class="bookmark-tag">中文文献</span>
       </div>
-      <div class="bookmark-desc">国内权威学术期刊、学位论文检索与期末课设调研必备</div>
+      <div class="bookmark-desc">国内权威学术期刊,学位论文检索与期末课设调研必备</div>
     </div>
     <div class="bookmark-link-text">访问站点 ↗</div>
   </a>
@@ -123,7 +123,7 @@ description: 赛博木鱼、极客贪吃蛇、2048小游戏与极客冲浪社区
         </div>
         <span class="bookmark-tag">全球前沿</span>
       </div>
-      <div class="bookmark-desc">互联网头条集散地，r/MachineLearning 与技术板块讨论圈</div>
+      <div class="bookmark-desc">互联网头条集散地,r/MachineLearning 与技术板块讨论圈</div>
     </div>
     <div class="bookmark-link-text">访问站点 ↗</div>
   </a>
@@ -131,14 +131,14 @@ description: 赛博木鱼、极客贪吃蛇、2048小游戏与极客冲浪社区
 
 ## 心境随笔 · Journals
 
-在代码与严密的数理逻辑之外，记录一些真实的骨血、潮水与呼吸：
+在代码与严密的数理逻辑之外,记录一些真实的骨血,潮水与呼吸:
 
 <div class="journal-bento-grid">
   <a href="./Journal1.html" class="journal-bento-card">
     <div class="journal-badge">🍂 随笔 01 · 算法隐喻</div>
     <div class="journal-title">Journal 1 · 红黑树</div>
     <div class="journal-quote">
-      “爱是炙热的红，恨是深沉的黑… 在无数次变色与旋转中，我们都在试着寻找属于自己的自平衡。”
+      "爱是炙热的红,恨是深沉的黑... 在无数次变色与旋转中,我们都在试着寻找属于自己的自平衡."
     </div>
     <div class="journal-footer">
       <span>阅读全文</span>
@@ -150,7 +150,7 @@ description: 赛博木鱼、极客贪吃蛇、2048小游戏与极客冲浪社区
     <div class="journal-badge">🌊 随笔 02 · 记忆潮汐</div>
     <div class="journal-title">Journal 2 · 大海</div>
     <div class="journal-quote">
-      “这场激素的瘟疫比想象中的来得更快… 站在浪潮退去的堤坝上，听风穿过无声的沙滩与岁月。”
+      "这场激素的瘟疫比想象中的来得更快... 站在浪潮退去的堤坝上,听风穿过无声的沙滩与岁月."
     </div>
     <div class="journal-footer">
       <span>阅读全文</span>
@@ -161,5 +161,5 @@ description: 赛博木鱼、极客贪吃蛇、2048小游戏与极客冲浪社区
 
 <div class="garden-photo-frame">
   <img src="/20260506105112_167_1.jpg" alt="Always With You" />
-  <div class="garden-photo-caption">Keep Thinking, Keep Breathing · 无论走多远，别忘了最初的宁静</div>
+  <div class="garden-photo-caption">Keep Thinking, Keep Breathing · 无论走多远,别忘了最初的宁静</div>
 </div>

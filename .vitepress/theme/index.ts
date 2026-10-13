@@ -4,12 +4,14 @@ import MusicToggle from './MusicToggle.vue'
 import BreakGames from './BreakGames.vue'
 import CourseMatrix from './CourseMatrix.vue'
 import AsideOutlineTracker from './AsideOutlineTracker.vue'
+import CollegeLogoFilter from './CollegeLogoFilter.vue'
 import './custom.css'
 
 export default {
   extends: DefaultTheme,
   Layout: () => {
     return h(DefaultTheme.Layout, null, {
+      'layout-top': () => h(CollegeLogoFilter),
       'nav-bar-content-after': () => h(MusicToggle),
       'aside-top': () => h(AsideOutlineTracker)
     })
