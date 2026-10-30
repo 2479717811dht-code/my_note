@@ -616,4 +616,19 @@ const filteredCourses = computed(() => {
 .dark .card-footer {
   border-top-color: rgba(255, 255, 255, 0.06);
 }
+
+.dark .tag-badge.math {
+  background: rgba(96, 140, 205, 0.16);
+  color: #a4c2ea;
+}
+
+.dark .tag-badge.lab {
+  background: rgba(72, 158, 108, 0.16);
+  color: #92d3ab;
+}
+
+.dark .tag-badge.life {
+  background: rgba(212, 158, 90, 0.16);
+  color: #ecc991;
+}
 </style>

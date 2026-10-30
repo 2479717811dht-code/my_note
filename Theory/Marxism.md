@@ -16,7 +16,7 @@
 
 [[toc]]
 
-<div style="display: block !important; text-align: center !important; margin: 60px auto 20px !important; padding: 20px 0 !important; width: 85% !important; border-top: 1px dashed #b1c2ca !important; border-bottom: 1px dashed #b1c2ca !important; font-family: '钟齐志莽行书', cursive !important; font-size: 20px !important; line-height: 1.8 !important; letter-spacing: 2px !important; font-weight: normal !important; font-style: italic !important; color: #2d4856 !important;">“ 是晚风，是星河，是我哼的歌，是宇宙坐标闪烁。”<span style="display: block !important; text-align: right !important; margin-top: 10px !important; font-size: 18px !important;">—— 房东的猫《和宇宙的温柔关联》</span></div>
+<div style="display: block !important; text-align: center !important; margin: 60px auto 20px !important; padding: 20px 0 !important; width: 85% !important; border-top: 1px dashed var(--wi-epigraph-border) !important; border-bottom: 1px dashed var(--wi-epigraph-border) !important; font-family: '钟齐志莽行书', cursive !important; font-size: 20px !important; line-height: 1.8 !important; letter-spacing: 2px !important; font-weight: normal !important; font-style: italic !important; color: var(--wi-quote-text) !important;">“ 是晚风，是星河，是我哼的歌，是宇宙坐标闪烁。”<span style="display: block !important; text-align: right !important; margin-top: 10px !important; font-size: 18px !important;">—— 房东的猫《和宇宙的温柔关联》</span></div>
 
 ## 一、导论
 

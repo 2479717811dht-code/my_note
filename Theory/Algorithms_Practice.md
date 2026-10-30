@@ -20,7 +20,7 @@ description: 经典数据结构实现、高频算法模板、动态规划、图�
 
 [[toc]]
 
-<div style="display: block !important; text-align: center !important; margin: 60px auto 20px !important; padding: 20px 0 !important; width: 85% !important; border-top: 1px dashed #b1c2ca !important; border-bottom: 1px dashed #b1c2ca !important; font-family: '钟齐志莽行书', cursive !important; font-size: 20px !important; line-height: 1.8 !important; letter-spacing: 2px !important; font-weight: normal !important; font-style: italic !important; color: #2d4856 !important;">“只要你敢不懦弱，凭什么我们要错过”<span style="display: block !important; text-align: right !important; margin-top: 10px !important; font-size: 18px !important;">—— 2026.7.20 龙佑街</span></div>
+<div style="display: block !important; text-align: center !important; margin: 60px auto 20px !important; padding: 20px 0 !important; width: 85% !important; border-top: 1px dashed var(--wi-epigraph-border) !important; border-bottom: 1px dashed var(--wi-epigraph-border) !important; font-family: '钟齐志莽行书', cursive !important; font-size: 20px !important; line-height: 1.8 !important; letter-spacing: 2px !important; font-weight: normal !important; font-style: italic !important; color: var(--wi-quote-text) !important;">“只要你敢不懦弱，凭什么我们要错过”<span style="display: block !important; text-align: right !important; margin-top: 10px !important; font-size: 18px !important;">—— 2026.7.20 龙佑街</span></div>
 
 ## Chapter 1：一些可用知识
 

@@ -20,7 +20,7 @@ description: 浙江大学普通物理学（甲）II 深度推导笔记：静电�
 
 [[toc]]
 
-<div style="display: block !important; text-align: center !important; margin: 60px auto 20px !important; padding: 20px 0 !important; width: 85% !important; border-top: 1px dashed #b1c2ca !important; border-bottom: 1px dashed #b1c2ca !important; font-family: '钟齐志莽行书', cursive !important; font-size: 20px !important; line-height: 1.8 !important; letter-spacing: 2px !important; font-weight: normal !important; font-style: italic !important; color: #2d4856 !important;">“ 原来你是我最想留住的幸运”<span style="display: block !important; text-align: right !important; margin-top: 10px !important; font-size: 18px !important;">—— 田馥甄《小幸运》</span></div>
+<div style="display: block !important; text-align: center !important; margin: 60px auto 20px !important; padding: 20px 0 !important; width: 85% !important; border-top: 1px dashed var(--wi-epigraph-border) !important; border-bottom: 1px dashed var(--wi-epigraph-border) !important; font-family: '钟齐志莽行书', cursive !important; font-size: 20px !important; line-height: 1.8 !important; letter-spacing: 2px !important; font-weight: normal !important; font-style: italic !important; color: var(--wi-quote-text) !important;">“ 原来你是我最想留住的幸运”<span style="display: block !important; text-align: right !important; margin-top: 10px !important; font-size: 18px !important;">—— 田馥甄《小幸运》</span></div>
 
 ---
 

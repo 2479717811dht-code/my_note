@@ -19,7 +19,7 @@
 
 > 代码使用说明: 各算法独立编译, 同名的 insert、search 等函数不要跨章混在一个源文件里. [完整源码与运行方法](./code/README.md)给出本笔记全部可运行示例; 题目原文中的填空保留, 后面提供完整答案.
 
-<div style="display: block !important; text-align: center !important; margin: 60px auto 20px !important; padding: 20px 0 !important; width: 85% !important; border-top: 1px dashed #b1c2ca !important; border-bottom: 1px dashed #b1c2ca !important; font-family: '钟齐志莽行书', cursive !important; font-size: 20px !important; line-height: 1.8 !important; letter-spacing: 2px !important; font-weight: normal !important; font-style: italic !important; color: var(--wi-quote-text) !important;">" 我终于, 自由了!"<span style="display: block !important; text-align: right !important; margin-top: 10px !important; font-size: 18px !important;">-- 2026.7.4 玉湖七幢</span></div>
+<div style="display: block !important; text-align: center !important; margin: 60px auto 20px !important; padding: 20px 0 !important; width: 85% !important; border-top: 1px dashed var(--wi-epigraph-border) !important; border-bottom: 1px dashed var(--wi-epigraph-border) !important; font-family: '钟齐志莽行书', cursive !important; font-size: 20px !important; line-height: 1.8 !important; letter-spacing: 2px !important; font-weight: normal !important; font-style: italic !important; color: var(--wi-quote-text) !important;">" 我终于, 自由了!"<span style="display: block !important; text-align: right !important; margin-top: 10px !important; font-size: 18px !important;">-- 2026.7.4 玉湖七幢</span></div>
 
 ## Chapter 1: Trees
 
