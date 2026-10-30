@@ -49,7 +49,7 @@ const handleEnded = () => {
     <!-- 音频元素：设置 preload="none" 避免首屏全量下载 -->
     <audio
       ref="audioRef"
-      :src="withBase('/song.mp3')"
+      :src="withBase('/audio/song.mp3')"
       preload="none"
       loop
       @ended="handleEnded"

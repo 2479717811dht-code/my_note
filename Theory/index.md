@@ -1,0 +1,481 @@
+---
+title: 理论课程集 · Theory Notes
+description: 浙江大学计算机科学与技术专业核心理论课与数理基石深度笔记全集
+---
+
+# 理论课程集 · Theory Notes
+
+<div class="garden-badge">💡 格物致知 · 体系化推导与知识沉淀</div>
+
+欢迎查阅专业理论课深度笔记。这里系统记录了从大一编程基石、大二软硬件核心，到高阶算法、数理物理基石与工程实战的完整推导过程与题型总结。
+
+---
+
+## 💻 计科核心专业课 · Computer Science Core
+
+计科专业核心骨架课程，建立底层系统认知与算法功底：
+
+<div class="garden-bento-grid">
+  <a href="./Fundamentals_of_Data_Structure.html" class="bento-card">
+    <div>
+      <div class="bento-card-top">
+        <span class="bento-code-badge">FDS</span>
+        <span class="bento-tag-badge core">专业必修</span>
+      </div>
+      <div class="bento-card-body">
+        <div class="bento-icon-box">🌲</div>
+        <div class="bento-content">
+          <span class="bento-title">数据结构基础</span>
+          <span class="bento-desc">线性表、二叉树与森林、AVL平衡树、二叉堆、散列表、图论最短路与并查集</span>
+        </div>
+      </div>
+    </div>
+    <div class="bento-card-footer">
+      <div class="bento-chips">
+        <span class="bento-chip">84K字精研</span>
+        <span class="bento-chip">Dijkstra/堆</span>
+      </div>
+      <span class="bento-arrow">→</span>
+    </div>
+  </a>
+
+  <a href="./Advanced_Data_Structure_Algorithm_Analysis.html" class="bento-card">
+    <div>
+      <div class="bento-card-top">
+        <span class="bento-code-badge">ADS</span>
+        <span class="bento-tag-badge core">高阶必修</span>
+      </div>
+      <div class="bento-card-body">
+        <div class="bento-icon-box">🚀</div>
+        <div class="bento-content">
+          <span class="bento-title">高级数据结构与算法</span>
+          <span class="bento-desc">AVL树、伸展树、B+树、左倾堆、斜堆、二项队列、摊还分析与近似算法</span>
+        </div>
+      </div>
+    </div>
+    <div class="bento-card-footer">
+      <div class="bento-chips">
+        <span class="bento-chip">260K字大扩充</span>
+        <span class="bento-chip">摊还分析</span>
+      </div>
+      <span class="bento-arrow">→</span>
+    </div>
+  </a>
+
+  <a href="./Computer_Organization.html" class="bento-card">
+    <div>
+      <div class="bento-card-top">
+        <span class="bento-code-badge">CO</span>
+        <span class="bento-tag-badge core">硬件系统</span>
+      </div>
+      <div class="bento-card-body">
+        <div class="bento-icon-box">🖥️</div>
+        <div class="bento-content">
+          <span class="bento-title">计算机组成与体系</span>
+          <span class="bento-desc">MIPS/RISC-V 指令集、单周期/流水线数据通路、结构/数据/控制冒险与Cache层次</span>
+        </div>
+      </div>
+    </div>
+    <div class="bento-card-footer">
+      <div class="bento-chips">
+        <span class="bento-chip">流水线微架构</span>
+        <span class="bento-chip">Cache映射</span>
+      </div>
+      <span class="bento-arrow">→</span>
+    </div>
+  </a>
+
+  <a href="./Computer_Organization_Midterm.html" class="bento-card">
+    <div>
+      <div class="bento-card-top">
+        <span class="bento-code-badge">CO-MID</span>
+        <span class="bento-tag-badge core">备考宝典</span>
+      </div>
+      <div class="bento-card-body">
+        <div class="bento-icon-box">🎯</div>
+        <div class="bento-content">
+          <span class="bento-title">计组期中全景手册与速查卡</span>
+          <span class="bento-desc">单周期数据通路推导、流水线冲突处理详解、ALU/浮点运算与考场速查卡</span>
+        </div>
+      </div>
+    </div>
+    <div class="bento-card-footer">
+      <div class="bento-chips">
+        <span class="bento-chip">265KB完备主手册</span>
+        <span class="bento-chip">考场速查卡</span>
+      </div>
+      <span class="bento-arrow">→</span>
+    </div>
+  </a>
+
+  <a href="./Digital_Logic_Design.html" class="bento-card">
+    <div>
+      <div class="bento-card-top">
+        <span class="bento-code-badge">DLD</span>
+        <span class="bento-tag-badge core">硬件基石</span>
+      </div>
+      <div class="bento-card-body">
+        <div class="bento-icon-box">⚡</div>
+        <div class="bento-content">
+          <span class="bento-title">数字逻辑设计</span>
+          <span class="bento-desc">布尔代数、卡诺图化简、组合逻辑设计、时序逻辑电路与有限状态机 FSM</span>
+        </div>
+      </div>
+    </div>
+    <div class="bento-card-footer">
+      <div class="bento-chips">
+        <span class="bento-chip">卡诺图</span>
+        <span class="bento-chip">FSM状态机</span>
+      </div>
+      <span class="bento-arrow">→</span>
+    </div>
+  </a>
+
+  <a href="./Fundamentals_of_Programming.html" class="bento-card">
+    <div>
+      <div class="bento-card-top">
+        <span class="bento-code-badge">FPA</span>
+        <span class="bento-tag-badge core">编程基石</span>
+      </div>
+      <div class="bento-card-body">
+        <div class="bento-icon-box">💻</div>
+        <div class="bento-content">
+          <span class="bento-title">程序设计与算法基础</span>
+          <span class="bento-desc">C/C++ 核心语法规范、指针与内存模型、结构体、面向对象与高频例题</span>
+        </div>
+      </div>
+    </div>
+    <div class="bento-card-footer">
+      <div class="bento-chips">
+        <span class="bento-chip">指针机制</span>
+        <span class="bento-chip">经典题解</span>
+      </div>
+      <span class="bento-arrow">→</span>
+    </div>
+  </a>
+</div>
+
+---
+
+## 📐 数理基石与工程物理 · Mathematics & Physics
+
+数学与自然科学底层基石，构建严谨形式逻辑与物理直觉：
+
+<div class="garden-bento-grid">
+  <a href="./Probability_and_Mathematical_Statistics.html" class="bento-card">
+    <div>
+      <div class="bento-card-top">
+        <span class="bento-code-badge">PMS</span>
+        <span class="bento-tag-badge math">数理全章</span>
+      </div>
+      <div class="bento-card-body">
+        <div class="bento-icon-box">🎲</div>
+        <div class="bento-content">
+          <span class="bento-title">概率论与数理统计</span>
+          <span class="bento-desc">随机事件与概率、多维随机变量、极限定理、三大抽样分布、参数估计与假设检验</span>
+        </div>
+      </div>
+    </div>
+    <div class="bento-card-footer">
+      <div class="bento-chips">
+        <span class="bento-chip">170K 9章全收录</span>
+        <span class="bento-chip">置信区间推导</span>
+      </div>
+      <span class="bento-arrow">→</span>
+    </div>
+  </a>
+
+  <a href="./Discrete_Mathematics.html" class="bento-card">
+    <div>
+      <div class="bento-card-top">
+        <span class="bento-code-badge">DM</span>
+        <span class="bento-tag-badge math">数理基石</span>
+      </div>
+      <div class="bento-card-body">
+        <div class="bento-icon-box">📐</div>
+        <div class="bento-content">
+          <span class="bento-title">离散数学</span>
+          <span class="bento-desc">命题与谓词逻辑、集合与关系、等价偏序集、图论与树、组合计数与母函数</span>
+        </div>
+      </div>
+    </div>
+    <div class="bento-card-footer">
+      <div class="bento-chips">
+        <span class="bento-chip">偏序关系</span>
+        <span class="bento-chip">图连通度</span>
+      </div>
+      <span class="bento-arrow">→</span>
+    </div>
+  </a>
+
+  <a href="./General_Physics.html" class="bento-card">
+    <div>
+      <div class="bento-card-top">
+        <span class="bento-code-badge">PHY</span>
+        <span class="bento-tag-badge math">物理总览</span>
+      </div>
+      <div class="bento-card-body">
+        <div class="bento-icon-box">🌌</div>
+        <div class="bento-content">
+          <span class="bento-title">普通物理学（甲）课程导读</span>
+          <span class="bento-desc">大物 I & II 核心脉络图谱、经典力热电光知识网络与实验课理论衔接</span>
+        </div>
+      </div>
+    </div>
+    <div class="bento-card-footer">
+      <div class="bento-chips">
+        <span class="bento-chip">I & II 全览</span>
+        <span class="bento-chip">学科衔接</span>
+      </div>
+      <span class="bento-arrow">→</span>
+    </div>
+  </a>
+
+  <a href="./General_Physics_I.html" class="bento-card">
+    <div>
+      <div class="bento-card-top">
+        <span class="bento-code-badge">PHY-I</span>
+        <span class="bento-tag-badge math">力学与热学</span>
+      </div>
+      <div class="bento-card-body">
+        <div class="bento-icon-box">🍎</div>
+        <div class="bento-content">
+          <span class="bento-title">普通物理学（甲）I</span>
+          <span class="bento-desc">质点动力学、牛顿定律、动量角动量守恒、刚体定轴转动、机械振动与波动、热力学基础</span>
+        </div>
+      </div>
+    </div>
+    <div class="bento-card-footer">
+      <div class="bento-chips">
+        <span class="bento-chip">角动量守恒</span>
+        <span class="bento-chip">卡诺循环</span>
+      </div>
+      <span class="bento-arrow">→</span>
+    </div>
+  </a>
+
+  <a href="./General_Physics_II.html" class="bento-card">
+    <div>
+      <div class="bento-card-top">
+        <span class="bento-code-badge">PHY-II</span>
+        <span class="bento-tag-badge math">电磁与光学</span>
+      </div>
+      <div class="bento-card-body">
+        <div class="bento-icon-box">⚡</div>
+        <div class="bento-content">
+          <span class="bento-title">普通物理学（甲）II</span>
+          <span class="bento-desc">高斯定理、安培环路定理、法拉第电磁感应、麦克斯韦方程组、波动光学与近代物理</span>
+        </div>
+      </div>
+    </div>
+    <div class="bento-card-footer">
+      <div class="bento-chips">
+        <span class="bento-chip">136K长篇详解</span>
+        <span class="bento-chip">麦氏方程组</span>
+      </div>
+      <span class="bento-arrow">→</span>
+    </div>
+  </a>
+
+  <a href="./Mechanics.html" class="bento-card">
+    <div>
+      <div class="bento-card-top">
+        <span class="bento-code-badge">MECH</span>
+        <span class="bento-tag-badge math">工程力学</span>
+      </div>
+      <div class="bento-card-body">
+        <div class="bento-icon-box">⚙️</div>
+        <div class="bento-content">
+          <span class="bento-title">力学导论 · 期末全景复习</span>
+          <span class="bento-desc">动量与能量定理、刚体动力学、流体力学初步、模拟考题精选与考前速记导图</span>
+        </div>
+      </div>
+    </div>
+    <div class="bento-card-footer">
+      <div class="bento-chips">
+        <span class="bento-chip">期末总复习</span>
+        <span class="bento-chip">考前速记</span>
+      </div>
+      <span class="bento-arrow">→</span>
+    </div>
+  </a>
+</div>
+
+---
+
+## 🛠️ 编程算法与工程实战 · Practice & Engineering
+
+日常算法刷题积累与硬件描述语言核心规范：
+
+<div class="garden-bento-grid">
+  <a href="./Algorithms_Practice.html" class="bento-card">
+    <div>
+      <div class="bento-card-top">
+        <span class="bento-code-badge">ALGO</span>
+        <span class="bento-tag-badge core">算法实战</span>
+      </div>
+      <div class="bento-card-body">
+        <div class="bento-icon-box">💡</div>
+        <div class="bento-content">
+          <span class="bento-title">算法设计与刷题实战手册</span>
+          <span class="bento-desc">112KB 完整刷题总结，涵盖高频数据结构实现、动态规划状态转移、图论与树算法模板</span>
+        </div>
+      </div>
+    </div>
+    <div class="bento-card-footer">
+      <div class="bento-chips">
+        <span class="bento-chip">112KB算法库</span>
+        <span class="bento-chip">高频题型模板</span>
+      </div>
+      <span class="bento-arrow">→</span>
+    </div>
+  </a>
+
+  <a href="./Verilog_HDL.html" class="bento-card">
+    <div>
+      <div class="bento-card-top">
+        <span class="bento-code-badge">VERILOG</span>
+        <span class="bento-tag-badge core">硬件工程</span>
+      </div>
+      <div class="bento-card-body">
+        <div class="bento-icon-box">🔌</div>
+        <div class="bento-content">
+          <span class="bento-title">Verilog HDL 硬件描述语言设计基础</span>
+          <span class="bento-desc">Verilog 语法规范、阻塞与非阻塞赋值避坑、组合/时序逻辑建模与 FSM 规范写法</span>
+        </div>
+      </div>
+    </div>
+    <div class="bento-card-footer">
+      <div class="bento-chips">
+        <span class="bento-chip">硬件语法速查</span>
+        <span class="bento-chip">FSM工程写法</span>
+      </div>
+      <span class="bento-arrow">→</span>
+    </div>
+  </a>
+</div>
+
+---
+
+## 🚩 通识人文与思政 · General Education
+
+通识核心与思想政治理论，期末背诵与复习精要：
+
+<div class="garden-bento-grid">
+  <a href="./Marxism.html" class="bento-card">
+    <div>
+      <div class="bento-card-top">
+        <span class="bento-code-badge">MARX</span>
+        <span class="bento-tag-badge math">思想政治</span>
+      </div>
+      <div class="bento-card-body">
+        <div class="bento-icon-box">🚩</div>
+        <div class="bento-content">
+          <span class="bento-title">马克思主义基本原理</span>
+          <span class="bento-desc">唯物辩证法三大规律、实践与认识论、资本主义生产与剩余价值、唯物史观核心考点</span>
+        </div>
+      </div>
+    </div>
+    <div class="bento-card-footer">
+      <div class="bento-chips">
+        <span class="bento-chip">考点大纲</span>
+        <span class="bento-chip">考研背诵</span>
+      </div>
+      <span class="bento-arrow">→</span>
+    </div>
+  </a>
+
+  <a href="./Situation_and_Policy.html" class="bento-card">
+    <div>
+      <div class="bento-card-top">
+        <span class="bento-code-badge">SP</span>
+        <span class="bento-tag-badge math">时事通识</span>
+      </div>
+      <div class="bento-card-body">
+        <div class="bento-icon-box">📜</div>
+        <div class="bento-content">
+          <span class="bento-title">形势与政策 I · 背诵版复习精研</span>
+          <span class="bento-desc">国内外时事热点专题系统梳理、政策背景深度解析与期末关键题干背诵资料</span>
+        </div>
+      </div>
+    </div>
+    <div class="bento-card-footer">
+      <div class="bento-chips">
+        <span class="bento-chip">66KB精研背诵</span>
+        <span class="bento-chip">期末专题</span>
+      </div>
+      <span class="bento-arrow">→</span>
+    </div>
+  </a>
+</div>
+
+---
+
+## 理论进阶路线 · Study Roadmap
+
+::: tip 💡 计算机科学理论学习递进建议
+1. **编程思维与数理筑基**: 以"程序设计基础"熟悉内存、指针与结构化思维，通过"离散数学"建立严谨的形式化推导习惯，借助"普通物理学"与"概率统计"拓宽科学唯象与随机建模视野。
+2. **算法与数据结构**: 深研"数据结构基础 (FDS)"，吃透线性表、树、堆、图与并查集；随后衔接"高级数据结构与算法 (ADS)"的摊还分析与平衡树进阶，配合"算法实战手册"刷题沉淀。
+3. **软硬件协同自底向上**: 由"数字逻辑设计"理解门电路、时序逻辑与有限状态机；再跃升至"计算机组成与体系"推导单周期与五级流水线数据通路，结合"期中备考手册"构建清晰的体系框架。
+:::
+
+---
+
+## 助学智囊团 · AI Research Assistants
+
+遇到复杂的概念推导、数学证明或代码调试时，可随时借助以下 AI 助手：
+
+<div class="ai-assistant-grid">
+  <a href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer" class="ai-assistant-card">
+    <div class="ai-card-icon">🤖</div>
+    <div class="ai-card-info">
+      <span class="ai-card-name">ChatGPT</span>
+      <span class="ai-card-desc">综合能力强，适合概念推导、代码实现与综合答疑</span>
+    </div>
+  </a>
+
+  <a href="https://claude.ai/" target="_blank" rel="noopener noreferrer" class="ai-assistant-card">
+    <div class="ai-card-info">🧠</div>
+    <div class="ai-card-info">
+      <span class="ai-card-name">Claude</span>
+      <span class="ai-card-desc">逻辑清晰，长文本学术资料阅读与严密推理极佳</span>
+    </div>
+  </a>
+
+  <a href="https://deepseek.com/" target="_blank" rel="noopener noreferrer" class="ai-assistant-card">
+    <div class="ai-card-info">⚡</div>
+    <div class="ai-card-info">
+      <span class="ai-card-name">DeepSeek</span>
+      <span class="ai-card-desc">国产推理先锋，擅长数学公式推导与复杂代码分析</span>
+    </div>
+  </a>
+
+  <a href="https://gemini.google.com/" target="_blank" rel="noopener noreferrer" class="ai-assistant-card">
+    <div class="ai-card-info">💎</div>
+    <div class="ai-card-info">
+      <span class="ai-card-name">Gemini</span>
+      <span class="ai-card-desc">Google 旗下多模态模型，支持海量上下文与多模态图表</span>
+    </div>
+  </a>
+
+  <a href="https://kimi.moonshot.cn/" target="_blank" rel="noopener noreferrer" class="ai-assistant-card">
+    <div class="ai-card-info">🌙</div>
+    <div class="ai-card-info">
+      <span class="ai-card-name">Kimi</span>
+      <span class="ai-card-desc">长文本阅读专家，擅长期末论文研读与复习资料总结</span>
+    </div>
+  </a>
+
+  <a href="https://grok.com/" target="_blank" rel="noopener noreferrer" class="ai-assistant-card">
+    <div class="ai-card-info">🚀</div>
+    <div class="ai-card-info">
+      <span class="ai-card-name">Grok</span>
+      <span class="ai-card-desc">风格直接幽默，快速探讨技术观点与前沿热点</span>
+    </div>
+  </a>
+</div>
+
+<div class="garden-photo-frame">
+  <img src="/20260602162149_1020_180.jpg" alt="Keep Moving Forward" />
+  <div class="garden-photo-caption">Strive for Greatness · 积跬步以至千里，致广大而尽精微</div>
+</div>

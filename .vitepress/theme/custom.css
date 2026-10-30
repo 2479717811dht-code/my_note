@@ -2072,3 +2072,9 @@ img[src*="cute.gif"]:hover {
   display: block;
   text-align: center;
 }
+
+/* Wrapper for the homepage garden badge (replaces inline styles). */
+.garden-badge-wrap {
+  text-align: center;
+  margin-top: 1.8rem;
+}

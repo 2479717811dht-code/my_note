@@ -14,7 +14,7 @@ description: 计算机系统硬件实验：单周期与流水线 CPU 微架构�
 ## 核心实验模块
 
 <div class="garden-bento-grid">
-  <a href="./Lab_for_all/Computer_Organization/IP2SOC/README.html" class="bento-card">
+  <a href="./Computer_Organization/IP2SOC/" class="bento-card">
     <div>
       <div class="bento-card-top">
         <span class="bento-code-badge">Lab 02</span>

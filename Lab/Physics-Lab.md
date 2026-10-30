@@ -16,7 +16,7 @@ description: 浙江大学普通物理学实验 I & II 完整实验报告合集�
 点击卡片直接进入各次实验报告完整正文与数据图表：
 
 <div class="garden-bento-grid">
-  <a href="./Lab_for_all/Physics_Lab/I/碰撞实验/report.html" class="bento-card">
+  <a href="./Physics_Lab/I/碰撞实验/report.html" class="bento-card">
     <div>
       <div class="bento-card-top">
         <span class="bento-code-badge">Lab 01</span>
@@ -39,7 +39,7 @@ description: 浙江大学普通物理学实验 I & II 完整实验报告合集�
     </div>
   </a>
 
-  <a href="./Lab_for_all/Physics_Lab/I/铁磁材料的磁滞回线和基本磁化曲线/report.html" class="bento-card">
+  <a href="./Physics_Lab/I/铁磁材料的磁滞回线和基本磁化曲线/report.html" class="bento-card">
     <div>
       <div class="bento-card-top">
         <span class="bento-code-badge">Lab 02</span>
@@ -62,7 +62,7 @@ description: 浙江大学普通物理学实验 I & II 完整实验报告合集�
     </div>
   </a>
 
-  <a href="./Lab_for_all/Physics_Lab/I/万用表的设计/report.html" class="bento-card">
+  <a href="./Physics_Lab/I/万用表的设计/report.html" class="bento-card">
     <div>
       <div class="bento-card-top">
         <span class="bento-code-badge">Lab 03</span>
@@ -85,7 +85,7 @@ description: 浙江大学普通物理学实验 I & II 完整实验报告合集�
     </div>
   </a>
 
-  <a href="./Lab_for_all/Physics_Lab/I/惠斯登电桥/report.html" class="bento-card">
+  <a href="./Physics_Lab/I/惠斯登电桥/report.html" class="bento-card">
     <div>
       <div class="bento-card-top">
         <span class="bento-code-badge">Lab 04</span>
@@ -108,7 +108,7 @@ description: 浙江大学普通物理学实验 I & II 完整实验报告合集�
     </div>
   </a>
 
-  <a href="./Lab_for_all/Physics_Lab/I/用双臂电桥测低电阻/report.html" class="bento-card">
+  <a href="./Physics_Lab/I/用双臂电桥测低电阻/report.html" class="bento-card">
     <div>
       <div class="bento-card-top">
         <span class="bento-code-badge">Lab 05</span>
@@ -131,7 +131,7 @@ description: 浙江大学普通物理学实验 I & II 完整实验报告合集�
     </div>
   </a>
 
-  <a href="./Lab_for_all/Physics_Lab/I/非平衡电桥/report.html" class="bento-card">
+  <a href="./Physics_Lab/I/非平衡电桥/report.html" class="bento-card">
     <div>
       <div class="bento-card-top">
         <span class="bento-code-badge">Lab 06</span>
@@ -154,7 +154,7 @@ description: 浙江大学普通物理学实验 I & II 完整实验报告合集�
     </div>
   </a>
 
-  <a href="./Lab_for_all/Physics_Lab/I/固定均匀弦振动实验/report.html" class="bento-card">
+  <a href="./Physics_Lab/I/固定均匀弦振动实验/report.html" class="bento-card">
     <div>
       <div class="bento-card-top">
         <span class="bento-code-badge">Lab 07</span>
@@ -177,7 +177,7 @@ description: 浙江大学普通物理学实验 I & II 完整实验报告合集�
     </div>
   </a>
 
-  <a href="./Lab_for_all/Physics_Lab/I/金属材料杨氏模量的测定/report.html" class="bento-card">
+  <a href="./Physics_Lab/I/金属材料杨氏模量的测定/report.html" class="bento-card">
     <div>
       <div class="bento-card-top">
         <span class="bento-code-badge">Lab 08</span>
@@ -200,7 +200,7 @@ description: 浙江大学普通物理学实验 I & II 完整实验报告合集�
     </div>
   </a>
 
-  <a href="./Lab_for_all/Physics_Lab/I/示波器的应用/report.html" class="bento-card">
+  <a href="./Physics_Lab/I/示波器的应用/report.html" class="bento-card">
     <div>
       <div class="bento-card-top">
         <span class="bento-code-badge">Lab 09</span>
@@ -223,7 +223,7 @@ description: 浙江大学普通物理学实验 I & II 完整实验报告合集�
     </div>
   </a>
 
-  <a href="./Lab_for_all/Physics_Lab/I/用霍尔法测直流圆线圈与亥姆霍兹线圈磁场/report.html" class="bento-card">
+  <a href="./Physics_Lab/I/用霍尔法测直流圆线圈与亥姆霍兹线圈磁场/report.html" class="bento-card">
     <div>
       <div class="bento-card-top">
         <span class="bento-code-badge">Lab 10</span>
@@ -246,7 +246,7 @@ description: 浙江大学普通物理学实验 I & II 完整实验报告合集�
     </div>
   </a>
 
-  <a href="./Lab_for_all/Physics_Lab/I/交流电路功率因数实验、组装整流器（同时做两个实验内容）/report.html" class="bento-card">
+  <a href="./Physics_Lab/I/交流电路功率因数实验、组装整流器（同时做两个实验内容）/report.html" class="bento-card">
     <div>
       <div class="bento-card-top">
         <span class="bento-code-badge">Lab 11</span>
@@ -269,7 +269,7 @@ description: 浙江大学普通物理学实验 I & II 完整实验报告合集�
     </div>
   </a>
 
-  <a href="./Lab_for_all/Physics_Lab/I/弗兰克赫兹实验/report.html" class="bento-card">
+  <a href="./Physics_Lab/I/弗兰克赫兹实验/report.html" class="bento-card">
     <div>
       <div class="bento-card-top">
         <span class="bento-code-badge">Lab 12</span>
@@ -298,7 +298,7 @@ description: 浙江大学普通物理学实验 I & II 完整实验报告合集�
 ## 物理实验（二）· 设计性与虚拟仿真实验
 
 <div class="garden-bento-grid">
-  <a href="./Lab_for_all/Physics_Lab/II/Week_1,2-北斗导航定位模拟设计与应用/formal/formal.html" class="bento-card">
+  <a href="./Physics_Lab/II/Week_1-2-北斗导航定位模拟设计与应用/formal/formal.html" class="bento-card">
     <div>
       <div class="bento-card-top">
         <span class="bento-code-badge">Lab 13</span>
@@ -321,7 +321,7 @@ description: 浙江大学普通物理学实验 I & II 完整实验报告合集�
     </div>
   </a>
 
-  <a href="./Lab_for_all/Physics_Lab/II/Week_5-国家级一流本科课程线上虚拟仿真实验/report.html" class="bento-card">
+  <a href="./Physics_Lab/II/Week_5-国家级一流本科课程线上虚拟仿真实验/report.html" class="bento-card">
     <div>
       <div class="bento-card-top">
         <span class="bento-code-badge">Lab 14</span>

@@ -7,8 +7,6 @@ import { sub } from '@mdit/plugin-sub'
 import { sup } from '@mdit/plugin-sup'
 import { mark } from '@mdit/plugin-mark'
 
-console.log('>>> 当前 VitePress 配置已加载 <<<')
-
 // 让 Typora 的 [toc] 在 VitePress 中自动变成 [[toc]]
 const typoraTocCompat = {
   name: 'typora-toc-compat',
@@ -46,8 +44,14 @@ export default withMermaid(
     // 读取 Git 提交时间，显示文章最后更新时间
     lastUpdated: true,
 
-    // 允许代码文件引用（如 .c, .tex, .ppt 等静态非 html 源码文件链接）
-    ignoreDeadLinks: true,
+    // 死链检查：构建时校验所有站内链接。
+    // 白名单仅放行两类"本地 vault 外部引用"——它们在本地 Obsidian 中有效，但刻意不入库发布：
+    //   1) ../ 开头的链接（note/、lesson/ 等本地目录）
+    //   2) ./code/ 下的链接（ADS 笔记引用的本地源码目录）
+    ignoreDeadLinks: [
+      (url: string) => url.startsWith('../') || url.startsWith('./../'),
+      (url: string) => url.startsWith('./code/')
+    ],
 
     markdown: {
       // 所有代码块默认显示行号
@@ -106,7 +110,7 @@ export default withMermaid(
         {
           text: '理论课程',
           items: [
-            { text: '理论课全景导读', link: '/Theory/theory' },
+            { text: '理论课全景导读', link: '/Theory/' },
             { text: '计科核心专业课', link: '/Theory/Fundamentals_of_Data_Structure' },
             { text: '数理基石与物理', link: '/Theory/Probability_and_Mathematical_Statistics' },
             { text: '编程与算法实战', link: '/Theory/Algorithms_Practice' },
@@ -116,7 +120,7 @@ export default withMermaid(
         {
           text: '实验与大作业',
           items: [
-            { text: '实验总览导读', link: '/Lab/lab' },
+            { text: '实验总览导读', link: '/Lab/' },
             { text: '数字逻辑设计实验 (DLD)', link: '/Lab/Digital-Logic-Design-Lab' },
             { text: '计算机组成体系实验 (CO)', link: '/Lab/Computer-Organization-Lab' },
             { text: '普通物理学实验集 (PHY)', link: '/Lab/Physics-Lab' }
@@ -124,11 +128,11 @@ export default withMermaid(
         },
         {
           text: '知识图谱',
-          link: '/Cover/logic'
+          link: '/Guide/logic'
         },
         {
           text: '休息一下',
-          link: '/Break/break'
+          link: '/Break/'
         }
       ],
 
@@ -147,7 +151,7 @@ export default withMermaid(
           items: [
             {
               text: '知识图谱与选课逻辑',
-              link: '/Cover/logic'
+              link: '/Guide/logic'
             }
           ]
         },
@@ -157,7 +161,7 @@ export default withMermaid(
           items: [
             {
               text: 'Read Me · 理论课总览',
-              link: '/Theory/theory'
+              link: '/Theory/'
             },
             {
               text: '💻 计科核心专业课',
@@ -165,7 +169,7 @@ export default withMermaid(
               items: [
                 {
                   text: 'Fundamentals of Programming (FPA)',
-                  link: '/Theory/note-cs-code-cleaned'
+                  link: '/Theory/Fundamentals_of_Programming'
                 },
                 {
                   text: 'Fundamentals of Data Structure (FDS)',
@@ -185,7 +189,7 @@ export default withMermaid(
                 },
                 {
                   text: 'Digital Logic Design (DLD)',
-                  link: '/Theory/dldnote'
+                  link: '/Theory/Digital_Logic_Design'
                 }
               ]
             },
@@ -255,7 +259,7 @@ export default withMermaid(
           items: [
             {
               text: 'Read Me · 实验总览',
-              link: '/Lab/lab'
+              link: '/Lab/'
             },
             {
               text: '⚡ Digital Logic Design 实验',
@@ -267,25 +271,25 @@ export default withMermaid(
                 },
                 {
                   text: '🎮 期末大作业设计报告',
-                  link: '/Lab/Lab_for_all/Digital_Logic_Design/projects/Degital_Logic_Design_Final_Porject/report/Report'
+                  link: '/Lab/Digital_Logic_Design/projects/Digital_Logic_Design_Final_Project/report/Report'
                 },
                 {
                   text: '13 次系列实验报告',
                   collapsed: true,
                   items: [
-                    { text: 'Lab 1 · 电子仪器与信号测量', link: '/Lab/Lab_for_all/Digital_Logic_Design/Lab/3.2/第一次实验报告-邓欢桐、杨海涛' },
-                    { text: 'Lab 2 · 基本开关电路', link: '/Lab/Lab_for_all/Digital_Logic_Design/Lab/3.9/第二次实验报告-邓欢桐、杨海涛' },
-                    { text: 'Lab 3 · 集成逻辑门电路测试', link: '/Lab/Lab_for_all/Digital_Logic_Design/Lab/3.16/第三次实验报告-邓欢桐、杨海涛' },
-                    { text: 'Lab 4 · EDA平台与环境运用', link: '/Lab/Lab_for_all/Digital_Logic_Design/Lab/3.23/第四次实验报告' },
-                    { text: 'Lab 5 · 变量译码器设计与应用', link: '/Lab/Lab_for_all/Digital_Logic_Design/Lab/3.30/第五次实验报告-邓欢桐、杨海涛' },
-                    { text: 'Lab 6 · 7段数码管显示译码器', link: '/Lab/Lab_for_all/Digital_Logic_Design/Lab/4.13/第六次实验报告-邓欢桐、杨海涛' },
-                    { text: 'Lab 7 · 多路选择器设计及应用', link: '/Lab/Lab_for_all/Digital_Logic_Design/Lab/4.20/第七次实验报告（邓欢桐、杨海涛）' },
-                    { text: 'Lab 8 · 加法器设计与应用', link: '/Lab/Lab_for_all/Digital_Logic_Design/Lab/4.27/第八次实验报告-邓欢桐、杨海涛' },
-                    { text: 'Lab 9 · 锁存器与触发器基本原理', link: '/Lab/Lab_for_all/Digital_Logic_Design/Lab/5.11/第九次实验报告-邓欢桐、杨海涛' },
-                    { text: 'Lab 10 · 同步时序电路设计', link: '/Lab/Lab_for_all/Digital_Logic_Design/Lab/5.18/第十次实验报告-邓欢桐、杨海涛' },
-                    { text: 'Lab 11 · 寄存器及传输设计', link: '/Lab/Lab_for_all/Digital_Logic_Design/Lab/5.25/第十一次实验报告-邓欢桐，杨海涛' },
-                    { text: 'Lab 12 · 移位寄存器设计与应用', link: '/Lab/Lab_for_all/Digital_Logic_Design/Lab/6.1/第十二次实验报告-邓欢桐、杨海涛' },
-                    { text: 'Lab 13 · 计数器定时器设计与应用', link: '/Lab/Lab_for_all/Digital_Logic_Design/Lab/6.8/第十三次实验报告-邓欢桐、杨海涛' }
+                    { text: 'Lab 1 · 电子仪器与信号测量', link: '/Lab/Digital_Logic_Design/reports/Lab01/第一次实验报告-邓欢桐、杨海涛' },
+                    { text: 'Lab 2 · 基本开关电路', link: '/Lab/Digital_Logic_Design/reports/Lab02/第二次实验报告-邓欢桐、杨海涛' },
+                    { text: 'Lab 3 · 集成逻辑门电路测试', link: '/Lab/Digital_Logic_Design/reports/Lab03/第三次实验报告-邓欢桐、杨海涛' },
+                    { text: 'Lab 4 · EDA平台与环境运用', link: '/Lab/Digital_Logic_Design/reports/Lab04/第四次实验报告' },
+                    { text: 'Lab 5 · 变量译码器设计与应用', link: '/Lab/Digital_Logic_Design/reports/Lab05/第五次实验报告-邓欢桐、杨海涛' },
+                    { text: 'Lab 6 · 7段数码管显示译码器', link: '/Lab/Digital_Logic_Design/reports/Lab06/第六次实验报告-邓欢桐、杨海涛' },
+                    { text: 'Lab 7 · 多路选择器设计及应用', link: '/Lab/Digital_Logic_Design/reports/Lab07/第七次实验报告（邓欢桐、杨海涛）' },
+                    { text: 'Lab 8 · 加法器设计与应用', link: '/Lab/Digital_Logic_Design/reports/Lab08/第八次实验报告-邓欢桐、杨海涛' },
+                    { text: 'Lab 9 · 锁存器与触发器基本原理', link: '/Lab/Digital_Logic_Design/reports/Lab09/第九次实验报告-邓欢桐、杨海涛' },
+                    { text: 'Lab 10 · 同步时序电路设计', link: '/Lab/Digital_Logic_Design/reports/Lab10/第十次实验报告-邓欢桐、杨海涛' },
+                    { text: 'Lab 11 · 寄存器及传输设计', link: '/Lab/Digital_Logic_Design/reports/Lab11/第十一次实验报告-邓欢桐，杨海涛' },
+                    { text: 'Lab 12 · 移位寄存器设计与应用', link: '/Lab/Digital_Logic_Design/reports/Lab12/第十二次实验报告-邓欢桐、杨海涛' },
+                    { text: 'Lab 13 · 计数器定时器设计与应用', link: '/Lab/Digital_Logic_Design/reports/Lab13/第十三次实验报告-邓欢桐、杨海涛' }
                   ]
                 }
               ]
@@ -300,7 +304,7 @@ export default withMermaid(
                 },
                 {
                   text: 'OExp02 · IP2SOC 片上系统设计',
-                  link: '/Lab/Lab_for_all/Computer_Organization/IP2SOC/README'
+                  link: '/Lab/Computer_Organization/IP2SOC/'
                 }
               ]
             },
@@ -310,15 +314,15 @@ export default withMermaid(
               items: [
                 {
                   text: 'Project 1 · 检索性能评测 (Search)',
-                  link: '/Lab/Lab_for_all/Fundamentals_of_Data_Structure/Project1_Search/project1'
+                  link: '/Lab/Fundamentals_of_Data_Structure/Project1_Search/project1'
                 },
                 {
                   text: 'Project 2 · 多项式与二叉堆应用',
-                  link: '/Lab/Lab_for_all/Fundamentals_of_Data_Structure/Project2_Polynomial/project2'
+                  link: '/Lab/Fundamentals_of_Data_Structure/Project2_Polynomial/project2'
                 },
                 {
                   text: 'Project 3 · 网格路由与图论最短路径',
-                  link: '/Lab/Lab_for_all/Fundamentals_of_Data_Structure/Project3_Graph_Routing/report of project3'
+                  link: '/Lab/Fundamentals_of_Data_Structure/Project3_Graph_Routing/report'
                 }
               ]
             },
@@ -328,19 +332,19 @@ export default withMermaid(
               items: [
                 {
                   text: 'Project 1 · SkipList 跳表性能基准评测',
-                  link: '/Lab/Lab_for_all/Advanced_Data_Structure/Project1_SkipList/README'
+                  link: '/Lab/Advanced_Data_Structure/Project1_SkipList/'
                 },
                 {
                   text: 'Project 2 · 斐波那契堆路网最短路径分析',
-                  link: '/Lab/Lab_for_all/Advanced_Data_Structure/Project2_ShortestPath/report_two_heap_history'
+                  link: '/Lab/Advanced_Data_Structure/Project2_ShortestPath/report'
                 },
                 {
                   text: 'Project 3 · 最优二叉搜索树动态规划',
-                  link: '/Lab/Lab_for_all/Advanced_Data_Structure/Project3_OBST/report'
+                  link: '/Lab/Advanced_Data_Structure/Project3_OBST/report'
                 },
                 {
                   text: 'Project 4 · 最大团回溯与分支限界',
-                  link: '/Lab/Lab_for_all/Advanced_Data_Structure/Project4_MaxClique/report'
+                  link: '/Lab/Advanced_Data_Structure/Project4_MaxClique/report'
                 }
               ]
             },
@@ -354,59 +358,59 @@ export default withMermaid(
                 },
                 {
                   text: 'Lab 01 · 碰撞实验与动量守恒',
-                  link: '/Lab/Lab_for_all/Physics_Lab/I/碰撞实验/report'
+                  link: '/Lab/Physics_Lab/I/碰撞实验/report'
                 },
                 {
                   text: 'Lab 02 · 铁磁材料动态磁滞回线',
-                  link: '/Lab/Lab_for_all/Physics_Lab/I/铁磁材料的磁滞回线和基本磁化曲线/report'
+                  link: '/Lab/Physics_Lab/I/铁磁材料的磁滞回线和基本磁化曲线/report'
                 },
                 {
                   text: 'Lab 03 · 万用电表的设计与校准',
-                  link: '/Lab/Lab_for_all/Physics_Lab/I/万用表的设计/report'
+                  link: '/Lab/Physics_Lab/I/万用表的设计/report'
                 },
                 {
                   text: 'Lab 04 · 惠斯登单臂电桥测中值电阻',
-                  link: '/Lab/Lab_for_all/Physics_Lab/I/惠斯登电桥/report'
+                  link: '/Lab/Physics_Lab/I/惠斯登电桥/report'
                 },
                 {
                   text: 'Lab 05 · 开尔文双臂电桥测低电阻',
-                  link: '/Lab/Lab_for_all/Physics_Lab/I/用双臂电桥测低电阻/report'
+                  link: '/Lab/Physics_Lab/I/用双臂电桥测低电阻/report'
                 },
                 {
                   text: 'Lab 06 · 非平衡电桥原理与温度测量',
-                  link: '/Lab/Lab_for_all/Physics_Lab/I/非平衡电桥/report'
+                  link: '/Lab/Physics_Lab/I/非平衡电桥/report'
                 },
                 {
                   text: 'Lab 07 · 固定均匀弦振动与驻波',
-                  link: '/Lab/Lab_for_all/Physics_Lab/I/固定均匀弦振动实验/report'
+                  link: '/Lab/Physics_Lab/I/固定均匀弦振动实验/report'
                 },
                 {
                   text: 'Lab 08 · 拉伸法测金属丝杨氏模量',
-                  link: '/Lab/Lab_for_all/Physics_Lab/I/金属材料杨氏模量的测定/report'
+                  link: '/Lab/Physics_Lab/I/金属材料杨氏模量的测定/report'
                 },
                 {
                   text: 'Lab 09 · 模拟示波器的调节与使用',
-                  link: '/Lab/Lab_for_all/Physics_Lab/I/示波器的应用/report'
+                  link: '/Lab/Physics_Lab/I/示波器的应用/report'
                 },
                 {
                   text: 'Lab 10 · 交流电路功率因数与整流滤波',
-                  link: '/Lab/Lab_for_all/Physics_Lab/I/交流电路功率因数实验、组装整流器（同时做两个实验内容）/report'
+                  link: '/Lab/Physics_Lab/I/交流电路功率因数实验、组装整流器（同时做两个实验内容）/report'
                 },
                 {
                   text: 'Lab 11 · 霍尔效应测亥姆霍兹磁场',
-                  link: '/Lab/Lab_for_all/Physics_Lab/I/用霍尔法测直流圆线圈与亥姆霍兹线圈磁场/report'
+                  link: '/Lab/Physics_Lab/I/用霍尔法测直流圆线圈与亥姆霍兹线圈磁场/report'
                 },
                 {
                   text: 'Lab 12 · 弗兰克-赫兹实验能级测定',
-                  link: '/Lab/Lab_for_all/Physics_Lab/I/弗兰克赫兹实验/report'
+                  link: '/Lab/Physics_Lab/I/弗兰克赫兹实验/report'
                 },
                 {
                   text: 'Lab 13 · 北斗导航定位模拟设计',
-                  link: '/Lab/Lab_for_all/Physics_Lab/II/Week_1,2-北斗导航定位模拟设计与应用/formal/formal'
+                  link: '/Lab/Physics_Lab/II/Week_1-2-北斗导航定位模拟设计与应用/formal/formal'
                 },
                 {
                   text: 'Lab 14 · 国家级一流线上虚拟仿真实验',
-                  link: '/Lab/Lab_for_all/Physics_Lab/II/Week_5-国家级一流本科课程线上虚拟仿真实验/report'
+                  link: '/Lab/Physics_Lab/II/Week_5-国家级一流本科课程线上虚拟仿真实验/report'
                 }
               ]
             }
@@ -418,7 +422,7 @@ export default withMermaid(
           items: [
             {
               text: 'Read Me · 摸鱼小憩',
-              link: '/Break/break'
+              link: '/Break/'
             },
             {
               text: 'Journal 1 · 红黑树',

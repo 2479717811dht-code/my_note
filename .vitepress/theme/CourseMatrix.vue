@@ -55,7 +55,7 @@ const courses = [
     title: '数字逻辑设计',
     desc: '布尔代数 · 卡诺图化简 · 组合时序逻辑 · 有限状态机 · Verilog 设计',
     chips: ['卡诺图', 'FSM 状态机'],
-    link: '/Theory/dldnote'
+    link: '/Theory/Digital_Logic_Design'
   },
   {
     category: 'core',
@@ -66,7 +66,7 @@ const courses = [
     title: '程序设计与算法基础',
     desc: 'C/C++ 核心语法 · 指针内存模型 · 面向对象 · 基础算法与题型解析',
     chips: ['指针机制', '算法实战'],
-    link: '/Theory/note-cs-code-cleaned'
+    link: '/Theory/Fundamentals_of_Programming'
   },
   {
     category: 'math',
@@ -209,7 +209,7 @@ const courses = [
     title: '数据结构基础大作业',
     desc: '检索算法经验复杂度评测 · 稀疏多项式运算 · 大规模网格最短路径寻路优化',
     chips: ['3大课程设计', '基准实测'],
-    link: '/Lab/lab'
+    link: '/Lab/'
   },
   {
     category: 'lab',
@@ -220,7 +220,7 @@ const courses = [
     title: '高级数据结构算法大作业',
     desc: 'SkipList 评测 · 全美路网斐波那契堆分析 · 最优二叉树 · 最大团分支限界',
     chips: ['4大算法研讨', 'Cache瓶颈分析'],
-    link: '/Lab/lab'
+    link: '/Lab/'
   },
   {
     category: 'lab',
@@ -231,7 +231,7 @@ const courses = [
     title: '课程体系知识图谱',
     desc: '浙江大学计科培养方案全局脉络 · 选课规划 · 学习心法与 SGA 寄语',
     chips: ['培养路线', '全局框架'],
-    link: '/Cover/logic'
+    link: '/Guide/logic'
   },
   {
     category: 'lab',
@@ -242,7 +242,7 @@ const courses = [
     title: '摸鱼放松小站',
     desc: '赛博木鱼积攒功德 · 怀旧贪吃蛇 · 2048消除 · 极客冲浪社区与随笔',
     chips: ['木鱼功德+1', '益智街机'],
-    link: '/Break/break'
+    link: '/Break/'
   }
 ]
 
