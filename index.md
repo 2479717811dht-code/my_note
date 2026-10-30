@@ -19,25 +19,25 @@ hero:
 features:
   - icon: "🧭"
     title: "Course Map · 知识图谱"
-    details: "课程脉络与全局导航,系统化梳理大学计算机专业知识图谱与选课逻辑"
+    details: "课程脉络与全局导航，系统化梳理大学计算机专业知识图谱与选课逻辑"
     link: /Cover/logic
     linkText: "探索知识图谱 →"
 
   - icon: "💻"
     title: "Theory Notes · 专业理论"
-    details: "理论课深度笔记,涵盖数据结构,计算机组成,离散数学与经典算法"
+    details: "理论课深度笔记，涵盖高阶数据结构、计算机组成、9章完备概率统计与普通物理"
     link: /Theory/theory
     linkText: "阅读理论课 →"
 
   - icon: "🧪"
-    title: "Engineering Lab · 实验实战"
-    details: "实验实战与设计报告,从 Verilog 硬件逻辑到软硬件协同代码归档"
+    title: "Engineering Lab · 实验与课设"
+    details: "实验实战与设计报告，涵盖 DLD/CO 硬件、大作业算法研讨与 14 项物理实验"
     link: /Lab/lab
     linkText: "进入实验集 →"
 
   - icon: "☕"
     title: "Take a Break · 摸鱼小憩"
-    details: "在学术与代码间隙停下脚步,赛博木鱼,贪吃蛇,2048与心境随笔"
+    details: "在学术与代码间隙停下脚步，赛博木鱼、贪吃蛇、2048 与心境随笔"
     link: /Break/break
     linkText: "呼吸片刻 →"
 ---

@@ -124,6 +124,105 @@ const courses = [
     link: '/Lab/Computer-Organization-Lab'
   },
   {
+    category: 'core',
+    code: 'CO-MID',
+    tag: '备考速查',
+    tagType: 'core',
+    icon: '🎯',
+    title: '计组期中手册与速查卡',
+    desc: 'RISC-V/MIPS 指令 · 单周期/流水线数据通路推导 · 冒险冲突与考场速查卡',
+    chips: ['265KB完备手册', '考场速查'],
+    link: '/Theory/Computer_Organization_Midterm'
+  },
+  {
+    category: 'core',
+    code: 'ALGO',
+    tag: '算法实战',
+    tagType: 'core',
+    icon: '💡',
+    title: '算法设计与刷题实战手册',
+    desc: '经典数据结构实现 · 动态规划状态转移 · 图论算法高频题型模板总结',
+    chips: ['112KB实战库', '题型模板'],
+    link: '/Theory/Algorithms_Practice'
+  },
+  {
+    category: 'core',
+    code: 'HDL',
+    tag: '硬件描述',
+    tagType: 'core',
+    icon: '🔌',
+    title: 'Verilog HDL 设计基础',
+    desc: 'Verilog 核心语法 · 阻塞非阻塞避坑 · 组合时序电路建模与 FSM 工程规范',
+    chips: ['Verilog语法', 'FSM规范'],
+    link: '/Theory/Verilog_HDL'
+  },
+  {
+    category: 'math',
+    code: 'PHY',
+    tag: '物理基石',
+    tagType: 'math',
+    icon: '🌌',
+    title: '普通物理学（甲）I & II',
+    desc: '经典力热基础 · 电磁学高斯环路定理 · 麦克斯韦方程组 · 波动光学与量子物理',
+    chips: ['I & II 全览', '电磁与光学'],
+    link: '/Theory/General_Physics'
+  },
+  {
+    category: 'math',
+    code: 'MECH',
+    tag: '工程力学',
+    tagType: 'math',
+    icon: '⚙️',
+    title: '力学导论期末全景复习',
+    desc: '动量能量守恒 · 刚体转动动力学 · 考前速记导图与 25 道模拟题深度解析',
+    chips: ['期末总复习', '考前速记'],
+    link: '/Theory/Mechanics'
+  },
+  {
+    category: 'math',
+    code: 'SP',
+    tag: '时事通识',
+    tagType: 'math',
+    icon: '📜',
+    title: '形势与政策 I 复习精研',
+    desc: '时事热点专题系统梳理 · 政策背景深度剖析 · 期末要点与关键背诵资料',
+    chips: ['66KB精研背诵', '专题梳理'],
+    link: '/Theory/Situation_and_Policy'
+  },
+  {
+    category: 'lab',
+    code: 'PHY LAB',
+    tag: '物理实验',
+    tagType: 'lab',
+    icon: '🔬',
+    title: '普通物理学实验集 (14项)',
+    desc: '碰撞实验 · 磁滞回线 · 万用表设计 · 驻波 · 示波器 · 霍尔效应 · 北斗导航模拟',
+    chips: ['14个完整报告', '数据处理分析'],
+    link: '/Lab/Physics-Lab'
+  },
+  {
+    category: 'lab',
+    code: 'FDS PROJ',
+    tag: '课程设计',
+    tagType: 'lab',
+    icon: '🌲',
+    title: '数据结构基础大作业',
+    desc: '检索算法经验复杂度评测 · 稀疏多项式运算 · 大规模网格最短路径寻路优化',
+    chips: ['3大课程设计', '基准实测'],
+    link: '/Lab/lab'
+  },
+  {
+    category: 'lab',
+    code: 'ADS PROJ',
+    tag: '高阶课设',
+    tagType: 'lab',
+    icon: '🚀',
+    title: '高级数据结构算法大作业',
+    desc: 'SkipList 评测 · 全美路网斐波那契堆分析 · 最优二叉树 · 最大团分支限界',
+    chips: ['4大算法研讨', 'Cache瓶颈分析'],
+    link: '/Lab/lab'
+  },
+  {
     category: 'lab',
     code: 'MAP',
     tag: '全局导引',

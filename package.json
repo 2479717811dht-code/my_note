@@ -1,9 +1,9 @@
 {
   "scripts": {
     "docs:dev": "vitepress dev",
-    "docs:build": "vitepress build",
+    "docs:build": "node --max-old-space-size=8192 ./node_modules/vitepress/bin/vitepress.js build",
     "docs:preview": "vitepress preview",
-    "build": "vitepress build"
+    "build": "node --max-old-space-size=8192 ./node_modules/vitepress/bin/vitepress.js build"
   },
   "devDependencies": {
     "@mdit/plugin-footnote": "^0.23.2",
