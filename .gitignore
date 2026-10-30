@@ -92,6 +92,9 @@ typings/
 .vitepress/dist/
 node_modules/
 
+# Obsidian 编辑器配置（本机状态，不入库）
+.obsidian/
+
 # 过滤 Vivado 编译垃圾（全自动清理）
 **/*.cache/
 **/*.hw/
@@ -100,3 +103,40 @@ node_modules/
 **/*.sim/
 **/vivado.jou
 **/vivado.log
+**/*.jou
+**/*.backup.jou
+
+# 过滤 Xilinx ISE 编译垃圾
+**/xst/
+**/_ngo/
+**/iseconfig/
+**/_xmsgs/
+**/xlnx_auto_0_xdb/
+**/projnav.tmp
+**/webtalk*.xml
+**/usage_statistics_webtalk.html
+**/*.bld
+**/*.ngc
+**/*.ngd
+**/*.ngr
+**/*.pad
+**/*.par
+**/*.pcf
+**/*.ptwx
+**/*.stx
+**/*.syr
+**/*.twr
+**/*.twx
+**/*.unroutes
+**/*.ut
+**/*.xpi
+**/*.xrpt
+**/*.xst
+**/*.xbcd
+**/*_map.map
+**/*_map.mrp
+**/*_map.ncd
+**/*_map.ngm
+**/*_map.pxr
+**/*_summary.html
+**/*_usage.xml
